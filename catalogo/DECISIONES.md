@@ -235,6 +235,21 @@ reabre. El informe FORJA v1.1.0 queda derogado en dos puntos: «CABINA CORE a 24
 COMPLETA) y «cobro a 69 USD» (es 79). La cuota de cobro pasa de 17 a 15 ventas/mes porque el
 neto por unidad sube.
 
+
+## 10 · Plan de trabajo v1.0 reconciliado con el repo — DECIDIDA (15-sep-2026, noche)
+
+El plan de venta v1.0 (misma fecha, escrito sin el repositorio delante) contradecía lo ratificado
+aquí en cuatro puntos. Sergio decidió el 15-sep-2026, en dos sesiones paralelas:
+
+| Punto | Decisión |
+|---|---|
+| Tarifa | **La del repo** (COMPLETA 249 €, cobro 79 €; punto 9). Los «CORE 249 USD / cobro 69 USD» del plan quedan retirados |
+| Canal | **Gumroad** (punto 8). En la sesión paralela se marcó Polar a las 19:58 sin ver el punto 8, ya fusionado; **prevalece Gumroad**, que es lo que Sergio dijo con sus palabras y lo que está en `main`. Polar queda como caída si Gumroad no paga a México |
+| Conformidad | Las 17 del catálogo ya validan; el parche de frontmatter **no se aplica** sobre la carpeta original de 78 |
+| Tercer tramo del objetivo | **Instalación Esencial** de hostelería (2.500 €), no una suscripción sin precio |
+
+El plan reconciliado es [`venta/PLAN-DE-TRABAJO.md`](../venta/PLAN-DE-TRABAJO.md) v1.1.0.
+
 ---
 
 ## Lo que NO he decidido, y por qué

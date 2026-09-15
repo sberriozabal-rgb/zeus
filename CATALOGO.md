@@ -93,6 +93,7 @@ lo hace comprensible.
 
 ## Documentos
 
+- [`venta/PLAN-DE-TRABAJO.md`](venta/PLAN-DE-TRABAJO.md) — el plan operativo de venta v1.1: fases, aritmética del objetivo y huecos con responsable.
 - [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md) — tarifa propuesta, con la razón de cada cifra y su anclaje de mercado.
 - [`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md) — matriz G1–G5 pieza por pieza y los tres riesgos abiertos.
 - [`catalogo/PENDIENTE-FIRMA.md`](catalogo/PENDIENTE-FIRMA.md) — las 4 decisiones que desbloquean el cobro.
