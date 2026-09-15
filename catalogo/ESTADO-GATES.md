@@ -122,29 +122,28 @@ Por eso la entrega va por acceso revocable a este repositorio privado y no por
 adjunto.
 
 
-### 5 · `respuesta-resenas` envía la v1.0.0 mientras declara la v1.1.0
+### 5 · ~~`respuesta-resenas` envía la v1.0.0~~ ✅ RESUELTO (15-sep-2026, v1.2.0)
 
-Hallazgo del validador, 15-sep-2026. La pieza puntúa **8/20**, no el 19/20 que
-declara su ficha. La causa no es la rúbrica: es un **desajuste de versión**.
+**Corrección del diagnóstico inicial.** Se dijo que el trabajo de la v1.1.0 no se había hecho.
+**Era incorrecto.** Las cuatro piezas que la ficha declaraba haber fabricado el 16-ago —
+procedimiento atómico, tabla SIEMPRE, tabla NUNCA y antipatrones — **sí estaban en el fichero y
+sí pasaban la rúbrica** (puntos 07, 10, 11 y 12).
 
-- `SKILL.md` frontmatter → `version: "1.0.0"`
-- `metadata.json` → `"version": "1.1.0"`, `"fecha_revision": "2026-08-16"`
-- `CHANGELOG.md` → **solo tiene entrada 1.0.0**, más un «Roadmap v1.1»
+Lo que fallaba era otra cosa, y eran tres problemas:
 
-La ficha describe con detalle cuatro piezas del ADN que *"se fabricaron el
-16-ago-2026"* —pasos atómicos con rama «si falta el dato», tabla de reglas
-SIEMPRE, tabla NUNCA y antipatrones— y dice que por eso la nota subió de 16 a
-19/20. **El fichero que se entrega no las lleva todas**, y el CHANGELOG no
-registra ninguna v1.1.0.
+1. **La versión decía tres cosas distintas en cuatro sitios.** Frontmatter `1.0.0`, sección
+   `## Versión` del mismo fichero `v1.1.0`, `metadata.json` `1.1.0`, y el CHANGELOG sin ninguna
+   entrada de 1.1.0.
+2. **Estructura anterior al ADN.** Usaba `## Método` y `## Formato del informe` en vez de las 13
+   secciones de serie, así que caía en 12 puntos **por nomenclatura**, no por contenido ausente.
+3. **`## Casos de prueba` no rotulaba** los cuatro casos como Happy path / Edge case / Failure /
+   Integration, de modo que existían en `cases/` y aun así los puntos 13-16 caían.
 
-Es exactamente el fallo que la propia ficha de esta skill se corrigió una vez y
-que la doctrina llama *nota regalada = fraude interno*. Hay que decidir qué es
-verdad: o la v1.1.0 existe y no se guardó, o la ficha describe un trabajo que no
-se llegó a hacer. Hasta resolverlo, esta pieza **no debe ir en material de venta
-con la etiqueta 19/20**.
+**Resuelto en v1.2.0**: reestructurada al ADN conservando verbatim procedimiento, reglas y
+antipatrones; versión unificada en los cuatro sitios. De **8/20 a 19/20** (20/20 mecánico, menos
+el punto 19 de criterio). Se salta a 1.2.0 porque **el número 1.1.0 está quemado**: quien lo vio
+estaba viendo un fichero de 8/20.
 
-Nota de calibración: las otras cinco de hostelería validan en 17–19/20, en línea
-con lo declarado. El problema es de esta pieza, no del catálogo.
 
 ### 6 · Frontmatter YAML inválido en 3 skills — **corregido el 15-sep-2026**
 
@@ -171,3 +170,38 @@ doctrina manda: *"ejecutar el validador antes de empaquetar, sin excepción"*.
 Tras la reescritura, los seis `SKILL.md` de CABINA vuelven a parsear correctamente y sus
 `metadata` mantienen todos los valores como cadena, conforme a la especificación. **17/17 del
 catálogo válidos.**
+
+### 8 · Cinco skills más con el mismo problema de envoltorio — **abierto**
+
+Al revalidar el catálogo completo el 15-sep-2026 aparecen cinco piezas con la misma causa que
+tenía CABINA: contenido de oficio sin la estructura de serie. **Sus notas declaradas no
+coinciden con las medidas.**
+
+| Skill | Línea | Declara | Mide | Diferencia |
+|---|---|---|---|---|
+| `cobro-cartera-vencida` | Neutra | **19/20** | **1/20** | −18 |
+| `reporte-inteligencia` | Neutra | 18/20 *(pendiente de reauditoría)* | **2/20** | −16 |
+| `respaldo-proyecto-ia-cl` | Neutra | 18/20 *(autoevaluación)* | **3/20** | −15 |
+| `universal-compilador-contexto` | Neutra | 17/20 *(autoevaluación)* | **1/20** | −16 |
+| `reporte-inteligencia-competencia` | Hostelería | sin nota declarada | **1/20** | — |
+
+`cobro-cartera-vencida` es el caso más serio: declara **19/20** en su propio frontmatter y es la
+pieza que se había señalado como **la mejor posicionada del catálogo para venta suelta**.
+
+**Lo que esto no significa.** Igual que en CABINA, la nota mide conformidad con la rúbrica, no
+calidad del oficio. Las tres que se autoevaluaron lo declaran honestamente como
+*"(autoevaluación)"*, y `reporte-inteligencia` ya avisaba de estar *"pendiente de reauditoría
+tras v1.1.0"*. No hay aquí una nota inflada a sabiendas salvo, quizá, el 19/20 de
+`cobro-cartera-vencida`, que no lleva ninguna salvedad.
+
+**Lo que sí significa.** Ninguna de las cinco puede venderse como P1 hasta cerrar el envoltorio,
+y ninguna debe aparecer en material de venta con su nota actual. El trabajo es el mismo que se
+hizo en CABINA: 13 secciones del ADN, 6 pasos atómicos, reglas SIEMPRE y NUNCA, 5 antipatrones,
+4 casos de prueba y los ficheros del peldaño.
+
+**Estado del catálogo tras esta revisión:**
+
+| Tramo | Skills | Nota |
+|---|---|---|
+| Listas (≥16/20 medido) | 12 | CABINA ×6, hostelería ×6 |
+| Pendientes de envoltorio | 5 | 4 neutras + `reporte-inteligencia-competencia` |

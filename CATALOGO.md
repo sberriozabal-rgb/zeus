@@ -23,12 +23,12 @@ vendido. Se venden como instalación.
 | # | Skill | Ver. | Auditoría | Estado |
 |---|---|---|---|---|
 | 1 | `escandallo-ingenieria-menu` | 1.1.0 | **19/20** | ACORDADO |
-| 2 | `respuesta-resenas` | 1.1.0 | **19/20** | ACORDADO |
+| 2 | `respuesta-resenas` | **1.2.0** | **19/20** ✅ reestructurada | ACORDADO |
 | 3 | `apertura-cierre-turno` | 1.1.1 | **19/20** | ACORDADO |
 | 4 | `comparativa-proveedores` | 1.1.0 | **18/20** | ACORDADO |
 | 5 | `receta-estandar` | 1.1.0 | **18/20** | ACORDADO |
 | 6 | `productividad-personal-turno` | 1.1.0 | sin nota declarada | ACORDADO |
-| 7 | `reporte-inteligencia-competencia` | 1.0.0 | sin nota declarada | ACORDADO |
+| 7 | `reporte-inteligencia-competencia` | 1.0.0 | **mide 1/20** ⚠️ | ACORDADO |
 
 **Precio en ficha:** Instalación Completa **4.900 €** (6 skills) · Instalación
 Esencial **2.500 €** (3 skills). Ambos `[A VALIDAR]`.
@@ -63,13 +63,15 @@ Piezas que no dependen de un oficio concreto. Vendibles sueltas por catálogo
 
 | Skill | Ver. | Auditoría | Estado |
 |---|---|---|---|
-| `cobro-cartera-vencida` | 1.1.0 | **19/20** | ACORDADO |
-| `reporte-inteligencia` | 1.1.0 | 18/20 *(pendiente de reauditoría tras v1.1.0)* | ACORDADO |
-| `respaldo-proyecto-ia-cl` | 2.0.0 | 18/20 *(autoevaluación)* | ACORDADO |
-| `universal-compilador-contexto` | 1.0.0 | 17/20 *(autoevaluación)* | ACORDADO |
+| `cobro-cartera-vencida` | 1.1.0 | declara 19/20 · **mide 1/20** ⚠️ | ACORDADO |
+| `reporte-inteligencia` | 1.1.0 | declara 18/20 · **mide 2/20** ⚠️ | ACORDADO |
+| `respaldo-proyecto-ia-cl` | 2.0.0 | declara 18/20 · **mide 3/20** ⚠️ | ACORDADO |
+| `universal-compilador-contexto` | 1.0.0 | declara 17/20 · **mide 1/20** ⚠️ | ACORDADO |
 
-Ninguna tiene precio propuesto. `cobro-cartera-vencida`, con 19/20 y sector
-neutro, es la mejor candidata a primer producto suelto de catálogo.
+⚠️ **Las cuatro necesitan cerrar envoltorio antes de venderse**, igual que necesitó CABINA:
+miden entre 1 y 3 sobre 20 contra la rúbrica. Detalle en
+[`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md). `cobro-cartera-vencida` sigue siendo la
+mejor candidata a primer producto suelto **una vez cerrado**.
 
 ---
 

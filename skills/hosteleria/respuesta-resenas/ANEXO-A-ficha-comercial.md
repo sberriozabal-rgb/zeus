@@ -11,30 +11,41 @@ Precio propuesto   : No se vende suelta. Incluida en Instalación Completa 4.900
 Canal              : Venta presencial dentro del sistema instalable (Motor B), ejecutada en la visita con las reseñas reales del local, nunca con una demo de ejemplo. No se publica suelta en directorio hasta que el sistema completo tenga el primer caso vendido.
 Motor              : B · Instalación
 Frase de anuncio   : "Te digo si tus reseñas malas repiten siempre el mismo problema, y te dejo escritas las respuestas."
-Estado / Versión   : ACORDADO / v1.1.0
-Auditoría          : 19/20 — ver desglose abajo. No se redondea al alza.
+Estado / Versión   : ACORDADO / v1.2.0
+Auditoría          : 19/20 (validar_skill.py, 15-sep-2026) — ver desglose abajo. No se redondea al alza.
 Gates              : G1 [x] G2 [ ] G3 [x] G4 [x] G5 [ ]
 
 ## Desglose de auditoría (19/20)
 
-**Corrección de nota respecto a la v1.0.0.** Esta ficha declaraba 19/20 cuando la
-skill valía **16/20**: le faltaban cuatro piezas del ADN de la línea —procedimiento
-en pasos atómicos con rama "si falta el dato", tabla de reglas SIEMPRE, tabla de
-reglas NUNCA y sección de antipatrones—. Era una nota regalada. Las cuatro se
-fabricaron el 16-ago-2026 y ahora sí se sostienen.
+**Medida con el validador de la casa el 15-sep-2026**, no estimada. Devuelve **20/20 mecánico**;
+se declara **19/20** porque el punto 19 es de criterio —*"que las URLs estén verificadas, no solo
+presentes"*— y las ocho URLs de `references/` no se han reverificado una a una en esta pasada.
 
-Punto no conseguido: **umbral con cifra**. El umbral operativo de la skill —3
-menciones en 60 días— es calibración de oficio sin fuente externa, igual que el
-"~10-15 reseñas nuevas al mes" y el "tres ya empieza a ser estadísticamente
-significativo" de `umbrales-resenas.md` §2, que no tiene contraste de hipótesis
-detrás. La cifra que sí está verificada (Luca) es de mercado, no del local. Se
-declara en vez de redondearse.
+### Historial de esta nota, que es parte del producto
 
-Todos los demás puntos: disparo con jerga real, trabajo en verbo, ejecutor
-definido, entrada real, manejo de datos sucios, pasos atómicos con "si falta el
-dato", plantilla de salida en bloque, límites declarados, 11 reglas SIEMPRE, 10
-reglas NUNCA, 5 antipatrones, los 4 casos, frontmatter de seis campos, versión y
-CHANGELOG, referencias externas con URL en `references/FUENTES.md`, y esta ficha.
+Esta ficha ha declarado una nota equivocada **dos veces**, y las dos quedan escritas:
+
+1. **v1.0.0**: declaraba 19/20 cuando la skill valía 16/20. Faltaban cuatro piezas del ADN
+   —procedimiento en pasos atómicos con rama "si falta el dato", tabla SIEMPRE, tabla NUNCA y
+   antipatrones—. Se fabricaron el 16-ago-2026.
+2. **v1.1.0**: seguía declarando 19/20, pero **el fichero entregado puntuaba 8/20**. Las cuatro
+   piezas del punto anterior sí estaban y sí pasaban; lo que fallaba era que el `SKILL.md`
+   conservaba la estructura anterior al ADN (`## Método`, `## Formato del informe`) y por tanto
+   caía en 12 puntos de rúbrica **por nomenclatura**. Además, la versión decía tres cosas
+   distintas en cuatro sitios y este CHANGELOG no tenía entrada de 1.1.0.
+
+La v1.2.0 cierra las dos cosas: estructura de serie completa y versión unificada. **El número
+1.1.0 queda quemado y no se reutiliza**, porque quien lo vio estaba viendo un fichero de 8/20.
+
+### Punto no conseguido
+
+**URLs verificadas (punto 19).** Están las ocho, con su fuente identificada, pero no se han
+reconfirmado una a una en esta revisión. Se declara en vez de redondearse.
+
+Sigue en pie, además, la carencia de fondo que ya declaraba la v1.1.0: el umbral operativo
+—3 menciones en 60 días— es **criterio de oficio sin fuente externa**, igual que el "~10-15
+reseñas nuevas al mes" del comprador nombrado. La cifra que sí está verificada (Luca) es de
+mercado, no del local.
 
 ## Notas de gates
 
