@@ -176,8 +176,8 @@ que se firma.
 | ~~Qué método de cobro ofrece Gumroad desde México~~ **Banco local** (verificado 15-sep, §3). El paso 0.2 lo comprueba en el alta | Sergio · paso 0.2 |
 | ~~Si Gumroad admite precio en EUR~~ **Muestra EUR, cobra en USD** (verificado 15-sep, §2) | — |
 | Si Polar paga a México (sólo importa si Gumroad falla) | La fábrica, cuando el proxy deje leer polar.sh |
-| Si myClaude y SkillHQ actúan como *merchant of record* o el IVA europeo es del vendedor | La fábrica, escribiéndoles |
-| Cómo se entra en el directorio `claudemarketplaces.com` | La fábrica |
+| Si myClaude y SkillHQ actúan como *merchant of record* o el IVA europeo es del vendedor | **Correos redactados** (15-sep): en borradores de Gmail y en [`CONSULTAS-PENDIENTES.md`](CONSULTAS-PENDIENTES.md). Falta el destinatario, que Sergio toma de cada web al enviar |
+| Cómo se entra en el directorio `claudemarketplaces.com` | **Correo redactado** (15-sep), mismo sitio. Sólo se envía si se decide publicar el marketplace gratuito |
 | Si existe una skill de captación que no sea de pago (hoy no) | Sergio |
 | Revisión externa de inocuidad de `receta-estandar` (único G4 abajo) | Sergio · consultor |
 | Revisión del abogado de `venta/ANEXO-CONTRATO-INOCUIDAD.md` | Sergio · abogado |
