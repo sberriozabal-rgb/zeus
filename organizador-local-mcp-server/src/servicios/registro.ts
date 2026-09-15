@@ -116,7 +116,18 @@ export async function reescribirDiario(base: string, anotaciones: Anotacion[]): 
   await fs.writeFile(path.join(dir, FICHERO_DIARIO), cuerpo, "utf8");
 }
 
-let snapshotHecho = false;
+export interface ResultadoSnapshot {
+  hecho: boolean;
+  detalle: string;
+}
+
+/**
+ * El intento de esta sesión, con su resultado. Se recuerda tanto el éxito como
+ * el fracaso: si Time Machine no está configurado, `tmutil` va a fallar igual
+ * la segunda vez y la quinta, y cada intento cuesta hasta un minuto de espera.
+ * Un intento por proceso, que es lo que dice la documentación de esta función.
+ */
+let intento: ResultadoSnapshot | null = null;
 
 /**
  * Snapshot APFS antes de la primera operación destructiva del proceso.
@@ -125,21 +136,26 @@ let snapshotHecho = false;
  * llama decide: las herramientas lo muestran en la respuesta para que quede
  * claro si hay red de seguridad o no.
  */
-export async function snapshotAPFS(): Promise<{ hecho: boolean; detalle: string }> {
-  if (snapshotHecho) return { hecho: true, detalle: "ya se hizo uno en esta sesión" };
+export async function snapshotAPFS(): Promise<ResultadoSnapshot> {
+  if (intento) {
+    return intento.hecho
+      ? { hecho: true, detalle: "ya se hizo uno en esta sesión" }
+      : intento;
+  }
   if (process.platform !== "darwin") {
-    return { hecho: false, detalle: "no es macOS: no hay snapshot APFS disponible" };
+    intento = { hecho: false, detalle: "no es macOS: no hay snapshot APFS disponible" };
+    return intento;
   }
   try {
     const { stdout } = await ejecutar("tmutil", ["localsnapshot"], { timeout: 60_000 });
-    snapshotHecho = true;
-    return { hecho: true, detalle: stdout.trim() || "snapshot creado" };
+    intento = { hecho: true, detalle: stdout.trim() || "snapshot creado" };
   } catch (error) {
-    return {
+    intento = {
       hecho: false,
       detalle:
         `no se pudo crear (${error instanceof Error ? error.message : String(error)}). ` +
-        "Suele ser que Time Machine no está configurado.",
+        "Suele ser que Time Machine no está configurado. No se reintentará en esta sesión.",
     };
   }
+  return intento;
 }

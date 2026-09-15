@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+# Un push nuevo sobre la misma rama cancela la ejecución anterior: no tiene
+# sentido gastar minutos verificando un commit que ya está superado.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  servidor-mcp:
+    name: Servidor MCP · ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      # Sin fail-fast: si falla en un sistema, interesa ver si el otro también.
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    defaults:
+      run:
+        working-directory: organizador-local-mcp-server
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: organizador-local-mcp-server/package-lock.json
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Compilar (TypeScript estricto)
+        run: npm run build
+
+      - name: Arranca y responde
+        run: node dist/index.js --version
+
+      - name: Pruebas de integración contra un cliente MCP real
+        run: npm test
+
+      - name: Las respuestas de la evaluación siguen siendo ciertas
+        run: npm run eval:resolver
+
+  script-terminal:
+    # En macOS a propósito: el script usa `stat -f` y `tmutil`, y es la
+    # plataforma donde se va a pegar de verdad. Probarlo solo en Linux daría
+    # una confianza falsa.
+    name: Script de Terminal · macOS
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sintaxis del envoltorio y del cuerpo del heredoc
+        run: kit-limpieza-organizacion/verificar-sintaxis.sh
+
+      - name: Prueba funcional sobre un árbol desechable
+        run: kit-limpieza-organizacion/probar.sh

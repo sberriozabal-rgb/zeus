@@ -172,5 +172,12 @@ La prueba de integración arranca el servidor por stdio y lo conduce con el
 cliente del SDK, igual que haría Claude Desktop: cubre seguridad de rutas,
 protecciones, fusión, duplicados, movimientos, registro y deshacer.
 
+`eval:resolver` no solo imprime las respuestas: las contrasta con las
+publicadas en `evaluacion.xml` y **sale con error si alguna deja de coincidir**.
+Así la evaluación no se queda afirmando cosas que ya no son ciertas.
+
+El CI del repositorio (`.github/workflows/ci.yml`) ejecuta compilación, pruebas
+y evaluación en **ubuntu-latest y macos-latest** en cada push.
+
 Las preguntas de `pruebas/evaluacion/evaluacion.xml` están pensadas para que
 ninguna se resuelva leyendo nombres de fichero: hay que abrir los documentos.

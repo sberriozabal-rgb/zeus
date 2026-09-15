@@ -3,7 +3,7 @@
 Piezas nuevas que se suman al **KIT DE LIMPIEZA Y ORGANIZACIÓN · OCTAVA SOG v1.0**
 que ya vive en Drive.
 
-## `organizador_documentos_y_descargas_mac_v1.1.sh`
+## `organizador_documentos_y_descargas_mac_v1.2.sh`
 
 Fusiona `~/Descargas` dentro de `~/Documentos` y organiza el conjunto contra la
 misma taxonomía que usa Google Drive (`01 · … 10 · …` + `99 · Sin clasificar`),
@@ -54,3 +54,17 @@ regla de la casa (borrado directo, ACORDADO 2026-08-08).
 Registro de la pasada de organización sobre `99 · Sin clasificar` de Google Drive:
 25 ficheros de entrada, 24 clasificados leyendo su contenido, 1 pendiente.
 Incluye nombre original, nombre nuevo y el porqué de cada movimiento.
+
+## Verificación automática
+
+Dos scripts, que el CI del repositorio ejecuta en cada push sobre **macOS**
+—la plataforma donde el organizador se va a pegar de verdad— y que también
+puedes lanzar tú:
+
+| Script | Qué comprueba |
+|---|---|
+| `verificar-sintaxis.sh` | Sintaxis del envoltorio **y del cuerpo**. `bash -n` sobre el fichero solo valida el envoltorio: el cuerpo va dentro de un heredoc entrecomillado y el intérprete no lo mira. Hay que extraerlo y validarlo aparte |
+| `probar.sh` | Prueba funcional: ejecuta el script real con `HOME` apuntando a un árbol desechable y comprueba 19 cosas — que el duplicado se borra, que la colisión con contenido distinto se conserva marcada, que `node_modules` y las apps no se arrastran, que un `.pages` sí se mueve entero, que la descarga a medias no se toca, que `~/Descargas` queda vacía pero existe, y que una segunda pasada no cambia nada |
+
+Probar el script solo en Linux daría confianza falsa: usa `stat -f` y `tmutil`,
+que son de macOS. Por eso ese trabajo del CI corre en `macos-latest`.

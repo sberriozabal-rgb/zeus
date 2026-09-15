@@ -1,6 +1,6 @@
 /bin/bash <<'DOCS_EOF'
 # ============================================================
-# ORGANIZADOR DOCUMENTOS + DESCARGAS · Mac · Terminal v1.1
+# ORGANIZADOR DOCUMENTOS + DESCARGAS · Mac · Terminal v1.2
 # Fusiona ~/Descargas dentro de ~/Documentos y organiza el conjunto.
 # Taxonomía espejo de Google Drive: 01–10 + 99
 # Regla de la casa: borrado directo, sin cuarentena
@@ -60,16 +60,21 @@ touch "$LOG"
 TS() { date '+%Y-%m-%d %H:%M:%S'; }
 log() { printf -- "- [%s] %s\n" "$(TS)" "$1" >> "$LOG"; }
 if [ "$SIMULACRO" -eq 1 ]; then MODO="SIMULACRO (no se toca nada)"; else MODO="EJECUCIÓN · borrado directo"; fi
-log "=== $MODO · Organizador Documentos+Descargas v1.1 · base: $BASE · descargas: ${DESC:-(ninguna)} · snapshot APFS: $SNAP ==="
+log "=== $MODO · Organizador Documentos+Descargas v1.2 · base: $BASE · descargas: ${DESC:-(ninguna)} · snapshot APFS: $SNAP ==="
 
 BORRADOS=0; BYTES=0; MOVIDOS=0; ARCHIVADOS=0; RENOMBRADOS=0; PEND=0
-FUSFILES=0; FUSDIRS=0; INCOMPL=0
+FUSFILES=0; FUSDIRS=0; INCOMPL=0; PROTEGIDOS=0
 US=$(printf '\037')
 TMP=$(mktemp -d)
 trap 'rm -rf "$TMP"' EXIT
 
-fsize()  { stat -f '%z' "$1" 2>/dev/null || echo 0; }
-fmtime() { stat -f '%m' "$1" 2>/dev/null || echo 0; }
+# Solo dígitos. Si `stat` devuelve cualquier otra cosa (otra plataforma, un
+# fichero que desaparece a media pasada), la aritmética recibiría texto y con
+# `set -u` el script abortaría a mitad. Un contador de bytes no puede tumbar
+# una organización ya empezada.
+solo_digitos() { case "$1" in ''|*[!0-9]*) printf '0';; *) printf '%s' "$1";; esac; }
+fsize()  { solo_digitos "$(stat -f '%z' "$1" 2>/dev/null)"; }
+fmtime() { solo_digitos "$(stat -f '%m' "$1" 2>/dev/null)"; }
 fhash()  { shasum -a 256 "$1" | awk '{print $1}'; }
 
 do_rm() { if [ "$SIMULACRO" -eq 0 ]; then rm -f "$1"; fi; }
@@ -93,6 +98,30 @@ libre() {
 # ni paquetes de macOS (.app .pages .key .numbers .rtfd …), porque
 # romperlos rompe proyectos, instaladores y documentos-paquete.
 # Tampoco se toca lo ya archivado ni las carpetas traídas de Descargas.
+# ¿Es una app o una biblioteca? Eso no es un documento del usuario.
+es_paquete_sistema() {
+  case "$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')" in
+    *.app|*.framework|*.bundle|*.sparsebundle|*.photoslibrary|*.fcpbundle|*.logicx|*.band) return 0;;
+    *) return 1;;
+  esac
+}
+
+# ¿Es un paquete que el usuario entiende como un documento suyo?
+es_paquete_documento() {
+  case "$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')" in
+    *.pages|*.key|*.numbers|*.rtfd) return 0;;
+    *) return 1;;
+  esac
+}
+
+# ¿Es un directorio en el que no se entra ni se mueve?
+es_dir_protegido() {
+  case "$1" in
+    node_modules|Library|.git|.*) return 0;;
+    *) es_paquete_sistema "$1";;
+  esac
+}
+
 scan() {
   find "$BASE" \
     \( -name '.*' -o -name 'node_modules' -o -name 'Library' \
@@ -137,10 +166,27 @@ if [ -n "$DESC" ]; then
     log "FUSIONADO · $f → $tgt"
   done < "$TMP/desc_f"
 
-  # Carpetas y paquetes del primer nivel
+  # Carpetas y paquetes del primer nivel.
+  # Un .pages es un directorio, pero es un documento: va a la bandeja de
+  # entrada como una unidad. Un node_modules o un .app, no: se quedan.
   find "$DESC" -maxdepth 1 -mindepth 1 -type d ! -name '.*' -print0 > "$TMP/desc_d" 2>/dev/null
   while IFS= read -r -d '' d; do
     name=$(basename "$d")
+
+    if es_dir_protegido "$name"; then
+      PROTEGIDOS=$((PROTEGIDOS+1))
+      log "OMITIDO · $d · directorio protegido o paquete de aplicación: se queda en Descargas"
+      continue
+    fi
+
+    if es_paquete_documento "$name"; then
+      tgt=$(libre "$BASE/$D99" "$name")
+      do_mv "$d" "$tgt"
+      FUSFILES=$((FUSFILES+1))
+      log "FUSIONADO (paquete-documento, entero) · $d → $tgt"
+      continue
+    fi
+
     tgt=$(libre "$BASE/$CARPDESC" "$name")
     do_mv "$d" "$tgt"
     FUSDIRS=$((FUSDIRS+1))
@@ -302,7 +348,7 @@ mkstruct
 MB=$(awk -v b="$BYTES" 'BEGIN{printf "%.1f", b/1048576}')
 {
   echo ""
-  echo "════════ INFORME FINAL · ORGANIZADOR DOCUMENTOS+DESCARGAS v1.1 ════════"
+  echo "════════ INFORME FINAL · ORGANIZADOR DOCUMENTOS+DESCARGAS v1.2 ════════"
   echo " Base:      $BASE"
   echo " Descargas: ${DESC:-(no encontrada, fase 0 omitida)}"
   echo " Modo:      $MODO"
@@ -310,6 +356,7 @@ MB=$(awk -v b="$BYTES" 'BEGIN{printf "%.1f", b/1048576}')
   if [ -n "$DESC" ]; then
     echo " Fusionado desde Descargas: $FUSFILES ficheros · $FUSDIRS carpetas intactas"
     echo " Descargas incompletas respetadas: $INCOMPL"
+    echo " Protegidos no tocados (node_modules, apps…): $PROTEGIDOS"
     echo "──────────────────────────────────────────────────────────────────────"
   fi
   for d in "$D01" "$D02" "$D03" "$D04" "$D05" "$D06" \
