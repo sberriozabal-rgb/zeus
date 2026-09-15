@@ -16,7 +16,7 @@ description: >-
 license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. Ver LICENSE.txt.
 compatibility: Requiere Python 3.9+ para ejecutar scripts/proveedores.py. Sin dependencias externas.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
   sector: "hosteleria-restauracion"
   entregable: "informe-control-compras"
   enlaza_con: "escandallo-ingenieria-menu"
@@ -181,19 +181,15 @@ mismo producto, no como hallazgo.
 
 3. **Entrada: líneas agrupadas → Acción: ejecutar `python3 scripts/proveedores.py datos.json` para normalizar a unidad base y a base imponible → Salida: €/kg, €/L o €/ud sin IVA por línea, más la lista `errores_datos` de lo que no se pudo normalizar → Si falta el tipo de IVA: se asume precio de albarán sin IVA y se declara; si hay sospecha de mezcla, la línea se marca "IVA por confirmar".**
 
-4. **Entrada: precios por base con fecha → Acción: detectar subidas del mismo proveedor entre la primera y la última fecha del periodo, contra el umbral del 8% → Salida: alertas con precio antes, precio ahora, % y fechas → Si solo hay una fecha por producto y proveedor: no hay alerta posible y se dice, en vez de comparar contra otro proveedor y llamarlo subida.**
+4. **Entrada: precios por base con fecha y familia de cada producto → Acción: detectar subidas del mismo proveedor entre la primera y la última fecha del periodo contra el umbral del 8%, y marcar como estacional toda subida de familia volátil según `references/familias-y-volatilidad.md` → Salida: alertas con precio antes, precio ahora, % y fechas, cada una etiquetada estacional o estructural, y el total de sobrecoste evitable contando solo las estructurales → Si solo hay una fecha por producto y proveedor: no hay alerta posible y se dice, en vez de comparar contra otro proveedor y llamarlo subida; y si la familia no consta, se clasifica por el nombre del producto y se declara el criterio usado.**
 
-5. **Entrada: familia de cada producto → Acción: marcar como estacional toda subida de familia volátil según `references/familias-y-volatilidad.md` → Salida: cada subida etiquetada estacional o estructural, y el total de sobrecoste evitable contando solo las estructurales → Si la familia no consta: se clasifica por el nombre del producto y se declara el criterio usado.**
+5. **Entrada: precios por base de distintos proveedores en la fecha más reciente → Acción: identificar quién tiene hoy cada producto más barato y calcular la diferencia → Salida: tabla de comparativa con ahorro mensual y anual → Si la diferencia supera el 40-50%: se emite como sospecha de producto distinto, no como ahorro, y se pide verificar calidad, calibre y origen antes de cambiar.**
 
-6. **Entrada: precios por base de distintos proveedores en la fecha más reciente → Acción: identificar quién tiene hoy cada producto más barato y calcular la diferencia → Salida: tabla de comparativa con ahorro mensual y anual → Si la diferencia supera el 40-50%: se emite como sospecha de producto distinto, no como ahorro, y se pide verificar calidad, calibre y origen antes de cambiar.**
+6. **Entrada: histórico de precio por base del mismo formato → Acción: buscar formato encubierto (precio de línea estable con €/base al alza) y revisar a mano portes, precio de lista contra pactado y mínimo de pedido → Salida: apartado 4 del informe, o la frase "no se detectaron subidas encubiertas en este periodo" → Si no hay dos periodos del mismo formato: no se puede detectar y se dice.**
 
-7. **Entrada: histórico de precio por base del mismo formato → Acción: buscar formato encubierto (precio de línea estable con €/base al alza) y revisar a mano portes, precio de lista contra pactado y mínimo de pedido → Salida: apartado 4 del informe, o la frase "no se detectaron subidas encubiertas en este periodo" → Si no hay dos periodos del mismo formato: no se puede detectar y se dice.**
+7. **Entrada: variación por base, consumo mensual, y la carta o la salida de `escandallo-ingenieria-menu` → Acción: multiplicar variación por volumen para obtener impacto en euros, ordenar todo de mayor a menor impacto anual, y cruzar cada subida con los platos que usan ese producto para calcular sobrecoste por ración, por mes y margen perdido → Salida: subidas y ahorros ordenados por euros, y el apartado 5 con los platos que pasan de sanos a tocados por la compra, no por la receta → Si falta el consumo: el impacto sale 0 €, se declara que es un hueco de dato y no un coste cero, y se ordena por porcentaje avisando de que no es el orden de prioridad; si no hay datos de carta, el apartado 5 no aparece y se ofrece como siguiente paso.**
 
-8. **Entrada: variación por base y consumo mensual → Acción: multiplicar variación por volumen para obtener impacto en euros y ordenar todo de mayor a menor impacto anual → Salida: subidas y ahorros ordenados por euros → Si falta el consumo: el impacto sale 0 €, se declara que es un hueco de dato y no un coste cero, y se ordena por porcentaje avisando de que no es el orden de prioridad.**
-
-9. **Entrada: carta o salida de `escandallo-ingenieria-menu` → Acción: cruzar cada subida con los platos que usan ese producto y calcular sobrecoste por ración, por mes y margen perdido → Salida: apartado 5 con los platos que pasan de sanos a tocados por la compra, no por la receta → Si no hay datos de carta: el apartado no aparece y se ofrece como siguiente paso.**
-
-10. **Entrada: todo lo anterior → Acción: pasar las cinco verificaciones (misma base por producto, ningún precio por base absurdo, ninguna subida superior al 100% sin verificar, estacionales separadas de estructurales, cada acción con cifra anual) y redactar tres o cuatro acciones → Salida: informe cerrado con "ahorro y sobrecoste evitable estimado: X €/año" → Si una acción no acaba en cifra: no es una acción, es una observación, y se saca del apartado 6.**
+8. **Entrada: todo lo anterior → Acción: pasar las cinco verificaciones (misma base por producto, ningún precio por base absurdo, ninguna subida superior al 100% sin verificar, estacionales separadas de estructurales, cada acción con cifra anual) y redactar tres o cuatro acciones → Salida: informe cerrado con "ahorro y sobrecoste evitable estimado: X €/año" → Si una acción no acaba en cifra: no es una acción, es una observación, y se saca del apartado 6.**
 
 ## Salida
 
@@ -227,7 +223,7 @@ Solo si hay datos de carta o escandallo.
 ## 6. Acciones, por orden de impacto
 1. **[Qué hacer]** — vale X €/año. Antes de ejecutar, comprueba [calidad · calibre · plazo · servicio].
 
-## 7. Supuestos y huecos de dato
+## 7. Supuestos de esta versión y huecos de dato
 - Líneas descartadas y por qué (con el mensaje literal del motor).
 - Qué se asumió (IVA, familia, consumo).
 - Qué falta por medir para la siguiente vuelta.

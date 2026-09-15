@@ -4,7 +4,7 @@ description: Cruza el export de ventas por franja horaria con las horas trabajad
 license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. Ver LICENSE.txt.
 compatibility: Agent Skills — estándar abierto (agentskills.io). Sin dependencias de un motor concreto. El cálculo con dinero requiere Python 3.9+ para scripts/productividad_turno.py, sin librerías externas.
 metadata:
-  version: 1.1.0
+  version: "1.1.1"
   author: FORJA
   estado: ACORDADO
   linea: hosteleria

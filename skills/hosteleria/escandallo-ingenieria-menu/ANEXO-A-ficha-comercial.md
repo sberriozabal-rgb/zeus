@@ -11,8 +11,8 @@ Precio propuesto   : Dentro de Instalación Esencial (2.500 €) y Completa (4.9
 Canal              : Venta presencial dentro del sistema instalable (Motor B). No se publica suelta en directorio hasta que el sistema tenga el primer caso vendido con cifras.
 Motor              : B · Instalación
 Frase de anuncio   : "Tu merluza no cuesta lo que pone el albarán. Cuesta el doble, y está en tu carta."
-Estado / Versión   : ACORDADO / v1.1.0
-Auditoría          : 19/20 (revisión de cierre, 16-ago-2026). **Corregida a la baja desde el 20/20 que declaraba esta misma ficha esta mañana.** Punto que falla: `cases/case_01_happy_path.md` y `case_03_failure.md` manejan porcentajes de sector sin fuente ni fecha — lo levanta el validador de la casa (`puerta-estrecha`, hallazgo `cifra-sin-fuente`). Un 20/20 en una pieza que nunca se ha ejecutado contra los datos reales de un cliente es una nota regalada, y la casa no las firma.
+Estado / Versión   : ACORDADO / v1.1.1
+Auditoría          : **19/20** (`validar_skill.py`, 2026-09-15, v1.1.1). El validador devuelve 20/20 mecánico; no se firma el 20 porque el punto 19 exige URLs verificadas una a una. Venía de 18/20 medido; ver CHANGELOG 1.1.1.
 Gates              : G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x]
 
 Notas:

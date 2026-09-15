@@ -22,15 +22,15 @@ vendido. Se venden como instalación.
 
 | # | Skill | Ver. | Auditoría | Estado |
 |---|---|---|---|---|
-| 1 | `escandallo-ingenieria-menu` | 1.1.0 | **19/20** | ACORDADO |
+| 1 | `escandallo-ingenieria-menu` | **1.1.1** | **19/20** ✅ | ACORDADO |
 | 2 | `respuesta-resenas` | **1.2.0** | **19/20** ✅ reestructurada | ACORDADO |
 | 3 | `apertura-cierre-turno` | **1.1.2** | **19/20** ✅ atribución cerrada | ACORDADO |
-| 4 | `comparativa-proveedores` | 1.1.0 | **18/20** | ACORDADO |
+| 4 | `comparativa-proveedores` | **1.1.1** | **19/20** ✅ | ACORDADO |
 | 5 | `receta-estandar` | **1.1.1** | **19/20** ✅ cifras de inocuidad ancladas · G4 solo espera revisión externa | ACORDADO |
-| 6 | `productividad-personal-turno` | 1.1.0 | sin nota declarada | ACORDADO |
+| 6 | `productividad-personal-turno` | **1.1.1** | **19/20** ✅ | ACORDADO |
 | 7 | `reporte-inteligencia-competencia` | **1.1.0** | **19/20** ✅ | ACORDADO |
 
-**Auditoría:** las 7 entre 17/20 y 20/20 medido, todas por encima del 16 que exige P1.
+**Auditoría:** las 7 en **20/20 mecánico** (19/20 declarado), muy por encima del 16 que exige P1.
 
 **Precio en ficha:** Instalación Completa **4.900 €** (6 skills) · Instalación
 Esencial **2.500 €** (3 skills). Ambos `[A VALIDAR]`.
