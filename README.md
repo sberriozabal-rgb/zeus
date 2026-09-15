@@ -8,9 +8,12 @@ Repositorio privado de skills de ZEUS / FORJA: activos ejecutables para
 hostelería y restauración, DJ y cabina, gestión y finanzas, más los códigos de
 Google Script y los contextos de la casa.
 
-**Este repositorio es privado y es el canal de entrega del catálogo.** La
-doctrina de la casa exige entregar por *acceso revocable a repositorio privado,
-nunca por adjunto*: el adjunto no se recupera al cancelar, el acceso sí.
+**Este repositorio es privado y es la fuente de verdad del catálogo.** La doctrina de la
+casa prefiere entregar por *acceso revocable a repositorio privado, nunca por adjunto*; desde
+el 15-sep-2026 el catálogo suelto (CABINA y línea neutra) se vende en **Gumroad**, que entrega
+por descarga. Es una desviación declarada, asumida a cambio de que Gumroad remita el IVA como
+*merchant of record* (decisión 8 en [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md)). Las
+instalaciones de hostelería siguen entregándose en la visita.
 
 ## Catálogo de venta
 
@@ -26,7 +29,8 @@ nunca por adjunto*: el adjunto no se recupera al cancelar, el acceso sí.
 - [`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md) — matriz G1–G5 y riesgos abiertos.
 - [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md) — **las decisiones tomadas**, con su razón.
 - [`venta/`](venta/) — kit de venta: **hoja de alta en Gumroad** (`GUMROAD-ALTA.md`), empaquetador
-  de productos (`empaquetar_gumroad.py`), guion de visita y mensajes listos.
+  de productos con validación previa (`empaquetar_gumroad.py`), consultas pendientes a terceros
+  (`CONSULTAS-PENDIENTES.md`), guion de visita y mensajes listos.
 
 ## Estructura
 

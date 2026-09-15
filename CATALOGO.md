@@ -1,9 +1,11 @@
 # Catálogo de venta — ZEUS / FORJA
 
 Estado a 15-sep-2026. **17 skills cargadas** en `skills/`, todas en estado
-`ACORDADO` con licencia que permite la venta. Este repositorio es privado: es el
-canal de entrega que exige la doctrina de la casa —*acceso revocable a
-repositorio privado, nunca por adjunto*—, no un escaparate público.
+`ACORDADO` con licencia que permite la venta. Este repositorio es privado: es la fuente de
+verdad del catálogo, no un escaparate público. El catálogo suelto se vende en **Gumroad** y se
+entrega por descarga del zip que genera `venta/empaquetar_gumroad.py` (decisión 8); la
+doctrina de *acceso revocable, nunca por adjunto* queda como preferencia declarada, no como
+canal vigente.
 
 > **Estado de venta.** Gates **G1, G3 y G5 levantados en las 17** y **G4 en 16/17**
 > (`receta-estandar` espera revisión externa de inocuidad). Tarifa ratificada el

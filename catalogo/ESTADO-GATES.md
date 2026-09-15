@@ -141,8 +141,10 @@ colegas. Lo defendible es la cadencia de actualización, el acceso revocable, la
 configuración con datos del cliente, el criterio de oficio y la velocidad de la
 fábrica. Quien venda protección del archivo, miente."*
 
-Por eso la entrega va por acceso revocable a este repositorio privado y no por
-adjunto.
+Por eso la doctrina prefiere la entrega por acceso revocable a este repositorio privado. Desde
+el 15-sep-2026 el catálogo suelto se entrega por descarga en Gumroad (decisión 8): se pierde la
+revocación y se gana el IVA resuelto. Lo demás de la lista —cadencia, configuración con datos
+del cliente, criterio de oficio, velocidad— no cambia.
 
 
 ### 5 · ~~`respuesta-resenas` envía la v1.0.0~~ ✅ RESUELTO (15-sep-2026, v1.2.0)

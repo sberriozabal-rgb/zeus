@@ -5,6 +5,9 @@ Uso:
     python3 venta/empaquetar_gumroad.py                 # todos los productos
     python3 venta/empaquetar_gumroad.py cabina-completa cobro-cartera-vencida
 
+Antes de escribir nada valida cada skill (frontmatter YAML con name, description
+y license; LICENSE.txt presente) y se niega a empaquetar si algo falla.
+
 Genera un .zip por producto en dist/ (ignorado por git). Cada zip lleva las
 skills completas —SKILL.md, references/, assets/, scripts/, cases/, README,
 CHANGELOG y LICENSE.txt— más un LEEME.txt con la instalación y la licencia.
@@ -88,8 +91,47 @@ def leeme(titulo, skills):
     return "\n".join(lineas) + "\n"
 
 
+def validar_skill(base):
+    """Comprobaciones mínimas antes de empaquetar: la doctrina manda ejecutar el
+    validador antes de empaquetar, sin excepción. Devuelve una lista de errores."""
+    import re
+    errores = []
+    skill_md = os.path.join(base, "SKILL.md")
+    if not os.path.exists(skill_md):
+        return [f"{base}: falta SKILL.md"]
+    if not os.path.exists(os.path.join(base, "LICENSE.txt")):
+        errores.append(f"{base}: falta LICENSE.txt")
+    texto = open(skill_md, encoding="utf-8").read()
+    m = re.match(r"^---\n(.*?)\n---\n", texto, re.S)
+    if not m:
+        return errores + [f"{base}: SKILL.md sin frontmatter"]
+    fm = m.group(1)
+    try:
+        import yaml  # opcional
+        datos = yaml.safe_load(fm)
+        if not isinstance(datos, dict):
+            errores.append(f"{base}: frontmatter no es un mapa YAML")
+        else:
+            for campo in ("name", "description", "license"):
+                if not datos.get(campo):
+                    errores.append(f"{base}: frontmatter sin `{campo}`")
+            if datos.get("name") and datos["name"] != os.path.basename(base):
+                errores.append(f"{base}: `name` ({datos['name']}) no coincide con la carpeta")
+    except ImportError:
+        # Sin PyYAML: comprobación de superficie. Instala pyyaml para la completa.
+        for campo in ("name:", "description:", "license:"):
+            if not re.search(rf"^{campo}", fm, re.M):
+                errores.append(f"{base}: frontmatter sin `{campo[:-1]}` (comprobación sin PyYAML)")
+    return errores
+
+
 def empaquetar(nombre):
     titulo, skills = PRODUCTOS[nombre]
+    errores = []
+    for ref in skills:
+        errores += validar_skill(os.path.join(SKILLS, ruta_skill(ref)))
+    if errores:
+        sys.exit("NO SE EMPAQUETA. Errores de validación:\n  " + "\n  ".join(errores))
     os.makedirs(DIST, exist_ok=True)
     destino = os.path.join(DIST, f"{nombre}.zip")
     n = 0
