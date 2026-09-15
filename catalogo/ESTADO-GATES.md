@@ -87,8 +87,9 @@ licencia de uso libre es un problema comercial real, no una cuestión de orden.
 **Retirada `checklist-turno`, se conserva `apertura-cierre-turno`** (la auditada, con ficha y
 licencia de venta). Decisión en [`DECISIONES.md`](DECISIONES.md).
 
-> ⚠️ Queda una acción que solo puede hacer Sergio: **borrarla de sus skills sincronizadas en su
-> cuenta de Claude**. Mientras siga instalada ahí, sigue siendo distribuible.
+✅ **Ejecutado el 15-sep-2026**, confirmado por Sergio: `checklist-turno`
+(`skill_01RfEvhHA5Ex5x9ufLoF8955`) borrada de la cuenta. Ya no hay una pieza con licencia de uso
+libre circulando al lado de la que se vende. **Riesgo cerrado.**
 
 ### 2 · Ninguna pieza ha pasado G2: cero ejecuciones contra datos reales de cliente
 

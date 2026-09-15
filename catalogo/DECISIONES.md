@@ -62,7 +62,7 @@ no es un producto: es una deuda que se paga todos los lunes.
 **Se reabre cuando haya 3 instalaciones vivas** y esté claro cuánto cuesta producir un reporte en
 condiciones reales.
 
-## 4 · `checklist-turno`: RETIRADA — DECIDIDA
+## 4 · `checklist-turno`: RETIRADA — ✅ EJECUTADA (15-sep-2026)
 
 Se retira `checklist-turno` y se conserva `apertura-cierre-turno`.
 
@@ -75,31 +75,19 @@ Mantener las dos significa vender una pieza dentro de una instalación de 2.500 
 gemela circula gratis. No es un problema de orden: es el argumento que te tumba la venta el día
 que un cliente lo descubra.
 
-### Cómo borrarla, sin equivocarse de skill
+### Ejecución — confirmada por Sergio el 15-sep-2026
 
-⚠️ **Esta acción solo puede hacerla Sergio.** `checklist-turno` no vive en este repositorio ni en
-el contenedor de trabajo: el directorio de skills de la sesión es **un espejo que se resincroniza
-desde la cuenta de Claude al arrancar**. Borrar la copia local no elimina nada — vuelve en la
-sesión siguiente, con la skill intacta en la cuenta y igual de distribuible.
+**Borrada de la cuenta.** `checklist-turno` (`skill_01RfEvhHA5Ex5x9ufLoF8955`, origen *custom*)
+ya no está instalada. Se conserva `apertura-cierre-turno`
+(`skill_01WqWzCVPVa5ioSQ2376NgyU`, origen *plugin* `plugin_013767vgp3Hip4YHgfZhddim`), que es la
+auditada en 17/20, con ficha comercial, CHANGELOG, casos y licencia de venta.
 
-El riesgo de borrar la equivocada es real, porque **las dos tienen la misma descripción palabra
-por palabra**. Se distinguen por el origen y por el identificador:
+Nota de trazabilidad: la ejecución **la confirma Sergio**. No es verificable desde la sesión de
+trabajo, porque el directorio de skills del contenedor es un espejo que se resincroniza al
+arrancar y refleja el estado del momento en que se creó, no el actual.
 
-| | `checklist-turno` — **se borra** | `apertura-cierre-turno` — **se conserva** |
-|---|---|---|
-| `skillId` | `skill_01RfEvhHA5Ex5x9ufLoF8955` | `skill_01WqWzCVPVa5ioSQ2376NgyU` |
-| Origen | **custom** — subida directamente a la cuenta | **plugin** — `plugin_013767vgp3Hip4YHgfZhddim` |
-| Creada | 2026-08-11 | 2026-09-05 |
-| Licencia | *"uso libre, incluido el comercial"* ❌ | *"uso comercial sin derecho de redistribución"* ✅ |
-| Auditoría | sin ficha ni nota | 17/20, ficha, CHANGELOG, casos |
-
-**La señal fiable en la interfaz es el origen:** `apertura-cierre-turno` viene de un plugin y
-debería mostrar esa marca; `checklist-turno` es una skill personalizada, sin plugin detrás. Se
-borra la personalizada, desde la gestión de skills de la cuenta en claude.ai.
-
-**Hasta que eso ocurra, esta decisión está documentada pero no ejecutada**, y la pieza sigue
-circulando con licencia de uso libre mientras su gemela se vende dentro de una instalación de
-2.500 €.
+Con esto queda cerrado el riesgo comercial: ya no hay una pieza con licencia de uso libre
+circulando al lado de su gemela, que se vende dentro de la Instalación Esencial de 2.500 €.
 
 ## 5 · Canal de cobro: POLAR — DECIDIDA
 

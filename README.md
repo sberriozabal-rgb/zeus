@@ -48,6 +48,6 @@ bloquea la venta — la instalación de hostelería se ejecuta precisamente así
 datos del propio cliente.
 
 No se han subido: `valoracion-lote-vino-inversion` (BORRADOR, 16/20), `checklist-turno`
-(**retirada**, duplicado con licencia de uso libre), `forja-fabrica-de-skills` y
+(**retirada y borrada de la cuenta**, duplicado con licencia de uso libre), `forja-fabrica-de-skills` y
 `zeus-skill-creator` (internos), y la línea `octava-*`. Motivos en
 [`CATALOGO.md`](CATALOGO.md#lo-que-no-se-ha-subido-y-por-qué).

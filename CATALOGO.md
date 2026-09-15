@@ -85,7 +85,7 @@ lo hace comprensible.
 | Activo | Motivo |
 |---|---|
 | `valoracion-lote-vino-inversion` | Estado **BORRADOR**, 16/20, cuatro de cinco gates abajo. La doctrina dice que por debajo de ACORDADO no sale de la fábrica. |
-| `checklist-turno` | ✅ **RETIRADA el 15-sep-2026.** Duplicado de `apertura-cierre-turno` con licencia de uso libre. Se conserva `apertura-cierre-turno`, que es la auditada y con licencia de venta. Ver [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md). |
+| `checklist-turno` | ✅ **RETIRADA Y BORRADA de la cuenta el 15-sep-2026.** Era duplicado de `apertura-cierre-turno` con licencia de uso libre. Se conserva `apertura-cierre-turno`, que es la auditada y con licencia de venta. Ver [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md). |
 | `forja-fabrica-de-skills` | Su propia ficha: *"No se vende. Activo interno."* |
 | `zeus-skill-creator` | Interno. Si se licencia: 490–990 €/año por puesto `[A VALIDAR]`. |
 | Línea `octava-*` (17 skills) | Sin metadatos de estado ni ficha comercial. Es el sistema operativo de OCTAVA, no catálogo de venta. |
