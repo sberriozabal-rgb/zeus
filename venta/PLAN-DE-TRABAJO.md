@@ -64,7 +64,7 @@ Nada de lo que sigue tiene sentido hasta que esto esté hecho. Son cuarenta minu
 | 1.2 | Alta de **CABINA COMPLETA (249)** y **cobro-cartera-vencida (79)** con la hoja `venta/GUMROAD-ALTA.md`, bloques 1 y 2. Precio en EUR si Gumroad lo admite; si sólo USD, la cifra se mantiene y se anota | Sergio | 30 min | Los dos enlaces directos responden, buscador interno apagado |
 | 1.3 | Comprarse el propio producto con descuento del 100 % | Sergio | 10 min | Ve el correo, el enlace y el zip como los ve el comprador |
 | 1.4 | Apuntar la comisión exacta del desglose de esa transacción | Sergio | 2 min | Se cierra el hueco de si el 10 % + 0,50 incluye el procesamiento de tarjeta |
-| 1.5 | Repositorio público `octava-skills` **sólo si hay una skill de captación que no esté en ningún paquete de pago**. Hoy no la hay: `apertura-cierre-turno` va dentro de la Instalación Esencial y no se regala | Sergio decide | — | Sin skill que cumpla, no se crea el repositorio |
+| 1.5 | ~~Repositorio público `octava-skills`~~ ✅ **Publicado el 15-sep por orden del titular** (decisión 10): <https://github.com/sberriozabal-rgb/octava-skills>, con las 17 fichas, el marketplace validado y `apertura-cierre-turno` abierta | Hecho | — | Los enlaces de compra de las fichas apuntan a Gumroad: el paso 1.2 los pone en marcha |
 | 1.6 | myClaude: **sólo** tras confirmar por escrito que actúa como *merchant of record* o asumir el IVA europeo. Sin exclusividad ni cuota de alta | Fábrica escribe · Sergio decide | 20 min | Respuesta escrita de myClaude en la carpeta |
 
 ### Fase 2 · La prueba — días 5 a 20
