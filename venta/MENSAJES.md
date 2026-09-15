@@ -19,7 +19,8 @@ sin fuente: si los tocas, mantén las dos reglas.
 >
 > **Presupuesto y contrato de evento** (49 €) — las seis cláusulas que se pagan cuando faltan.
 >
-> Las seis juntas, 249 €. [enlace]
+> Las seis juntas, 249 €. Ficha de cada una, con lo que NO hace, en
+> github.com/sberriozabal-rgb/octava-skills
 
 ### Respuesta a "¿y esto qué hace exactamente?"
 
@@ -32,7 +33,13 @@ sin fuente: si los tocas, mantén las dos reglas.
 > No te limpia la biblioteca —para eso está Lexicon, 199 USD, y es mejor que yo en eso—. Te dice
 > qué se arregla **primero** y por qué, que es lo que Lexicon no hace.
 
-### Respuesta a "¿me lo dejas probar?"
+### Respuesta a "¿me lo dejas probar?" (hostelería y B2B)
+
+> Hay una skill abierta del mismo taller, el checklist de apertura y cierre de turno. Se instala
+> en dos líneas desde github.com/sberriozabal-rgb/octava-skills y te sirve para ver cómo trabaja
+> una pieza de esta serie antes de pagar por ninguna.
+
+### Respuesta a "¿me lo dejas probar?" (DJ)
 
 > No hay versión de prueba, pero sí algo mejor: mándame tu XML y te devuelvo el parte de las tres
 > cosas más urgentes, gratis. Si te sirve, compras. Si no, te quedas el parte igual.
@@ -53,7 +60,8 @@ sin fuente: si los tocas, mantén las dos reglas.
 > Lo que más recupera no es reclamar antes: es dejar de reclamar sobre facturas que estaban mal
 > emitidas. Mientras el papel está mal, el reloj no corre a tu favor.
 >
-> 79 €, pago único. No sirve para cobrar a particulares.
+> 79 €, pago único. No sirve para cobrar a particulares. La ficha entera:
+> github.com/sberriozabal-rgb/octava-skills/blob/main/catalogo/cobro-cartera-vencida.md
 
 ### PACK CONTEXTO (89 €)
 

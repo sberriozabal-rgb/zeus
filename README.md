@@ -15,6 +15,12 @@ por descarga. Es una desviación declarada, asumida a cambio de que Gumroad remi
 *merchant of record* (decisión 8 en [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md)). Las
 instalaciones de hostelería siguen entregándose en la visita.
 
+## Escaparate público
+
+→ **<https://github.com/sberriozabal-rgb/octava-skills>** — fichas públicas de las 17 con precio y
+límites, marketplace de plugins y la skill abierta instalable. Generado desde este repositorio
+(decisión 10). Escaparate web: <https://sberriozabal-rgb.github.io/octava-skills/>.
+
 ## Catálogo de venta
 
 → **[`CATALOGO.md`](CATALOGO.md)** — 17 skills cargadas, en tres líneas.
