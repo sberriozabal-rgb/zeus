@@ -12,7 +12,7 @@ reales, uno sucio) · **G3** precio (comprador nombrado + cifra firmada) ·
 | `respuesta-resenas` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · v1.2.0 reestructurada |
 | `apertura-cierre-turno` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · v1.1.2 atribución cerrada |
 | `comparativa-proveedores` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 |
-| `receta-estandar` | ✅ | ❌ | ✅ | ❌ | ✅ | 19/20 · **G4 abajo solo por (a): revisión técnica externa** |
+| `receta-estandar` | ✅ | ❌ | ✅ | ❌ | ✅ | 19/20 · **G4 abajo solo por (a): revisión técnica externa** · no bloquea la venta desde la decisión 11 |
 | `productividad-personal-turno` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 |
 | `reporte-inteligencia-competencia` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · dentro de la Completa, sin suscripción hasta 3 instalaciones vivas |
 
