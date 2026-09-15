@@ -75,9 +75,31 @@ Mantener las dos significa vender una pieza dentro de una instalación de 2.500 
 gemela circula gratis. No es un problema de orden: es el argumento que te tumba la venta el día
 que un cliente lo descubra.
 
-> ⚠️ **Acción que solo puedes hacer tú:** `checklist-turno` vive en tu cuenta de Claude, no en
-> este repositorio. Hay que **borrarla de tus skills sincronizadas**. Aquí queda documentada como
-> retirada, pero mientras siga instalada en tu cuenta sigue siendo distribuible.
+### Cómo borrarla, sin equivocarse de skill
+
+⚠️ **Esta acción solo puede hacerla Sergio.** `checklist-turno` no vive en este repositorio ni en
+el contenedor de trabajo: el directorio de skills de la sesión es **un espejo que se resincroniza
+desde la cuenta de Claude al arrancar**. Borrar la copia local no elimina nada — vuelve en la
+sesión siguiente, con la skill intacta en la cuenta y igual de distribuible.
+
+El riesgo de borrar la equivocada es real, porque **las dos tienen la misma descripción palabra
+por palabra**. Se distinguen por el origen y por el identificador:
+
+| | `checklist-turno` — **se borra** | `apertura-cierre-turno` — **se conserva** |
+|---|---|---|
+| `skillId` | `skill_01RfEvhHA5Ex5x9ufLoF8955` | `skill_01WqWzCVPVa5ioSQ2376NgyU` |
+| Origen | **custom** — subida directamente a la cuenta | **plugin** — `plugin_013767vgp3Hip4YHgfZhddim` |
+| Creada | 2026-08-11 | 2026-09-05 |
+| Licencia | *"uso libre, incluido el comercial"* ❌ | *"uso comercial sin derecho de redistribución"* ✅ |
+| Auditoría | sin ficha ni nota | 17/20, ficha, CHANGELOG, casos |
+
+**La señal fiable en la interfaz es el origen:** `apertura-cierre-turno` viene de un plugin y
+debería mostrar esa marca; `checklist-turno` es una skill personalizada, sin plugin detrás. Se
+borra la personalizada, desde la gestión de skills de la cuenta en claude.ai.
+
+**Hasta que eso ocurra, esta decisión está documentada pero no ejecutada**, y la pieza sigue
+circulando con licencia de uso libre mientras su gemela se vende dentro de una instalación de
+2.500 €.
 
 ## 5 · Canal de cobro: POLAR — DECIDIDA
 
