@@ -49,6 +49,7 @@ PRODUCTOS = {
     "respaldo-proyecto-ia-cl": ("Respaldo cifrado de proyecto de IA", ["neutro/respaldo-proyecto-ia-cl"]),
     "universal-compilador-contexto": ("Compilador de contexto de proyecto", ["neutro/universal-compilador-contexto"]),
     "pack-contexto": ("PACK CONTEXTO", ["neutro/respaldo-proyecto-ia-cl", "neutro/universal-compilador-contexto"]),
+    "productividad-personal-turno": ("Productividad de personal por turno", ["hosteleria/productividad-personal-turno"]),
 }
 for k in CABINA:
     PRODUCTOS[k] = (k, [CABINA[k]])

@@ -214,3 +214,474 @@ Son las mismas de la doctrina y **no se negocian**:
 | 3 | Alta de los dos productos | Sergio · bloques 1 y 2, con `cabina-completa.zip` y `cobro-cartera-vencida.zip` de `empaquetar_gumroad.py`. Precios decididos: 249 y 79 |
 | 4 | `myclaude publish` | Sergio · con el paquete del informe; desde aquí `myclaude.sh` no responde. Antes, la consulta sobre IVA de `CONSULTAS-PENDIENTES.md` |
 | 5–7 | Las dos conversaciones de prueba | Sergio · es el hueco que importa |
+
+---
+
+## 6 · Alta del resto del catálogo
+
+Los dos productos de arriba van primero. Estos trece se dan de alta después, con el mismo
+formulario, la misma política de devolución (bloque 3) y las mismas tres reglas (bloque 4).
+Los `slug` son **exactamente** los que enlazan las fichas públicas de
+<https://github.com/sberriozabal-rgb/octava-skills>: si cambias uno, cambia también la ficha.
+Cada zip lo genera `empaquetar_gumroad.py` con el nombre del `slug`.
+
+Generado el 15-sep-2026 desde los `SKILL.md` y las fichas comerciales. Cada descripción sigue la
+plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, licencia.
+
+### CABINA CORE · 149
+
+| Campo | Valor |
+|---|---|
+| **Name** | CABINA CORE — skill para Claude |
+| **URL** | `cabina-core` |
+| **Price** | 149 |
+| **Content** | `dist/cabina-core.zip` → `python3 venta/empaquetar_gumroad.py cabina-core` |
+| **Summary** | Las tres que usa cualquier DJ con biblioteca y bolos recurrentes: qué va a fallar, qué pasó, y el set para el slot que te den. |
+
+**Description (pegar entera)**
+
+> **Las tres que usa cualquier DJ con biblioteca y bolos recurrentes: qué va a fallar, qué pasó, y el set para el slot que te den.**
+>
+> Tres skills para Claude que trabajan sobre tus exports de rekordbox o Serato, sin tocar tu biblioteca: la auditoría que prioriza por riesgo de cabina, el parte de bolo con la hora exacta y el set reordenado para el slot que te toque.
+>
+> **Qué llevas**
+>
+> - **Auditoría de biblioteca** — Te digo qué tracks te van a fallar en el próximo bolo, y en qué orden arreglarlos.
+> - **Parte de bolo** — Qué se cortó pronto, qué se sostuvo y dónde saltó el tempo. Con la hora exacta, no con lo que recuerdes.
+> - **Set por encargo** — Te cambian el slot a las siete de la tarde y a las ocho tienes el set reordenado, con el por qué de cada transición.
+>
+> **Qué NO hace**
+>
+> - **Diagnostica, no repara.** Es decisión deliberada: reparar exige escribir en la base de datos propietaria (rekordbox `master.db` es SQLite cifrada con SQLCipher4; los `.crate` de Serato son binarios documentados solo por ingeniería inversa comunitaria) y hacerlo mal rompe playlists, cue points y beatgrids.
+> - No detecta clave ni BPM que falten: eso exige decodificar el audio. Lo hace el análisis del propio software o Mixed In Key.
+> - No sabe si un MP3 está corrupto. Ve metadatos, no decodifica.
+> - No transporta My Tags ni playlists inteligentes: el XML de rekordbox no los incluye, está documentado por AlphaTheta (<https://rekordbox.com/>), y si el DJ organiza así le falta información en el parte.
+>
+> **Requisitos**
+>
+> - **Obligatorio:** `collection.xml` de rekordbox, exportado con `File > Export Collection in xml format`.
+> - **Recomendado:** fecha y tipo del próximo bolo. Cambia por completo la priorización: sin ella el parte ordena por riesgo genérico, con ella ordena por lo que suena antes.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### CABINA EVENTOS · 99
+
+| Campo | Valor |
+|---|---|
+| **Name** | CABINA EVENTOS — skill para Claude |
+| **URL** | `cabina-eventos` |
+| **Price** | 99 |
+| **Content** | `dist/cabina-eventos.zip` → `python3 venta/empaquetar_gumroad.py cabina-eventos` |
+| **Summary** | Las dos piezas del bolo de evento: qué pides al repertorio y qué firmas antes de tocar. |
+
+**Description (pegar entera)**
+
+> **Las dos piezas del bolo de evento: qué pides al repertorio y qué firmas antes de tocar.**
+>
+> Dos skills para Claude para el DJ de bodas y eventos: la lista del cliente cruzada contra tu biblioteca con el documento ya escrito, y el presupuesto desglosado con las seis cláusulas que se pagan cuando faltan.
+>
+> **Qué llevas**
+>
+> - **Peticiones a repertorio** — Qué tengo, qué hay que comprar, qué está en una versión que no sirve y qué me han pedido que no ponga. Con el documento para el cliente ya escrito.
+> - **Presupuesto y contrato de evento** — Las seis cláusulas que se pagan cuando faltan, y el presupuesto desglosado para que negociar no sea bajar el margen.
+>
+> **Qué NO hace**
+>
+> - **No es asesoramiento jurídico.** Produce borradores de práctica sectorial, y la validez de cada cláusula depende de la jurisdicción. El uso recurrente exige revisión de abogado.
+> - No es asesoramiento fiscal. Los impuestos se indican de forma explícita en el presupuesto, pero el tipo aplicable lo confirma el asesor del DJ.
+> - Los baremos son **contexto de mercado, no tarifa recomendada**. Sirven para saber si estás fuera de precio; el precio lo fija el DJ con su coste y su agenda.
+> - **No se aplica el baremo de un país a otro** sin declararlo como referencia importada. El dato de The Knot es de EE. UU. y no vale para España sin ese aviso.
+>
+> **Requisitos**
+>
+> - **Obligatorio · Lista del cliente**, pegada tal cual. Vale WhatsApp con marcas de hora, email, lista numerada, prosa continua o transcripción de audio. **No se pide que la limpien: limpiarla es el trabajo.**
+> - **Obligatorio · Export de biblioteca**: `collection.xml` de rekordbox, o CSV con al menos `artist` y `title` (Lexicon, Serato, Engine DJ y VirtualDJ exportan CSV).
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Auditoría de biblioteca · 49
+
+| Campo | Valor |
+|---|---|
+| **Name** | Auditoría de biblioteca — skill para Claude |
+| **URL** | `auditoria-de-biblioteca` |
+| **Price** | 49 |
+| **Content** | `dist/auditoria-de-biblioteca.zip` → `python3 venta/empaquetar_gumroad.py auditoria-de-biblioteca` |
+| **Summary** | Te digo qué tracks te van a fallar en el próximo bolo, y en qué orden arreglarlos. |
+
+**Description (pegar entera)**
+
+> **Te digo qué tracks te van a fallar en el próximo bolo, y en qué orden arreglarlos.**
+>
+> Convierte **un `collection.xml` exportado de rekordbox** en **un parte de estado con los hallazgos agrupados por categoría, un índice de salud de 0 a 100 y un plan de reparación ordenado por riesgo real en cabina**, para **un DJ de club, móvil o residente que prepara un bolo o migra de equipo**, en **menos de 10 minutos de atención**.
+>
+> **Qué NO hace**
+>
+> - **Diagnostica, no repara.** Es decisión deliberada: reparar exige escribir en la base de datos propietaria (rekordbox `master.db` es SQLite cifrada con SQLCipher4; los `.crate` de Serato son binarios documentados solo por ingeniería inversa comunitaria) y hacerlo mal rompe playlists, cue points y beatgrids.
+> - No detecta clave ni BPM que falten: eso exige decodificar el audio. Lo hace el análisis del propio software o Mixed In Key.
+> - No sabe si un MP3 está corrupto. Ve metadatos, no decodifica.
+> - No transporta My Tags ni playlists inteligentes: el XML de rekordbox no los incluye, está documentado por AlphaTheta (<https://rekordbox.com/>), y si el DJ organiza así le falta información en el parte.
+>
+> **Requisitos**
+>
+> - **Obligatorio:** `collection.xml` de rekordbox, exportado con `File > Export Collection in xml format`.
+> - **Recomendado:** fecha y tipo del próximo bolo. Cambia por completo la priorización: sin ella el parte ordena por riesgo genérico, con ella ordena por lo que suena antes.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Parte de bolo · 49
+
+| Campo | Valor |
+|---|---|
+| **Name** | Parte de bolo — skill para Claude |
+| **URL** | `postmortem-de-bolo` |
+| **Price** | 49 |
+| **Content** | `dist/postmortem-de-bolo.zip` → `python3 venta/empaquetar_gumroad.py postmortem-de-bolo` |
+| **Summary** | Qué se cortó pronto, qué se sostuvo y dónde saltó el tempo. Con la hora exacta, no con lo que recuerdes. |
+
+**Description (pegar entera)**
+
+> **Qué se cortó pronto, qué se sostuvo y dónde saltó el tempo. Con la hora exacta, no con lo que recuerdes.**
+>
+> Convierte **un export de historial de sesión (rekordbox o Serato) más el relato del DJ sobre la sala** en **un parte de aprendizaje con los hechos verificables separados de las hipótesis, y de una a tres decisiones concretas para el próximo bolo**, para **un DJ residente, móvil o de club que repite tipo de evento o sala**, en **menos de 20 minutos de atención**.
+>
+> **Qué NO hace**
+>
+> - **El fichero no sabe si había gente.** No hay forma de saber cuánta gente había ni cómo respondió: eso lo aporta el DJ o no existe en el parte.
+> - No evalúa técnica de mezcla ni calidad de la selección musical: eso exigiría oír la grabación, y esta skill no oye.
+> - Sin historial exportado no hay análisis. Un set grabado en audio no sirve de entrada.
+> - Sin horas en el export, el parte pierde tiempo en el aire, curva de tempo y localización de momentos, que es aproximadamente la mitad de su valor.
+>
+> **Requisitos**
+>
+> - **Obligatorio:** historial exportado en CSV o TSV, con al menos título y hora. En rekordbox está en la pestaña Historial, botón derecho sobre la sesión, exportar. En Serato, en History, botón Export (csv o txt). Cualquier CSV con `title,artist,start time` vale.
+> - **Muy recomendable:** el relato de la sala, que se obtiene con las cinco preguntas de `references/preguntas-de-sala.md`: a qué hora se llenó y se vació, si hubo algún momento de pérdida, cuál fue el mejor momento, qué sorprendió, y en qué condiciones se tocó.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Set por encargo · 49
+
+| Campo | Valor |
+|---|---|
+| **Name** | Set por encargo — skill para Claude |
+| **URL** | `set-por-encargo` |
+| **Price** | 49 |
+| **Content** | `dist/set-por-encargo.zip` → `python3 venta/empaquetar_gumroad.py set-por-encargo` |
+| **Summary** | Te cambian el slot a las siete de la tarde y a las ocho tienes el set reordenado, con el por qué de cada transición. |
+
+**Description (pegar entera)**
+
+> **Te cambian el slot a las siete de la tarde y a las ocho tienes el set reordenado, con el por qué de cada transición.**
+>
+> Convierte **un pool de tracks exportado más el brief del slot** en **un set ordenado con nota de transición para cada par y una lista de huecos declarados**, para **un DJ de club, residente, móvil o de eventos que prepara un bolo concreto**, en **menos de 15 minutos de atención**.
+>
+> **Qué NO hace**
+>
+> - **No oye.** Lee clave, BPM y energía del export; no los detecta. Si el análisis de origen trae la clave mal, el set saldrá mal y no hay forma de detectarlo desde aquí.
+> - No corrige claves mal detectadas: eso exige audio y es trabajo de Mixed In Key.
+> - No decide qué track suena mejor. Calcula compatibilidad de datos, que no es lo mismo que compatibilidad musical.
+> - No mezcla ni genera transiciones: prepara el orden, no ejecuta nada en cabina.
+>
+> **Requisitos**
+>
+> - **Obligatorio · Pool**: `collection.xml` de rekordbox, o CSV con columnas `artista,titulo,bpm,key` y opcionalmente `energia,genero,duracion_s`. **Hay que filtrarlo antes**: el pool es la música candidata a ese bolo, no la biblioteca entera.
+> - **Obligatorio · Brief del slot**: al menos duración y franja. Idealmente también BPM de entrada y de salida, público, prohibiciones del cliente y tracks obligatorios.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Peticiones a repertorio · 49
+
+| Campo | Valor |
+|---|---|
+| **Name** | Peticiones a repertorio — skill para Claude |
+| **URL** | `peticiones-a-repertorio` |
+| **Price** | 49 |
+| **Content** | `dist/peticiones-a-repertorio.zip` → `python3 venta/empaquetar_gumroad.py peticiones-a-repertorio` |
+| **Summary** | Qué tengo, qué hay que comprar, qué está en una versión que no sirve y qué me han pedido que no ponga. Con el documento para el cliente ya escrito. |
+
+**Description (pegar entera)**
+
+> **Qué tengo, qué hay que comprar, qué está en una versión que no sirve y qué me han pedido que no ponga. Con el documento para el cliente ya escrito.**
+>
+> Convierte **una lista de peticiones en lenguaje natural más un export de la biblioteca del DJ** en **un informe de cuatro cubos (TENGO / NO TENGO / DUDOSO / PROHIBIDO) con lista de compra priorizada y documento de confirmación redactado para el cliente**, para **un DJ móvil que prepara un evento contratado**, en **menos de 10 minutos de trabajo asistido**.
+>
+> **Qué NO hace**
+>
+> - **No oye.** No elige qué versión suena mejor: propone por contexto de evento y la decisión la firma una persona.
+> - No consulta tiendas digitales ni verifica disponibilidad comercial: genera la lista de compra, no compra ni comprueba que el track esté a la venta.
+> - No sirve para peticiones que llegan **durante** el evento. Esto es preparación, no tiempo real.
+> - Sin biblioteca exportable solo entrega parseo, prohibidos y agrupación, y lo declara. Es aproximadamente medio informe.
+>
+> **Requisitos**
+>
+> - **Obligatorio · Lista del cliente**, pegada tal cual. Vale WhatsApp con marcas de hora, email, lista numerada, prosa continua o transcripción de audio. **No se pide que la limpien: limpiarla es el trabajo.**
+> - **Obligatorio · Export de biblioteca**: `collection.xml` de rekordbox, o CSV con al menos `artist` y `title` (Lexicon, Serato, Engine DJ y VirtualDJ exportan CSV).
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Presupuesto y contrato de evento · 49
+
+| Campo | Valor |
+|---|---|
+| **Name** | Presupuesto y contrato de evento — skill para Claude |
+| **URL** | `presupuesto-y-contrato-evento` |
+| **Price** | 49 |
+| **Content** | `dist/presupuesto-y-contrato-evento.zip` → `python3 venta/empaquetar_gumroad.py presupuesto-y-contrato-evento` |
+| **Summary** | Las seis cláusulas que se pagan cuando faltan, y el presupuesto desglosado para que negociar no sea bajar el margen. |
+
+**Description (pegar entera)**
+
+> **Las seis cláusulas que se pagan cuando faltan, y el presupuesto desglosado para que negociar no sea bajar el margen.**
+>
+> Convierte **una consulta de cliente de evento (fecha, lugar, tipo, horario, extras)** en **presupuesto desglosado por conceptos, contrato con las cláusulas marcadas por nivel de riesgo y rider técnico del espacio concreto**, para **un DJ móvil o de eventos que responde a un lead sin manager ni agencia**, en **menos de 30 minutos de atención**.
+>
+> **Qué NO hace**
+>
+> - **No es asesoramiento jurídico.** Produce borradores de práctica sectorial, y la validez de cada cláusula depende de la jurisdicción. El uso recurrente exige revisión de abogado.
+> - No es asesoramiento fiscal. Los impuestos se indican de forma explícita en el presupuesto, pero el tipo aplicable lo confirma el asesor del DJ.
+> - Los baremos son **contexto de mercado, no tarifa recomendada**. Sirven para saber si estás fuera de precio; el precio lo fija el DJ con su coste y su agenda.
+> - **No se aplica el baremo de un país a otro** sin declararlo como referencia importada. El dato de The Knot es de EE. UU. y no vale para España sin ese aviso.
+>
+> **Requisitos**
+>
+> - **Mínimo imprescindible:** fecha, tipo de evento, ciudad o lugar, y duración. Con eso ya se produce.
+> - **Recomendado:** número de invitados (determina el equipo y el precio), espacio y si es interior o exterior (exterior obliga a plan B de lluvia y más potencia), hora de inicio y fin (define horas extra y recargo nocturno).
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Demo a sello · 49
+
+| Campo | Valor |
+|---|---|
+| **Name** | Demo a sello — skill para Claude |
+| **URL** | `demo-a-sello` |
+| **Price** | 49 |
+| **Content** | `dist/demo-a-sello.zip` → `python3 venta/empaquetar_gumroad.py demo-a-sello` |
+| **Summary** | El canal que pide cada sello, la frase que lo distingue de los otros cien envíos, y la fecha correcta para que Beatport y Spotify lleguen a tiempo. |
+
+**Description (pegar entera)**
+
+> **El canal que pide cada sello, la frase que lo distingue de los otros cien envíos, y la fecha correcta para que Beatport y Spotify lleguen a tiempo.**
+>
+> Convierte **un track terminado más los datos del artista** en **una lista priorizada de sellos con su canal exacto, un texto de envío por sello, el clip de 20 segundos seleccionado y un calendario de envío coordinado con los plazos de tienda**, para **un productor o DJ que manda demos sin manager**, en **menos de 45 minutos de atención**.
+>
+> **Qué NO hace**
+>
+> - **No compra una firma.** Ordena el envío y elimina los descartes automáticos, que son de forma. El criterio artístico del sello no se puede gestionar desde aquí.
+> - No garantiza respuesta, escucha ni publicación. **El silencio es la respuesta por defecto** y así se declara antes de enviar nada.
+> - No produce ni masteriza. Si el track no está terminado, la skill se detiene en el paso 1.
+> - La lista de canales es **una foto de agosto de 2026**: los sellos cambian de política y el canal se verifica en su web antes de cada envío.
+>
+> **Requisitos**
+>
+> - **Obligatorio:** track terminado y **masterizado**. Los sellos solo aceptan trabajo terminado; si no lo está y aun así se envía, se declara.
+> - **Obligatorio:** género, BPM y clave.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### PACK CONTEXTO · 89
+
+| Campo | Valor |
+|---|---|
+| **Name** | PACK CONTEXTO — skill para Claude |
+| **URL** | `pack-contexto` |
+| **Price** | 89 |
+| **Content** | `dist/pack-contexto.zip` → `python3 venta/empaquetar_gumroad.py pack-contexto` |
+| **Summary** | Saca tu proyecto de IA a un paquete cifrado y conviértelo en una biblioteca ordenada con la lista de lo que aún no has decidido. |
+
+**Description (pegar entera)**
+
+> **Saca tu proyecto de IA a un paquete cifrado y conviértelo en una biblioteca ordenada con la lista de lo que aún no has decidido.**
+>
+> Las dos mitades de la misma cadena: el respaldo asegura el material antes de que desaparezca; el compilador lo hace comprensible, ordenado por temas y con la versión vigente marcada.
+>
+> **Qué llevas**
+>
+> - **Respaldo cifrado de proyecto de IA** — Te llevas tu proyecto entero cifrado, con el guion para rehacerlo y la lista de lo que no cabía. Probado en frío antes de que borres nada.
+> - **Compilador de contexto de proyecto** — Todo lo que hay en tu carpeta, ordenado por temas, con la versión vigente marcada y la lista de lo que aún no has decidido.
+>
+> **Qué NO hace**
+>
+> - **No migra nada.** Anthropic no soporta migrar datos entre cuentas personales, y esta skill no inventa un botón que no existe: produce un paquete de **reconstrucción manual**.
+> - **No respalda secretos.** Las credenciales son C3 y **se rotan, no se respaldan**.
+> - El borrador automático de chats **cita y cuenta, no interpreta**. Sin la lectura humana es un índice, y venderlo como resumen es prometer lo que el producto no hace.
+> - Sin el export oficial no hay historial de chats, y esa capa entera va a `HUECOS.md`. El resto del respaldo sí se hace.
+>
+> **Requisitos**
+>
+> - **Obligatorio:** acceso vigente al proyecto. El respaldo es una operación del presente: el que se aplaza no existe.
+> - **Obligatorio:** el **export oficial** de los datos de Claude, solicitado y descargado **antes de 24 horas**, porque su enlace caduca. Es la única vía al historial de chats.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Reporte semanal de inteligencia competitiva · 49
+
+| Campo | Valor |
+|---|---|
+| **Name** | Reporte semanal de inteligencia competitiva — skill para Claude |
+| **URL** | `reporte-inteligencia` |
+| **Price** | 49 |
+| **Content** | `dist/reporte-inteligencia.zip` → `python3 venta/empaquetar_gumroad.py reporte-inteligencia` |
+| **Summary** | Seis competidores, ocho métricas y tres acciones para esta semana. Con la cita y la fecha de cada cosa, para que puedas comprobarlo. |
+
+**Description (pegar entera)**
+
+> **Seis competidores, ocho métricas y tres acciones para esta semana. Con la cita y la fecha de cada cosa, para que puedas comprobarlo.**
+>
+> Convierte **el nombre de una marca y su plaza** en **un reporte semanal de 10 secciones con panel congelado de 6 competidores, tabla de brecha en 8 métricas y 3 acciones de 7 días con dueño y métrica de verificación**, para **quien dirige marca, operación o el negocio entero**.
+>
+> **Qué NO hace**
+>
+> - **El modo BÚSQUEDA no cierra una línea base.** Alcanza 2 de 8 métricas y se emite siempre con `ESTADO_LINEA_BASE: ABIERTA`.
+> - No usa datos obtenidos saltándose términos de uso ni muros de acceso: el reporte se sostiene sobre lo que cualquiera puede ver.
+> - No identifica ni nombra a ningún reseñador. Analiza patrones, no personas.
+> - **No recomienda solicitar, comprar, incentivar ni suprimir reseñas**, ni propias ni del competidor: está prohibido por norma en EE. UU. y por política de plataforma en todos los mercados.
+>
+> **Requisitos**
+>
+> - **Obligatorio:** el nombre de la marca. Nada más es obligatorio.
+> - **Recomendado:** ciudad o dirección. Es la **única** pregunta que se hace si el nombre es ambiguo, y nunca se hacen más de dos.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Respaldo cifrado de proyecto de IA · 49
+
+| Campo | Valor |
+|---|---|
+| **Name** | Respaldo cifrado de proyecto de IA — skill para Claude |
+| **URL** | `respaldo-proyecto-ia-cl` |
+| **Price** | 49 |
+| **Content** | `dist/respaldo-proyecto-ia-cl.zip` → `python3 venta/empaquetar_gumroad.py respaldo-proyecto-ia-cl` |
+| **Summary** | Te llevas tu proyecto entero cifrado, con el guion para rehacerlo y la lista de lo que no cabía. Probado en frío antes de que borres nada. |
+
+**Description (pegar entera)**
+
+> **Te llevas tu proyecto entero cifrado, con el guion para rehacerlo y la lista de lo que no cabía. Probado en frío antes de que borres nada.**
+>
+> Convierte **el contenido de un Proyecto de Claude —instrucciones, base de conocimiento, descargas y adjuntos, skills asociadas y el historial de chats del export oficial—** en **un paquete cifrado AES-256 con archivo maestro `RESTAURAR-TODO.md`, resumen de chats, checksums SHA-256 y guion de reconstrucción**, para **quien administra el proyecto**, en **30 a 60 minutos por proyecto de hasta 100 documentos**, una vez recibido el export.
+>
+> **Qué NO hace**
+>
+> - **No migra nada.** Anthropic no soporta migrar datos entre cuentas personales, y esta skill no inventa un botón que no existe: produce un paquete de **reconstrucción manual**.
+> - **No respalda secretos.** Las credenciales son C3 y **se rotan, no se respaldan**.
+> - El borrador automático de chats **cita y cuenta, no interpreta**. Sin la lectura humana es un índice, y venderlo como resumen es prometer lo que el producto no hace.
+> - Sin el export oficial no hay historial de chats, y esa capa entera va a `HUECOS.md`. El resto del respaldo sí se hace.
+>
+> **Requisitos**
+>
+> - **Obligatorio:** acceso vigente al proyecto. El respaldo es una operación del presente: el que se aplaza no existe.
+> - **Obligatorio:** el **export oficial** de los datos de Claude, solicitado y descargado **antes de 24 horas**, porque su enlace caduca. Es la única vía al historial de chats.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Compilador de contexto de proyecto · 49
+
+| Campo | Valor |
+|---|---|
+| **Name** | Compilador de contexto de proyecto — skill para Claude |
+| **URL** | `universal-compilador-contexto` |
+| **Price** | 49 |
+| **Content** | `dist/universal-compilador-contexto.zip` → `python3 venta/empaquetar_gumroad.py universal-compilador-contexto` |
+| **Summary** | Todo lo que hay en tu carpeta, ordenado por temas, con la versión vigente marcada y la lista de lo que aún no has decidido. |
+
+**Description (pegar entera)**
+
+> **Todo lo que hay en tu carpeta, ordenado por temas, con la versión vigente marcada y la lista de lo que aún no has decidido.**
+>
+> Convierte **una carpeta de trabajo completa, el historial de chats del proyecto y el conocimiento ya cargado en él** en **un único ZIP `<PROYECTO>_CONTEXTO_<fecha>.zip` con la biblioteca por dominios, el resumen ejecutivo, el resumen de chats, el resumen de contexto y el inventario de documentos con su ubicación**, para **quien dirige el proyecto**, en **una sesión de 60 a 120 minutos para una carpeta de hasta 150 archivos**.
+>
+> **Qué NO hace**
+>
+> - **No opina sobre el proyecto ni corrige sus cifras.** Extrae y ordena lo que existe; los conflictos y los huecos se devuelven, no se resuelven.
+> - **No modifica la carpeta original.** Todo lo nuevo vive en `CONTEXTO`.
+> - La **Ruta A de chats es parcial por diseño**: usa las herramientas de la sesión y no garantiza cobertura completa. La completa exige el ZIP del export oficial.
+> - El conocimiento ya cargado en el proyecto se trata como **compilación anterior**, no como fuente primaria: compilar sobre un resumen es copia de copia y hereda el error.
+>
+> **Requisitos**
+>
+> - **Obligatorio:** la carpeta de trabajo con todos sus archivos. Por defecto se busca en `/home/claude/fuente`, y el nombre del proyecto se toma del nombre de la carpeta si no se indica otro.
+> - **Recomendado:** el historial de chats. Hay dos rutas y **rinden cosas distintas**: la Ruta A usa las herramientas de la sesión y es **parcial por diseño**; la Ruta B usa el ZIP del export oficial y es completa.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+### Productividad de personal por turno · 199
+
+| Campo | Valor |
+|---|---|
+| **Name** | Productividad de personal por turno — skill para Claude |
+| **URL** | `productividad-personal-turno` |
+| **Price** | 199 |
+| **Content** | `dist/productividad-personal-turno.zip` → `python3 venta/empaquetar_gumroad.py productividad-personal-turno` |
+| **Summary** | Sabes en qué franjas pagas plantilla sin venta y en cuáles pierdes venta por falta de mano. |
+
+**Description (pegar entera)**
+
+> **Sabes en qué franjas pagas plantilla sin venta y en cuáles pierdes venta por falta de mano.**
+>
+> Convierte el export de ventas por franja horaria y el parte de horas del mismo periodo en un informe de dos páginas para el dueño o el encargado, en unos 20 minutos: ventas por hora trabajada y coste de personal sobre venta sin IVA de cada franja y de cada día de la semana, los euros de exceso del periodo, qué parte de ese exceso es de horas fijas que no se pueden tocar, y una propuesta de escalonar entradas y salidas con las horas concretas que recupera.
+>
+> **Qué NO hace**
+>
+> - **No calcula el cuadrante legal ni sustituye a asesoría laboral.** No interpreta convenio colectivo, no valida jornada máxima, descansos entre jornadas, festivos, horas complementarias ni registro horario. Toda modificación de jornada, horario o turno se valida con **asesoría laboral o graduado social (España)** o con **abogado laboral (México)** y, donde exista, con la representación legal de los trabajadores. Este informe prepara la decisión; no la autoriza.
+> - No calcula nóminas, finiquitos, indemnizaciones ni cotizaciones. Los factores de coste hora son de gestión, no de nómina.
+> - No propone despidos ni evalúa a personas. Trabaja con franjas y puestos. Si el encargo pide señalar a alguien, queda fuera de alcance y se dice.
+> - No sustituye conocer el local: sin saber qué se hace en cada franja, los porcentajes engañan y el informe lo declara en vez de rellenar el hueco.
+>
+> **Requisitos**
+>
+> - **Ventas por franja horaria, sin IVA** (export del TPV: fecha, franja, importe) — es el dato obligatorio. Si el export viene con IVA, se pide el tipo aplicado y se descuenta antes de calcular nada; si no se conoce, se calcula igual y se marca en la cabecera del informe que los porcentajes de coste están inflados por el IVA incluido.
+> - **Horas trabajadas de esa misma franja** (fichajes, parte de horas o cuadrante ejecutado) — dato obligatorio. Sin ventas y horas del mismo periodo no hay productividad: hay facturación, que es otra cosa, y el activo se detiene y lo dice.
+>
+> **Licencia**
+>
+> Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
