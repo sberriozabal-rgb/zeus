@@ -30,7 +30,8 @@ instalaciones de hostelería siguen entregándose en la visita.
 - [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md) — **las decisiones tomadas**, con su razón.
 - [`venta/`](venta/) — kit de venta: **hoja de alta en Gumroad** (`GUMROAD-ALTA.md`), empaquetador
   de productos con validación previa (`empaquetar_gumroad.py`), consultas pendientes a terceros
-  (`CONSULTAS-PENDIENTES.md`), guion de visita y mensajes listos.
+  (`CONSULTAS-PENDIENTES.md`), guion de visita, mensajes listos y **locuciones**
+  generadas en local (`venta/locuciones/`).
 
 ## Estructura
 
