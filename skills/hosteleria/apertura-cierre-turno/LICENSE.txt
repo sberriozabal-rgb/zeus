@@ -1,0 +1,28 @@
+Licencia de uso comercial — apertura-cierre-turno v1.1.1
+
+Copyright 2026 Sergio Berriozabal Serrano. Todos los derechos reservados.
+
+Este activo se concede en uso mediante acceso revocable (suscripción o
+instalación con acuerdo vigente). El uso comercial está permitido
+exclusivamente para el comprador nombrado en el Anexo A de esta skill
+o su organización.
+
+PROHIBIDO sin autorización escrita de FORJA:
+- Redistribuir, revender, sublicenciar o publicar este archivo o
+  cualquier derivado sustancial del mismo a terceros.
+- Eliminar o alterar este aviso de licencia.
+- Usar el nombre, marca o materiales de FORJA para promocionar
+  productos de terceros.
+
+PERMITIDO:
+- Ejecutar esta skill dentro de la organización del comprador.
+- Adaptar los umbrales y plantillas internas a los datos reales del
+  negocio del comprador, para uso interno de ese negocio.
+
+Esta skill no deriva de ningún material source-available con
+prohibición de venta. No usa marcas de terceros en su nombre técnico
+ni comercial.
+
+Sin garantía de ningún tipo. Ver límites declarados en SKILL.md,
+sección "Límites". No sustituye asesoría profesional colegiada en
+materia de higiene alimentaria, laboral, fiscal o legal.

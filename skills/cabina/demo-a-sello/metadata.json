@@ -1,0 +1,38 @@
+{
+  "name": "demo-a-sello",
+  "commercial_name": "Demo a sello",
+  "version": "1.1.0",
+  "author": "Sergio Berriozábal Serrano",
+  "linea": "CABINA",
+  "paquete": "CABINA CARRERA",
+  "peldano": "P1",
+  "motor": "A",
+  "estado": "ACORDADO",
+  "precio_eur": 49,
+  "fecha_revision": "2026-09-15",
+  "entregable": "plan-de-envio-a-sellos",
+  "enlaza_con": [
+    "postmortem-de-bolo"
+  ],
+  "gates": {
+    "G1": false,
+    "G2": false,
+    "G3": true,
+    "G4": true,
+    "G5": false
+  },
+  "fuente_umbral": "Creditos LabelRadar: 5 gratis/mes y 5 por envio = 1 demo/mes (help.labelradar.com). PRO 70 creditos, 179,88 USD/ano (beatportal.com, abril 2025 - REVERIFICAR). Volumen de buzon: mas de cien demos al dia segun Armada (armadamusic.com). Toolroom solo acepta LabelRadar (toolroomrecords.com/demos). Plazos: Beatport 3 semanas (greenroomsupport.beatport.com), Spotify 7 dias y una sola cancion (support.spotify.com)",
+  "carencias_declaradas": [
+    "G2 pendiente: sin envios reales registrados de un comprador que haya pagado",
+    "La lista de canales por sello es una foto de agosto de 2026: las politicas de demo cambian sin aviso",
+    "El precio de LabelRadar PRO procede de una nota de abril de 2025 y debe reverificarse antes de recomendar la suscripcion"
+  ],
+  "license": "Ver LICENSE.txt — uso permitido al comprador, prohibida la redistribucion",
+  "spec": {
+    "estandar": "Agent Skills",
+    "url": "https://agentskills.io/specification"
+  },
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "ZEUS / FORJA"
+}

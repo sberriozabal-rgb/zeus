@@ -1,0 +1,57 @@
+{
+  "local": "Taberna de prueba",
+  "periodo": "2026-07",
+  "iva_defecto": 0.10,
+  "food_cost_real": 0.362,
+  "platos": [
+    {"nombre": "Arroz de marisco (2p)", "familia": "principales", "precio_carta": 42.00, "unidades_vendidas": 210, "costes_ocultos_pct": 0.07,
+     "ingredientes": [
+       {"nombre": "Gamba entera", "precio_kg": 22.00, "gramos_en_plato": 120, "rendimiento": 0.55},
+       {"nombre": "Mejillon con concha", "precio_kg": 3.50, "gramos_en_plato": 100, "rendimiento": 0.30},
+       {"nombre": "Arroz bomba", "precio_kg": 3.90, "gramos_en_plato": 320, "merma_coccion": 0.0},
+       {"nombre": "Fumet y sofrito", "precio_kg": 4.20, "gramos_en_plato": 400}
+     ]},
+    {"nombre": "Merluza a la plancha", "familia": "principales", "precio_carta": 23.00, "unidades_vendidas": 165, "costes_ocultos_pct": 0.06,
+     "ingredientes": [
+       {"nombre": "Merluza entera", "precio_kg": 12.50, "gramos_en_plato": 190, "rendimiento": 0.52, "merma_coccion": 0.18},
+       {"nombre": "Patata", "precio_kg": 1.30, "gramos_en_plato": 130, "rendimiento": 0.82},
+       {"nombre": "Aceite oliva", "precio_kg": 9.20, "gramos_en_plato": 25}
+     ]},
+    {"nombre": "Solomillo a la brasa", "familia": "principales", "precio_carta": 26.00, "unidades_vendidas": 190, "costes_ocultos_pct": 0.08,
+     "ingredientes": [
+       {"nombre": "Solomillo con cordon", "precio_kg": 28.00, "gramos_en_plato": 200, "rendimiento": 0.80, "merma_coccion": 0.25},
+       {"nombre": "Guarnicion verdura", "precio_kg": 3.10, "gramos_en_plato": 110, "rendimiento": 0.78}
+     ]},
+    {"nombre": "Pulpo a la brasa", "familia": "principales", "precio_carta": 24.00, "unidades_vendidas": 88, "costes_ocultos_pct": 0.06,
+     "ingredientes": [
+       {"nombre": "Pulpo crudo", "precio_kg": 19.00, "gramos_en_plato": 220, "rendimiento": 0.65},
+       {"nombre": "Patata", "precio_kg": 1.30, "gramos_en_plato": 120, "rendimiento": 0.82}
+     ]},
+    {"nombre": "Ensalada de la casa", "familia": "principales", "precio_carta": 11.50, "unidades_vendidas": 96, "costes_ocultos_pct": 0.05, "intocable": true,
+     "ingredientes": [
+       {"nombre": "Lechuga", "precio_kg": 2.40, "gramos_en_plato": 95, "rendimiento": 0.65},
+       {"nombre": "Tomate", "precio_kg": 3.10, "gramos_en_plato": 85, "rendimiento": 0.94},
+       {"nombre": "Atun conserva", "precio_kg": 15.50, "gramos_en_plato": 55}
+     ]},
+    {"nombre": "Alcachofa confitada", "familia": "entrantes", "precio_carta": 14.00, "unidades_vendidas": 61, "costes_ocultos_pct": 0.06,
+     "ingredientes": [
+       {"nombre": "Alcachofa", "precio_kg": 4.80, "gramos_en_plato": 200, "rendimiento": 0.40},
+       {"nombre": "Aceite confitado", "precio_kg": 9.20, "gramos_en_plato": 60}
+     ]},
+    {"nombre": "Croquetas (6u)", "familia": "entrantes", "precio_carta": 12.00, "unidades_vendidas": 320, "costes_ocultos_pct": 0.09,
+     "ingredientes": [
+       {"nombre": "Masa croqueta", "precio_kg": 6.10, "gramos_en_plato": 240},
+       {"nombre": "Aceite fritura amortizado", "precio_kg": 2.10, "gramos_en_plato": 40}
+     ]},
+    {"nombre": "Tabla iberica", "familia": "entrantes", "precio_carta": 28.00, "unidades_vendidas": 0, "costes_ocultos_pct": 0.04,
+     "ingredientes": [
+       {"nombre": "Jamon iberico", "precio_kg": 78.00, "gramos_en_plato": 120},
+       {"nombre": "Queso curado", "precio_kg": 19.00, "gramos_en_plato": 90},
+       {"nombre": "Pan cristal", "precio_kg": 5.50, "gramos_en_plato": 80}
+     ]},
+    {"nombre": "Bogavante del dia", "familia": "entrantes", "precio_carta": 30.00, "unidades_vendidas": 24, "costes_ocultos_pct": 0.05,
+     "ingredientes": [
+       {"nombre": "Bogavante vivo", "precio_kg": 52.00, "gramos_en_plato": 350, "rendimiento": 0.40}
+     ]}
+  ]
+}

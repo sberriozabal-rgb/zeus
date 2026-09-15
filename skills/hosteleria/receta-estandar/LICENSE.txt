@@ -1,0 +1,21 @@
+Licencia de uso — receta-estandar
+Copyright 2026 Sergio Berriozabal Serrano. Todos los derechos reservados.
+
+Se concede al titular de una licencia activa el derecho a usar esta skill
+dentro de su propia organizacion, incluyendo su instalacion en los agentes
+y entornos que dicha organizacion opere.
+
+No se concede el derecho a redistribuir, revender, sublicenciar ni publicar
+esta skill ni obras derivadas de ella, ni a incorporarla en un producto de
+terceros, sin autorizacion escrita del titular de los derechos.
+
+La ficha que produce esta skill es una herramienta de apoyo a la decision.
+No constituye un plan de autocontrol APPCC ni satisface el articulo 5 del
+Reglamento (CE) 852/2004, y en Mexico no sustituye el cumplimiento de la
+NOM-251-SSA1-2009. Marcar puntos criticos en una receta es una buena
+practica de higiene documentada, no el sistema de autocontrol que la ley
+exige al titular del establecimiento, ni sustituye el criterio de un
+profesional colegiado ni la certificacion por quien corresponda. La
+responsabilidad sobre la inocuidad de los alimentos, sobre la validacion de
+todo binomio tiempo-temperatura y sobre la declaracion de alergenos recae
+exclusivamente en el titular del negocio alimentario.

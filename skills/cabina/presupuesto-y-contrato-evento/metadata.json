@@ -1,0 +1,40 @@
+{
+  "name": "presupuesto-y-contrato-evento",
+  "commercial_name": "Presupuesto y contrato de evento",
+  "version": "1.1.0",
+  "author": "Sergio Berriozábal Serrano",
+  "linea": "CABINA",
+  "paquete": "CABINA EVENTOS",
+  "peldano": "P1",
+  "motor": "A",
+  "estado": "ACORDADO",
+  "precio_eur": 49,
+  "fecha_revision": "2026-09-15",
+  "entregable": "presupuesto-contrato-y-rider",
+  "enlaza_con": [
+    "peticiones-a-repertorio",
+    "set-por-encargo"
+  ],
+  "gates": {
+    "G1": false,
+    "G2": false,
+    "G3": true,
+    "G4": true,
+    "G5": false
+  },
+  "fuente_umbral": "Seis clausulas CRITICAS definidas por criterio operativo (perdida real y previsible), en references/clausulas.md. Baremos por mercado con fuente en references/baremos-precio.md: Espana 350-500 EUR media, escalon medio real 1.000-1.500 EUR, hora extra 75-250 EUR; EEUU mediana 1.800 USD con cuartiles 800/1.600/2.700 (theknot.com); boda media Espana 25.183 EUR con 123 invitados. Regla dura: no aplicar baremo de un pais a otro sin declararlo",
+  "carencias_declaradas": [
+    "G2 pendiente: sin ejecuciones registradas contra leads reales de un comprador que haya pagado",
+    "No es asesoramiento juridico: los borradores exigen revision de abogado del pais de firma para uso recurrente",
+    "Los baremos son contexto de mercado, no tarifa recomendada"
+  ],
+  "aviso_legal": "NO ES ASESORAMIENTO JURIDICO. Aviso no negociable, en cabecera de SKILL.md y en toda entrega.",
+  "license": "Ver LICENSE.txt — uso permitido al comprador, prohibida la redistribucion",
+  "spec": {
+    "estandar": "Agent Skills",
+    "url": "https://agentskills.io/specification"
+  },
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "ZEUS / FORJA"
+}

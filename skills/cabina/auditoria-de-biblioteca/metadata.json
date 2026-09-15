@@ -1,0 +1,41 @@
+{
+  "name": "auditoria-de-biblioteca",
+  "commercial_name": "Auditoría de biblioteca",
+  "version": "1.1.0",
+  "author": "Sergio Berriozábal Serrano",
+  "linea": "CABINA",
+  "paquete": "CABINA CORE",
+  "peldano": "P1",
+  "motor": "A",
+  "estado": "ACORDADO",
+  "precio_eur": 49,
+  "fecha_fabricacion": "2026-08-11",
+  "fecha_revision": "2026-09-15",
+  "entregable": "parte-de-biblioteca",
+  "enlaza_con": [
+    "set-por-encargo",
+    "postmortem-de-bolo"
+  ],
+  "requiere": "python3 >= 3.9",
+  "auditoria": "pendiente de recuento tras v1.1.0",
+  "gates": {
+    "G1": false,
+    "G2": false,
+    "G3": true,
+    "G4": true,
+    "G5": false
+  },
+  "fuente_umbral": "Precision de clave: test de 200 tracks, rekordbox 7 en 69% frente a Mixed In Key en 89% (blog.dubspot.com). Comparable de reparacion en lote: Lexicon 199 USD vitalicio (lexicondj.com/pricing). La proporcion de biblioteca realmente pinchada es [CASO UNICO, NO ESTADISTICA] reportado en foro. URLs y limites en references/FUENTES.md",
+  "carencias_declaradas": [
+    "G2 pendiente: sin ejecuciones registradas contra bibliotecas reales de un comprador que haya pagado",
+    "Solo rekordbox XML: Serato, Engine y Traktor exigen conversion previa"
+  ],
+  "license": "Ver LICENSE.txt — uso permitido al comprador, prohibida la redistribucion",
+  "spec": {
+    "estandar": "Agent Skills",
+    "url": "https://agentskills.io/specification"
+  },
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "ZEUS / FORJA"
+}

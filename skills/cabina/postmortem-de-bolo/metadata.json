@@ -1,0 +1,40 @@
+{
+  "name": "postmortem-de-bolo",
+  "commercial_name": "Parte de bolo",
+  "version": "1.1.0",
+  "author": "Sergio Berriozábal Serrano",
+  "linea": "CABINA",
+  "paquete": "CABINA CORE",
+  "peldano": "P1",
+  "motor": "A",
+  "estado": "ACORDADO",
+  "precio_eur": 49,
+  "fecha_revision": "2026-09-15",
+  "entregable": "parte-de-aprendizaje-de-sesion",
+  "enlaza_con": [
+    "set-por-encargo",
+    "auditoria-de-biblioteca"
+  ],
+  "requiere": "python3 >= 3.9",
+  "gates": {
+    "G1": false,
+    "G2": false,
+    "G3": true,
+    "G4": true,
+    "G5": false
+  },
+  "fuente_umbral": "Metodo: frontera de tres cajas HECHO/RELATO/HIPOTESIS, sin fuente externa por ser criterio de oficio. Umbrales numericos (120 s cortado, 420 s sostenido, 5 BPM, 3 pasos Camelot) marcados [A VALIDAR] y configurables. Precision de clave del software de origen: mixedinkey.com. URLs y limites en references/FUENTES.md",
+  "carencias_declaradas": [
+    "G2 pendiente: sin ejecuciones registradas contra historiales reales de un comprador que haya pagado",
+    "Los cuatro umbrales del motor son criterio de casa sin fuente externa",
+    "El hueco de mercado declarado se basa en una busqueda no exhaustiva"
+  ],
+  "license": "Ver LICENSE.txt — uso permitido al comprador, prohibida la redistribucion",
+  "spec": {
+    "estandar": "Agent Skills",
+    "url": "https://agentskills.io/specification"
+  },
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "ZEUS / FORJA"
+}

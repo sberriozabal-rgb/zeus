@@ -1,0 +1,20 @@
+LICENCIA DE USO COMERCIAL — cobro-cartera-vencida
+Copyright 2026 Sergio Berriozabal Serrano. Todos los derechos reservados.
+
+1. CONCESIÓN. Se concede al comprador una licencia personal, intransferible y
+   no exclusiva para usar esta skill en su propio negocio o en el de sus
+   clientes de consultoría.
+
+2. PROHIBIDO. Queda prohibido redistribuir, revender, sublicenciar, publicar
+   en un repositorio abierto o incorporar esta skill a un catálogo de terceros
+   sin autorización escrita del titular.
+
+3. SIN GARANTÍA. La skill se entrega "tal cual". Prepara material de gestión de
+   cobro; NO constituye asesoría jurídica, fiscal ni contable. El escalón A5
+   marca el punto en que el caso debe pasar a un profesional colegiado.
+
+4. LÍMITE DE RESPONSABILIDAD. El titular no responde de decisiones de cobro,
+   quitas, cortes de suministro ni acciones judiciales tomadas por el usuario.
+
+5. VERSIONADO. Esta licencia ampara la versión indicada en el frontmatter y sus
+   parches. Las versiones MAYORES pueden requerir nueva licencia.

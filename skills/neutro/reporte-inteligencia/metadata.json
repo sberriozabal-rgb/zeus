@@ -1,0 +1,41 @@
+{
+  "name": "reporte-inteligencia",
+  "commercial_name": "Reporte semanal de inteligencia competitiva",
+  "version": "1.2.0",
+  "author": "Sergio Berriozábal Serrano",
+  "linea": "neutra",
+  "peldano": "P1",
+  "motor": "A",
+  "estado": "ACORDADO",
+  "precio_eur": "39-49 [A VALIDAR]",
+  "fecha_revision": "2026-09-15",
+  "entregable": "reporte-semanal-de-10-secciones",
+  "enlaza_con": [
+    "respuesta-resenas",
+    "reporte-inteligencia-competencia"
+  ],
+  "auditoria": "19/20 (validar_skill.py, 15-sep-2026; punto 19 de criterio no confirmado)",
+  "gates": {
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "G4": true,
+    "G5": false
+  },
+  "fuente_umbral": "BrightLocal Local Consumer Review Survey 2026 (n=1.002 adultos EEUU, 11-02-2026): 97% lee resenas, 41% siempre, Google del 83% al 71%, 6 plataformas consultadas, 19% espera respuesta el mismo dia. FTC 16 CFR Part 465 en vigor desde 21-10-2024, sancion 53.088 USD. Luca HBS 12-016: una estrella = +5-9% ingresos, solo independientes. Panel 3+2+1, 13 semanas de congelacion, 3 menciones para patron y topes 6/5/3 son [CONVENCION] de la skill. URLs y limites en references/FUENTES.md",
+  "carencias_declaradas": [
+    "G2 parcial: el antipatron 1 esta [OBSERVADO 2026-08-16] en una ejecucion real de CDMX, pero no son tres casos reales",
+    "Cifras de BrightLocal son de EEUU: direccion extrapolable, cifras exactas no",
+    "Elasticidad de Luca es de restaurantes independientes en Yelp: no vale para otros sectores",
+    "G3 pendiente y con decision de modelo abierta: pago unico o suscripcion",
+    "Solape comercial con reporte-inteligencia-competencia, que es su vertical de hosteleria"
+  ],
+  "license": "Ver LICENSE.txt",
+  "spec": {
+    "estandar": "Agent Skills",
+    "url": "https://agentskills.io/specification"
+  },
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "Sergio Berriozábal"
+}

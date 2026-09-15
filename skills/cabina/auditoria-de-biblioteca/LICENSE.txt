@@ -1,0 +1,34 @@
+LICENCIA DE USO — auditoria-de-biblioteca
+Copyright 2026 Sergio Berriozabal Serrano. Todos los derechos reservados.
+
+1. CONCESION
+   Se concede al comprador una licencia personal, intransferible y no exclusiva para usar
+   esta skill en su propia actividad profesional, incluida la actividad comercial, sin
+   limite de numero de ejecuciones ni de clientes finales atendidos con ella.
+
+2. PROHIBICIONES
+   Queda prohibida la redistribucion, reventa, cesion, sublicencia, publicacion o puesta a
+   disposicion de terceros del contenido de esta carpeta, en todo o en parte, con o sin
+   modificaciones, sea a titulo oneroso o gratuito.
+
+3. TRABAJOS DERIVADOS
+   El comprador puede adaptar la skill para su propio uso interno. Los trabajos derivados
+   quedan sujetos a esta misma licencia y no pueden redistribuirse.
+
+4. AUSENCIA DE GARANTIA
+   La skill se entrega "tal cual". Es una herramienta de diagnostico de metadatos y no garantiza resultado alguno en la
+   ejecucion de un bolo. No modifica, repara ni gestiona la base de datos del software del
+   usuario, y opera exclusivamente en modo de solo lectura sobre ficheros exportados.
+
+5. LIMITACION DE RESPONSABILIDAD
+   El titular no respondera de danos directos o indirectos derivados del uso de la skill,
+   incluido el lucro cesante, hasta el limite maximo del importe abonado por la licencia.
+
+6. MARCAS DE TERCEROS
+   rekordbox, Serato, Lexicon y Mixed In Key son marcas de sus respectivos titulares. Su mencion en esta skill
+   es cita de producto, precio, plazo o politica publicada, con la URL de la fuente, y no
+   implica afiliacion, patrocinio ni respaldo.
+
+7. REVOCACION
+   El acceso al repositorio de entrega puede revocarse al cesar la relacion comercial. La
+   licencia de uso sobre la copia ya entregada subsiste conforme a las clausulas anteriores.

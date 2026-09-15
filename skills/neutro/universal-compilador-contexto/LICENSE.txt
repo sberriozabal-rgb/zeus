@@ -1,0 +1,49 @@
+LICENCIA DE USO — universal-compilador-contexto
+Copyright 2026 Sergio Berriozabal Serrano. Todos los derechos reservados.
+
+1. CONCESION
+   Se concede al comprador una licencia personal, intransferible y no exclusiva para usar
+   esta skill en su propia actividad profesional, incluida la actividad comercial, sin
+   limite de numero de ejecuciones ni de proyectos compilados.
+
+2. PROHIBICIONES
+   Queda prohibida la redistribucion, reventa, cesion, sublicencia, publicacion o puesta a
+   disposicion de terceros del contenido de esta carpeta, en todo o en parte, con o sin
+   modificaciones, sea a titulo oneroso o gratuito.
+
+3. TRABAJOS DERIVADOS
+   El comprador puede adaptar la skill para su propio uso interno. Los trabajos derivados
+   quedan sujetos a esta misma licencia y no pueden redistribuirse.
+
+4. AUSENCIA DE GARANTIA
+   La skill se entrega "tal cual". EXTRAE Y ORDENA MATERIAL EXISTENTE: no interpreta el
+   negocio, no valida cifras y no emite criterio. Los conflictos entre documentos y los
+   huecos de informacion se devuelven declarados al usuario, que es quien decide. El
+   titular no garantiza la exactitud del material de origen ni de las transcripciones
+   obtenidas por OCR, que se marcan como automaticas.
+
+5. ALCANCE DE LA INGESTA DE CHATS
+   La Ruta A (herramientas de sesion) es PARCIAL POR DISENO y el artefacto lo declara en
+   cada entrega. La cobertura completa exige el ZIP del export oficial de la plataforma,
+   cuya disponibilidad y cuyo plazo de descarga dependen de un tercero.
+
+6. CONFIDENCIALIDAD
+   El artefacto marca [CONFIDENCIAL] los datos de terceros identificables y anonimiza casos
+   salvo autorizacion escrita presente en la carpeta de origen. Las credenciales y claves no
+   se incorporan al paquete. El cumplimiento de la normativa de proteccion de datos aplicable
+   al material compilado es responsabilidad del usuario.
+
+7. LIMITACION DE RESPONSABILIDAD
+   El titular no respondera de danos directos o indirectos derivados del uso de la skill,
+   incluidas las decisiones de negocio tomadas sobre el material compilado, hasta el limite
+   maximo del importe abonado por la licencia.
+
+8. MARCAS DE TERCEROS
+   Claude y Anthropic, asi como las herramientas de extraccion citadas (Poppler, Tesseract y
+   las librerias de Python referenciadas), son marcas o proyectos de sus respectivos
+   titulares. Su mencion es cita de documentacion publica con la URL de la fuente, y no
+   implica afiliacion, patrocinio ni respaldo.
+
+9. REVOCACION
+   El acceso al repositorio de entrega puede revocarse al cesar la relacion comercial. La
+   licencia de uso sobre la copia ya entregada subsiste conforme a las clausulas anteriores.

@@ -1,0 +1,43 @@
+LICENCIA DE USO — reporte-inteligencia-competencia
+Titular: Sergio Berriozabal Serrano. Marca comercial: TROQUEL.
+Copyright 2026 Sergio Berriozabal Serrano.
+Todos los derechos reservados.
+
+1. CONCESION
+   Se concede al comprador una licencia personal, intransferible y no exclusiva para usar
+   esta skill en su propia actividad profesional, incluida la actividad comercial, sin
+   limite de numero de ejecuciones.
+
+2. PROHIBICIONES
+   Queda prohibida la redistribucion, reventa, cesion, sublicencia, publicacion o puesta a
+   disposicion de terceros del artefacto, en todo o en parte, con o sin modificaciones, sea
+   a titulo oneroso o gratuito.
+
+3. TRABAJOS DERIVADOS
+   El comprador puede adaptar la skill para su propio uso interno. Los trabajos derivados
+   quedan sujetos a esta misma licencia y no pueden redistribuirse.
+
+4. AUSENCIA DE GARANTIA
+   La skill se entrega "tal cual". Produce investigacion de escritorio sobre fuentes
+   publicas. NO ES DUE DILIGENCE, ni asesoria legal, ni asesoria financiera, y no garantiza
+   la exactitud ni la vigencia de los datos publicados por terceros. Las cifras deben
+   re-verificarse a la fecha de uso.
+
+5. UMBRALES DE COMPORTAMIENTO
+   Los cortes del semaforo proceden de paneles de consumidores de EE. UU. (BrightLocal).
+   Su aplicacion a los mercados de Espana y Mexico esta marcada [A VALIDAR] en el propio
+   artefacto y no debe presentarse como promesa de resultado.
+
+6. USO DE FUENTES
+   La skill opera exclusivamente sobre informacion publicamente accesible. No autoriza el
+   acceso a paneles privados, la elusion de muros de acceso ni el tratamiento de datos
+   personales de resenadores.
+
+7. MARCAS DE TERCEROS
+   Google, TripAdvisor, TheFork y BrightLocal son marcas de sus respectivos titulares. Su
+   mencion es cita de plataforma o de estudio publicado, con la URL de la fuente, y no
+   implica afiliacion, patrocinio ni respaldo.
+
+8. REVOCACION
+   El acceso al repositorio de entrega puede revocarse al cesar la relacion comercial. La
+   licencia de uso sobre la copia ya entregada subsiste conforme a las clausulas anteriores.

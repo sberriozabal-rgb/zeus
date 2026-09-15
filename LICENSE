@@ -1,0 +1,43 @@
+# Titularidad y licencia del catálogo ZEUS
+
+**Titular de todos los derechos: Sergio Berriozábal Serrano.**
+Copyright © 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.
+
+## Alcance
+
+Esta declaración cubre **la totalidad del contenido de este repositorio**: las 17 skills del
+catálogo de venta, su documentación, sus scripts, sus ficheros de referencia, sus casos de prueba,
+las fichas comerciales y el material de venta de `venta/`.
+
+## Marcas y nombres de casa
+
+`ZEUS`, `FORJA`, `TROQUEL`, `OCTAVA` y `CABINA` son **nombres comerciales y de línea de producto
+del titular**, no entidades distintas ni co-titulares. Donde el material anterior atribuía la
+autoría a alguno de esos nombres, la titularidad es y era de Sergio Berriozábal Serrano; la
+atribución quedó unificada el 15-sep-2026.
+
+## Licencia concedida al comprador
+
+Cada skill lleva su `LICENSE.txt` con las condiciones concretas. En todas, en términos generales:
+
+- Se concede uso **personal, intransferible y no exclusivo**, incluido el uso comercial en la
+  actividad propia del comprador, sin límite de ejecuciones ni de clientes finales atendidos.
+- Queda **prohibida la redistribución**, reventa, cesión, sublicencia o puesta a disposición de
+  terceros, total o parcial, con o sin modificaciones, a título oneroso o gratuito.
+- Los trabajos derivados para uso interno están permitidos y quedan sujetos a esta misma licencia.
+- El acceso al repositorio de entrega es **revocable** al cesar la relación comercial. La licencia
+  sobre la copia ya entregada subsiste conforme a las cláusulas de cada `LICENSE.txt`.
+
+## Sobre la protección del archivo — declarado sin adornos
+
+Una skill es texto plano. **No hay DRM, ni firma, ni ofuscación posible**, y este catálogo no
+promete lo contrario. Cualquier comprador puede copiarla. Lo defendible es la cadencia de
+actualización, el acceso revocable, la configuración con datos del cliente, el criterio de oficio
+y la velocidad de la fábrica. Quien venda protección del archivo, miente.
+
+## Marcas de terceros
+
+Las marcas citadas en las skills —entre otras rekordbox, Serato, Lexicon, Mixed In Key,
+LabelRadar, Beatport, Spotify, Google, TripAdvisor, TheFork, Claude y Anthropic— pertenecen a sus
+respectivos titulares. Su mención es **cita de producto, precio, plazo, política o estudio
+publicado, con la URL de la fuente**, y no implica afiliación, patrocinio ni respaldo.
