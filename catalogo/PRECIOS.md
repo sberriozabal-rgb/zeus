@@ -19,8 +19,10 @@ dos se sostengan tres semanas después.
 **Completa** = las tres anteriores más `respuesta-resenas`, `productividad-personal-turno` y
 `reporte-inteligencia-competencia`.
 
-> ⚠️ **`receta-estandar` NO se factura todavía.** Su G4 está abajo por seguridad alimentaria:
-> necesita revisión de un consultor antes de cobrarse. El Completa se sirve con las otras seis al
+> ⚠️ **`receta-estandar` NO se factura todavía.** Su G4 está abajo por seguridad alimentaria.
+> A 15-sep-2026 la casa ha hecho todo lo que podía —cifras ancladas al RD 3484/2000 y a AESAN,
+> cláusula contractual redactada, discrepancia AESAN/RD detectada y aplicada— y **solo falta la
+> revisión de un consultor de seguridad alimentaria** antes de cobrarse. El Completa se sirve con las otras seis al
 > mismo precio, y cuando levante G4 entra sin coste para quien ya compró.
 
 **No se cobra por Polar.** La instalación va por Stripe México (pesos) o transferencia: el ticket

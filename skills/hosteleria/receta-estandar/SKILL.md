@@ -16,7 +16,7 @@ compatibility: Cualquier cliente de Agent Skills conforme a la especificación a
 metadata:
   vertical: gastronomia
   posicion_cola: "2"
-  version: 1.1.0
+  version: "1.1.1"
   estado: ACORDADO
   contrato_entrada: "ficha de receta-estandar (JSON o tabla) con gramaje por porción"
   contrato_salida_hacia: "escandallo-ingenieria-menu, apertura-cierre-turno"
@@ -116,9 +116,12 @@ Lo que el usuario aporta, en cualquier combinación, y qué se hace si falta:
 Tres cifras hacen de esto un producto y no una plantilla de Word:
 
 **1 · Las temperaturas internas mínimas, con la norma del país y el binomio
-completo.** No "hasta que esté cocido". España, informe AESAN-2021-004: aves
+completo.** No "hasta que esté cocido". España, informe AESAN-2021-004
+(<https://www.aesan.gob.es/AECOSAN/docs/documentos/seguridad_alimentaria/evaluacion_riesgos/informes_comite/TIEMPO-TEMPERATURA.pdf>): aves
 **74 °C/1 s**, carne **70 °C/1 s**, pescado **68 °C/15 s**, mantenimiento en
-caliente **≥63 °C**, recalentamiento **≥74 °C/15 s**. México,
+caliente **≥63 °C** —o **≥65 °C** según el Real Decreto 3484/2000 art. 7
+(<https://www.boe.es/buscar/doc.php?id=BOE-A-2001-809>), que es la norma reglamentaria y prevalece ante
+inspección—, recalentamiento **≥74 °C/15 s**. México,
 NOM-251-SSA1-2009: aves y rellenos **74 °C** (§7.3.1), carnes molidas y cerdo en
 trozo **68 °C**, pescado y trozos de res **63 °C**, mantenimiento en caliente
 **>60 °C** y en frío **≤7 °C** (§7.3.3), refrigeración máx. **7 °C** (§5.5.2).
@@ -293,6 +296,17 @@ ficha cuando se pide, no en lugar de ella):
 }
 ```
 
+Y el pie que lleva toda ficha en papel, que es lo que lee el cocinero:
+
+```markdown
+## Supuestos de esta versión
+- País de operación y norma aplicada: [ES · AESAN-2021-004 + RD 3484/2000 | MX · NOM-251]
+- Cifras de inocuidad marcadas [A VALIDAR]: [ninguna | lista]
+- Ingredientes ESTIMADOS o PENDIENTES: [lista]
+- Elementos que NO escalan linealmente: [sal, reducciones, tiempos de cocción]
+- Fecha de generación: [AAAA-MM-DD] — la norma puede haber cambiado después
+```
+
 Consumen este contrato: `escandallo-ingenieria-menu` (ingrediente + cantidad +
 unidad de compra, para calcular el coste — que **no** calcula esta skill) y
 `apertura-cierre-turno` (bloque de mise en place y conservación, como tareas de
@@ -388,8 +402,7 @@ checklist de apertura o de estación).
    cantidad numérica, incluidos los variables, con su valor de partida declarado.
 
 3. **La escala rota.** **Síntoma**: la receta multiplicada para un evento de 50
-   sale distinta a la de 4 — más salada, más líquida, otra textura. **Causa
-   raíz**: se multiplicaron las cantidades pero no los tiempos de reducción y
+   sale distinta a la de 4 — más salada, más líquida, otra textura. **Causa raíz**: se multiplicaron las cantidades pero no los tiempos de reducción y
    cocción ni los ratios de sartén/producto, que no escalan linealmente.
    **Corrección**: la ficha declara qué elementos NO escalan linealmente como nota
    de escalado, además de la tabla de cantidades. Para escalar el gramaje de forma

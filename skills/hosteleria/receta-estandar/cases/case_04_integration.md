@@ -119,7 +119,7 @@ azar y sabe en dos segundos si está dentro.
 - **Hacia `apertura-cierre-turno`**: los bloques 3 (mise en place) y 6
   (conservación y servicio) de la ficha se transfieren tal cual como tareas de
   checklist con su criterio de "hecho" — *salmón porcionado en 4 × 160 g y
-  refrigerado*, *puré de pase con sonda ≥63 °C*. El punto crítico de mantenimiento
+  refrigerado*, *puré de pase con sonda ≥65 °C*. El punto crítico de mantenimiento
   en caliente deja de ser una línea de una ficha plastificada y pasa a ser una
   tarea firmada de la lista de apertura. La tolerancia ±10 % **no se copia** en el
   checklist: se referencia. Un umbral vive en un solo sitio.

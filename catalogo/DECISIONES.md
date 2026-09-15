@@ -139,6 +139,15 @@ Detectado y corregido en el momento. Verificado: **17/17 frontmatter parsean.**
 | **G5** público | ✅ **17/17** | Criterio del gate: *"sin cifra inventada"*. Verificado: toda cifra de las 17 fichas lleva fuente con URL o va marcada `[A VALIDAR]` / `[SIN VERIFICAR]` / `[CONVENCIÓN]`. **Levantado desde el 15-sep-2026** |
 | **G2** prueba | ❌ **0/17** | **No lo cierro. Ver abajo.** |
 
+### Estado de `receta-estandar` a 15-sep-2026, tras el trabajo de fábrica
+
+De los tres requisitos de su G4: **(c) cerrado**, **(b) redactado** en
+`venta/ANEXO-CONTRATO-INOCUIDAD.md` (pendiente de abogado), **(a) pendiente** — la revisión
+técnica externa, que es la única que no puede hacer la casa. Además se anclaron las tres cifras
+de inocuidad que la v1.1.0 declaraba como riesgo legal y se detectó y aplicó una discrepancia
+AESAN/RD 3484/2000 (≥63 vs ≥65 °C en caliente; prevalece el RD). De 17/20 a 19/20 declarado.
+**Sigue sin facturarse.** Detalle en `ESTADO-GATES.md` §10 y en el CHANGELOG v1.1.1 de la pieza.
+
 ### La titularidad no levanta G2 ni el G4 de `receta-estandar`
 
 Ser el titular de OCTAVA y de las skills resuelve **quién puede venderlas, licenciarlas,

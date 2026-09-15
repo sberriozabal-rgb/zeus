@@ -32,8 +32,22 @@ alimentos, aprobado el 17-feb-2021.
 | Platos con huevo, consumo NO inmediato | **70 °C** | 2 segundos |
 | Platos con huevo, consumo inmediato | **63 °C** | 20 segundos |
 | Vegetales | **70 °C** | 2 minutos en el centro |
-| **Mantenimiento en caliente** | **≥63 °C** | mientras dure el servicio |
+| **Mantenimiento en caliente** (AESAN) | **≥63 °C** | mientras dure el servicio — **ver discrepancia con RD 3484/2000 abajo** |
 | **Recalentamiento** | **≥74 °C** | 15 segundos en el centro |
+
+### Tabla A-bis · España — Real Decreto 3484/2000, artículo 7 (norma reglamentaria)
+
+Conservación y servicio de comidas preparadas. Es la norma que aplica la inspección; AESAN
+es opinión científica. Fuente 7 de `FUENTES.md`.
+
+| Comida preparada | Temperatura |
+|---|---|
+| Congelada | **≤ −18 °C** |
+| Refrigerada, duración **< 24 h** | **≤ 8 °C** |
+| Refrigerada, duración **> 24 h** | **≤ 4 °C** |
+| **Caliente** | **≥ 65 °C** |
+
+El RD **no** regula temperaturas de cocinado: para eso sigue valiendo AESAN.
 
 AESAN expresa siempre **binomio tiempo-temperatura**, no solo la temperatura. Una
 ficha que dice "74 °C" sin el tiempo está incompleta según esta fuente, aunque el
@@ -66,7 +80,8 @@ partida en dos y no promediada:
 |---|---|---|---|
 | Pescado en trozo | 68 °C / 15 s | 63 °C | Una ficha de merluza escrita para Madrid queda 5 °C por encima de lo exigido en Monterrey. Cocinar de más no es ilegal, pero es un pescado peor: si la ficha viaja, se reescribe el binomio, no se copia |
 | Carne (molida / trozo) | 70 °C / 1 s (carne, genérico) | 68 °C molida · 63 °C trozo de res | Cifras cercanas, categorías distintas. La defendible ante inspección es la del país de operación |
-| Mantenimiento en caliente | ≥63 °C | >60 °C | 3 °C de diferencia en el criterio de una vitrina, un baño maría o una mesa caliente de pase |
+| Mantenimiento en caliente | ≥63 °C (AESAN) · **≥65 °C (RD 3484/2000)** | >60 °C | Dentro de España, el informe AESAN y el Real Decreto no coinciden: **prevalece el RD, que es la norma reglamentaria**. Las fichas españolas usan ≥65 °C desde la v1.1.1 |
+| Conservación en frío | ≤8 °C si <24 h · ≤4 °C si >24 h (RD 3484/2000 art. 7) | ≤7 °C conservación (§7.3.3) · ≤4 °C recepción de pescado fresco (§7.4.2) | **El 4 °C significa cosas distintas en cada país**: en España es conservación de más de 24 h; en México es recepción de pescado. Una ficha que ponga "≤4 °C" sin decir cuál de las dos es, no sirve en ninguno de los dos |
 
 **Regla de la casa:** una ficha declara **el país de operación en la cabecera** y
 usa la tabla de ese país. Una ficha sin país declarado no pasa de BORRADOR. No se

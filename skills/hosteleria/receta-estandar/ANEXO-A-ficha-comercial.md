@@ -11,8 +11,8 @@ Precio propuesto   : Dentro de Instalación Completa (4.900 €) **cuando levant
 Canal              : Venta presencial dentro del sistema instalable (Motor B). No se publica suelta en directorio hasta que el sistema completo tenga el primer caso vendido con cifras documentadas.
 Motor              : B · Instalación
 Frase de anuncio   : "La receta de tu local, no una receta bonita: con la temperatura que exige la norma de tu país y el hueco marcado donde todavía no has pesado."
-Estado / Versión   : ACORDADO / v1.1.0
-Auditoría          : 18/20 — ver desglose abajo. No se redondea al alza.
+Estado / Versión   : ACORDADO / v1.1.1
+Auditoría          : **19/20** (`validar_skill.py`, 15-sep-2026, v1.1.1). El validador devuelve 20/20 mecánico; no se firma el 20 porque el punto 19 exige URLs verificadas una a una. Antes de la v1.1.1 medía **17/20** por tres defectos de estructura (umbral sin URL inline, salida sin supuestos, un antipatrón con el molde partido), ya cerrados.
 Gates              : G1 [x] G2 [ ] G3 [x] G4 [ ] G5 [x]
 
 ## Desglose de auditoría (18/20)
@@ -21,14 +21,9 @@ Primera auditoría formal contra la rúbrica de 20 puntos de esta skill: la v1.0
 declaró 17/20 en su CHANGELOG remitiendo a un informe del registro del proyecto,
 sin desglose propio en la pieza.
 
-**Punto no conseguido nº 1 — versión y CHANGELOG.** `CHANGELOG.md` cierra en
-**v1.0.0** mientras el frontmatter, el cuerpo del SKILL.md, este anexo y
-`metadata.json` declaran **v1.1.0**. El cambio de más valor de esa versión —
-sustituir la tabla de temperaturas de origen británico (FoodDocs / Food Standards
-Agency UK) por las dos fuentes oficiales de los mercados de la casa, AESAN y
-NOM-251 — **no está registrado en ninguna parte**. Y el propio SKILL.md, en su
-sección `## Versión`, declara que si las cifras de versión divergen la entrega no
-sale de fábrica. Divergen. Se declara en vez de redondearse.
+**~~Punto no conseguido nº 1 — versión y CHANGELOG.~~ ✅ Resuelto.** El `CHANGELOG.md`
+registra la v1.1.0 con el cambio de fuente normativa (FSA UK → AESAN + NOM-251) como su
+cambio de más valor, y desde la v1.1.1 las versiones coinciden en los cuatro sitios.
 
 **Punto no conseguido nº 2 — frontmatter conforme a spec.** El bloque YAML es
 conforme en forma (`name` de 15 caracteres, `description` de 868, los cinco campos
@@ -61,7 +56,21 @@ apartado, y esta ficha.
   hasta el primer pesaje documentado en un local, es una hipótesis bien escrita.
 - **G3 (precio)** marcado con comprador nombrado, no-comprador nombrado y canal
   definido, aunque la cifra siga `[A VALIDAR]` hasta la firma de Sergio.
-- **G4 (legal) pendiente, y es el gate crítico de esta pieza.** No por licencia
+- **G4 (legal) pendiente, y es el gate crítico de esta pieza. Estado 15-sep-2026: de los
+  tres requisitos, dos hechos y uno que no puede hacer la casa.**
+  - **(c) ✅ cerrado**: el CHANGELOG registra el cambio de fuente normativa y las versiones
+    coinciden.
+  - **(b) ✅ redactado**: `venta/ANEXO-CONTRATO-INOCUIDAD.md`, cláusula que traslada al titular
+    del negocio la inocuidad, la validación de cada binomio y los alérgenos. **Pendiente de
+    revisión jurídica** antes de firmarse.
+  - **(a) ❌ pendiente y es el que protege al titular**: revisión técnica externa por consultor
+    de seguridad alimentaria. La casa ha dejado el trabajo listo para esa revisión: las tres
+    cifras sin ancla que la v1.1.0 declaraba como riesgo legal están ancladas (RD 3484/2000
+    art. 7 para conservación en frío y vida útil; AESAN vegetales 70 °C/2 min para el ejemplo
+    del script), y se ha detectado y corregido una **discrepancia AESAN/RD en mantenimiento en
+    caliente (≥63 vs ≥65 °C)** aplicando la cifra reglamentaria. Todo ello listado en el
+    CHANGELOG v1.1.1 bajo *"Para el consultor"*.
+  - Texto original del requisito: No por licencia
   —no deriva de material con prohibición de venta, no usa marca ajena en el nombre
   técnico ni comercial, y las menciones a AESAN, NOM-251, COFEPRIS y Codex son
   citas de fuente con URL— sino porque **toca seguridad alimentaria**. Antes de

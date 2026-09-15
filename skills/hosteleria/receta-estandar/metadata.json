@@ -1,11 +1,11 @@
 {
   "name": "receta-estandar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Sergio Berriozábal Serrano",
   "linea": "hosteleria",
   "peldaño": "P1",
   "fecha_fabricacion": "2026-08-11",
-  "fecha_revision": "2026-08-16",
+  "fecha_revision": "2026-09-15",
   "motor": "B",
   "entregable": "ficha-receta-estandar",
   "enlaza_con": [

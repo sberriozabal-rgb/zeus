@@ -26,7 +26,7 @@ vendido. Se venden como instalación.
 | 2 | `respuesta-resenas` | **1.2.0** | **19/20** ✅ reestructurada | ACORDADO |
 | 3 | `apertura-cierre-turno` | **1.1.2** | **19/20** ✅ atribución cerrada | ACORDADO |
 | 4 | `comparativa-proveedores` | 1.1.0 | **18/20** | ACORDADO |
-| 5 | `receta-estandar` | 1.1.0 | **18/20** | ACORDADO |
+| 5 | `receta-estandar` | **1.1.1** | **19/20** ✅ cifras de inocuidad ancladas · G4 solo espera revisión externa | ACORDADO |
 | 6 | `productividad-personal-turno` | 1.1.0 | sin nota declarada | ACORDADO |
 | 7 | `reporte-inteligencia-competencia` | **1.1.0** | **19/20** ✅ | ACORDADO |
 

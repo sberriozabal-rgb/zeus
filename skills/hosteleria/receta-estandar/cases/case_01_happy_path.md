@@ -67,18 +67,18 @@ que quedan realmente sin dato son emplatado y las cantidades de aceite y sal.
 | 5 | Calentar plancha con el aceite | 3 min | 200-220 °C | El aceite ondula, no humea | |
 | 6 | Marcar el salmón piel abajo sin moverlo | 4-5 min | 200-220 °C | La piel se despega sola de la plancha al empujar con la espátula | |
 | 7 | Voltear y terminar la cocción | 1-2 min | 200-220 °C | **Sonda en la parte más gruesa: 68 °C mantenidos 15 s** | ● |
-| 8 | Regenerar puré y espárragos y montar el plato | 2 min | ≥63 °C | Puré a temperatura de pase medida con sonda | ● |
+| 8 | Regenerar puré y espárragos y montar el plato | 2 min | ≥65 °C | Puré a temperatura de pase medida con sonda | ● |
 
 ## 5. Puntos críticos de control
 | Paso | Qué se controla | Umbral (temp + tiempo) | Verificación | Norma |
 |---|---|---|---|---|
 | 7 | Cocción del salmón | **68 °C durante 15 s** en el centro | Sonda en la parte más gruesa del lomo | AESAN-2021-004, categoría pescado |
-| 8 | Mantenimiento en caliente del puré | **≥63 °C** mientras dure el servicio | Sonda en el recipiente de pase | AESAN-2021-004, mantenimiento en caliente |
-| — | Conservación del salmón porcionado | ≤4 °C hasta el marcado | Registro de cámara del checklist de apertura | Práctica de oficio; ver nota de región |
+| 8 | Mantenimiento en caliente del puré | **≥65 °C** mientras dure el servicio | Sonda en el recipiente de pase | **RD 3484/2000 art. 7** (norma reglamentaria; AESAN-2021-004 fija ≥63 °C, prevalece el RD ante inspección) |
+| — | Conservación del salmón porcionado | ≤4 °C hasta el marcado | Registro de cámara del checklist de apertura | **RD 3484/2000 art. 7**: exige ≤8 °C para duración <24 h; la ficha aplica el umbral de >24 h (≤4 °C) por criterio de oficio con pescado crudo, **más estricto que el mínimo legal** |
 
 ## 6. Conservación y servicio
-- Salmón porcionado: refrigerado, consumo en 24 h desde el porcionado
-- Puré: caliente ≥63 °C en servicio; si se enfría, se regenera una sola vez
+- Salmón porcionado: refrigerado a ≤4 °C, consumo en 24 h desde el porcionado. Las 24 h son el umbral del RD 3484/2000 art. 7 entre comida refrigerada de corta (≤8 °C) y larga duración (≤4 °C); al aplicar ya ≤4 °C, la ficha cumple ambos tramos
+- Puré: caliente ≥65 °C en servicio (RD 3484/2000 art. 7); si se enfría, se regenera una sola vez a ≥74 °C/15 s (AESAN-2021-004, recalentamiento)
 - Servicio: plato caliente, salmón recién marcado, no se marca por adelantado
 
 ## 7. Emplatado
@@ -86,7 +86,7 @@ que quedan realmente sin dato son emplatado y las cantidades de aceite y sal.
 - Vajilla: [pendiente de confirmar con el chef]
 - Posición: puré en la base, salmón encima con la piel hacia arriba, espárragos en abanico apoyados
 - Cantidades: 200 g de puré · 160 g de salmón · 3 espárragos
-- Temperatura de servicio: plato ≥63 °C
+- Temperatura de servicio: plato ≥65 °C (RD 3484/2000 art. 7, comida preparada caliente)
 
 ## 8. Notas de escalado
 No escalan linealmente: el tiempo de plancha (depende de la superficie disponible,

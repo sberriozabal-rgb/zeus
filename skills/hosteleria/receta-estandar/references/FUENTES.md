@@ -136,6 +136,41 @@ hueco se marca `[A VALIDAR]` y se resuelve con la autoridad local.
 
 ---
 
+## 7 · Real Decreto 3484/2000, de 29 de diciembre — normas de higiene para comidas preparadas (España)
+
+Norma **reglamentaria** vigente en España, publicada en el BOE. A diferencia del informe
+AESAN-2021-004 (fuente 1), que es una opinión científica, este Real Decreto es la norma que
+aplica la inspección.
+
+<https://www.boe.es/buscar/doc.php?id=BOE-A-2001-809>
+
+**Cifras verificadas en el artículo 7** (temperaturas de almacenamiento, conservación,
+transporte y venta de comidas preparadas):
+
+| Comida preparada | Temperatura |
+|---|---|
+| Congelada | **≤ −18 °C** |
+| Refrigerada, con periodo de duración **inferior a 24 h** | **≤ 8 °C** |
+| Refrigerada, con periodo de duración **superior a 24 h** | **≤ 4 °C** |
+| Caliente | **≥ 65 °C** |
+
+**Qué sostiene:**
+- La **conservación en frío** de la ficha para España, que hasta la v1.1.0 no tenía ancla y
+  figuraba en `cases/case_01` como "práctica de oficio; ver nota de región" — nota que no
+  existía. El umbral de 24 h que separa ≤8 °C de ≤4 °C es exactamente el que la ficha usa para
+  la vida útil del porcionado.
+- El **mantenimiento en caliente para España**, donde **discrepa con AESAN**: el informe dice
+  ≥63 °C y el Real Decreto dice **≥65 °C**. Ante inspección prevalece el reglamento. Desde la
+  v1.1.1 las fichas españolas usan **≥65 °C** y la discrepancia está declarada en
+  `temperaturas_haccp.md`.
+
+**Qué NO sostiene:** temperaturas de **cocinado**. El artículo 7 regula conservación y servicio;
+los binomios de cocción (pescado 68 °C/15 s, aves 74 °C/1 s, etc.) siguen siendo de AESAN-2021-004.
+
+**Ámbito:** España. Norma reglamentaria, documento primario en BOE. Consultado: 2026-09-15.
+
+---
+
 ## Equivalencias de cocina — sin fuente citable, y declarado
 
 `references/equivalencias_cocina.md` (taza = 240 ml, puñado de hierbas = 8-12 g,

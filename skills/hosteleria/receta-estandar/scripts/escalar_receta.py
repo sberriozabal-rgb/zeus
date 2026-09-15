@@ -23,6 +23,7 @@ import sys
 
 EJEMPLO_RECETA = {
     "plato": "Salsa madre de tomate",
+    "pais_operacion": "ES",
     "rendimiento_total": {"porciones": 4, "peso_g": 800},
     "porcion_individual_g": 200,
     "tolerancia_porcion_pct": 10,
@@ -33,10 +34,11 @@ EJEMPLO_RECETA = {
         {"nombre": "sal", "cantidad": 5, "unidad": "g", "marca": "ESTIMADO"},
     ],
     "puntos_criticos_haccp": [
-        {"paso": 3, "temp_min_c": 74, "metodo_verificacion": "sonda"}
+        {"paso": 3, "temp_min_c": 70, "tiempo_min_s": 120, "metodo_verificacion": "sonda",
+         "norma": "AESAN-2021-004, vegetales: 70 C durante 2 min en el centro"}
     ],
     "mise_en_place": ["cuchillo de chef", "olla mediana", "tabla de picar"],
-    "conservacion": "refrigerar a ≤4°C, consumir en 3 días",
+    "conservacion": "refrigerar a <=4 C, consumir en 3 dias (RD 3484/2000 art. 7: comida refrigerada de duracion >24 h, <=4 C)",
     "estado": "ACORDADO",
 }
 

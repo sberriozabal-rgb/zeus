@@ -12,7 +12,7 @@ reales, uno sucio) · **G3** precio (comprador nombrado + cifra firmada) ·
 | `respuesta-resenas` | ✅ | ❌ | ⚠️ | ✅ | ❌ | 19/20 |
 | `apertura-cierre-turno` | ✅ | ❌ | ⚠️ | ✅ | ❌ | 19/20 |
 | `comparativa-proveedores` | ✅ | ❌ | ⚠️ | ✅ | ❌ | 18/20 |
-| `receta-estandar` | ✅ | ❌ | ⚠️ | ❌ | ❌ | 18/20 · **G4 abajo** |
+| `receta-estandar` | ✅ | ❌ | ✅ | ❌ | ✅ | 19/20 · **G4 abajo solo por (a): revisión técnica externa** |
 | `productividad-personal-turno` | ❌ | ❌ | ❌ | ❌ | ❌ | ficha con los 5 gates sin marcar |
 | `reporte-inteligencia-competencia` | — | — | — | — | — | sin ficha comercial |
 
@@ -234,3 +234,26 @@ vende la vertical, a cualquier otro sector la neutra. Queda declarado en las dos
 En cambio `respaldo-proyecto-ia-cl` y `universal-compilador-contexto` **sí se venden juntas**: son
 la misma cadena en dos mitades y el `chats.jsonl` y el `HUECOS.md` de la primera son entradas
 directas de la segunda.
+
+### 10 · `receta-estandar`: discrepancia AESAN / RD 3484/2000 en mantenimiento en caliente — **detectada y aplicada, pendiente de confirmar por el consultor**
+
+Al anclar las tres cifras de inocuidad que la v1.1.0 declaraba como riesgo legal, apareció que
+**dentro de España las dos fuentes oficiales no coinciden**: el informe AESAN-2021-004 fija el
+mantenimiento en caliente en **≥63 °C** y el Real Decreto 3484/2000, art. 7, en **≥65 °C**. El
+RD es norma reglamentaria; AESAN es opinión científica. Ante inspección prevalece el RD.
+
+**Se ha aplicado la cifra reglamentaria** (dirección conservadora: más estricta) en los casos
+españoles, y la discrepancia está declarada en `temperaturas_haccp.md`, en el `SKILL.md`, en
+`FUENTES.md` (fuente 7, nueva, con URL del BOE) y en la cláusula 6 del anexo contractual. **Los
+binomios de cocinado no se han tocado**: siguen siendo de AESAN y el RD no los regula.
+
+Lo mismo con el **4 °C, que significa cosas distintas en cada país**: en España es conservación
+de más de 24 h (RD art. 7); en México es recepción de pescado fresco (NOM-251 §7.4.2), y la
+conservación es ≤7 °C (§7.3.3). Una ficha que ponga "≤4 °C" sin decir cuál de las dos es no
+sirve en ninguno de los dos. Declarado en la tabla de discrepancias.
+
+**Estado del G4 de `receta-estandar` tras esto:** de los tres requisitos de su ficha, **(c)**
+divergencia de versión → cerrado; **(b)** cláusula contractual → redactada en
+`venta/ANEXO-CONTRATO-INOCUIDAD.md`, pendiente de revisión jurídica; **(a)** revisión técnica
+externa → **pendiente, y es la única que no puede hacer la casa**. La pieza pasa de 17/20 a
+19/20 declarado y **sigue sin facturarse** hasta que (a) esté hecha.
