@@ -15,7 +15,7 @@
     "postmortem-de-bolo"
   ],
   "gates": {
-    "G1": false,
+    "G1": true,
     "G2": false,
     "G3": true,
     "G4": true,

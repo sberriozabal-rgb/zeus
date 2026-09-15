@@ -13,7 +13,7 @@
 | Límite declarado | Un envío bien hecho no compra una firma: ordena el envío y elimina los descartes automáticos, no decide el criterio artístico del sello. Se manda **un solo track, el mejor** —tres dicen que no sabes cuál es bueno— y si no está masterizado se declara. |
 | Precio propuesto | **49 €** pago único |
 | Razón del precio | Tramo 30–49 € de mejor conversión. Es el único producto de la línea CARRERA, así que no tiene paquete propio: se vende suelto o dentro de CABINA COMPLETA. |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «El canal que pide cada sello, la frase que lo distingue de los otros cien envíos, y la fecha correcta para que Beatport y Spotify lleguen a tiempo.» |
 | Estado / Versión | ACORDADO / v1.1.0 |

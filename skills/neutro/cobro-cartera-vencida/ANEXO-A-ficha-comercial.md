@@ -13,7 +13,7 @@
 | Límite declarado | **No es asesoría jurídica** — A5 marca el punto en que el caso sale del protocolo. **No sirve para deuda de consumidores.** Los umbrales de tramo, cliente crítico y coste del cobro son convenciones de este artefacto `[SIN VERIFICAR]`, no estándares de ningún organismo. |
 | Precio propuesto | **79 €** pago único. **Ratificado 15-sep-2026.** |
 | Razón del precio | Es la pieza neutra mejor posicionada del catálogo: sector agnóstico, dolor con cifra directa (DSO, importe en riesgo) y comprador que ya sabe que tiene el problema. Va por encima del tramo estándar de 49 € porque el entregable incluye los mensajes redactados y un cuadro de mando, no solo un análisis. |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «A quién reclamar primero, qué escribirle exactamente, y en qué fecha subes el tono si no paga.» |
 | Estado / Versión | ACORDADO / v1.2.0 |
@@ -29,9 +29,11 @@
   EJEMPLO — NO REALES]`. El propio roadmap de la skill lo señala como **el único punto que la
   separa del 20/20**: sustituir los cinco antipatrones `[DERIVADO]` por antipatrones observados
   en tres carteras reales.
-- **G3 (precio)** **pendiente**: hay comprador nombrado y canal, pero la cifra sigue
-  `[A VALIDAR]` hasta ratificación por escrito. La línea neutra no tiene tarifa cerrada.
+- **G3 (precio)** levantado el 15-sep-2026: **79 €** ratificado (`catalogo/DECISIONES.md`, punto 2).
+  Único de la línea neutra por encima del tramo de 49 €, por entregar mensajes redactados y cuadro
+  de mando.
 - **G4 (legal)** en orden. La skill declara que no es asesoría jurídica, excluye expresamente el
   cobro a consumidores con la fuente regulatoria que lo sostiene, y el anexo mexicano cita
   artículo y texto legal.
-- **G5 (público)** pendiente: esta ficha no se ha usado en material de venta enviado a nadie.
+- **G5 (público)** levantado el 15-sep-2026: toda cifra de esta ficha lleva fuente o va marcada
+  `[SIN VERIFICAR]`. Texto de venta en `venta/MENSAJES.md` y `venta/GUMROAD-ALTA.md`.

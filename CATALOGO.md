@@ -96,3 +96,4 @@ lo hace comprensible.
 - [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md) — tarifa propuesta, con la razón de cada cifra y su anclaje de mercado.
 - [`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md) — matriz G1–G5 pieza por pieza y los tres riesgos abiertos.
 - [`catalogo/PENDIENTE-FIRMA.md`](catalogo/PENDIENTE-FIRMA.md) — las 4 decisiones que desbloquean el cobro.
+- [`venta/GUMROAD-ALTA.md`](venta/GUMROAD-ALTA.md) — canal de cobro decidido el 15-sep-2026 y hoja de alta de los dos primeros productos.

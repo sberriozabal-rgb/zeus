@@ -7,7 +7,7 @@
   "peldano": "P1",
   "motor": "A",
   "estado": "ACORDADO",
-  "precio_eur": "39-49 [A VALIDAR]",
+  "precio_eur": "49 (ratificado 15-sep-2026, catalogo/PRECIOS.md)",
   "fecha_revision": "2026-09-15",
   "entregable": "reporte-semanal-de-10-secciones",
   "enlaza_con": [
@@ -18,7 +18,7 @@
   "gates": {
     "G1": true,
     "G2": false,
-    "G3": false,
+    "G3": true,
     "G4": true,
     "G5": false
   },
@@ -27,7 +27,6 @@
     "G2 parcial: el antipatron 1 esta [OBSERVADO 2026-08-16] en una ejecucion real de CDMX, pero no son tres casos reales",
     "Cifras de BrightLocal son de EEUU: direccion extrapolable, cifras exactas no",
     "Elasticidad de Luca es de restaurantes independientes en Yelp: no vale para otros sectores",
-    "G3 pendiente y con decision de modelo abierta: pago unico o suscripcion",
     "Solape comercial con reporte-inteligencia-competencia, que es su vertical de hosteleria"
   ],
   "license": "Ver LICENSE.txt",

@@ -7,7 +7,7 @@
   "peldano": "P1",
   "motor": "A",
   "estado": "ACORDADO",
-  "precio_eur": "39-49 [A VALIDAR]",
+  "precio_eur": "49 (ratificado 15-sep-2026, catalogo/PRECIOS.md)",
   "fecha_revision": "2026-09-15",
   "entregable": "paquete-cifrado-de-reconstruccion",
   "enlaza_con": [
@@ -18,7 +18,7 @@
   "gates": {
     "G1": true,
     "G2": false,
-    "G3": false,
+    "G3": true,
     "G4": true,
     "G5": false
   },
@@ -27,8 +27,7 @@
     "G2 pendiente: los casos son de fabricacion",
     "NO MIGRA entre cuentas: produce reconstruccion manual, y la plataforma no soporta la migracion",
     "Sin pyzipper el paquete se entrega sin cifrar y se declara",
-    "El borrador de chats cita y cuenta, no interpreta: la lectura humana es trabajo de una persona",
-    "G3 pendiente: la linea neutra no tiene tarifa cerrada"
+    "El borrador de chats cita y cuenta, no interpreta: la lectura humana es trabajo de una persona"
   ],
   "license": "Ver LICENSE.txt — uso comercial sin derecho de redistribucion",
   "spec": {

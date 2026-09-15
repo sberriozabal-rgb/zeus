@@ -25,7 +25,7 @@ dos se sostengan tres semanas después.
 > revisión de un consultor de seguridad alimentaria** antes de cobrarse. El Completa se sirve con las otras seis al
 > mismo precio, y cuando levante G4 entra sin coste para quien ya compró.
 
-**No se cobra por Polar.** La instalación va por Stripe México (pesos) o transferencia: el ticket
+**No se cobra por Gumroad.** La instalación va por Stripe México (pesos) o transferencia: el ticket
 alto justifica la comisión menor pese a no ser *merchant of record*.
 
 > Regla de la casa, literal: *ante negociación se quita alcance, jamás se baja el precio del
@@ -44,8 +44,12 @@ Precio ratificado por el dueño el 15-sep-2026. Estas cifras ya **no** llevan
 | **CABINA CARRERA** | 1 skill · `demo-a-sello` | **49 €** | 1x |
 | **CABINA COMPLETA** | las 6 | **249 €** | 5,1x |
 
-Pago único. Precio final al comprador; el IVA lo gestiona Polar como *merchant of
-record*, que es la razón por la que la doctrina lo eligió como canal principal.
+Pago único. Precio final al comprador; el IVA lo gestiona Gumroad como *merchant of
+record*, que es la razón por la que se eligió como canal principal (decisión 8).
+
+> ✅ **Primer producto de Gumroad decidido (15-sep-2026):** CABINA COMPLETA, las seis a 249.
+> El informe FORJA v1.1.0 hablaba de «CABINA CORE a 249 USD»; queda derogado en eso. Esta
+> tarifa se mantiene tal cual. `DECISIONES.md`, punto 9.
 
 ### Por qué estas cifras
 
@@ -80,7 +84,7 @@ estás cobrando.**
 El bloqueo de G1 que existía al cerrar la tarifa —las seis puntuaban entre 0 y 2 sobre 20 por
 falta de `cases/`, `CHANGELOG.md`, tabla NUNCA y antipatrones— **quedó resuelto el mismo
 día**: envoltorio cerrado en las seis, validador en 20/20 mecánico (19/20 declarado). El
-contenido de oficio no se tocó. **CABINA está lista para publicar en Polar.** Detalle en
+contenido de oficio no se tocó. **CABINA está lista para publicar en Gumroad** (hoja de alta en `venta/GUMROAD-ALTA.md`). Detalle en
 [`ESTADO-GATES.md`](ESTADO-GATES.md#cabina-dj).
 
 ## 3 · Neutra / B2B — CERRADA
@@ -102,21 +106,23 @@ es una deuda que se paga todos los lunes. Se reabre con 3 instalaciones vivas.
 
 ## Canal de cobro
 
-La doctrina ya lo tiene decidido y no hace falta reabrirlo:
+Decidido el 15-sep-2026 (decisión 8 de `DECISIONES.md`), tras rehacer la cuenta con el
+procesamiento de tarjeta dentro:
 
-- **Polar** como principal: es *merchant of record*, acepta México como país del
-  vendedor, y concede y revoca acceso a repositorio privado de GitHub al
-  suscribir y al cancelar. Comisión 5 % + 0,50 $ en plan gratuito; 3,8 % + 0,40 $
-  en plan de 20 $/mes; +1,5 % en tarjeta internacional; 15 $ por disputa.
+- **Gumroad** como principal para catálogo: 10 % + 0,50 USD por venta directa `[según informe
+  FORJA v1.1.0; confirmar en el desglose de la primera venta si incluye tarjeta]`, sin cuota
+  fija, *merchant of record* (remite el IVA de cada país). Entrega por descarga del zip de
+  `venta/empaquetar_gumroad.py`. Hoja de alta en `venta/GUMROAD-ALTA.md`.
+- **myClaude** (92 % antes de Stripe) empata con Gumroad en unidades necesarias; se suma
+  después, si acaso, por el tráfico que trae, no por margen. Sin exclusividad ni cuota.
 - **Stripe México** para pesos e instalaciones: 3,6 % + 3,00 MXN, +0,5 % tarjeta
   internacional, +2 % conversión de divisa. **No es merchant of record.**
-- Entrega **siempre por acceso revocable** a este repositorio privado, nunca por
-  adjunto. El adjunto no se recupera al cancelar.
+- **Polar** queda descartado: era *merchant of record* y entregaba por acceso revocable al
+  repositorio, pero la decisión del 12-sep ya era Gumroad y la cuenta rehecha no da razón de
+  margen para reabrirla. Configuración conservada en `venta/POLAR-CONFIGURACION.md`.
 
-Empezar por el plan gratuito de Polar: comisión más alta pero sin cuota fija, no
-arriesga nada hasta que haya volumen. `scripts/punto_equilibrio.py` de
-`forja-fabrica-de-skills` calcula a partir de cuántas transacciones compensa
-saltar al plan de 20 $/mes.
+**Entrega por descarga es una desviación declarada de la doctrina** (*acceso revocable, nunca
+adjunto*), asumida a cambio del IVA resuelto.
 
 ## Anclas de mercado (fuentes de la doctrina)
 

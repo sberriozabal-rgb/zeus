@@ -70,7 +70,7 @@ con sus notas declaradas. Es fiable.
 | `respaldo-proyecto-ia-cl` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · 49 € / 89 € en PACK CONTEXTO · medida con el validador, ya no autoevaluación |
 | `universal-compilador-contexto` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · 49 € / 89 € en PACK CONTEXTO · ídem |
 
-Las cuatro cerraron envoltorio y ficha comercial el 15-sep-2026. G2 lo levanta el primer comprador por Polar.
+Las cuatro cerraron envoltorio y ficha comercial el 15-sep-2026. G2 lo levanta el primer comprador por Gumroad.
 
 ---
 
