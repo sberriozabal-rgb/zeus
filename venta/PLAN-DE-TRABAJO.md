@@ -103,41 +103,50 @@ porque es el producto con precio de servicio y la doctrina prohíbe regalarlo.
 
 ## 2 · La aritmética que gobierna el objetivo
 
-Precios firmados y comisión de Gumroad al 10 % + 0,50 USD (≈ 0,43 €) `[según informe FORJA
-v1.1.0; si el desglose del paso 1.4 muestra el procesamiento de tarjeta aparte, se resta aquí]`.
-Las cuotas son las de la decisión 9.
+Precios firmados y comisión real de Gumroad, **verificada el 15-sep-2026**: el 10 % + 0,50 USD
+**no incluye** el procesamiento de tarjeta, que va aparte (≈ 2,9 % + 0,30 USD); coste efectivo
+≈ 12,9 % + 0,80 USD por venta directa ([Swell](https://www.swell.is/content/gumroad-pricing),
+[Checkout Page](https://checkoutpage.com/blog/how-gumroad-pricing-works-and-a-cheaper-alternative),
+[InsightRaider](https://insightraider.com/en/answers/how-much-does-gumroad-cost-per-month)). Las ventas
+por el buscador interno (Discover) pagan un 30 % plano: por eso se apaga. Las cuotas son las de la
+decisión 9.
 
 | Producto | Precio | Neto por unidad, cobrando en EUR | Neto si Gumroad sólo admite USD | Cuota/mes |
 |---|---|---|---|---|
-| CABINA COMPLETA | 249 | 223,7 € | 193,8 € (223,6 USD) | **7** |
-| Cobro de cartera vencida | 79 | 70,7 € | 61,2 € (70,6 USD) | **15** |
+| CABINA COMPLETA | 249 | 216,2 € | 187,3 € (216,1 USD) | **7** |
+| Cobro de cartera vencida | 79 | 68,1 € | 59,0 € (68,1 USD) | **15** |
 | Instalación Esencial (transferencia, sin comisión) | 2.500 € | 2.500 € | — | **una cada 6 meses** |
 
-**22 ventas al mes entre los dos productos cubren 2.626 € netos si Gumroad cobra en euros: el
-objetivo entero.** Si sólo admite dólares, las mismas 22 ventas dan 2.275 € (87 %) y el resto lo
-cubre una Instalación Esencial cada seis meses. En ninguno de los dos casos hace falta el tercer
-tramo que la v1.0 dejaba sin precio.
+**22 ventas al mes entre los dos productos cubren 2.535 € netos (97 %) si Gumroad cobra en euros;
+2.196 € (84 %) si sólo admite dólares.** En los dos casos una Instalación Esencial cada seis meses
+(417 €/mes) cierra el objetivo. Gumroad muestra precios en EUR pero procesa en USD al cambio del
+momento ([Gumroad Help](https://gumroad.com/help/article/149-adding-a-product)): la cifra en euros
+es la que ve el comprador; lo que entra en cuenta es dólares.
 
 **Cambiar de canal no ahorra ni una venta:** Polar (5 % + 1,5 % internacional + 0,50) daría 232,4 €
-y 73,4 € netos, unos 94 € más al mes con las mismas 22 unidades, y entregaría por acceso revocable
+y 73,4 € netos, unos 240 € más al mes con las mismas 22 unidades, y entregaría por acceso revocable
 al repositorio. Se decidió Gumroad por el IVA resuelto y por no reabrir una decisión ya tomada dos
-veces; Polar es la caída si Gumroad no paga a México.
+veces; Polar es la caída si Gumroad no paga a México. **A 15-sep no hay confirmación de que Polar
+pague a México** (su lista de países no se pudo leer desde aquí); de Gumroad sí la hay (§3).
 
 ---
 
 ## 3 · El reloj del dinero
 
-Que no se confunda lentitud administrativa con fracaso comercial. Cifras del informe FORJA v1.1.0,
-`[sin segunda comprobación: el proxy bloquea gumroad.com]`; se confirman en el paso 0.2.
+Que no se confunda lentitud administrativa con fracaso comercial. **Verificado el 15-sep-2026**
+([Gumroad Help — Getting paid](https://help.gumroad.com/article/13-getting-paid),
+[InsightRaider](https://insightraider.com/en/answers/when-does-gumroad-pay-out)).
 
 | Hito | Cuándo |
 |---|---|
 | Venta hecha | día 0 |
 | Retención antes de poder cobrarla | 7 días |
-| Los pagos salen los viernes | el viernes siguiente |
-| Revisión de cuenta nueva | 1 a 3 semanas, en paralelo desde el día 1 |
+| Los pagos salen los viernes, por ventas hasta el viernes anterior | el viernes siguiente |
+| Mínimo para que salga el pago | 10 USD acumulados; si no, pasa a la semana siguiente |
+| Verificación de identidad (KYC de Stripe) | la pide tras cierto volumen; hacerla el día 1 para que no frene el primer pago |
+| **Cobro a México** | **Transferencia a banco local mexicano, soportada** ([Gumroad: local bank account support](https://gumroad.gumroad.com/p/local-bank-account-support-in-more-countries)). PayPal ya no es método de pago de Gumroad desde oct-2024. Lo que no hay en México es la conexión directa de Stripe, que no afecta al cobro |
 
-**Entre la primera venta y el primer ingreso pasan de dos a cuatro semanas.** Es el calendario, no
+**Entre la primera venta y el primer ingreso pasan de dos a tres semanas.** Es el calendario, no
 un problema. La instalación de hostelería no tiene este reloj: se cobra por transferencia el día
 que se firma.
 
@@ -150,7 +159,7 @@ que se firma.
 | El tráfico no llega | La tienda abierta y sin visitas a los 14 días | No bajar precio. Ir a buscar al DJ donde está: foros, grupos, residentes conocidos |
 | La promesa no convence sin cifra | Visitas sin compra | Acelerar la fase 2. Es el hueco, no el precio |
 | CABINA COMPLETA a 249 no aguanta en directorios | Cero ventas en myClaude y sí en el enlace directo | Confirmado: ese precio se defiende en página propia, no en estante. Ante negociación se quita alcance, jamás se baja el precio |
-| Gumroad no paga a México por transferencia | Sólo aparece PayPal al configurar cobros | Contar un 3-4 % de conversión encima. Si aun así no compensa, caer a Polar con `venta/POLAR-CONFIGURACION.md`, que está completo |
+| Gumroad no paga a México por transferencia | El alta de cobro no ofrece banco mexicano (contra lo que dice su blog) | Caer a Polar con `venta/POLAR-CONFIGURACION.md`, previa confirmación de que Polar sí paga a México |
 | La tienda se llama CABINA y el producto de cobro vive ahí | Un director financiero pregunta qué es CABINA | Asumido el 12-sep. Casi nadie llega por la portada |
 | Dos tarifas circulando | Alguien cita «CORE 249 USD» o «cobro 69 USD» | La v1.0 está retirada. Toda cifra sale de `catalogo/PRECIOS.md` |
 | El zip se comparte | Un comprador lo pasa a diez colegas | Desviación asumida de la doctrina (decisión 8). La licencia lo prohíbe; el remedio real es la fase 2: la cifra de cliente no se copia con el zip |
@@ -162,10 +171,11 @@ que se firma.
 
 | Hueco | Responsable |
 |---|---|
-| **La prueba con cifra, en los tres productos** | Sergio · tres conversaciones |
-| Si el 10 % + 0,50 de Gumroad incluye el procesamiento de tarjeta | Sergio · paso 1.4 |
-| Qué método de cobro ofrece Gumroad desde México | Sergio · paso 0.2 |
-| Si Gumroad admite precio en EUR o fuerza USD | Sergio · paso 1.2 |
+| **La prueba con cifra, en los tres productos** | Sergio · tres conversaciones. Estado del pipeline real en [`PIPELINE.md`](PIPELINE.md) |
+| ~~Si el 10 % + 0,50 incluye el procesamiento~~ **No lo incluye** (verificado 15-sep, §2). El paso 1.4 sólo confirma la cifra exacta | Sergio · paso 1.4 |
+| ~~Qué método de cobro ofrece Gumroad desde México~~ **Banco local** (verificado 15-sep, §3). El paso 0.2 lo comprueba en el alta | Sergio · paso 0.2 |
+| ~~Si Gumroad admite precio en EUR~~ **Muestra EUR, cobra en USD** (verificado 15-sep, §2) | — |
+| Si Polar paga a México (sólo importa si Gumroad falla) | La fábrica, cuando el proxy deje leer polar.sh |
 | Si myClaude y SkillHQ actúan como *merchant of record* o el IVA europeo es del vendedor | La fábrica, escribiéndoles |
 | Cómo se entra en el directorio `claudemarketplaces.com` | La fábrica |
 | Si existe una skill de captación que no sea de pago (hoy no) | Sergio |
@@ -191,6 +201,7 @@ catálogo tiene 17 piezas listas y ninguna venta; el problema no se arregla con 
 | Archivo | Qué es |
 |---|---|
 | `venta/PLAN-DE-TRABAJO.md` | Este documento. El plan operativo, v1.1 |
+| `venta/PIPELINE.md` | El pipeline real: la campaña del 7-sep prospecto a prospecto, con la acción siguiente de cada uno |
 | `venta/GUMROAD-ALTA.md` | La cuenta, los dos productos campo por campo, la política de devolución |
 | `venta/empaquetar_gumroad.py` | Genera en `dist/` el zip de cada producto sin material de fábrica |
 | `venta/POLAR-CONFIGURACION.md` | Histórico; es la caída si Gumroad no paga a México |
