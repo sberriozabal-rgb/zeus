@@ -14,287 +14,251 @@ description: >-
   concreta, auditar la operación interna ni comparar precios de proveedores.
 license: Proprietary
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   status: "ACORDADO"
   audit: "18/20 (pendiente de reauditoría tras v1.1.0)"
   author: "Sergio Berriozábal"
   updated: "2026-08-16"
 ---
 
-# REPORTE DE INTELIGENCIA — v1.1.0
-## Panel de 6 competidores · reputación digital · brecha · plan de 7 días
+# reporte-inteligencia
 
----
+## Qué hace
 
-## ROL
+Convierte **el nombre de una marca y su plaza** en **un reporte semanal de 10 secciones con
+panel congelado de 6 competidores, tabla de brecha en 8 métricas y 3 acciones de 7 días con
+dueño y métrica de verificación**, para **quien dirige marca, operación o el negocio entero**.
 
-Eres el analista de inteligencia competitiva de la marca. Tu producto no es un resumen de reseñas: es un documento de decisión que dice **qué hacer el lunes** y contra qué número se comprueba el viernes.
+El coste real está en la captura, no en la redacción, y eso cambia la promesa: en modo BÚSQUEDA
+son **~1 h 15 min** pero solo se alcanzan 2 de las 8 métricas; en modo PLATAFORMA son **6-8
+horas** y se cierra la línea base. La cifra de 45 minutos que figuraba en la v1.0.x medía solo la
+redacción y omitía la captura. Declarar el modo antes de medir es lo que separa este reporte de
+una tabla de números redondos con aspecto de medición.
 
----
+## Cuándo se dispara
 
-## DEFINICIÓN OPERATIVA
+- "quiero saber cómo voy contra los de mi zona"
+- "qué están haciendo mis competidores que yo no"
+- "necesito un informe semanal de reputación"
+- "por qué nos están bajando las valoraciones"
+- "quién es el líder de mi categoría en la plaza"
+- "ha abierto uno nuevo y quiero saber si me afecta"
+- "compara mi marca con seis parecidas"
+- "qué piden los clientes que nadie está dando"
+- jerga del gremio: "panel", "línea base", "benchmark", "competencia", "plaza", "cuota",
+  "nota media", "velocidad de reseñas", "tasa de respuesta", "brecha", "delta", "serie",
+  "corte semanal", "entrante"
 
-Convierte **el nombre de una marca y su plaza** en **un reporte semanal de 10 secciones con panel de 6 competidores, tabla de brecha en 8 métricas y 3 acciones de 7 días con dueño y métrica de verificación**, para **quien dirige marca, operación o el negocio entero**.
+## Quién lo ejecuta
 
-**Tiempo, desglosado por modo de captura** (ver P2·bis). El coste real está en la captura, no en la redacción:
+Quien dirige la marca o el negocio, o el analista al que se lo encarga. **1 h 15 min** en modo
+BÚSQUEDA —que no cierra línea base y sirve para armar el panel— y **6 a 8 horas** en modo
+PLATAFORMA para el primer corte completo. Los cortes siguientes bajan mucho: el panel ya está
+congelado y solo se recapturan las métricas.
 
-| Fase | Modo BÚSQUEDA | Modo PLATAFORMA |
-|---|---|---|
-| Captura (P2 + P3) | 20–30 min | **45–60 min por ficha × 7 = 5–7 h** |
-| Análisis y redacción (P4–P9) | 45 min | 45 min |
-| **Total** | ~1 h 15 min | **6–8 h** |
+## Entrada
 
-El modo BÚSQUEDA **no cierra una línea base**: alcanza 2 de las 8 métricas. La cifra de 45 minutos que figuraba en v1.0.x medía solo la redacción y omitía la captura.
+- **Obligatorio:** el nombre de la marca. Nada más es obligatorio.
+- **Recomendado:** ciudad o dirección. Es la **única** pregunta que se hace si el nombre es
+  ambiguo, y nunca se hacen más de dos.
+- **Recomendado:** la plataforma ancla donde vive la reputación del sector, para no mezclar
+  fuentes en la misma serie.
+- **Recomendado:** el reporte de la semana anterior, si existe, para reutilizar el panel
+  congelado y verificar si las tres acciones movieron la métrica.
+- **Dato sucio típico:** la nota o el volumen que vienen de un agregador **sin fecha de captura
+  declarada**. Se marca `[FUENTE SIN FECHA]` y **no entra en el cálculo de medianas**. Y cuando
+  dos fuentes se contradicen, **se reportan ambas y no se elige**: la discrepancia es el dato.
+  El segundo dato sucio es el competidor con menos de 10 reseñas totales, que se marca
+  `[MUESTRA INSUFICIENTE]` y sale de las medianas del panel, no del reporte.
 
----
+## Umbral que sostiene el producto
 
-## PROTOCOLO
+**El panel congelado 13 semanas con composición fija 3+2+1.** Tres directos (misma categoría,
+ticket ±25 %, dentro del radio), dos de referencia (líder de la plaza o marca aspiracional) y un
+entrante (abierto o relanzado en 12 meses). Cambiar de competidores a mitad de trimestre
+convierte **todos los deltas en ruido**, y los dos cupos de referencia son obligatorios
+precisamente porque van por delante: si el panel no incomoda, está mal armado.
 
-Nueve pasos. El paso 1 es bloqueante: sin panel congelado no hay serie comparable.
+El segundo umbral es el **modo de captura**, y es bloqueante: BÚSQUEDA alcanza solo las métricas
+1 y 2 y se emite con `ESTADO_LINEA_BASE: ABIERTA`; PLATAFORMA alcanza las 8 y sí cierra línea
+base. **Nunca se mezclan modos en la misma serie.**
 
-### P0 · Encuadre mínimo
+Las anclas externas, verificadas:
 
-- **Entrada:** nombre de la marca. Nada más es obligatorio.
-- **Acción:** identificar categoría, plaza y radio de competencia desde fuentes públicas. Fijar la semana del reporte (lunes–domingo cerrado).
-- **Si falta el dato:** si el nombre es ambiguo (varias marcas homónimas o cadena multi-local), **preguntar una sola cosa**: ciudad o dirección. Nunca más de dos preguntas. Radio por defecto: 2 km en núcleo urbano, 15 min en coche fuera de él, mercado nacional si el negocio es digital. Se declara el radio asumido en la cabecera.
+- **97 % lee reseñas** al evaluar un negocio local y **41 % las lee siempre** (29 % en 2025);
+  Google cae del 83 % al 71 % como plataforma de descubrimiento y el consumidor medio consulta
+  **seis plataformas**; **19 % espera respuesta el mismo día** y 32 % al día siguiente, de donde
+  sale el umbral de **< 24 h**. (BrightLocal, *Local Consumer Review Survey 2026*, panel de
+  1.002 adultos de EE. UU., 11-02-2026,
+  <https://www.brightlocal.com/research/local-consumer-review-survey/>.) **Límite: es EE. UU.;
+  la dirección del comportamiento es extrapolable, las cifras exactas no.**
+- **Una estrella más de nota se traduce en un 5-9 % más de ingresos**, efecto concentrado en
+  establecimientos independientes y **ausente en cadenas** (Luca, HBS 12-016,
+  <https://www.hbs.edu/ris/Publication%20Files/12-016_a7e4a5a2-03f9-490d-b093-8f951238dba2.pdf>).
+  **Límite: es Yelp y son restaurantes independientes; no se presenta como elasticidad válida
+  para otros sectores.**
+- Comprar, vender o suprimir reseñas está **prohibido por norma en EE. UU. desde el
+  21-10-2024**, con sanción civil por infracción conocida (FTC, 16 CFR Part 465,
+  <https://www.federalregister.gov/documents/2024/08/22/2024-18519/trade-regulation-rule-on-the-use-of-consumer-reviews-and-testimonials>).
 
-### P1 · Armar y congelar el panel de 6 · BLOQUEANTE
+`[CONVENCIÓN]` de esta skill, no dato de fuente: la composición 3+2+1, las 13 semanas de
+congelación, el umbral de **3 menciones** para declarar patrón, la ventana de 30 reseñas o 90
+días, y los topes de 6 hallazgos, 5 fallos y 3 acciones.
 
-- **Entrada:** marca, categoría, plaza, radio.
-- **Acción:** seleccionar seis competidores con esta composición fija:
+## Procedimiento
 
-| Cupo | Perfil | Criterio de entrada |
-|---|---|---|
-| 3 | **Directos** | Misma categoría, mismo rango de ticket (±25 %), dentro del radio |
-| 2 | **Referencia** | Líder de la categoría en la plaza o marca aspiracional que el cliente compara |
-| 1 | **Entrante** | Abierto o relanzado en los últimos 12 meses, o modelo distinto que roba la misma ocasión de consumo |
+1. **Entrada: el nombre de la marca → Acción: identificar categoría, plaza y radio desde fuentes
+   públicas, fijar la semana (lunes-domingo cerrado) y armar el panel de 6 con la composición
+   3+2+1, congelándolo 13 semanas → Salida: ficha de panel con nombre, perfil, distancia y
+   motivo de entrada en una línea → Si falta el dato: si el nombre es ambiguo se pregunta **una
+   sola cosa**, ciudad o dirección; radio por defecto 2 km urbano, 15 min en coche fuera, y
+   nacional si el negocio es digital, siempre declarado en cabecera.**
 
-- El panel **se congela 13 semanas**. Un cambio a mitad de trimestre rompe la serie y todos los deltas dejan de significar nada. Los cambios se anotan y entran en el corte siguiente.
-- **Salida:** ficha de panel con nombre, perfil, distancia o ámbito y motivo de entrada en una línea.
-- **Si falta el dato:** si no hay 6 candidatos en el radio, se amplía el radio en tramos de 2 km y se declara. Nunca se rellena el panel con un negocio de otra categoría para llegar a seis.
+2. **Entrada: el panel armado → Acción: declarar el MODO DE CAPTURA en la cabecera **antes** de
+   capturar nada, BÚSQUEDA o PLATAFORMA → Salida: modo declarado y, si es BÚSQUEDA, la
+   advertencia de método y `ESTADO_LINEA_BASE: ABIERTA` → Si se cambia de modo a mitad de
+   trimestre: se rompe la serie igual que cambiando el panel, así que no se hace.**
 
-### P2·bis · Declarar el MODO DE CAPTURA · BLOQUEANTE
+3. **Entrada: las 7 fichas (panel de 6 más la marca propia) → Acción: capturar de fuentes
+   públicas las 8 métricas del cuadro, leyendo antes `references/metricas-y-umbrales.md` →
+   Salida: tabla de 7 filas × 8 columnas con fecha y hora de captura → Si falta el dato: celda
+   `[NO DISPONIBLE]` con su motivo, y **nunca se estima una métrica ausente**.**
 
-**Nuevo en v1.1.0.** Hasta v1.0.x el protocolo decía *qué* medir y *con qué fórmula*, pero no *desde dónde*. Los dos modos posibles rinden cosas distintas y confundirlos produce una línea base falsa.
+4. **Entrada: las reseñas del panel → Acción: leer lo cualitativo y extraer patrones de elogio y
+   de queja, cada uno con cita textual de menos de 15 palabras, con fecha y plataforma → Salida:
+   patrones citados y recuperables → Si un patrón tiene menos de 3 menciones: es anécdota y no
+   sube a patrón.**
 
-| Modo | Cómo se obtiene el dato | Métricas alcanzables | ¿Cierra línea base? |
-|---|---|---|---|
-| **BÚSQUEDA** | Buscador, agregadores, directorios, prensa, fichas indexadas | **Solo 1 y 2**, y con fecha de captura frecuentemente desconocida | ❌ **No** |
-| **PLATAFORMA** | Abrir la ficha en la plataforma ancla y contar el listado de reseñas | **1 a 8** | ✅ Sí |
+5. **Entrada: la tabla de métricas → Acción: construir la brecha en tres columnas —nosotros,
+   mediana del panel, mejor del panel— con delta y semáforo por métrica → Salida: las 8 métricas
+   con posición de 1.º a 7.º y las tres peor situadas → Si el panel tiene fichas con muestra
+   insuficiente: salen de la mediana pero no del reporte, y se declara.**
 
-- **Acción:** declarar el modo en la cabecera del reporte, antes de capturar nada. Si es BÚSQUEDA, la cabecera lleva además la advertencia de método.
-- **Regla dura:** el modo BÚSQUEDA sirve para **armar el panel de P1 y verificar identidad**, no para medir. Un reporte en modo BÚSQUEDA se emite con `ESTADO_LINEA_BASE: ABIERTA` y sus tres acciones de 7 días se orientan a cerrarla.
-- **Nunca se mezclan modos en la misma serie.** Cambiar de modo a mitad de trimestre rompe los deltas igual que cambiar el panel o el ancla.
-- **Si falta el dato:** toda nota o volumen procedente de un agregador **sin fecha de captura declarada** se marca `[FUENTE SIN FECHA]` y no entra en el cálculo de medianas. Cuando dos fuentes se contradicen, **se reportan ambas y no se elige**: la discrepancia es el dato.
+6. **Entrada: brecha y patrones → Acción: escribir máximo 6 hallazgos de lo que ellos hacen bien
+   (cada uno con evidencia citada y clasificación de replicabilidad) y máximo 5 fallos propios
+   ordenados por frecuencia × impacto, **en el lenguaje del cliente y no en el interno** →
+   Salida: 6 hallazgos y 5 fallos con su cita → Si un hallazgo es `ESTRUCTURAL`: no puede
+   originar ninguna acción de 7 días.**
 
-### P2 · Captura de reputación digital
+7. **Entrada: hallazgos, fallos y huecos de la plaza → Acción: identificar de 2 a 4
+   oportunidades —lo que piden los clientes que ningún competidor resuelve— y cerrar con
+   exactamente 3 acciones de 7 días (acción, dueño por puesto, coste y métrica de verificación
+   con número y fecha) más 2 movimientos de trimestre → Salida: tabla de 3 filas y 2 movimientos
+   → Si solo hay una oportunidad real: se entrega una; cero relleno.**
 
-- **Entrada:** panel de 6 + la marca propia = 7 fichas.
-- **Acción:** por cada uno, capturar de fuentes **públicas** las 8 métricas del cuadro. Definiciones exactas y umbrales en `references/metricas-y-umbrales.md` — **léelo antes de calcular nada**. Fuentes prioritarias por sector en `references/fuentes-por-sector.md`.
+8. **Entrada: todo lo anterior → Acción: montar el semáforo de 5 indicadores, listar las alertas
+   activas y verificar las tres acciones del reporte anterior como hecha / no hecha / movió la
+   métrica, emitiendo con `assets/plantilla-reporte.md` → Salida: reporte de 10 secciones con
+   cabecera de semana, panel, radio, modo y fecha de captura → Si es el primer corte: la
+   cabecera lleva `[PRIMER CORTE — LÍNEA BASE]` y no hay deltas que mostrar.**
+
+## Salida
+
+```markdown
+# Reporte de inteligencia — [Marca] · Semana [n]
+Panel congelado hasta: [fecha] · Radio: [n] · MODO: [BÚSQUEDA|PLATAFORMA]
+Captura: [fecha y hora] · ESTADO_LINEA_BASE: [ABIERTA|CERRADA]
+
+## 1. Resumen  ## 2. Panel  ## 3. Reputación (7×8)  ## 4. Brecha
+## 5. Qué hacen bien ellos (máx. 6)   ## 6. Qué hacemos mal (máx. 5)
+## 7. Oportunidades (2-4)             ## 8. Acciones de 7 días (exactamente 3)
+| Acción | Dueño (puesto) | Coste | Métrica de verificación + fecha |
+## 9. Movimientos de trimestre (2)    ## 10. Semáforo y alertas
+
+## Supuestos de esta versión
+[radio asumido, celdas NO DISPONIBLE, fuentes sin fecha, muestras insuficientes]
+```
+
+Las 8 métricas del paso 3, y por qué está cada una:
 
 | # | Métrica | Por qué está |
 |---|---|---|
 | 1 | Nota media global | Punto de partida, pero se mueve lento |
 | 2 | Volumen total de reseñas | Mide masa y antigüedad de la reputación |
-| 3 | Velocidad (reseñas nuevas/semana, media 4 sem.) | Mide tracción actual |
-| 4 | Nota reciente (media de las últimas 20) | Detecta la deriva 3–6 meses antes que la media global |
-| 5 | % de 1–2★ sobre las últimas 50 | Mide el daño vivo, no el histórico |
+| 3 | Velocidad (nuevas/semana, media 4 sem.) | Mide tracción actual |
+| 4 | Nota reciente (media de las últimas 20) | Detecta la deriva 3-6 meses antes que la global |
+| 5 | % de 1-2★ sobre las últimas 50 | Mide el daño vivo, no el histórico |
 | 6 | Tasa de respuesta del propietario (últimas 50) | Se ve desde fuera y pesa en la percepción |
-| 7 | Tiempo mediano de respuesta | La expectativa del mercado es < 24 h (ver REFERENCIAS) |
+| 7 | Tiempo mediano de respuesta | La expectativa del mercado es < 24 h |
 | 8 | Frescura (% de reseñas de los últimos 30 días) | Un perfil sin reseñas recientes se lee como negocio apagado |
 
-- **Salida:** tabla de 7 filas × 8 columnas, con fecha y hora de captura.
-- **Si falta el dato:** celda marcada `[NO DISPONIBLE]` con el motivo (perfil sin reclamar, plataforma sin presencia, muestra < 10 reseñas). **Nunca se estima una métrica ausente.** Si un competidor tiene < 10 reseñas totales, se marca `[MUESTRA INSUFICIENTE]` y se excluye de las medianas del panel, no del reporte.
+## Límites
 
-### P3 · Lectura cualitativa: elogios y quejas
+- **El modo BÚSQUEDA no cierra una línea base.** Alcanza 2 de 8 métricas y se emite siempre con
+  `ESTADO_LINEA_BASE: ABIERTA`.
+- No usa datos obtenidos saltándose términos de uso ni muros de acceso: el reporte se sostiene
+  sobre lo que cualquiera puede ver.
+- No identifica ni nombra a ningún reseñador. Analiza patrones, no personas.
+- **No recomienda solicitar, comprar, incentivar ni suprimir reseñas**, ni propias ni del
+  competidor: está prohibido por norma en EE. UU. y por política de plataforma en todos los
+  mercados.
+- Las cifras de BrightLocal son de consumidores de EE. UU. y la elasticidad de Luca es de
+  restaurantes independientes en Yelp: la dirección es extrapolable, las cifras exactas no.
+- No sustituye la respuesta a reseñas ni el plan de marketing: produce la evidencia y el bloque
+  `HANDOFF` para quien haga eso.
 
-- **Entrada:** las últimas 30 reseñas de cada ficha, o las de los últimos 90 días si son más.
-- **Acción:** clasificar cada reseña en los cinco ejes: **producto · servicio y tiempos · precio-valor · entorno y limpieza · canal digital** (reserva, pedido, entrega, atención online). Extraer por competidor hasta 5 elogios y 5 quejas recurrentes.
-- **Umbral de patrón:** un tema es patrón con **≥ 3 menciones independientes** en la ventana. Con 1 o 2 menciones es anécdota y **no entra en el reporte** — es la regla que impide construir estrategia sobre un cliente enfadado.
-- Cada patrón lleva **una cita textual de menos de 15 palabras + fecha + plataforma**. Sin cita verificable, el patrón no existe.
-- **Salida:** por competidor, elogios y quejas ordenados por frecuencia, con evidencia.
+## Reglas
 
-### P4 · Espejo propio
-
-- **Entrada:** ficha de la marca propia (P2 + P3).
-- **Acción:** tabla de brecha en tres columnas: **nosotros · mediana del panel · mejor del panel**, con el delta y el semáforo por métrica.
-- **Salida:** las 8 métricas con posición (1.º a 7.º) y las tres en que la marca está peor situada.
-- **Si falta el dato:** si la marca propia no tiene perfil reclamado en alguna plataforma, eso **es el primer hallazgo del reporte**, no una laguna.
-
-### P5 · Qué hacen bien ellos que nosotros no
-
-- **Entrada:** P3 de los seis + P4.
-- **Acción:** máximo **6 hallazgos**. Cada uno con: qué hacen · evidencia citada (métrica o cita con fecha) · por qué les funciona · **clasificación de replicabilidad**.
-
-| Clase | Significado |
+| SIEMPRE | Porqué |
 |---|---|
-| `7 DÍAS` | Se copia sin inversión ni obra: respuesta, horario, foto, texto, protocolo |
-| `90 DÍAS` | Requiere cambio de proceso, formación o gasto acotado |
-| `ESTRUCTURAL` | Depende de ubicación, capital, licencia o marca — se documenta y **no se recomienda copiar** |
+| Citar textualmente en menos de 15 palabras, con fecha y plataforma, cada patrón | Sin evidencia recuperable, quien lee no puede comprobarlo y deja de confiar en la serie entera |
+| Congelar el panel 13 semanas | Cambiar de competidores a mitad de trimestre convierte todos los deltas en ruido |
+| Declarar fecha y hora de captura en la cabecera | Una nota media de hace tres semanas presentada como actual es un dato falso con formato de dato verdadero |
+| Marcar `[NO DISPONIBLE]` la métrica que no se pudo capturar | Un hueco declarado se cubre la semana siguiente; una estimación inventada contamina la serie para siempre |
+| Separar hecho, inferencia y criterio con `[DATO]`, `[INFERENCIA]` y `[CRITERIO]` | Quien decide necesita saber qué está comprobado y qué es juicio del analista |
+| Dar a toda recomendación su métrica de verificación con número y fecha | Sin ella no es una recomendación, es una opinión con formato de tabla |
+| Escribir los fallos propios con las palabras del cliente | El lenguaje interno permite negar el problema; la cita del cliente, no |
+| Comparar contra la mediana del panel, nunca contra la media | Un competidor con 4.000 reseñas distorsiona la media y hace parecer normal lo que no lo es |
+| Declarar el modo de captura en la cabecera | Una tabla levantada por búsqueda y otra en plataforma no son la misma medición |
+| Reportar ambas fuentes cuando se contradicen, sin elegir | La discrepancia **es** el dato, y elegir en silencio oculta el único hallazgo real de esa celda |
 
-- **Si falta el dato:** un hallazgo sin evidencia citable se degrada a hipótesis, va a la sección de vigilancia, y no genera recomendación.
+| NUNCA | Porqué |
+|---|---|
+| Usar datos obtenidos saltándose términos de uso o muros de acceso | Un dato ilegítimo es un pasivo legal dentro de un documento interno |
+| Inventar una nota, un volumen o una cita | Un solo dato fabricado invalida el reporte completo y el lector no puede saber cuál era |
+| Recomendar solicitar, comprar, incentivar o suprimir reseñas | Prohibido por norma en EE. UU. desde el 21-10-2024 con sanción civil, y por política de plataforma en todos los mercados |
+| Convertir una reseña aislada en un patrón | Menos de 3 menciones es anécdota, y construir sobre ella hace perseguir fantasmas al equipo |
+| Recomendar copiar un hallazgo clasificado `ESTRUCTURAL` | Pedir que se replique una ubicación o un capital que no se tiene quema credibilidad y presupuesto |
+| Mencionar o identificar a un reseñador por su nombre | El reporte analiza patrones, no personas, y un documento interno con nombres es un problema de datos personales |
+| Entregar más de 6 hallazgos, 5 fallos y 3 acciones | Un reporte semanal con veinte prioridades no tiene ninguna, y a la tercera semana nadie lo abre |
+| Declarar cerrada una línea base levantada en modo BÚSQUEDA | Cinco de las ocho métricas serían huecos presentados como medición, y los deltas se calcularían contra un vacío |
+| Mezclar modos de captura dentro de la misma serie | Rompe los deltas exactamente igual que cambiar el panel o la plataforma ancla a mitad de trimestre |
 
-### P6 · Qué hacemos mal nosotros
+## Antipatrones
 
-- **Entrada:** quejas propias de P3 + las tres peores métricas de P4.
-- **Acción:** ordenar por **frecuencia × impacto**, donde impacto es el efecto sobre la decisión de compra según el eje afectado. Cada fallo se escribe en el lenguaje del cliente, con su cita, no en el del interno ("tardan 40 minutos en traer la comida", no "desviación en tiempos de pase").
-- **Salida:** máximo 5 fallos, con la cifra o cita que los sostiene.
-- **Si falta el dato:** si la marca propia tiene menos de 10 reseñas en la ventana, el diagnóstico propio se hace sobre 180 días y se declara la ventana ampliada.
+1. **Síntoma**: la tabla de reputación tiene las columnas 3 a 8 vacías o rellenas de números redondos, y la cabecera no dice cómo se capturó. `[OBSERVADO 2026-08-16]` **Causa raíz**: se levantó el reporte con buscador porque es veinte veces más rápido, y se presentó como medición. **Corrección**: el paso 2 obliga a declarar el modo antes de capturar; en modo BÚSQUEDA, `ESTADO_LINEA_BASE: ABIERTA` y las tres acciones se orientan a construir la captura en plataforma. *Procedencia: detectado en la ejecución real de la Semana 0 de una taquería de CDMX el 2026-08-16. Es el primer antipatrón de esta skill observado, no derivado.*
 
-### P7 · Oportunidades de la plaza
+2. **Síntoma**: los seis competidores tienen todos nota inferior a la de la marca propia, o el reporte de la semana 6 tiene dos competidores que no estaban en el de la semana 5 sin nota que lo explique. `[DERIVADO]` **Causa raíz**: el panel se eligió para quedar bien en vez de para aprender, o se rehízo desde cero en lugar de reutilizar el congelado. **Corrección**: los dos cupos de referencia del paso 1 son obligatorios y por definición van por delante —si el panel no incomoda, está mal armado—, y el panel se copia del reporte anterior: cualquier cambio va con motivo escrito y se aplica en el corte trimestral.
 
-- **Entrada:** los 42 patrones del panel (6 × 7 temas máx.) + P5.
-- **Acción:** identificar **huecos**: qué pide el cliente en las reseñas del panel que **ningún** competidor está resolviendo, y qué elogio aparece en un solo competidor (ventaja no imitada todavía). Cada oportunidad lleva ventana temporal estimada y qué la cierra.
-- **Salida:** 2 a 4 oportunidades. Cero relleno: si solo hay una, se entrega una.
+3. **Síntoma**: el reporte abre y cierra con la nota global y no hay ninguna cita textual en todo el documento. `[DERIVADO]` **Causa raíz**: se capturó la métrica fácil y se saltó la lectura cualitativa, que es donde está el trabajo. **Corrección**: la nota media es la métrica 1 de 8 y no puede ocupar más de una línea del resumen; sin quejas y elogios citados, el reporte no se emite.
 
-### P8 · Recomendaciones
+4. **Síntoma**: una recomendación se apoya en una única reseña. `[DERIVADO]` **Causa raíz**: la reseña era vívida y se saltó el umbral de 3 menciones. **Corrección**: trazar cada recomendación hasta su patrón y contar las menciones antes de escribirla.
 
-- **Entrada:** P5, P6, P7.
-- **Acción:** exactamente **3 acciones de 7 días** + **2 movimientos de trimestre**. Toda acción de 7 días lleva las cuatro columnas: **acción · dueño (puesto, no nombre genérico) · coste estimado o "cero" · métrica de verificación con número y fecha de corte**.
-- Una recomendación sin métrica de verificación no se entrega: se reescribe hasta tenerla.
-- **Salida:** tabla de 3 filas + 2 movimientos con criterio de decisión.
+5. **Síntoma**: una acción de 7 días exige terraza, segundo turno o un equipo que no existe. `[DERIVADO]` **Causa raíz**: el hallazgo no se clasificó por replicabilidad, o se clasificó mal. **Corrección**: ninguna acción de 7 días puede venir de un hallazgo `90 DÍAS` o `ESTRUCTURAL`; se comprueba el origen de cada fila antes de emitir.
 
-### P9 · Cierre: semáforo, alertas y emisión
+## Casos de prueba
 
-- **Entrada:** todo lo anterior.
-- **Acción:** semáforo de 5 indicadores vigilados, lista de alertas activas (umbrales en `references/metricas-y-umbrales.md`), y verificación de las tres acciones del reporte de la semana anterior: **hecha / no hecha / movió la métrica**. Emitir con la plantilla de `assets/plantilla-reporte.md`.
-- **Salida:** reporte completo, 10 secciones, cabecera con semana, panel, radio y fecha de captura.
-- **Si falta el dato:** en el primer reporte de una marca no hay semana anterior; la sección de seguimiento dice `[PRIMER CORTE — LÍNEA BASE]`.
+Los cuatro casos están en `cases/`, con entrada y salida reales.
 
----
+**Happy path** (`cases/case_01_happy_path.md`): marca con plaza clara y panel completo en el
+radio. Primer corte con cabecera `[PRIMER CORTE — LÍNEA BASE]`, tabla 7×8 y las tres acciones
+con su métrica de verificación.
 
-## REGLAS
+**Edge case** (`cases/case_02_edge_case.md`): marca con dos locales a 900 m y panel solapado en
+4 de 6. Salen **dos reportes**, uno por unidad, y se declara que los deltas de los solapados no
+se suman.
 
-### SIEMPRE
+**Failure** (`cases/case_03_failure.md`): clínica dental con perfil sin reclamar, 6 reseñas y sin
+presencia en otras plataformas. **El reporte se emite igual**, con las celdas propias en
+`[NO DISPONIBLE]` y las tres acciones orientadas a construir la línea base.
 
-1. **Cita textual de menos de 15 palabras, con fecha y plataforma, para cada patrón.** Sin evidencia recuperable, quien lea el reporte no puede comprobarlo y deja de confiar en la serie entera.
-2. **Congela el panel 13 semanas.** Cambiar de competidores a mitad de trimestre convierte todos los deltas en ruido.
-3. **Declara la fecha y hora de captura en la cabecera.** Una nota media de hace tres semanas presentada como actual es un dato falso con formato de dato verdadero.
-4. **Marca `[NO DISPONIBLE]` la métrica que no se pudo capturar.** Un hueco declarado se puede cubrir la semana siguiente; una estimación inventada contamina la serie para siempre.
-5. **Separa hecho, inferencia y criterio** con las etiquetas `[DATO]`, `[INFERENCIA]`, `[CRITERIO]`. Quien decide necesita saber qué está comprobado y qué es tu juicio.
-6. **Toda recomendación lleva métrica de verificación con número y fecha.** Sin ella no es una recomendación, es una opinión con formato de tabla.
-7. **Escribe los fallos propios con las palabras del cliente.** El lenguaje interno permite negar el problema; la cita del cliente, no.
-8. **Compara contra la mediana del panel, no contra la media.** Un competidor con 4.000 reseñas distorsiona la media y hace parecer normal lo que no lo es.
-9. **Declara el modo de captura en la cabecera.** Una tabla levantada por búsqueda y otra levantada en plataforma no son la misma medición; presentarlas como comparables inventa deltas que no existen.
+**Integration** (`cases/case_04_integration.md`): encadenado con `respuesta-resenas`. El bloque
+`HANDOFF` entrega los 5 fallos propios en lista plana con eje y frecuencia, listos para consumir.
 
-### NUNCA
+## Ficha comercial
 
-1. **Nunca uses datos obtenidos saltándote los términos de uso o el muro de acceso de una plataforma.** El reporte se sostiene sobre lo que cualquiera puede ver; un dato ilegítimo es un pasivo legal en un documento interno.
-2. **Nunca inventes una nota, un volumen o una cita.** Un solo dato fabricado invalida el reporte completo y no hay forma de que el lector sepa cuál era.
-3. **Nunca recomiendes solicitar, comprar, incentivar ni suprimir reseñas** — ni propias ni del competidor. Está prohibido por norma en EE. UU. desde el 21-10-2024 con sanción civil por infracción (ver REFERENCIAS) y por política de las plataformas en todos los mercados.
-4. **Nunca conviertas una reseña aislada en un patrón.** Menos de 3 menciones es anécdota; construir sobre ella hace perseguir fantasmas al equipo.
-5. **Nunca recomiendes copiar un hallazgo clasificado `ESTRUCTURAL`.** Pedir que se replique una ubicación o un capital que no se tiene quema credibilidad y presupuesto.
-6. **Nunca menciones ni identifiques a un reseñador por su nombre.** El reporte analiza patrones, no personas, y un documento interno con nombres es un problema de datos personales.
-7. **Nunca entregues más de 6 hallazgos, 5 fallos y 3 acciones.** Un reporte semanal con veinte prioridades no tiene ninguna, y a la tercera semana nadie lo abre.
-8. **Nunca declares cerrada una línea base levantada en modo BÚSQUEDA.** Cinco de las ocho métricas serían huecos presentados como medición, y la semana siguiente los deltas se calcularían contra un vacío.
+Ver `ANEXO-A-ficha-comercial.md`.
 
----
+## Versión
 
-## MATRIZ DE APLICABILIDAD
-
-| Contexto | Aplica | Ajuste |
-|---|---|---|
-| Local único con competencia física | ✅ Sí | Caso central. Radio geográfico. |
-| Cadena o grupo multi-local | ✅ Sí | Un reporte **por unidad**, más una fila comparativa entre unidades propias. El panel de una unidad no sirve para otra. |
-| Marca digital, ecommerce o SaaS | ✅ Sí | El radio es de categoría, no geográfico. Fuentes: Trustpilot, G2, Capterra, App Store, Play. Añadir métrica de frescura de casos publicados. |
-| Hotel, clínica, servicio profesional | ✅ Sí | Ponderar por plataforma dominante del sector (ver `references/fuentes-por-sector.md`). |
-| Marca nueva sin reseñas propias (< 10) | ⚠️ Parcial | Se entrega el panel completo y la sección propia sale como `[SIN LÍNEA BASE]`. Sirve para posicionar, no para medir brecha. |
-| Sector con reputación no pública (B2B industrial, defensa) | ⚠️ Parcial | Sustituir reseñas por señales públicas: ofertas de empleo, notas de prensa, licitaciones, cambios de web. Se declara el cambio de fuente. |
-| **Aquí NO aplica** | ❌ | Redactar la respuesta a una reseña concreta · auditoría interna de operación o de costes · comparativa de precios de proveedores · investigación sobre un individuo · due diligence legal o financiera de un competidor. |
-
----
-
-## ANTIPATRONES
-
-Marcados `[DERIVADO]`: deducidos de los puntos de rotura del protocolo, no de una muestra de reportes emitidos.
-
-### 1 · El panel de conveniencia `[DERIVADO]`
-- **Síntoma observable:** los seis competidores tienen todos nota **inferior** a la de la marca propia.
-- **Causa raíz:** se eligió el panel para quedar bien, no para aprender.
-- **Corrección:** los dos cupos de **Referencia** de P1 son obligatorios y por definición van por delante. Si el panel no incomoda, está mal armado.
-
-### 2 · El reporte de la nota media `[DERIVADO]`
-- **Síntoma observable:** el reporte abre y cierra con la nota global y no hay ninguna cita textual en todo el documento.
-- **Causa raíz:** se capturó la métrica fácil y se saltó P3, que es donde está el trabajo.
-- **Corrección:** la nota media es la métrica 1 de 8 y no puede ocupar más de una línea del resumen. Sin quejas y elogios citados, el reporte no se emite.
-
-### 3 · La anécdota ascendida `[DERIVADO]`
-- **Síntoma observable:** una recomendación de la sección 8 se apoya en una única reseña.
-- **Causa raíz:** la reseña era vívida y se saltó el umbral de 3 menciones.
-- **Corrección:** trazar cada recomendación hasta su patrón y contar las menciones antes de escribirla.
-
-### 4 · La copia estructural `[DERIVADO]`
-- **Síntoma observable:** una acción de 7 días exige terraza, segundo turno o un equipo que no existe.
-- **Causa raíz:** el hallazgo no se clasificó en P5, o se clasificó mal.
-- **Corrección:** ninguna acción de 7 días puede venir de un hallazgo `90 DÍAS` o `ESTRUCTURAL`. Se comprueba el origen de cada fila antes de emitir.
-
-### 5 · La serie rota `[DERIVADO]`
-- **Síntoma observable:** el reporte de la semana 6 tiene dos competidores que no estaban en el de la semana 5, sin nota que lo explique.
-- **Causa raíz:** se rehízo el panel desde cero en vez de reutilizar el congelado.
-- **Corrección:** el panel se copia del reporte anterior. Cualquier cambio va con motivo escrito y se aplica en el corte trimestral.
-
-### 6 · La línea base de escaparate `[OBSERVADO 2026-08-16]`
-- **Síntoma observable:** la tabla de reputación tiene las columnas 3 a 8 vacías o rellenas de números redondos, y la cabecera no dice cómo se capturó.
-- **Causa raíz:** se levantó el reporte con buscador porque es veinte veces más rápido, y se presentó como medición.
-- **Corrección:** P2·bis obliga a declarar el modo antes de capturar. En modo BÚSQUEDA, `ESTADO_LINEA_BASE: ABIERTA` y las tres acciones construyen la captura en plataforma.
-- **Procedencia:** detectado en la ejecución real de la Semana 0 de una taquería de CDMX el 2026-08-16. Es el primer antipatrón de esta skill **observado**, no derivado.
-
----
-
-## CASOS
-
-### happy_path
-- **Entrada:** "Reporte de inteligencia de Casa Melilla, Chamberí, Madrid."
-- **Salida esperada:** panel de 6 (3 directos del barrio, 2 de referencia, 1 entrante), tabla de 7×8 con fecha de captura, 30 patrones citados, brecha con la marca 5.ª de 7 en tiempo de respuesta, 4 hallazgos `7 DÍAS`, 5 fallos propios ordenados, 3 oportunidades, 3 acciones con dueño y métrica, semáforo. Cabecera: `[PRIMER CORTE — LÍNEA BASE]`.
-
-### edge_case
-- **Entrada:** marca con dos locales a 900 m, panel solapado en 4 de 6.
-- **Salida esperada:** **dos reportes**, uno por unidad, panel propio en cada uno, más una fila comparativa entre las dos unidades propias. Se declara el solape y se advierte de que 4 competidores están contados en ambos: sus deltas **no se suman**.
-
-### failure
-- **Entrada:** clínica dental con perfil de Google sin reclamar, 6 reseñas totales, sin presencia en ninguna otra plataforma.
-- **Salida esperada:** **el reporte se emite igual.** Panel de 6 completo con su reputación (que sí existe), sección propia marcada `[MUESTRA INSUFICIENTE — 6 reseñas]`, tabla de brecha con las celdas propias en `[NO DISPONIBLE]`, y las 3 acciones de 7 días orientadas a construir la línea base: reclamar el perfil, completar ficha, activar la petición de reseña conforme a norma. Métrica de verificación: perfil reclamado y ≥ 15 reseñas en 30 días. **Nunca se responde solo "faltan datos".**
-
-### integration
-- **Entrada:** la salida de esta skill como entrada de una skill de respuesta a reseñas o de plan de marketing.
-- **Salida esperada:** además del reporte, un bloque `HANDOFF` al final con: los 5 fallos propios en lista plana con su eje y frecuencia, las 3 acciones con dueño y métrica, y el panel congelado con fecha de descongelación. Formato tabla Markdown, sin prosa, listo para consumir por otra skill.
-
----
-
-## AUTOCONTROL
-
-Antes de emitir, verifica en silencio:
-
-- ¿Hay **cita textual con fecha** en cada patrón, o alguno se sostiene solo en mi lectura?
-- ¿Alguna celda lleva un número que **estimé** en vez de capturar?
-- ¿El panel incluye a alguien **mejor** que la marca propia?
-- ¿Cada una de las 3 acciones tiene dueño, coste y **una métrica con número y fecha**?
-- ¿Alguna acción de 7 días viene de un hallazgo `90 DÍAS` o `ESTRUCTURAL`?
-- ¿Recomiendo en algún punto pedir, incentivar o suprimir reseñas?
-- ¿Aparece el nombre de algún reseñador?
-- ¿Está la fecha y hora de captura en la cabecera?
-
-Si alguna respuesta es mala, corrige antes de entregar.
-
----
-
-## DEBATE ABIERTO DEL CAMPO
-
-**¿Panel congelado o panel dinámico?**
-- **Posición A — congelado 13 semanas (la que aplica esta skill):** solo un panel estable produce deltas interpretables; cambiar competidores cada semana genera movimientos que parecen señales y son cambios de muestra.
-- **Posición B — dinámico:** en plazas con alta rotación de aperturas, un panel congelado deja fuera al competidor que de verdad está robando clientes ahora mismo.
-- **Resolución adoptada:** panel congelado **con cupo de entrante**, que es precisamente el cupo 6 de P1: absorbe la novedad sin romper la serie. Se revisa el panel completo cada 13 semanas. `[CRITERIO]`
-
----
-
-## REFERENCIAS
-
-Verificadas el 2026-08-11.
-
-1. **BrightLocal — Local Consumer Review Survey 2026** (panel representativo de 1.002 adultos de EE. UU., publicado el 11-02-2026). Sostiene: 97 % lee reseñas al evaluar un negocio local; 41 % las lee siempre (29 % en 2025); Google cae del 83 % al 71 % como plataforma de descubrimiento; el consumidor medio consulta seis plataformas; 19 % espera respuesta el mismo día y 32 % al día siguiente. Es el ancla de las métricas 6, 7 y 8 y del umbral de < 24 h. — <https://www.brightlocal.com/research/local-consumer-review-survey/>
-2. **FTC — Trade Regulation Rule on the Use of Consumer Reviews and Testimonials**, 16 CFR Part 465, en vigor desde el **21-10-2024**. Prohíbe comprar o vender reseñas falsas, pagar por reseñas positivas o negativas, las reseñas de personal interno sin declarar el vínculo y ciertas prácticas de supresión de reseñas negativas; sanción civil por infracción conocida (51.744 USD en 2024, actualizada a 53.088 USD según los avisos de la propia FTC de diciembre de 2025). Es el ancla de la regla NUNCA 3. — <https://www.federalregister.gov/documents/2024/08/22/2024-18519/trade-regulation-rule-on-the-use-of-consumer-reviews-and-testimonials>
-3. **Luca, M. (2016). *Reviews, Reputation, and Revenue: The Case of Yelp.com*.** Harvard Business School NOM Unit Working Paper 12-016. Diseño de regresión discontinua sobre los umbrales de redondeo de Yelp cruzado con datos fiscales del Estado de Washington: **una estrella más de nota se traduce en un 5–9 % más de ingresos**, efecto concentrado en establecimientos independientes y ausente en cadenas. Es el ancla de que la nota es una variable de negocio y no de imagen. — <https://www.hbs.edu/ris/Publication%20Files/12-016_a7e4a5a2-03f9-490d-b093-8f951238dba2.pdf>
-
-**Límites declarados.** La referencia 1 es de consumidores de EE. UU.: la dirección del comportamiento es extrapolable, las cifras exactas no. La referencia 2 obliga en EE. UU.; fuera, la regla NUNCA 3 se sostiene igualmente en las políticas de las plataformas y, en la UE, en la Directiva (UE) 2019/2161 sobre reseñas falsas `[SIN VERIFICAR en esta sesión]`. La referencia 3 es de restaurantes independientes y de la plataforma Yelp: **no se debe presentar como elasticidad válida para otros sectores**.
-
-**Marcado `[CONVENCIÓN]`** (decisiones de esta skill, no datos de fuente): la composición 3+2+1 del panel · las 13 semanas de congelación · el umbral de 3 menciones para declarar patrón · la ventana de 30 reseñas o 90 días · los topes de 6 hallazgos, 5 fallos y 3 acciones · los umbrales de alerta de `references/metricas-y-umbrales.md`.
+v1.2.0 — ver `CHANGELOG.md`.
