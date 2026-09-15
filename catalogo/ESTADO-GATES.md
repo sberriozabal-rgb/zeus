@@ -9,15 +9,15 @@ reales, uno sucio) · **G3** precio (comprador nombrado + cifra firmada) ·
 | Skill | G1 | G2 | G3 | G4 | G5 | Nota |
 |---|:--:|:--:|:--:|:--:|:--:|---|
 | `escandallo-ingenieria-menu` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 |
-| `respuesta-resenas` | ✅ | ❌ | ⚠️ | ✅ | ❌ | 19/20 |
-| `apertura-cierre-turno` | ✅ | ❌ | ⚠️ | ✅ | ❌ | 19/20 |
+| `respuesta-resenas` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · v1.2.0 reestructurada |
+| `apertura-cierre-turno` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · v1.1.2 atribución cerrada |
 | `comparativa-proveedores` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 |
 | `receta-estandar` | ✅ | ❌ | ✅ | ❌ | ✅ | 19/20 · **G4 abajo solo por (a): revisión técnica externa** |
 | `productividad-personal-turno` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 |
-| `reporte-inteligencia-competencia` | — | — | — | — | — | sin ficha comercial |
+| `reporte-inteligencia-competencia` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · dentro de la Completa, sin suscripción hasta 3 instalaciones vivas |
 
-⚠️ = G3 marcado en la ficha con comprador nombrado y canal, pero **la cifra sigue
-`[A VALIDAR]` a la espera de firma**.
+G3 y G5 levantados en las siete el 15-sep-2026 (`DECISIONES.md` §6). G2 lo levanta la
+primera instalación vendida.
 
 ## CABINA (DJ)
 
@@ -26,12 +26,12 @@ el validador de la casa (`validar_skill.py`), no estimada.
 
 | Skill | Antes | Ahora | G1 | G2 | G3 | G4 | G5 |
 |---|---|---|:--:|:--:|:--:|:--:|:--:|
-| `auditoria-de-biblioteca` | 0/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
-| `postmortem-de-bolo` | 1/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
-| `presupuesto-y-contrato-evento` | 1/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
-| `set-por-encargo` | 2/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
-| `peticiones-a-repertorio` | 2/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
-| `demo-a-sello` | 2/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
+| `auditoria-de-biblioteca` | 0/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ✅ |
+| `postmortem-de-bolo` | 1/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ✅ |
+| `presupuesto-y-contrato-evento` | 1/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ✅ |
+| `set-por-encargo` | 2/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ✅ |
+| `peticiones-a-repertorio` | 2/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ✅ |
+| `demo-a-sello` | 2/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ✅ |
 
 **Por qué 19 y no 20.** El validador devuelve **20/20 mecánico** en las seis. No se firma el 20:
 el punto 19 es de criterio —*"que las URLs estén verificadas, no solo presentes"*— y en esta
@@ -63,12 +63,14 @@ con sus notas declaradas. Es fiable.
 
 ## Neutra / B2B
 
-| Skill | Nota declarada | Ficha | Observación |
-|---|---|---|---|
-| `cobro-cartera-vencida` | 19/20 | no | La mejor posicionada del catálogo para venta suelta |
-| `reporte-inteligencia` | 18/20 | no | *"pendiente de reauditoría tras v1.1.0"* — reauditar antes de publicar |
-| `respaldo-proyecto-ia-cl` | 18/20 *(autoevaluación)* | no | Auditoría propia, no externa |
-| `universal-compilador-contexto` | 17/20 *(autoevaluación)* | no | Auditoría propia, no externa |
+| Skill | G1 | G2 | G3 | G4 | G5 | Nota |
+|---|:--:|:--:|:--:|:--:|:--:|---|
+| `cobro-cartera-vencida` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · 79 € · la mejor posicionada para venta suelta |
+| `reporte-inteligencia` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · 49 € · reauditada tras v1.1.0, ahora v1.2.0 |
+| `respaldo-proyecto-ia-cl` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · 49 € / 89 € en PACK CONTEXTO · medida con el validador, ya no autoevaluación |
+| `universal-compilador-contexto` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 · 49 € / 89 € en PACK CONTEXTO · ídem |
+
+Las cuatro cerraron envoltorio y ficha comercial el 15-sep-2026. G2 lo levanta el primer comprador por Polar.
 
 ---
 

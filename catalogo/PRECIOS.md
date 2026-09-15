@@ -75,19 +75,13 @@ por coherencia de trabajo, no por ahorro.
 Frase útil en venta: **CABINA COMPLETA cuesta lo que una hora extra que hoy no
 estás cobrando.**
 
-### Bloqueo pendiente antes de publicar
+### Bloqueo levantado (15-sep-2026)
 
-El precio está cerrado, pero **G1 (producto) no está levantado en ninguna de las
-seis**: la rúbrica de 20 puntos de la casa las puntúa entre **0 y 2 sobre 20**
-porque no tienen `cases/`, ni `CHANGELOG.md`, ni tabla de reglas NUNCA, ni los 5
-antipatrones. El peldaño P1 exige `.skill` conforme **auditada ≥16/20 y con 4
-casos de prueba**. Detalle pieza por pieza en
+El bloqueo de G1 que existía al cerrar la tarifa —las seis puntuaban entre 0 y 2 sobre 20 por
+falta de `cases/`, `CHANGELOG.md`, tabla NUNCA y antipatrones— **quedó resuelto el mismo
+día**: envoltorio cerrado en las seis, validador en 20/20 mecánico (19/20 declarado). El
+contenido de oficio no se tocó. **CABINA está lista para publicar en Polar.** Detalle en
 [`ESTADO-GATES.md`](ESTADO-GATES.md#cabina-dj).
-
-Es trabajo de fábrica, no de criterio: el contenido de oficio ya está y es bueno
-—las tablas de riesgo, las seis curvas de energía, las seis cláusulas críticas,
-los plazos de Beatport y Spotify—. Lo que falta es el envoltorio que la casa
-exige para poder cobrar por él.
 
 ## 3 · Neutra / B2B — CERRADA
 
