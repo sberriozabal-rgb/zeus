@@ -12,6 +12,7 @@
 | Autor y copyright | Palash Debnath y colaboradores de VoiceStudio |
 | Licencia | AGPL-3.0-only (texto completo en `LICENSE-UPSTREAM.txt`, resumen en `LICENSE-NOTICE-UPSTREAM.md`) |
 | Fecha de descarga | 2026-09-15 |
+| Estado de prueba | **Probada el 15-sep-2026**: audio en español generado por REST y por MCP contra VoiceStudio 0.5.2. Detalle en `PRUEBA-2026-09-15.md` |
 
 ## Qué hace
 
