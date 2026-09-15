@@ -11,7 +11,7 @@ description: >-
   precio.
 license: Propietaria. Uso permitido al comprador; prohibida la redistribucion. No es asesoramiento juridico.
 metadata:
-  version: 1.0.0
+  version: "1.1.0"
   linea: CABINA
   paquete: CABINA EVENTOS
   estado: ACORDADO
@@ -19,227 +19,249 @@ metadata:
   idioma_base: es
 ---
 
-# PRESUPUESTO Y CONTRATO DE EVENTO
-
-## ROL
-
-Eres el departamento de administracion que un DJ autonomo no tiene. Conviertes
-una consulta en tres documentos: presupuesto, contrato y rider tecnico.
-
-Tu valor no es redactar bonito — eso lo hace cualquier asistente. Tu valor es
-saber que clausula falta y cuanto cuesta que falte.
+# presupuesto-y-contrato-evento
 
 ## AVISO LEGAL — NO NEGOCIABLE
 
-Esto **no es asesoramiento juridico**. Genera borradores a partir de practicas
-habituales del sector. La validez de una clausula depende de la jurisdiccion,
-y hay materias (consumidores, proteccion de datos, fiscalidad) que cambian por
-pais y por ano.
+Esto **no es asesoramiento jurídico**. Genera borradores a partir de prácticas habituales del
+sector. La validez de una cláusula depende de la jurisdicción, y hay materias —consumidores,
+protección de datos, fiscalidad— que cambian por país y por año.
 
-**Todo contrato que vaya a usarse de forma recurrente debe revisarlo un
-abogado del pais donde se firma.** Dilo en la entrega. Siempre.
+**Todo contrato que vaya a usarse de forma recurrente debe revisarlo un abogado del país donde
+se firma.** Esto se dice en la entrega. Siempre.
 
-## DEFINICION OPERATIVA
+## Qué hace
 
-Esta skill convierte **una consulta de cliente (fecha, lugar, tipo de evento,
-horario, extras)** en **presupuesto desglosado + contrato con clausulas
-marcadas por riesgo + rider tecnico del espacio concreto**, para **un DJ movil
-que responde a un lead**, en **menos de 30 minutos**.
+Convierte **una consulta de cliente de evento (fecha, lugar, tipo, horario, extras)** en
+**presupuesto desglosado por conceptos, contrato con las cláusulas marcadas por nivel de riesgo
+y rider técnico del espacio concreto**, para **un DJ móvil o de eventos que responde a un lead
+sin manager ni agencia**, en **menos de 30 minutos de atención**.
 
-## ENTRADA
+El valor no es redactar bonito, que eso lo hace cualquier asistente. El valor es **saber qué
+cláusula falta y cuánto cuesta que falte**: las seis críticas son las que, ausentes, convierten
+un evento cobrado en una pérdida previsible. Y el desglose por conceptos, que es lo que permite
+negociar quitando alcance en vez de bajando el margen.
 
-Minimo imprescindible: fecha, tipo de evento, ciudad o lugar, y duracion.
+## Cuándo se dispara
 
-Todo lo demas se pregunta o se asume declarandolo:
+- "me ha entrado una consulta para una boda en junio, ¿cuánto cobro?"
+- "el cliente quiere que le baje el precio"
+- "me han pedido dos horas más a las tres de la mañana y no sabía qué cobrar"
+- "se me ha caído una boda a dos semanas y no había depósito"
+- "¿qué pongo en el contrato?"
+- "el sitio es un jardín y no sé qué pedirles de luz"
+- "¿esto lo cubre el seguro o lo pago yo?"
+- "necesito un rider para mandarles"
+- jerga del gremio: "lead", "depósito", "señal", "cancelación", "horas extra", "rider",
+  "limitador", "potencia", "aforo", "montaje", "desmontaje", "fuerza mayor", "sustitución",
+  "ceremonia aparte", "dietas", "kilometraje"
 
-| Campo | Por que importa |
-|---|---|
-| Numero de invitados | Determina el equipo de sonido y el precio |
-| Espacio (interior/exterior, m2) | Exterior obliga a plan B de lluvia y a mas potencia |
-| Hora de inicio y fin | Define horas extra y recargo nocturno |
-| Montaje: hora y acceso | Escaleras sin ascensor son coste real |
-| Potencia electrica disponible | Es la causa tecnica de fallo mas comun |
-| Iluminacion, humo, microfonos, pantalla | Cada extra es una linea |
-| Ceremonia aparte | Suele requerir segundo equipo |
-| Limitador de sonido | Cambia lo que se puede prometer |
+## Quién lo ejecuta
 
-## PROTOCOLO
+El propio DJ al recibir el lead, con **20 a 30 minutos** de atención para los tres documentos.
+La velocidad de respuesta pesa en la conversión, así que el objetivo operativo es **responder
+el mismo día**, aunque sea con supuestos declarados.
 
-**Paso 1 · Clasifica el evento y fija el segmento.**
-Basico / medio / premium. Determina el precio, no el discurso. Referencias de
-mercado en `references/baremos-precio.md`, todas con fuente y fecha.
+## Entrada
 
-Ancla de referencia: en EEUU el DJ de boda medio cobro **1.800 USD** segun el
-estudio de bodas reales de The Knot de 2025, con cuartiles en 800 / 1.600 /
-2.700 USD, y una horquilla regional de 1.400 a 2.500 USD
-(<https://www.theknot.com/content/average-cost-wedding-band-dj>).
-**Ese dato es de EEUU. No lo apliques a otro pais sin decir que es una
-referencia importada.** Los baremos de otros mercados estan en el fichero de
-referencia con su fuente propia.
+- **Mínimo imprescindible:** fecha, tipo de evento, ciudad o lugar, y duración. Con eso ya se
+  produce.
+- **Recomendado:** número de invitados (determina el equipo y el precio), espacio y si es
+  interior o exterior (exterior obliga a plan B de lluvia y más potencia), hora de inicio y
+  fin (define horas extra y recargo nocturno).
+- **Recomendado:** potencia eléctrica disponible y número de tomas independientes, que es **la
+  causa técnica de fallo más común**; superficie y altura libre de montaje; hora y acceso de
+  carga.
+- **Recomendado:** extras (iluminación, humo, micrófonos, pantalla), si hay ceremonia aparte
+  —suele requerir segundo equipo— y si el espacio tiene **limitador de sonido**, porque cambia
+  lo que se puede prometer.
+- **Dato sucio típico:** la consulta que solo dice "boda en junio, ¿precio?". No se responde
+  pidiendo un cuestionario: se asume el escenario más habitual del segmento, se produce el
+  presupuesto completo y **cada supuesto va declarado en una lista al final**. Si se asumieron
+  100 invitados porque no lo dijeron, tiene que constar.
 
-**Paso 2 · Desglosa el presupuesto por conceptos, nunca en un unico numero.**
-Un precio cerrado sin desglose no se puede negociar sin bajar el total: si el
-cliente pide rebaja, no hay nada que quitar salvo margen. Con desglose, se
-retira una linea.
+## Umbral que sostiene el producto
 
-Estructura minima:
-- Servicio de DJ (horas incluidas, y precio explicito de la hora extra)
-- Equipo de sonido dimensionado al aforo
-- Iluminacion
-- Extras (microfono, ceremonia, humo, pantalla)
-- Desplazamiento y dietas si aplica
-- Montaje y desmontaje (si se factura aparte)
-- Impuestos, indicados de forma explicita
+**Las seis cláusulas CRÍTICAS**, definidas por un criterio operativo y no por costumbre:
+CRÍTICA es aquella sin la cual el DJ asume una pérdida real y previsible. Son depósito,
+cancelación escalonada, horas extra, requisitos del espacio (electricidad, superficie,
+cubierto), fuerza mayor y sustitución. Catálogo completo con su nivel en
+`references/clausulas.md`.
 
-**Paso 3 · Monta el contrato desde el catalogo de clausulas.**
-Ver `references/clausulas.md`. Cada clausula lleva marcado su nivel de riesgo:
+El segundo umbral son los **baremos de mercado por país, cada uno con su fuente**, y con una
+regla dura: **no aplicar el baremo de un país a otro sin declarar que es una referencia
+importada.**
+
+- **España**: media nacional 350–500 €, boda completa 400–1.500 €, hora extra 75–250 €,
+  desplazamiento 0,50–1 €/km. **El escalón medio real está en 1.000–1.500 €, muy por encima de
+  los 717 € de promedio que publican los portales de presupuestos**, porque esos portales
+  atraen la demanda más sensible al precio. Un DJ que fija su tarifa mirando solo ahí se ancla
+  al segmento más bajo del mercado.
+- **EE. UU.**: DJ de boda medio en **1.800 USD** según el estudio de bodas reales de The Knot
+  de 2025, con cuartiles en 800 / 1.600 / 2.700 y horquilla regional de 1.400 a 2.500
+  (<https://www.theknot.com/content/average-cost-wedding-band-dj>).
+- **Contexto de negociación**: el coste medio de una boda en España es de **25.183 €** con 123
+  invitados de media, es decir 225 € por invitado
+  (<https://gironanoticies.com/comunicado/292790-25183-euros-el-coste-medio-de-celebrar-una-boda-en-espana-segun-bodasnet.htm>).
+  1.200 € sobre 25.183 € es **menos del 5% del presupuesto total**, y esa es la frase que
+  sostiene el precio sin bajarlo.
+
+**El baremo no es el precio del DJ.** Es el contexto. Sirve para saber si estás fuera de
+mercado, no para fijar tarifa: el precio lo decide el DJ según su coste, su agenda y su
+posicionamiento.
+
+## Procedimiento
+
+1. **Entrada: la consulta del cliente → Acción: clasificar el evento en segmento básico, medio
+   o premium y localizar el baremo del país correspondiente en `references/baremos-precio.md` →
+   Salida: segmento asignado y horquilla de precio con su fuente → Si el país no tiene baremo
+   propio en el fichero: se usa el más cercano y se declara explícitamente que es una
+   referencia importada.**
+
+2. **Entrada: segmento, aforo y duración → Acción: desglosar el presupuesto por conceptos —
+   servicio de DJ con horas incluidas y precio explícito de hora extra, sonido dimensionado al
+   aforo, iluminación, extras, desplazamiento y dietas, montaje si se factura aparte, impuestos
+   explícitos— → Salida: presupuesto por líneas, nunca un número único → Si falta el aforo: se
+   asume el habitual del segmento, se dimensiona sobre él y se declara el supuesto.**
+
+3. **Entrada: tipo de evento y espacio → Acción: montar el contrato desde el catálogo de
+   `references/clausulas.md`, incluyendo obligatoriamente las seis CRÍTICAS y marcando el nivel
+   de riesgo de cada una → Salida: borrador de contrato con niveles visibles → Si el cliente
+   rechaza una cláusula CRÍTICA: se declara por escrito qué pérdida asume el DJ con esa
+   ausencia, y la decisión es suya.**
+
+4. **Entrada: los datos del espacio concreto → Acción: generar el rider técnico específico con
+   potencia y número de tomas independientes, superficie, altura libre, acceso de carga, hora
+   de acceso y responsable de la custodia del equipo si queda montado la noche anterior →
+   Salida: rider del espacio, no genérico → Si faltan los datos eléctricos: se especifica el
+   requisito mínimo como condición del presupuesto y se pide confirmación antes de firmar.**
+
+5. **Entrada: los tres documentos → Acción: escribir el email de respuesta con tres partes —si
+   la fecha está libre, qué incluye el presupuesto adjunto, y un único siguiente paso claro— →
+   Salida: email listo para enviar el mismo día → Si la fecha no está libre: se dice en la
+   primera línea y se ofrece alternativa, sin enterrarlo al final.**
+
+6. **Entrada: todo lo producido → Acción: recopilar cada cifra asumida y no confirmada en una
+   lista de supuestos al final de la entrega, y añadir el aviso de revisión por abogado →
+   Salida: entrega completa con sus supuestos y su aviso legal → Si algún supuesto cambia el
+   precio de forma relevante: se señala cuál y en cuánto.**
+
+## Salida
+
+```markdown
+# Presupuesto — [Tipo de evento], [fecha]
+[Lugar] · [N invitados] · [horario] · Segmento: [básico/medio/premium]
+
+| # | Concepto | Detalle | Importe |
+|---|---|---|---|
+| 1 | Servicio de DJ | [N] horas incluidas | [€] |
+| 2 | Hora extra | precio unitario explícito | [€]/h |
+| 3 | Equipo de sonido | dimensionado a [N] invitados | [€] |
+| 4 | Iluminación | [detalle] | [€] |
+| 5 | Extras | [micro / ceremonia / humo / pantalla] | [€] |
+| 6 | Desplazamiento | [N] km a [tarifa]/km | [€] |
+| 7 | Montaje y desmontaje | [si se factura aparte] | [€] |
+|   | **Impuestos** | [tipo explícito] | [€] |
+|   | **TOTAL** | | **[€]** |
+
+## Cláusulas del contrato
+[cada una con su nivel: CRÍTICA / ALTA / MEDIA]
+
+## Rider técnico — [espacio concreto]
+Potencia: [N] kW, [N] tomas independientes · Superficie: [N] m² · Altura libre: [N] m
+Acceso de carga: [detalle] · Hora de acceso: [hora] · Custodia nocturna: [responsable]
+
+## Supuestos de esta versión
+[cada cifra asumida y no confirmada, y cuál de ellas movería el precio]
+
+> Este documento no es asesoramiento jurídico. Si vas a usar este contrato de forma
+> recurrente, que lo revise un abogado del país donde se firma.
+```
+
+Los tres niveles de cláusula del paso 3:
 
 | Nivel | Significado |
 |---|---|
-| CRITICA | Sin ella, el DJ asume una perdida real y previsible |
-| ALTA | Sin ella hay conflicto probable |
-| MEDIA | Conviene, se puede negociar |
+| **CRÍTICA** | Sin ella, el DJ asume una pérdida real y previsible |
+| **ALTA** | Sin ella hay conflicto probable |
+| **MEDIA** | Conviene, se puede negociar |
 
-Las CRITICAS son seis: deposito, cancelacion escalonada, horas extra, requisitos
-del espacio (electricidad, superficie, cubierto), fuerza mayor y sustitucion.
+## Límites
 
-**Paso 4 · Genera el rider tecnico del espacio concreto.**
-Un rider generico no sirve: el valor esta en lo especifico. Debe incluir
-potencia electrica y numero de tomas independientes, superficie de montaje,
-altura libre, acceso para carga, hora de acceso, y quien responde de la
-seguridad del equipo si se deja montado la noche anterior.
+- **No es asesoramiento jurídico.** Produce borradores de práctica sectorial, y la validez de
+  cada cláusula depende de la jurisdicción. El uso recurrente exige revisión de abogado.
+- No es asesoramiento fiscal. Los impuestos se indican de forma explícita en el presupuesto,
+  pero el tipo aplicable lo confirma el asesor del DJ.
+- Los baremos son **contexto de mercado, no tarifa recomendada**. Sirven para saber si estás
+  fuera de precio; el precio lo fija el DJ con su coste y su agenda.
+- **No se aplica el baremo de un país a otro** sin declararlo como referencia importada. El
+  dato de The Knot es de EE. UU. y no vale para España sin ese aviso.
+- No negocia por el DJ ni decide qué cláusula ceder. Marca el riesgo de cada ausencia; la
+  decisión es del DJ.
+- No dimensiona equipo por especificación acústica: propone según aforo y espacio, y el cálculo
+  fino lo hace quien conoce el material.
 
-**Paso 5 · Escribe el email de respuesta.**
-Tono profesional y breve. Tres partes: confirmacion de que la fecha esta
-libre (o no), presupuesto adjunto con lo que incluye, y un unico siguiente
-paso claro. La velocidad de respuesta pesa: responde el mismo dia.
+## Reglas
 
-**Paso 6 · Declara los supuestos.**
-Toda cifra asumida y no confirmada va en una lista al final. Si asumiste 100
-invitados porque no lo dijeron, tiene que constar.
-
-## REGLAS
-
-### SIEMPRE
-
-| Regla | Por que |
+| SIEMPRE | Porqué |
 |---|---|
-| Desglosar el presupuesto por conceptos | Sin desglose, negociar es bajar el margen |
-| Incluir las seis clausulas criticas | Son las que se pagan cuando faltan |
-| Poner precio explicito a la hora extra | Se pide siempre, y de madrugada |
-| Especificar requisitos electricos por escrito | Es la causa tecnica de fallo mas frecuente |
-| Marcar el aviso legal en cada contrato | No es asesoramiento juridico |
-| Declarar la moneda, los impuestos y la validez de la oferta | Un presupuesto sin fecha de caducidad es una opcion gratis |
-| Citar la fuente y el ano de cualquier baremo | Los precios de 2025 no son los de hoy |
+| Desglosar el presupuesto por conceptos, nunca un número único | Sin desglose, negociar es bajar el margen; con desglose se retira una línea |
+| Incluir las seis cláusulas CRÍTICAS en todo contrato | Son exactamente las que se pagan cuando faltan, y el coste es previsible |
+| Poner precio explícito a la hora extra | Se pide casi siempre y de madrugada, cuando ya no hay margen para negociar |
+| Especificar los requisitos eléctricos por escrito | Es la causa técnica de fallo más frecuente del oficio, y sin constancia escrita el problema es del DJ |
+| Citar el baremo con su país, su fuente y su fecha | Una cifra de mercado sin país es inútil, y sin fuente es indefendible cuando el cliente pregunta |
+| Declarar cada cifra asumida en la lista de supuestos | Un presupuesto con supuestos ocultos se convierte en discusión el día del montaje |
+| Generar el rider del espacio concreto, no uno genérico | El valor del rider está en lo específico; uno genérico no lo lee nadie y no protege de nada |
+| Responder el mismo día, aunque sea con supuestos | La velocidad de respuesta pesa en la conversión del lead tanto como el precio |
+| Advertir del limitador de sonido cuando exista | Cambia lo que se puede prometer, y prometer de más con limitador es un conflicto seguro |
+| Incluir el aviso de revisión por abogado en toda entrega | Es la frontera del producto y omitirla expone al DJ y a la casa |
 
-### NUNCA
-
-| Regla | Por que |
+| NUNCA | Porqué |
 |---|---|
-| Inventar un precio de mercado sin fuente | Un baremo falso destruye la credibilidad y la negociacion |
-| Aplicar un baremo de un pais a otro sin decirlo | 1.800 USD no es el precio de una boda en cualquier mercado |
-| Entregar un contrato como definitivo | Debe revisarlo un abogado local |
-| Prometer nivel de volumen donde hay limitador | Es una promesa que el DJ no controla |
-| Aceptar horario abierto sin recargo | "Hasta que aguante el cuerpo" es trabajo no facturado |
-| Omitir el plan B de lluvia en exterior | Es el conflicto mas caro y mas previsible |
-| Copiar clausulas de un contrato ajeno sin adaptarlas | Suelen citar normativa que no aplica |
+| Presentar esto como asesoramiento jurídico | No lo es, y afirmarlo expone legalmente a la casa y al DJ que lo usa |
+| Aplicar el baremo de un país a otro sin declararlo | Los mercados no son comparables, y una tarifa importada en silencio descoloca el precio entero |
+| Dar un precio cerrado sin desglose | Deja al DJ sin nada que quitar en la negociación salvo su propio margen |
+| Omitir una cláusula CRÍTICA porque el cliente la incomoda | Son las que evitan la pérdida previsible; si se cede, se declara qué se asume |
+| Prometer nivel de sonido en un espacio con limitador | El limitador manda sobre cualquier promesa, y el incumplimiento lo paga el DJ |
+| Inventar una cifra de baremo sin fuente | Es la cifra huérfana que el cliente pregunta y no se puede defender |
+| Usar el promedio de los portales de presupuestos como tarifa | Atraen la demanda más sensible al precio y ancla al DJ al segmento más bajo |
+| Entregar un rider genérico | No protege de nada: el fallo eléctrico ocurre en un espacio concreto con tomas concretas |
+| Cerrar un presupuesto sin la lista de supuestos | Toda cifra asumida y no declarada es una discusión aplazada al día del evento |
 
-## MATRIZ DE APLICABILIDAD
+## Antipatrones
 
-| Escenario | Aplica | Nota |
-|---|---|---|
-| Boda, comunion, quinceanera | Si | Caso central |
-| Corporativo y fiesta de empresa | Si | Anadir facturacion y plazos de pago a 30/60 dias |
-| Fiesta privada pequena | Si | Version reducida del contrato |
-| Festival o club con promotor | Parcial | El promotor suele imponer su contrato; usar como checklist |
-| Multiples mercados o divisas | Parcial | Cada mercado necesita su baremo con fuente |
-| Asesoramiento juridico | No | Requiere abogado colegiado |
-| Fiscalidad y facturacion del DJ | No | Requiere asesor fiscal local |
-| Fijar el precio propio del DJ | No | Se da el rango de mercado; el precio lo decide el DJ |
+1. **Síntoma**: se cae una boda a dos semanas y el DJ no cobra nada. **Causa raíz**: no había cláusula de depósito ni de cancelación escalonada, las dos primeras CRÍTICAS. **Corrección**: depósito no reembolsable a la firma y escala de cancelación por tramos de antelación; sin ellas, el DJ financia gratis la reserva de fecha del cliente.
 
-## ANTIPATRONES
+2. **Síntoma**: el cliente pide rebaja y el DJ baja el total un 15%. **Causa raíz**: el presupuesto era un número cerrado, así que no había ninguna línea que retirar. **Corrección**: desglosar siempre por conceptos; ante la petición de rebaja se quita iluminación, humo o una hora, no margen.
 
-**1 · El precio de una sola linea.**
-Sintoma: "Boda completa: 1.200 €".
-Causa: no se desgloso.
-Correccion: minimo cinco conceptos. Si el cliente pide rebaja, se retira una
-linea con su servicio, no se regala margen.
+3. **Síntoma**: el equipo salta a media fiesta y la culpa recae en el DJ. **Causa raíz**: no se especificó por escrito la potencia ni el número de tomas independientes en el rider del espacio. **Corrección**: requisito eléctrico como condición del presupuesto, confirmado antes de firmar, con el número de tomas y los kW por escrito.
 
-**2 · El contrato sin cancelacion escalonada.**
-Sintoma: una unica clausula de "no reembolsable".
-Causa: se copio una plantilla generica.
-Correccion: escalonar por proximidad a la fecha. Una cancelacion a 10 meses no
-es la misma perdida que una a 10 dias, y una clausula desproporcionada puede
-ser inaplicable ante un consumidor.
+4. **Síntoma**: el DJ cobra 700 € en una boda de 25.000 € y pierde dinero con las horas extra. **Causa raíz**: fijó su tarifa mirando el promedio de un portal de presupuestos, que atrae la demanda más sensible al precio. **Corrección**: usar el escalón medio real del mercado (1.000–1.500 € en España) y el contexto de que 1.200 € es menos del 5% del presupuesto de la boda.
 
-**3 · El rider generico.**
-Sintoma: el mismo rider para un jardin y para un salon de hotel.
-Causa: plantilla fija.
-Correccion: potencia, superficie, acceso y cubierta son especificos del sitio.
-Un rider que no menciona el sitio no protege de nada.
+5. **Síntoma**: el cliente se queja de que el volumen es bajo y exige lo prometido. **Causa raíz**: se prometió nivel de sonido sin comprobar que el espacio tenía limitador instalado. **Corrección**: preguntar siempre por el limitador, y cuando exista, escribir en el presupuesto qué se puede y qué no se puede garantizar con él.
 
-**4 · El baremo inventado.**
-Sintoma: "el precio medio del mercado es X" sin fuente.
-Causa: se rellenó con plausibilidad.
-Correccion: cifra con fuente y ano, o hueco declarado. Un hueco declarado vale
-mas que un dato falso, sobre todo en una negociacion donde el cliente puede
-comprobarlo.
+## Casos de prueba
 
-**5 · El horario elastico.**
-Sintoma: "terminamos cuando acabe la fiesta".
-Causa: no se fijo hora de fin ni precio de prolongacion.
-Correccion: hora de fin cerrada y precio por hora extra pactado por
-adelantado. Se cobra mejor a las 02:00 pactado que a las 05:00 discutiendo.
+Los cuatro casos están en `cases/`, con entrada y salida reales.
 
-## CASOS DE PRUEBA
+**Happy path** (`cases/case_01_happy_path.md`): boda de 120 invitados en finca con jardín,
+7 horas más ceremonia. Presupuesto desglosado en 7 líneas, seis cláusulas críticas y rider con
+los requisitos eléctricos del exterior.
 
-### happy_path
-**Entrada:** boda, 120 invitados, finca con jardin, ceremonia a las 18:00 y
-baile hasta las 03:00, microfono para discursos.
-**Salida esperada:** presupuesto con 7 conceptos y precio de hora extra;
-contrato con las 6 criticas mas ceremonia y plan B de lluvia; rider con
-potencia, tomas, superficie, acceso y hora de montaje; email de respuesta con
-un unico siguiente paso; lista de supuestos.
+**Edge case** (`cases/case_02_edge_case.md`): el cliente rechaza la cláusula de cancelación y
+pide precio cerrado. Se declara por escrito la pérdida que asume el DJ y se ofrece alcance
+reducido en vez de rebaja.
 
-### edge_case
-**Entrada:** evento en azotea de hotel con limitador de sonido a 85 dB y corte
-obligatorio a las 00:00 por licencia.
-**Salida esperada:** el limitador y el corte aparecen en el contrato como
-condicion del espacio y no como responsabilidad del DJ; el presupuesto no
-ofrece horas extra que la licencia no permite; el rider pregunta por el punto
-de medicion del limitador; y se advierte al cliente por escrito de que el
-volumen tendra un techo, para que no sea una sorpresa el mismo dia.
+**Failure** (`cases/case_03_failure.md`): consulta de una línea, "boda en junio, ¿precio?". Se
+entregan los tres documentos completos sobre supuestos declarados, sin pedir un cuestionario.
 
-### failure
-**Entrada:** el cliente solo dice "boda el 12 de junio, cuanto me cobras".
-**Salida esperada:** NO se responde solo con preguntas, que es la forma mas
-rapida de perder el lead. Se entrega: horquilla de precio por segmento con su
-fuente y su ano, lo que incluye cada segmento, las 4-6 preguntas que faltan
-para cerrar el numero, y la advertencia de que la fecha no queda reservada
-hasta el deposito. Se declara que la horquilla asume [N] invitados y [N] horas.
+**Integration** (`cases/case_04_integration.md`): encadenado con `peticiones-a-repertorio`. La
+cláusula de repertorio y prohibidos del contrato se rellena con el cubo PROHIBIDO del cruce.
 
-### integration
-**Entrada:** evento ya contratado.
-**Salida esperada:** los datos del evento (tipo, duracion, franjas, aforo,
-prohibiciones del cliente) se entregan como brief para `peticiones-a-repertorio`
-y para `set-por-encargo`. Los momentos criticos del contrato (ceremonia,
-primer baile, cierre) pasan como tracks obligatorios.
+## Ficha comercial
 
-## AUTOCONTROL
+Ver `ANEXO-A-ficha-comercial.md`.
 
-- ¿Cada cifra de mercado lleva fuente y ano?
-- ¿Se dijo de que pais es cada baremo?
-- ¿Estan las seis clausulas criticas?
-- ¿Tiene precio la hora extra?
-- ¿El rider menciona el espacio concreto o vale para cualquiera?
-- ¿Aparece el aviso de revision juridica?
-- ¿Estan declarados todos los supuestos?
+## Versión
 
-## REFERENCIAS
-
-- `references/baremos-precio.md` — precios de mercado con fuente y fecha.
-- `references/clausulas.md` — catalogo de clausulas por nivel de riesgo.
-- `references/rider-tecnico.md` — checklist de requisitos del espacio.
-- `assets/plantilla-presupuesto.md` — plantilla de presupuesto desglosado.
-- The Knot, estudio de bodas reales 2025 (EEUU):
-  <https://www.theknot.com/content/average-cost-wedding-band-dj>
+v1.1.0 — ver `CHANGELOG.md`.

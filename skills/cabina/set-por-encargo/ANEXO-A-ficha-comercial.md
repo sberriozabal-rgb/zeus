@@ -16,13 +16,13 @@
 | Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Te cambian el slot a las siete de la tarde y a las ocho tienes el set reordenado, con el por qué de cada transición.» |
-| Estado / Versión | ACORDADO / v1.0.0 |
-| Auditoría | **2/20** contra la rúbrica de 20 puntos de la casa (`validar_skill.py`, 15-sep-2026). Faltan: cases/ (4 casos), CHANGELOG.md, tabla de reglas NUNCA, 5 antipatrones. La nota se declara sin redondear: **por debajo de 16 no se vende**. |
-| Gates | G1 [ ] G2 [ ] G3 [x] G4 [x] G5 [ ] |
+| Estado / Versión | ACORDADO / v1.1.0 |
+| Auditoría | **19/20**. El validador de la casa (`validar_skill.py`, 15-sep-2026) devuelve 20/20 mecánico, frente al **2/20** de la v1.0.0. **No se firma el 20**: el punto 19 exige URLs verificadas, no solo presentes, y en esta pasada no se han reverificado una a una. La casa no redondea al alza. |
+| Gates | G1 [x] G2 [ ] G3 [x] G4 [x] G5 [ ] |
 
 ## Notas de gates
 
-- **G1 (producto)** **NO levantado**: 2/20 frente al 16/20 que exige el peldaño P1. Es el bloqueo real de esta pieza: el precio está cerrado pero el producto no pasa todavía la rúbrica de la casa.
+- **G1 (producto)** **levantado** el 15-sep-2026: 19/20 declarado, por encima del 16 que exige P1. Venía de 2/20. Se cerró el envoltorio —13 secciones del ADN, 6 pasos atómicos, 10 reglas SIEMPRE y 9 NUNCA, 5 antipatrones, los 4 casos de prueba, CHANGELOG, README, LICENSE y metadata—. El contenido de oficio ya estaba; faltaba la forma.
 - **G3 (precio)** levantado el 15-sep-2026 por instrucción del dueño. Cifra cerrada: 49 €.
 - **G2 (prueba)** pendiente.
 - **G4 (legal)** en orden. Las menciones a rekordbox, DJ.Studio y Mixed In Key son cita de prestaciones y de un test publicado con URL, no uso de marca.

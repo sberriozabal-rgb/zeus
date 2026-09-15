@@ -21,38 +21,45 @@ reales, uno sucio) · **G3** precio (comprador nombrado + cifra firmada) ·
 
 ## CABINA (DJ)
 
-Ficha comercial escrita para las seis el 15-sep-2026, con precio cerrado. Nota de
-auditoría medida con el validador de la casa (`validar_skill.py`), no estimada.
+Ficha comercial escrita para las seis y **envoltorio cerrado el 15-sep-2026**. Nota medida con
+el validador de la casa (`validar_skill.py`), no estimada.
 
-| Skill | Nota | G1 | G2 | G3 | G4 | G5 |
-|---|---|:--:|:--:|:--:|:--:|:--:|
-| `auditoria-de-biblioteca` | **0/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
-| `postmortem-de-bolo` | **1/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
-| `presupuesto-y-contrato-evento` | **1/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
-| `set-por-encargo` | **2/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
-| `peticiones-a-repertorio` | **2/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
-| `demo-a-sello` | **2/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
+| Skill | Antes | Ahora | G1 | G2 | G3 | G4 | G5 |
+|---|---|---|:--:|:--:|:--:|:--:|:--:|
+| `auditoria-de-biblioteca` | 0/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
+| `postmortem-de-bolo` | 1/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
+| `presupuesto-y-contrato-evento` | 1/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
+| `set-por-encargo` | 2/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
+| `peticiones-a-repertorio` | 2/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
+| `demo-a-sello` | 2/20 | **19/20** | ✅ | ❌ | ✅ | ✅ | ❌ |
 
-**G3 levantado** el 15-sep-2026: 49 € suelta, 149 € CORE, 99 € EVENTOS, 249 €
-COMPLETA. **G4 en orden**: licencia de comprador redactada, y
-`presupuesto-y-contrato-evento` lleva además aviso legal no negociable de que no
-es asesoramiento jurídico.
+**Por qué 19 y no 20.** El validador devuelve **20/20 mecánico** en las seis. No se firma el 20:
+el punto 19 es de criterio —*"que las URLs estén verificadas, no solo presentes"*— y en esta
+pasada no se han reverificado una a una. Es el mismo criterio con el que la casa corrigió a la
+baja el 20/20 de `escandallo-ingenieria-menu`. **No se redondea al alza.**
 
-**G1 es el bloqueo.** Lo que falta en las seis: `cases/` con los 4 casos de
-prueba y `CHANGELOG.md`. Además, tabla de reglas NUNCA y los 5 antipatrones en
-cinco de ellas, y `auditoria-de-biblioteca` y `postmortem-de-bolo` no llegan a 3
-URLs verificadas en `references/`.
+**Qué se cerró en cada una:** estructura de 13 secciones del ADN, procedimiento en 6 pasos
+atómicos con el molde Entrada → Acción → Salida → Si falta el dato, 10 reglas SIEMPRE y 9 NUNCA
+con su porqué, 5 antipatrones con síntoma/causa/corrección, los 4 casos de prueba con entrada y
+salida reales, y los ficheros del peldaño P1: `CHANGELOG.md`, `README.md`, `LICENSE.txt`,
+`metadata.json` y `references/FUENTES.md` donde faltaba.
 
-Conviene no leer mal ese 0-2/20: **no mide la calidad del oficio, mide
-conformidad con la rúbrica de la casa.** El contenido es sólido —la tabla de
-riesgo por hallazgo con consecuencia en cabina, las seis curvas de energía por
-franja, las seis cláusulas críticas con baremos fuenteados, los plazos de
-Beatport (3 semanas) y Spotify (7 días)—. Lo que no existe es el envoltorio que
-la casa exige para poder cobrar: casos, changelog y las tablas de reglas.
+**El contenido de oficio no se tocó.** Las notas de 0-2/20 nunca midieron la calidad del
+oficio: medían conformidad de formato. Las tablas de riesgo por hallazgo, las seis curvas de
+energía, los cuatro cubos con sus umbrales, las seis cláusulas críticas y los plazos de Beatport
+y Spotify ya estaban y son el producto. Lo que faltaba era la forma que la casa exige para poder
+cobrar.
 
-**Calibración del validador:** contra las skills de hostelería devuelve 17–19/20,
-coincidiendo con sus notas declaradas. Es fiable, así que el 0-2/20 de CABINA no
-es un artefacto de la herramienta.
+**G3 levantado** el 15-sep-2026: 49 € suelta, 149 € CORE, 99 € EVENTOS, 249 € COMPLETA.
+**G4 en orden**: licencia de comprador redactada en las seis, y `presupuesto-y-contrato-evento`
+lleva además aviso legal no negociable de que no es asesoramiento jurídico.
+
+**G2 sigue abajo, y solo lo levanta el primer comprador.** Los 4 casos de cada skill son de
+fabricación: ninguna se ha ejecutado contra los datos reales de alguien que haya pagado.
+
+**Calibración del validador:** contra las skills de hostelería devuelve 17-19/20, coincidiendo
+con sus notas declaradas. Es fiable.
+
 
 ## Neutra / B2B
 
@@ -158,3 +165,9 @@ correctamente.**
 
 Conviene añadir esta comprobación al empaquetado, que es lo que la propia
 doctrina manda: *"ejecutar el validador antes de empaquetar, sin excepción"*.
+
+### 7 · Frontmatter YAML: los seis de CABINA revalidados
+
+Tras la reescritura, los seis `SKILL.md` de CABINA vuelven a parsear correctamente y sus
+`metadata` mantienen todos los valores como cadena, conforme a la especificación. **17/17 del
+catálogo válidos.**

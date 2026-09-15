@@ -43,19 +43,18 @@ ficha comercial escrita para las seis.
 
 | Paquete | Skills | **Precio** | Auditoría |
 |---|---|---|---|
-| **CABINA CORE** | `auditoria-de-biblioteca`, `postmortem-de-bolo`, `set-por-encargo` | **149 €** | 0/20 · 1/20 · 2/20 |
-| **CABINA EVENTOS** | `peticiones-a-repertorio`, `presupuesto-y-contrato-evento` | **99 €** | 2/20 · 1/20 |
-| **CABINA CARRERA** | `demo-a-sello` | **49 €** | 2/20 |
+| **CABINA CORE** | `auditoria-de-biblioteca`, `postmortem-de-bolo`, `set-por-encargo` | **149 €** | 19/20 las tres |
+| **CABINA EVENTOS** | `peticiones-a-repertorio`, `presupuesto-y-contrato-evento` | **99 €** | 19/20 las dos |
+| **CABINA CARRERA** | `demo-a-sello` | **49 €** | 19/20 |
 | **CABINA COMPLETA** | las seis | **249 €** | — |
 
 Suelta: **49 €** cualquiera de las seis. Tarifa y razón de cada cifra en
 [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md#2--cabina-dj--tarifa-cerrada-15-sep-2026).
 
-> ⚠️ **No se puede publicar todavía.** G3 (precio) está levantado, pero **G1
-> (producto) no**: la rúbrica de la casa puntúa estas seis entre **0 y 2 sobre
-> 20** porque les faltan `cases/`, `CHANGELOG.md`, tabla de reglas NUNCA y los 5
-> antipatrones. P1 exige ≥16/20 y 4 casos de prueba. El contenido de oficio es
-> bueno; falta el envoltorio que la casa exige para cobrar por él.
+> ✅ **Lista para publicar.** G1 y G3 levantados en las seis el 15-sep-2026: auditoría
+> **19/20** (el validador da 20/20 mecánico; no se firma el 20 porque las URLs no se han
+> reverificado una a una) y precio cerrado. Venían de 0-2/20 por falta de envoltorio, no de
+> oficio. Queda G2, que solo lo levanta el primer comprador.
 
 ## Línea 3 · NEUTRA / B2B
 

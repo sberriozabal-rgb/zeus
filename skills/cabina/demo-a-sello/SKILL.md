@@ -3,7 +3,7 @@ name: demo-a-sello
 description: Convierte un track terminado en un envio a sellos discograficos hecho como pide cada sello - canal correcto (LabelRadar, email, portal propio), texto breve con el encaje concreto en su catalogo, clip de 20 segundos elegido con criterio, y calendario de envio coordinado con las fechas de Beatport y Spotify. Incluye los motivos de descarte automatico documentados por los propios sellos. Para productor o DJ que manda demos sin manager. Usar cuando haya un track listo para enviar, cuando haya que elegir a que sellos mandarlo, o cuando los envios anteriores no obtuvieron ninguna respuesta.
 license: Propietaria. Uso permitido al comprador; prohibida la redistribucion.
 metadata:
-  version: 1.0.0
+  version: "1.1.0"
   linea: CABINA
   paquete: CABINA CARRERA
   estado: ACORDADO
@@ -11,275 +11,230 @@ metadata:
   idioma_base: es
 ---
 
-# DEMO A SELLO
+# demo-a-sello
 
-## ROL
+## Qué hace
 
-Eres el manager que este productor no tiene. Tu trabajo no es escribir un email
-bonito: es que el envio llegue por donde el sello lo acepta, diga en tres
-frases por que encaja en SU catalogo, y no muera por un motivo de descarte
-evitable.
+Convierte **un track terminado más los datos del artista** en **una lista priorizada de sellos
+con su canal exacto, un texto de envío por sello, el clip de 20 segundos seleccionado y un
+calendario de envío coordinado con los plazos de tienda**, para **un productor o DJ que manda
+demos sin manager**, en **menos de 45 minutos de atención**.
 
-## DEFINICION OPERATIVA
+El trabajo no es escribir un email bonito: es que el envío **llegue por donde el sello lo
+acepta**, diga en tres frases por qué encaja en SU catálogo con nombres propios, y no muera por
+un motivo de descarte evitable. Los motivos de descarte automático están documentados por los
+propios sellos, y casi todos son de forma, no de música: canal equivocado, adjunto en vez de
+link, tres tracks en lugar de uno, o un master que no existe.
 
-Esta skill convierte **un track terminado + los datos del artista** en **una
-lista priorizada de sellos con su canal exacto, un texto de envio por sello,
-el clip de 20 segundos seleccionado y un calendario de envio**, para **un
-productor sin manager**, en **menos de 45 minutos**.
+## Cuándo se dispara
 
-## LA REALIDAD DEL BUZON — CONTEXTO QUE CAMBIA LAS DECISIONES
+- "tengo un track terminado y no sé a quién mandarlo"
+- "llevo veinte demos enviados y ni una respuesta"
+- "¿mando el track a Toolroom por email?"
+- "¿qué pongo en el mensaje del demo?"
+- "¿cuándo tengo que entregarlo para que salga en verano?"
+- "¿merece la pena pagar LabelRadar PRO?"
+- "¿mando tres tracks o uno?"
+- "me han dicho que no mande adjuntos, ¿entonces cómo?"
+- jerga del gremio: "demo", "A&R", "sello", "LabelRadar", "promo", "master", "bootleg",
+  "mashup", "créditos", "clip", "pitch", "lead time", "firma", "catálogo", "referencia",
+  "private link", "snippet"
 
-Armada Music declara que los sellos pueden recibir **mas de cien demos al dia**,
-y que por eso los A&R escuchan solo unos segundos de unos pocos temas
-(<https://www.armadamusic.com/news/how-to-submit-your-demo>).
+## Quién lo ejecuta
 
-Toolroom lo dice sin rodeos: **solo aceptan demos por LabelRadar** y "debido a
-la cantidad de demos que recibimos, no podemos responder a cada envio, aunque
-lo escuchamos todo" (<https://toolroomrecords.com/demos/>).
+El propio productor, sin manager, con **30 a 45 minutos** de atención para la primera tanda:
+filtrar admisibilidad, elegir sellos con encaje demostrable, verificar canales y redactar. Cada
+envío posterior a la misma lista baja a **10 minutos**, porque el trabajo de selección ya está
+hecho.
 
-Consecuencias operativas, no retoricas:
+## Entrada
 
-1. **El silencio es la respuesta por defecto.** No responder no significa
-   rechazo personal. No perseguir al A&R.
-2. **Los primeros segundos deciden.** Por eso el clip de 20 segundos importa
-   tanto como el track.
-3. **Enviar por el canal equivocado es enviar a la papelera.** Un email a
-   Toolroom no llega a ninguna parte.
+- **Obligatorio:** track terminado y **masterizado**. Los sellos solo aceptan trabajo
+  terminado; si no lo está y aun así se envía, se declara.
+- **Obligatorio:** género, BPM y clave.
+- **Obligatorio:** nombre artístico y links (SoundCloud, Spotify, Instagram).
+- **Necesario para no perder el tiempo:** entre 3 y 10 sellos objetivo, o al menos 3-5 artistas
+  de referencia con los que el track comparte terreno.
+- **Opcional:** historial de envíos previos (evita repetir sello), prueba social (bolos,
+  apoyos, prensa) y fecha de salida deseada, que es lo que activa el calendario de tienda.
+- **Dato sucio típico:** el productor que dice "mándalo a los grandes" sin poder nombrar una
+  sola referencia reciente del catálogo. Sin respuesta concreta a las tres preguntas de encaje,
+  ese sello no entra en la lista: un envío sin encaje demostrable es ruido, y en LabelRadar el
+  ruido cuesta créditos reales.
 
-## ENTRADA
+## Umbral que sostiene el producto
 
-Obligatorio:
+**El presupuesto de créditos de LabelRadar, que convierte la selección de sello en la decisión
+central.** La cuenta gratuita da **5 créditos al mes** y cada envío cuesta **5 créditos**: es
+decir, **exactamente un demo al mes**
+(<https://help.labelradar.com/hc/en-us/articles/28282477562900-What-are-credits-and-how-do-they-work>).
+PRO da 70 créditos, unos 14 envíos al mes, con precio de referencia publicado de **179,88
+USD/año** (<https://www.beatportal.com/articles/888959-labelradar-announces-april-offer-on-pro>,
+abril de 2025 — **reverificar antes de recomendarlo**).
 
-- Track terminado y **masterizado**. Armada solo acepta trabajo terminado.
-- Genero, BPM y clave.
-- Nombre artistico y links (SoundCloud, Spotify, Instagram).
+Con un envío gratis al mes, mandar al sello más grande en lugar del de mejor encaje cuesta un
+mes entero. Detalle que alivia: la **"30 Day Listen Guarantee"** devuelve los créditos si el
+sello no escucha en 30 días, y el envío sigue en pie.
 
-Necesario para no perder el tiempo: 3-10 sellos objetivo, o al menos 3-5
-artistas de referencia con los que el track comparte terreno.
+**El segundo umbral es el volumen del buzón.** Armada declara que los sellos pueden recibir
+**más de cien demos al día**, y que por eso los A&R escuchan solo unos segundos de unos pocos
+temas (<https://www.armadamusic.com/news/how-to-submit-your-demo>). Toolroom lo dice sin
+rodeos: **solo aceptan demos por LabelRadar** y no pueden responder a cada envío aunque lo
+escuchen todo (<https://toolroomrecords.com/demos/>). De ahí las tres consecuencias operativas:
+el silencio es la respuesta por defecto y no se persigue al A&R; los primeros segundos deciden,
+por eso el clip de 20 segundos importa tanto como el track; y enviar por el canal equivocado es
+enviar a la papelera.
 
-Opcional: historial de envios previos, prueba social (bolos, apoyos, prensa),
-fecha de salida deseada.
+**El tercer umbral es el calendario de tienda:** Beatport pide entregar **al menos 3 semanas
+antes** para optar a features
+(<https://greenroomsupport.beatport.com/hc/en-us/articles/4415537098004-What-are-Beatport-s-Lead-Times-How-far-in-advance-do-I-need-to-deliver-my-music>)
+y Spotify pide el pitch con **al menos 7 días** de antelación y solo una canción
+(<https://support.spotify.com/us/artists/article/pitching-music-and-videos-to-playlist-editors/>).
 
-## PROTOCOLO
+## Procedimiento
 
-**Paso 1 · Filtro de admisibilidad. Antes de nada.**
-Comprueba y detente si falla:
+1. **Entrada: el track y sus datos → Acción: pasar el filtro de admisibilidad comprobando que
+   está masterizado, que no es un bootleg, mashup ni remix sin licencia, y que es un solo track,
+   el mejor → Salida: track admitido o motivo de parada → Si no está masterizado: no se envía;
+   y si el artista decide enviarlo igual, se declara explícitamente en el texto, porque la
+   transparencia se prefiere al descubrimiento.**
 
-- ¿Esta masterizado? Si no, no se envia. Un sello que oye una mezcla sin
-  masterizar asume falta de oficio. Si se envia igualmente, hay que **decirlo**:
-  un sello recomienda ser transparente ("si no esta masterizado del todo,
-  dinoslo").
-- ¿Es un bootleg, mashup o remix sin licencia? Armada los rechaza
-  explicitamente. No se envia a sello: se publica por otra via.
-- ¿Es tu mejor track? Se manda uno, el mejor. No tres.
+2. **Entrada: track admitido y sellos candidatos → Acción: filtrar por encaje real respondiendo
+   con nombres propios a las tres preguntas (qué referencia parecida sacó en los últimos 6-12
+   meses, qué artista de su catálogo está más cerca, qué BPM y estética publica) → Salida: lista
+   de sellos con encaje demostrable → Si no se pueden contestar las tres: ese sello no entra en
+   la lista, por prestigioso que sea.**
 
-**Paso 2 · Selecciona sellos por encaje real, no por prestigio.**
-Para cada sello candidato, tres preguntas con respuesta concreta:
+3. **Entrada: la lista de sellos → Acción: identificar el canal exacto de cada uno en
+   `references/canales.md` y **verificarlo en su web**, porque la lista es una foto de agosto de
+   2026 → Salida: cada sello con su canal confirmado → Si el canal no se puede verificar: no se
+   envía a ciegas, se deja el sello en espera hasta confirmarlo.**
 
-1. ¿Ha sacado algo parecido en los ultimos 6-12 meses? Nombra la referencia.
-2. ¿Que artista de su catalogo esta mas cerca de este track?
-3. ¿Que BPM y que estetica publican? ¿Encaja el tuyo?
+4. **Entrada: la lista con canales y el saldo de créditos → Acción: ordenar los envíos por
+   encaje, no por tamaño del sello, y repartirlos contra el presupuesto real de créditos →
+   Salida: calendario de envíos priorizado → Si solo hay cuenta gratuita: se planifica **un
+   envío al mes** y se elige el de mejor encaje, no el más grande.**
 
-Si no puedes contestar las tres con nombres propios, ese sello no entra en la
-lista. Un envio sin encaje demostrable es ruido, y el ruido tiene coste: en
-LabelRadar, creditos.
+5. **Entrada: el track → Acción: elegir el clip de 20 segundos por criterio —nunca desde el
+   principio, porque la intro está hecha para mezclar; el momento con más información por
+   segundo; que se entienda fuera de contexto— → Salida: marca de tiempo del clip → Si el track
+   no tiene un momento que se sostenga solo en 20 segundos: eso es información sobre el track,
+   y se dice.**
 
-**Paso 3 · Identifica el canal EXACTO de cada sello.**
-Ver `references/canales.md`. Es el paso que mas envios salva. Hay tres
-familias:
+6. **Entrada: sello, encaje y clip → Acción: redactar el texto de envío breve con la frase de
+   encaje con nombre propio de ese sello, link privado nunca adjunto, y coordinar la fecha
+   contra los plazos de Beatport y Spotify → Salida: envío listo y registrado en el histórico →
+   Si no se registra a quién y cuándo se envió: se acaba reenviando al mismo sello o perdiendo
+   el hilo, así que el registro no es opcional.**
 
-| Canal | Como funciona | Ejemplos documentados |
+## Salida
+
+```markdown
+# Plan de envío — [Título del track]
+[Género] · [BPM] · [Clave] · Master: [sí/no] · Salida deseada: [fecha]
+
+## Clip de 20 segundos
+Marca: [mm:ss – mm:ss] · Por qué: [el elemento que hace distinto al track]
+
+## Sellos por orden de envío
+| # | Sello | Canal | Encaje (referencia concreta) | Fecha |
+|---|---|---|---|---|
+| 1 | [sello] | LabelRadar | "[Ref reciente]" de [artista], [mes/año] | [fecha] |
+
+## Texto por sello
+[breve, con la frase de encaje con nombre propio, link privado]
+
+## Calendario de tienda
+Beatport: entregar antes del [fecha] (3 semanas)
+Spotify: pitch antes del [fecha] (7 días, una sola canción)
+
+## Supuestos de esta versión
+[canales no verificados, créditos disponibles, precio de PRO sin reverificar]
+```
+
+Las tres familias de canal del paso 3:
+
+| Canal | Cómo funciona | Ejemplos documentados |
 |---|---|---|
-| LabelRadar | Portal; cuesta creditos | Toolroom, Armada, Defected, Drumcode, Anjunabeats, Monstercat, NCS, Mixmash, Heldeep |
-| Email de demos | Link privado, nunca adjunto | Sellos pequenos e independientes |
-| Portal propio | Formulario en su web | Varia; se comprueba en su web |
+| **LabelRadar** | Portal; cuesta créditos | Toolroom, Armada, Defected, Drumcode, Anjunabeats, Monstercat, NCS, Mixmash, Heldeep |
+| **Email de demos** | Link privado, nunca adjunto | Sellos pequeños e independientes |
+| **Portal propio** | Formulario en su web | Varía; se comprueba en su web |
 
-**Verifica el canal en la web del sello antes de enviar.** Los sellos cambian
-de politica y esta lista es una foto de agosto de 2026.
+## Límites
 
-**Paso 4 · Administra el presupuesto de LabelRadar.**
-La cuenta gratuita da **5 creditos al mes** y cada envio cuesta **5 creditos**:
-exactamente **un demo al mes**. PRO da 70 creditos (14 envios/mes); el precio
-de referencia publicado es 179,88 USD/ano
-(<https://www.beatportal.com/articles/888959-labelradar-announces-april-offer-on-pro>,
-abril de 2025 — reverificar antes de recomendarlo).
+- **No compra una firma.** Ordena el envío y elimina los descartes automáticos, que son de
+  forma. El criterio artístico del sello no se puede gestionar desde aquí.
+- No garantiza respuesta, escucha ni publicación. **El silencio es la respuesta por defecto** y
+  así se declara antes de enviar nada.
+- No produce ni masteriza. Si el track no está terminado, la skill se detiene en el paso 1.
+- La lista de canales es **una foto de agosto de 2026**: los sellos cambian de política y el
+  canal se verifica en su web antes de cada envío.
+- No gestiona bootlegs, mashups ni remixes sin licencia: los sellos los rechazan explícitamente
+  y su vía de publicación es otra.
+- Los precios de LabelRadar PRO proceden de una nota de abril de 2025 y **deben reverificarse**
+  antes de recomendar la suscripción.
 
-Con un envio al mes gratis, **la seleccion del sello lo es todo**. Prioriza:
-el mejor encaje primero, no el sello mas grande.
+## Reglas
 
-Detalle util: la "30 Day Listen Guarantee" devuelve los creditos si el sello no
-escucha en 30 dias, y el envio sigue en pie. Nada se pierde por esperar.
-
-**Paso 5 · Elige el clip de 20 segundos.**
-LabelRadar obliga al artista a elegir "el mejor clip de 20 segundos". Reglas:
-
-- **No empieces por el principio.** La intro esta hecha para mezclar, no para
-  convencer.
-- Elige el momento con **mas informacion por segundo**: el drop, el hook, el
-  elemento que hace distinto al track.
-- Que se entienda **fuera de contexto**, sin lo que va antes.
-- Si el track solo funciona entero, es un aviso: probablemente no destaca en
-  los primeros segundos, y asi es como lo van a escuchar.
-
-**Paso 6 · Escribe el texto. Menos de diez frases.**
-Armada pide que toda la presentacion ocupe menos de diez frases. Estructura:
-
-1. Quien eres, en una frase.
-2. Que mandas: titulo, genero, BPM, estado (masterizado, sin firmar).
-3. **Por que ESE sello** — con nombre propio de una referencia suya reciente.
-   Es la unica frase que no se puede reciclar entre sellos.
-4. Prueba social, solo si es real y verificable.
-5. El link. Privado de SoundCloud es la mejor opcion segun Armada.
-6. Cierre breve. Sin ruegos, sin urgencia falsa.
-
-Prohibido: adjuntos de audio (atascan la bandeja del A&R), texto de mailing
-masivo, y cualquier frase que valga para cualquier sello.
-
-**Paso 7 · Calendario.**
-Si el track sale por tu cuenta o ya tiene fecha, encaja los plazos oficiales:
-
-- **Beatport:** entregar al menos **3 semanas antes**; las features de tienda
-  se asignan con **2 semanas** de antelacion y despues ya no se consideran.
-- **Spotify:** pitch con al menos **7 dias** antes de la salida; solo una
-  cancion a la vez. El pitch garantiza entrar en el Release Radar de tus
-  seguidores; el placement editorial **no esta garantizado**.
-
-**Paso 8 · Seguimiento: uno solo, o ninguno.**
-En sellos que declaran que no responden (Toolroom), no hay seguimiento. En
-sellos pequenos, **un unico** recordatorio de dos frases a los 7-10 dias. Nunca
-un segundo.
-
-## REGLAS
-
-### SIEMPRE
-
-| Regla | Por que |
+| SIEMPRE | Porqué |
 |---|---|
-| Verificar el canal en la web del sello antes de enviar | Un email a un sello que solo usa LabelRadar no llega |
-| Escribir una frase de encaje con nombre propio por sello | Es lo unico que distingue tu envio de los otros cien |
-| Enviar link privado, nunca adjunto | Lo pide el propio sello; los adjuntos atascan la bandeja |
-| Elegir el clip de 20 s por criterio, no por defecto | Es la primera y a veces unica impresion |
-| Mandar un solo track, el mejor | Tres tracks dicen que no sabes cual es bueno |
-| Declarar si no esta masterizado | La transparencia se prefiere al descubrimiento |
-| Registrar que se envio, a quien y cuando | Sin registro se reenvia al mismo sello o se pierde el hilo |
+| Verificar el canal en la web del sello antes de enviar | Un email a un sello que solo usa LabelRadar no llega a ninguna parte; es el fallo que más envíos mata |
+| Escribir una frase de encaje con nombre propio por sello | Es lo único que distingue tu envío de los otros cien de ese día |
+| Enviar link privado, nunca adjunto | Lo piden los propios sellos; los adjuntos atascan la bandeja y algunos los filtran |
+| Elegir el clip de 20 s por criterio, no por defecto | Es la primera y a veces la única impresión, y los A&R escuchan solo unos segundos |
+| Mandar un solo track, el mejor | Tres tracks dicen que no sabes cuál es bueno, y esa lectura la hace el A&R en dos segundos |
+| Declarar si el track no está masterizado | La transparencia se prefiere al descubrimiento: un sello lo detecta igual |
+| Registrar qué se envió, a quién y cuándo | Sin registro se reenvía al mismo sello o se pierde el hilo de una conversación abierta |
+| Priorizar por encaje real y no por tamaño del sello | Con un envío gratis al mes, gastarlo en el sello más grande sin encaje cuesta un mes entero |
+| Coordinar la fecha con los plazos de Beatport y Spotify | Firmar a tiempo y entregar tarde deja el lanzamiento sin features ni pitch de playlist |
+| Reverificar el precio de LabelRadar PRO antes de recomendarlo | La cifra publicada es de abril de 2025 y una recomendación de gasto con dato caducado quema la confianza |
 
-### NUNCA
-
-| Regla | Por que |
+| NUNCA | Porqué |
 |---|---|
-| Inventar apoyos, cifras o bolos | Se comprueba en un minuto y quema el sello para siempre |
-| Mandar el mismo texto a varios sellos | El copiar-pegar se detecta y es motivo de descarte |
-| Enviar bootlegs o mashups sin licencia | Rechazo explicito; el sello no puede publicarlos |
-| Insistir tras el silencio | Muchos sellos declaran que no responden. No es personal |
-| Prometer que un sello firmara | Nadie puede prometer eso |
-| Gastar creditos en sellos sin encaje | Con 1 envio gratis al mes, cada credito es una decision |
-| Enviar musica sin masterizar como si estuviera lista | Se nota, y quema el contacto |
+| Prometer respuesta, escucha o firma | Nada de eso está bajo control de nadie aquí, y prometerlo es vender humo |
+| Perseguir al A&R tras el silencio | El silencio es la respuesta por defecto del oficio, no un olvido que se corrige insistiendo |
+| Enviar tres tracks "por si acaso" | Multiplica el trabajo del A&R y comunica que el artista no sabe cuál es su mejor tema |
+| Mandar un adjunto de audio | Los sellos piden link privado; el adjunto es motivo de descarte documentado |
+| Empezar el clip por el principio del track | La intro está hecha para mezclar, no para convencer, y regala los 20 segundos |
+| Enviar a un sello sin poder nombrar una referencia suya | Es ruido con coste en créditos, y el texto de encaje se nota vacío desde la primera línea |
+| Enviar un bootleg, mashup o remix sin licencia a un sello | Están rechazados explícitamente y el envío se descarta sin escucharse |
+| Dar por vigente la lista de canales sin comprobarla | Es una foto de agosto de 2026 y las políticas de demo cambian sin aviso |
+| Usar la misma frase de encaje para varios sellos | Se nota, y convierte el envío personalizado en un mailing |
 
-## MATRIZ DE APLICABILIDAD
+## Antipatrones
 
-| Escenario | Aplica | Nota |
-|---|---|---|
-| Track original terminado y masterizado | Si | Caso central |
-| Elegir a que sellos mandar | Si | El paso de mayor valor |
-| Reactivar tras envios sin respuesta | Si | Suele ser problema de canal o de encaje |
-| Preparar el pitch de Spotify | Si | Plazos y campos del formulario |
-| Track sin masterizar | Parcial | Solo si se declara; mejor esperar |
-| Bootleg o mashup sin licencia | No | Ningun sello legitimo lo publicara |
-| Valorar si el track es bueno | No | Requiere oir; esto no oye |
-| Garantizar respuesta o firma | No | Nadie puede |
-| Contactar promotores para bolos | No | Es otro flujo: EPK y booking |
+1. **Síntoma**: veinte demos enviados y ni una sola respuesta. **Causa raíz**: se envió por email a sellos que solo aceptan LabelRadar, así que los envíos no llegaron a ninguna bandeja. **Corrección**: verificar el canal exacto en la web de cada sello antes de enviar; es el paso que más envíos salva y cuesta dos minutos por sello.
 
-## ANTIPATRONES
+2. **Síntoma**: el crédito del mes se gasta en un sello enorme que nunca contesta. **Causa raíz**: se priorizó por prestigio y no por encaje demostrable. **Corrección**: ordenar por las tres preguntas de encaje con nombres propios; con cinco créditos al mes, un envío mal elegido cuesta el mes entero.
 
-**1 · La escopeta.**
-Sintoma: el mismo email a 40 sellos con el nombre cambiado.
-Causa: se confundio volumen con probabilidad.
-Correccion: 5 sellos con encaje demostrable superan a 40 sin el. Y en
-LabelRadar, 40 envios cuestan 200 creditos que la cuenta gratuita no tiene.
+3. **Síntoma**: el A&R abre el envío y lo cierra a los pocos segundos. **Causa raíz**: el clip de 20 segundos empieza por la intro, que está diseñada para mezclar y no dice nada fuera de contexto. **Corrección**: elegir el momento con más información por segundo —el drop, el hook, el elemento distintivo— y comprobar que se entiende sin lo que va antes.
 
-**2 · El canal equivocado.**
-Sintoma: cero respuestas en meses, incluso de sellos pequenos.
-Causa: se envio por email a sellos que solo aceptan portal.
-Correccion: revisar la pagina de demos de cada sello. Es la causa mas comun
-de silencio absoluto, y la mas facil de arreglar.
+4. **Síntoma**: el track se firma pero sale sin features de tienda ni pitch de playlist. **Causa raíz**: no se coordinó la fecha de envío con los plazos de entrega. **Corrección**: Beatport al menos 3 semanas antes y Spotify pitch con 7 días y una sola canción; el calendario se monta hacia atrás desde la fecha de salida deseada.
 
-**3 · El clip por defecto.**
-Sintoma: se selecciona el primer fragmento sin pensar.
-Causa: se trato como tramite.
-Correccion: el A&R escucha unos segundos. Esos segundos los eliges tu. Es la
-decision de mayor impacto por unidad de esfuerzo de todo el envio.
+5. **Síntoma**: el mismo sello recibe dos envíos del mismo artista con semanas de diferencia. **Causa raíz**: no se llevó registro de a quién y cuándo se envió. **Corrección**: histórico de envíos obligatorio con sello, fecha y estado; además evita reabrir un hilo que seguía vivo bajo la "30 Day Listen Guarantee".
 
-**4 · El curriculum inflado.**
-Sintoma: "apoyado por artistas de primer nivel" sin nombres.
-Causa: se intento compensar la falta de prueba social.
-Correccion: prueba social real y verificable, o ninguna. Un envio sin prueba
-social es normal; uno con prueba social falsa esta muerto al comprobarlo.
+## Casos de prueba
 
-**5 · El perseguidor.**
-Sintoma: tres emails en dos semanas.
-Causa: se leyo el silencio como olvido.
-Correccion: el silencio es la norma declarada. Un seguimiento como maximo.
+Los cuatro casos están en `cases/`, con entrada y salida reales.
 
-## CASOS DE PRUEBA
+**Happy path** (`cases/case_01_happy_path.md`): track de tech house masterizado, 6 sellos
+candidatos, cuenta gratuita de LabelRadar. Sale el orden de envío por encaje y un calendario
+coordinado con Beatport y Spotify.
 
-### happy_path
-**Entrada:** track de melodic techno a 124 BPM, masterizado, con un apoyo real
-en un mix publicado.
-**Salida esperada:** 5-8 sellos priorizados con su canal verificado y su
-referencia de encaje con nombre propio; un texto distinto por sello con la
-frase de encaje personalizada; clip de 20 s seleccionado con justificacion;
-plan de gasto de creditos de LabelRadar; y calendario con los plazos de
-Beatport y Spotify si hay fecha de salida.
+**Edge case** (`cases/case_02_edge_case.md`): el productor quiere mandar un bootleg a Armada. La
+skill se detiene en el paso 1 y propone la vía de publicación alternativa.
 
-### edge_case
-**Entrada:** productor con cuenta gratuita de LabelRadar (5 creditos = 1 envio
-al mes) y 8 sellos objetivo, todos en LabelRadar.
-**Salida esperada:** NO se recomienda pagar PRO por defecto. Se ordenan los 8
-por encaje y se propone un calendario de 8 meses, o priorizar 3 y buscar via
-alternativa para el resto. Se explica la garantia de 30 dias: si el sello no
-escucha, los creditos vuelven, asi que el coste real de un envio bien dirigido
-es menor de lo que parece. La decision de pagar se presenta con el numero
-delante, no como recomendacion generica.
+**Failure** (`cases/case_03_failure.md`): "tengo un track, mándalo a los grandes", sin sellos de
+referencia y sin master. Se entrega el plan completo sobre supuestos declarados.
 
-### failure
-**Entrada:** el productor no sabe a que sellos mandar y no tiene referencias
-claras.
-**Salida esperada:** NO se devuelve una lista generica de sellos famosos, que
-seria inventar encaje. Se entrega: metodo concreto para construir la lista
-(mirar que sellos publican los artistas mas cercanos a tu sonido, revisar los
-lanzamientos de los ultimos 6 meses en Beatport dentro de tu subgenero, mirar
-los sellos de los tracks que tu mismo pinchas), la plantilla de las tres
-preguntas de encaje, y el texto de envio ya preparado a falta de la frase de
-encaje. El productor completa la lista; la skill deja todo lo demas hecho.
+**Integration** (`cases/case_04_integration.md`): encadenado con `postmortem-de-bolo`. Los
+tracks que el parte identifica como más sostenidos en cabina son los candidatos con prueba de
+pista real.
 
-### integration
-**Entrada:** demo ya aceptada y con fecha de salida.
-**Salida esperada:** el calendario de promocion se cruza con los plazos de
-Beatport (3 semanas) y Spotify (7 dias). Los datos del artista y la prueba
-social acumulada alimentan el EPK. Los sellos contactados y su respuesta
-quedan en un registro reutilizable para el siguiente track.
+## Ficha comercial
 
-## AUTOCONTROL
+Ver `ANEXO-A-ficha-comercial.md`.
 
-- ¿Cada sello de la lista tiene su canal verificado en su propia web?
-- ¿Cada texto tiene una frase de encaje que no vale para otro sello?
-- ¿Hay alguna cifra, apoyo o bolo que el productor no pueda demostrar?
-- ¿Se justifico la eleccion del clip de 20 segundos?
-- ¿Cuadra el plan con los creditos que realmente tiene?
-- ¿Se prometio en algun punto una respuesta o una firma?
-- ¿Se esta enviando algo sin masterizar sin declararlo?
+## Versión
 
-## REFERENCIAS
-
-- `references/canales.md` — canal por sello y reglas de cada plataforma.
-- `references/plazos.md` — plazos de Beatport, Spotify y promo.
-- `assets/plantilla-envio.md` — plantilla de texto y registro de envios.
-- Armada Music, guia oficial de envio de demos:
-  <https://www.armadamusic.com/news/how-to-submit-your-demo>
-- Toolroom Records, politica de demos: <https://toolroomrecords.com/demos/>
-- LabelRadar, sistema de creditos:
-  <https://help.labelradar.com/hc/en-us/articles/28282477562900-What-are-credits-and-how-do-they-work>
-- Spotify for Artists, pitch a editores:
-  <https://support.spotify.com/us/artists/article/pitching-music-and-videos-to-playlist-editors/>
-- Beatport, plazos de entrega:
-  <https://greenroomsupport.beatport.com/hc/en-us/articles/4415537098004-What-are-Beatport-s-Lead-Times-How-far-in-advance-do-I-need-to-deliver-my-music>
+v1.1.0 — ver `CHANGELOG.md`.

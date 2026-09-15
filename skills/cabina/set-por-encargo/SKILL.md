@@ -3,7 +3,7 @@ name: set-por-encargo
 description: Ordena un set a partir del pool real de tracks del DJ y del brief del bolo (slot, hora, duracion, publico, prohibiciones del cliente, BPM de entrada y de salida), no solo de la armonia. Devuelve el orden con la justificacion de cada transicion en clave, tempo y energia, mas los huecos declarados. Para DJ de club, residente, movil y de eventos. Usar cuando haya que preparar un set para un slot concreto, cuando el slot cambie a ultima hora (menos tiempo, otra franja, otro BPM de relevo) o cuando haya que ordenar una playlist larga con criterio de sala.
 license: Propietaria. Uso permitido al comprador; prohibida la redistribucion.
 metadata:
-  version: 1.0.0
+  version: "1.1.0"
   linea: CABINA
   paquete: CABINA CORE
   estado: ACORDADO
@@ -11,228 +11,226 @@ metadata:
   idioma_base: es
 ---
 
-# SET POR ENCARGO
+# set-por-encargo
 
-## ROL
+## Qué hace
 
-Eres el asistente de preparacion de un DJ que tiene un bolo con condiciones
-concretas. Ordenas su musica segun el encargo, no segun un ideal abstracto de
-mezcla armonica.
+Convierte **un pool de tracks exportado más el brief del slot** en **un set ordenado con nota
+de transición para cada par y una lista de huecos declarados**, para **un DJ de club,
+residente, móvil o de eventos que prepara un bolo concreto**, en **menos de 15 minutos de
+atención**.
 
-Tu ventaja sobre un ordenador armonico automatico es que lees el brief: la
-hora, el publico, quien toca antes y despues, y que ha prohibido el cliente.
-Esa informacion no vive en los metadatos.
+La ventaja sobre un ordenador armónico automático es que lee el brief: la hora, el público,
+quién toca antes y después, y qué ha prohibido el cliente. Esa información no vive en los
+metadatos y es la que decide el set de verdad. Ordenar por Camelot y BPM lo hace cualquier
+herramienta con un clic; ordenar sabiendo que eres el telonero y que el cabeza de cartel abre
+a 128 es otra cosa.
 
-## DEFINICION OPERATIVA
+## Cuándo se dispara
 
-Esta skill convierte **un pool de tracks exportado + un brief de slot** en
-**un set ordenado con nota de transicion por cada par y una lista de huecos
-declarados**, para **un DJ que prepara un bolo concreto**, en **menos de 15
-minutos**.
+- "me han cambiado el slot, ahora tengo 60 minutos en vez de 90"
+- "tengo que preparar el set de la boda del sábado"
+- "el DJ de antes cierra a 124, ¿por dónde entro?"
+- "tengo una playlist de 300 tracks y no sé por dónde empezar a ordenarla"
+- "los novios han prohibido reggaetón, ¿cómo lo monto?"
+- "soy telonero y no quiero quemarle la pista al cabeza de cartel"
+- "necesito que el primer baile caiga en un sitio concreto"
+- "me han pasado de peak time a cierre y hay que rehacerlo"
+- jerga del gremio: "slot", "relevo", "curva de energía", "peak time", "telonero",
+  "Camelot", "rueda armónica", "BPM de entrada", "closing", "after", "pool", "warm up",
+  "primer baile", "vetar"
 
-## LIMITE HONESTO — LEER ANTES DE VENDER O DE USAR
+## Quién lo ejecuta
 
-Esta skill **no oye**. No detecta clave, ni BPM, ni energia: los lee del export.
-Si el analisis del software del DJ trae la clave mal, el set saldra mal y no
-hay forma de detectarlo desde aqui.
+El propio DJ preparando el bolo, con **10 a 15 minutos** de atención: filtrar el pool,
+rellenar el brief y revisar los tres puntos de riesgo de la salida. Si el slot cambia a última
+hora, la reejecución son **menos de 2 minutos**, que es donde está el mayor ahorro real.
 
-El dato es relevante: un test de laboratorio sobre 200 tracks encontro que
-rekordbox 7 acierta la clave en 138/200 (69%), frente a 178/200 de Mixed In Key
-(<https://blog.dubspot.com/dubspot-lab-report-mixed-in-key-vs-beatport>). Es
-decir, alrededor de un tercio de las claves de una biblioteca analizada solo
-con rekordbox pueden estar equivocadas.
+## Entrada
 
-Ademas, ordenar por armonia pura ya lo hacen DJ.Studio ("Harmonize") y Mixed In
-Key Pro ("DJ Mix Mode") con un clic. **Si lo unico que necesitas es ordenar por
-Camelot y BPM, usa esas herramientas: son mejores y mas baratas para eso.**
-Esta skill se justifica cuando el criterio es contextual: franja horaria,
-publico, prohibiciones, BPM de relevo, cambio de slot a ultima hora.
+- **Obligatorio · Pool**: `collection.xml` de rekordbox, o CSV con columnas
+  `artista,titulo,bpm,key` y opcionalmente `energia,genero,duracion_s`. **Hay que filtrarlo
+  antes**: el pool es la música candidata a ese bolo, no la biblioteca entera.
+- **Obligatorio · Brief del slot**: al menos duración y franja. Idealmente también BPM de
+  entrada y de salida, público, prohibiciones del cliente y tracks obligatorios.
+- **Recomendado:** quién toca antes y quién después, con su BPM de cierre y de apertura. Es
+  lo que activa la regla de relevo.
+- **Opcional:** tracks a vetar por decisión del club o del cliente, y el momento fijo al que
+  debe caer un obligatorio (el primer baile, la entrada de los novios).
+- **Dato sucio típico:** el pool sin columna de energía, muy habitual en exports de rekordbox.
+  El motor la infiere del BPM y **lo declara**, porque un BPM alto no es lo mismo que una
+  energía alta: un drum & bass de 174 puede ser atmosférico y un house de 120 puede reventar
+  la sala. El segundo dato sucio es el pool sin `duracion_s`, que obliga a estimar el número
+  de tracks y también se declara.
 
-## ENTRADA
+## Umbral que sostiene el producto
 
-Obligatorio:
+**Las seis curvas de energía por franja**, que traducen un dato del brief (la franja) en un
+parámetro ejecutable (la curva), con su rango y su razón de oficio. Son criterio de la casa
+`[A VALIDAR]`, no literatura publicada, y están en `references/curvas-y-franjas.md`.
 
-1. **Pool** — `collection.xml` de rekordbox, o CSV con columnas
-   `artista,titulo,bpm,key` y opcionalmente `energia,genero,duracion_s`.
-   Filtra antes: el pool debe ser la musica candidata a ese bolo, no la
-   biblioteca entera.
-2. **Brief del slot** — al menos duracion y franja. Idealmente:
+El segundo umbral sí tiene fuente y es el de relevo: una guía de preparación de slots de
+telonero recomienda **cerrar entre 4 y 8 BPM por debajo** del BPM de apertura del cabeza de
+cartel. Si el siguiente abre a 128, se cierra entre 120 y 124.
 
-| Campo | Ejemplo | Si falta |
-|---|---|---|
-| Duracion | 90 min | Asumir 60 y declararlo |
-| Franja | calentamiento / peak / cierre / after | Asumir peak y declararlo |
-| BPM de entrada | el DJ anterior cierra a 124 | Empezar por el pool y declararlo |
-| BPM de salida | el siguiente abre a 128 | Regla de relevo (ver abajo) |
-| Publico | boda 120 personas, 30-60 anios | Generico, declarado |
-| Prohibiciones | del cliente o del club | Ninguna |
-| Obligatorios | el track del primer baile | Ninguno |
+El tercero es el límite de precisión que condiciona todo lo demás: **rekordbox 7 acierta la
+clave en 138/200 tracks (69%) frente a 178/200 de Mixed In Key**
+(<https://blog.dubspot.com/dubspot-lab-report-mixed-in-key-vs-beatport>). Alrededor de un
+tercio de las claves de una biblioteca analizada solo con rekordbox pueden estar mal, y desde
+aquí **no hay forma de detectarlo**. Las distancias armónicas se calculan sobre la rueda
+Camelot (<https://neume.io/camelot-wheel>).
 
-## PROTOCOLO
+## Procedimiento
 
-**Paso 1 · Traduce la franja a curva de energia.**
+1. **Entrada: la franja del brief → Acción: traducirla a curva de energía con la tabla de seis
+   franjas y fijar el rango mínimo y máximo → Salida: curva y rango como parámetros →
+   Si falta la franja: asumir `peak` con meseta 6-9 y declarar el supuesto en la primera línea
+   de la entrega.**
 
-| Franja | Curva | Energia | Por que |
+2. **Entrada: duración del slot y duración media del pool → Acción: calcular el número de
+   tracks y sumar un 15% de margen, porque siempre se corta antes → Salida: número de tracks a
+   generar → Si el pool no trae duración: estimar 5 minutos por track en club y 3,5 en evento
+   de formato corto, y declarar la estimación.**
+
+3. **Entrada: pool, curva, número de tracks y restricciones → Acción: ejecutar
+   `python3 scripts/setbuilder.py <pool> -n <tracks> -c <curva> --energia-min <n>
+   --energia-max <n> [--incluir] [--vetar]` → Salida: el set ordenado con nota de transición
+   por par → Si un obligatorio no se puede colocar sin romper la curva: el motor lo declara
+   y no lo fuerza en silencio.**
+
+4. **Entrada: el set generado y el BPM de apertura del DJ siguiente → Acción: aplicar la regla
+   de relevo comprobando a mano que los últimos tracks aterrizan entre 4 y 8 BPM por debajo →
+   Salida: cierre verificado o corregido → Si no hay DJ después: se omite la regla y se cierra
+   según la curva, declarándolo.**
+
+5. **Entrada: las DECLARACIONES que imprime el motor → Acción: trasladarlas íntegras al DJ
+   (energía inferida del BPM, tracks sin duración, obligatorios no colocados, estancamiento
+   armónico frenado) → Salida: el set acompañado de sus huecos → Si no hay ninguna
+   declaración: se dice explícitamente que no la hay, en vez de callar.**
+
+6. **Entrada: el set completo → Acción: revisar los tres puntos de riesgo —que el track 1
+   arranque cerca del BPM de entrada, que el pico caiga donde marca la curva y no antes, y que
+   el cierre cumpla el relevo— → Salida: set entregable como propuesta editable → Si alguno
+   falla: se reejecuta con parámetros corregidos antes de entregar.**
+
+## Salida
+
+```
+SET — [sala / evento], [fecha]
+Slot: [duracion] · Franja: [franja] · Curva: [curva] (energia [min]-[max])
+BPM entrada: [n]  ->  BPM salida: [n]   Relevo: [n] (cierra 4-8 por debajo)
+
+ #  BPM  KEY  EN  TRACK                          TRANSICION
+ 1  124  8A   3   Artista - Titulo               entrada cerca del relevo (124)
+ 2  125  8A   4   Artista - Titulo               misma clave, +1 BPM
+ 3  126  9A   5   Artista - Titulo               +1 paso Camelot, +1 BPM
+...
+
+DECLARACIONES
+ - Energia inferida del BPM en 14 de 22 tracks (el pool no trae columna)
+ - 3 tracks sin duracion: numero de tracks estimado a 5 min/track
+ - Obligatorio "[track]" no colocado: rompia la curva en el minuto 40
+
+## Supuestos de esta versión
+[franja asumida, duraciones estimadas, y el aviso de precision de clave]
+```
+
+Las seis curvas del paso 1:
+
+| Franja | Curva | Energía | Por qué |
 |---|---|---|---|
 | Calentamiento / telonero | `rampa` | 3 a 7 | Sube sin llegar al techo: no se le quema la pista al cabeza de cartel |
-| Peak time | `meseta` | 6 a 9 | Sube rapido, sostiene, no se desinfla |
+| Peak time | `meseta` | 6 a 9 | Sube rápido, sostiene, no se desinfla |
 | Set completo de noche | `arco` | 3 a 9 | Pico al 70% y descenso de cierre |
 | Cierre / closing | `descenso` | 8 a 4 | Baja de forma controlada |
 | After | `descenso` | 6 a 3 | Empieza medio y desciende |
-| Sesion larga con oleadas | `dientes` | 4 a 9 | Tension y alivio en tres subidas |
+| Sesión larga con oleadas | `dientes` | 4 a 9 | Tensión y alivio en tres subidas |
 
-**Paso 2 · Calcula el numero de tracks.**
-Duracion / duracion media del pool. Si el pool no trae duracion, estima 5
-minutos por track para club y 3,5 para evento con formato mas corto, y
-**declara la estimacion**. Suma un 15% de margen: siempre se corta antes.
+## Límites
 
-**Paso 3 · Ejecuta.**
+- **No oye.** Lee clave, BPM y energía del export; no los detecta. Si el análisis de origen
+  trae la clave mal, el set saldrá mal y no hay forma de detectarlo desde aquí.
+- No corrige claves mal detectadas: eso exige audio y es trabajo de Mixed In Key.
+- No decide qué track suena mejor. Calcula compatibilidad de datos, que no es lo mismo que
+  compatibilidad musical.
+- No mezcla ni genera transiciones: prepara el orden, no ejecuta nada en cabina.
+- Con pool sin BPM ni clave degrada a orden por energía, y lo declara. Con vinilo o pool sin
+  metadatos el valor cae mucho.
+- Ordenar por armonía pura ya lo hacen DJ.Studio ("Harmonize") y Mixed In Key Pro ("DJ Mix
+  Mode") con un clic. **Si lo único que necesitas es ordenar por Camelot y BPM, usa esas: son
+  mejores y más baratas para eso.** Esta skill se justifica cuando el criterio es contextual.
 
-```bash
-python3 scripts/setbuilder.py <pool> -n <tracks> -c <curva> \
-  --energia-min <n> --energia-max <n> \
-  [--apertura "texto"] [--incluir "track"] [--vetar "artista o track"]
-```
+## Reglas
 
-Formatos de salida: `--formato texto` (por defecto, con notas de transicion),
-`--formato m3u` (importable), `--formato json` (para seguir trabajando).
-
-**Paso 4 · Aplica la regla de relevo.**
-Si hay DJ despues, los ultimos tracks deben aterrizar **por debajo** del BPM
-al que abrira el siguiente, nunca igual o por encima. Una guia de preparacion
-de slots de telonero recomienda cerrar entre 4 y 8 BPM por debajo del BPM de
-apertura del cabeza de cartel. Si el siguiente abre a 128, cierra entre 120 y
-124. Verificalo a mano sobre la salida: el script no conoce al DJ siguiente.
-
-**Paso 5 · Lee las DECLARACIONES y trasladalas.**
-El script declara: energia inferida del BPM, tracks sin duracion, obligatorios
-no colocados y estancamiento armonico forzado. Todo eso va al DJ, no se
-esconde. Un set con avisos es honesto; un set sin avisos suele ser un set con
-avisos ocultos.
-
-**Paso 6 · Revisa los tres puntos de riesgo.**
-- **Track 1**: si el brief da BPM de entrada, ¿arranca cerca?
-- **El pico**: ¿cae donde toca segun la curva, o llega demasiado pronto?
-- **El cierre**: ¿cumple la regla de relevo?
-
-## REGLAS
-
-### SIEMPRE
-
-| Regla | Por que |
+| SIEMPRE | Porqué |
 |---|---|
-| Traducir la franja a una curva antes de ejecutar | La franja es el dato del brief; la curva es el parametro |
-| Trasladar al DJ las declaraciones del script | Un set que oculta sus huecos se descubre en cabina |
-| Verificar el BPM de cierre contra el DJ siguiente | Dejar la pista por encima del relevo es una falta de oficio |
-| Pasar las prohibiciones del cliente a `--vetar` | Es la unica restriccion contractual dura del set |
-| Declarar cuando la energia se infirio del BPM | Un BPM alto no es lo mismo que una energia alta |
-| Dar el set como propuesta editable | El DJ decide en cabina; esto es preparacion |
+| Traducir la franja a una curva antes de ejecutar nada | La franja es el dato que da el cliente; la curva es el parámetro que entiende el motor |
+| Trasladar al DJ todas las declaraciones del motor | Un set que oculta sus huecos los descubre en cabina, que es el peor sitio |
+| Verificar a mano el BPM de cierre contra el DJ siguiente | El motor no conoce al relevo; dejar la pista por encima es una falta de oficio |
+| Pasar las prohibiciones del cliente a `--vetar` | Es la única restricción contractual dura del set y su incumplimiento tiene consecuencias |
+| Declarar cuando la energía se infirió del BPM | Un BPM alto no es una energía alta: un DnB de 174 puede ser atmosférico |
+| Entregar el set como propuesta editable, nunca como orden cerrado | El DJ decide en cabina; esto es preparación, no dirección |
+| Filtrar el pool antes de ejecutar | Con la biblioteca entera el motor elige entre ruido y el set pierde criterio |
+| Sumar un 15% de margen al número de tracks | Siempre se corta antes: es mejor sobrar que quedarse sin música a falta de diez minutos |
+| Revisar los tres puntos de riesgo antes de entregar | Track 1, pico y cierre concentran casi todos los fallos de un set preparado |
+| Declarar la estimación cuando el pool no trae duración | El número de tracks cambia el set entero, y es un supuesto que el DJ debe poder corregir |
 
-### NUNCA
-
-| Regla | Por que |
+| NUNCA | Porqué |
 |---|---|
-| Inventar la clave o el BPM de un track | Sin dato no hay mezcla verificable |
-| Afirmar que dos tracks "suenan bien juntos" | Eso exige oirlos; aqui solo hay compatibilidad de datos |
-| Ordenar solo por armonia ignorando el brief | Es justo lo que ya hacen las herramientas existentes |
-| Encadenar mas de 3 tracks en la misma clave sin decirlo | Aplana el set; el script lo frena y lo declara |
-| Colocar el mismo artista en dos tracks seguidos | Se oye como pobreza de pool |
-| Entregar un set que supere la duracion del slot | Pasarse de hora tiene consecuencias contractuales |
+| Inventar la clave o el BPM de un track | Sin dato no hay mezcla verificable, y un dato inventado se propaga a todas las transiciones |
+| Afirmar que dos tracks "suenan bien juntos" | Eso exige oírlos; aquí solo hay compatibilidad de datos, que es otra cosa |
+| Ordenar solo por armonía ignorando el brief | Es exactamente lo que ya hacen las herramientas existentes, mejor y más barato |
+| Encadenar más de 3 tracks en la misma clave sin decirlo | Aplana el set; el motor lo frena a 3 y lo declara como estancamiento |
+| Colocar el mismo artista en dos tracks seguidos | Se oye como pobreza de pool aunque los dos tracks sean buenos |
+| Entregar un set que supere la duración del slot | Pasarse de hora tiene consecuencias contractuales, sobre todo con limitador de sonido |
+| Forzar un obligatorio rompiendo la curva sin avisar | El DJ prefiere saber que su track no encaja a descubrir el bajón en directo |
+| Dar por buena la clave del export sin el aviso de precisión | Un tercio de las claves analizadas solo con rekordbox pueden estar mal |
+| Cerrar por encima del BPM de apertura del relevo | Obliga al siguiente DJ a bajar en frío delante de la pista, y se nota |
 
-## MATRIZ DE APLICABILIDAD
+## Antipatrones
 
-| Escenario | Aplica | Nota |
-|---|---|---|
-| Slot de club con hora y relevo definidos | Si | Caso central |
-| Cambio de slot a ultima hora | Si | El mayor ahorro de tiempo: reejecutar con otros parametros |
-| Boda o evento con momentos fijos | Si | Usar `--incluir` para los obligatorios |
-| Mix grabado para podcast o radio | Si | Sin regla de relevo |
-| Set con vinilo o pool sin metadatos | Parcial | Sin BPM/clave degrada a orden por energia; se declara |
-| Elegir que track suena mejor | No | Requiere oir |
-| Corregir claves mal detectadas | No | Requiere audio: usar Mixed In Key |
-| Mezclar o generar transiciones | No | Esto prepara el orden, no ejecuta la mezcla |
+1. **Síntoma**: 8 tracks seguidos en la misma clave, o BPM idéntico durante 40 minutos.
+   **Causa raíz**: pool demasiado estrecho, o se optimizó solo la armonía. **Corrección**: el
+   motor frena a 3 seguidos y lo declara; si aparece el aviso de estancamiento el problema es
+   el pool y hay que ampliarlo, no forzar el orden.
 
-## ANTIPATRONES
+2. **Síntoma**: la energía máxima llega en el minuto 20 de 90. **Causa raíz**: curva
+   equivocada, `rampa` o `meseta` donde tocaba `arco`. **Corrección**: reejecutar con `arco` y
+   verificar que el máximo cae cerca del 70% del slot.
 
-**1 · El set plano.**
-Sintoma: 8 tracks seguidos en la misma clave o BPM identico durante 40 min.
-Causa: pool demasiado estrecho, o solo se optimizo la armonia.
-Correccion: el script frena a 3 seguidos y lo declara. Si aparece el aviso de
-estancamiento, el problema es el pool: hay que ampliarlo, no forzar el orden.
+3. **Síntoma**: el set cierra a 130 y el DJ siguiente abre a 126. **Causa raíz**: no se aplicó
+   la regla de relevo del paso 4. **Corrección**: recortar los dos últimos tracks y aterrizar
+   entre 4 y 8 BPM por debajo de 126, es decir entre 118 y 122.
 
-**2 · El pico prematuro.**
-Sintoma: la energia maxima llega en el minuto 20 de 90.
-Causa: curva equivocada (`rampa` o `meseta` donde tocaba `arco`).
-Correccion: reejecutar con `arco`. Verificar que el maximo cae cerca del 70%.
+4. **Síntoma**: el track del primer baile aparece en mitad del set, entre dos temas de peak.
+   **Causa raíz**: se pasó como `--incluir` sin posición fija y el motor lo colocó donde
+   encajaba armónicamente. **Corrección**: los obligatorios con momento fijo se colocan
+   primero y el set se construye alrededor; si rompen la curva, se declara y decide el DJ.
 
-**3 · El atropello al relevo.**
-Sintoma: el set cierra a 130 y el siguiente DJ abre a 126.
-Causa: no se aplico el Paso 4.
-Correccion: recortar los ultimos tracks y sustituirlos por otros 4-8 BPM por
-debajo del BPM de apertura del siguiente.
+5. **Síntoma**: el set es perfecto sobre el papel y en cabina suena deslavazado. **Causa raíz**: se confió en claves de un export analizado solo con rekordbox, con ~31% de error
+   esperable. **Corrección**: tratar las transiciones armónicas como propuesta, no como
+   garantía, y comprobar de oído las del pico antes del bolo.
 
-**4 · La energia fantasma.**
-Sintoma: la curva es perfecta sobre el papel y la pista no responde.
-Causa: ningun track traia energia declarada y toda la curva se infirio del BPM.
-Correccion: leer la declaracion `energia_inferida_de_bpm`. Si es alta, la curva
-es una hipotesis. Con Mixed In Key la energia viene medida en Comments.
+## Casos de prueba
 
-**5 · El set que no cabe.**
-Sintoma: 22 tracks para 60 minutos.
-Causa: no se calculo la duracion, o el pool no traia `duracion_s`.
-Correccion: leer `duracion_estimada_s` y `tracks_sin_duracion`. Si faltan
-duraciones, la estimacion es parcial y hay que decirlo.
+Los cuatro casos están en `cases/`, con entrada y salida reales.
 
-## CASOS DE PRUEBA
+**Happy path** (`cases/case_01_happy_path.md`): slot de telonero de 90 minutos, relevo que abre
+a 128, pool de 180 tracks con clave y BPM. Sale curva `rampa` 3-7 y cierre a 122.
 
-### happy_path
-**Entrada:** pool de 180 tracks de techno con BPM, clave y energia; brief de
-peak time de 90 min, entra a 128, siguiente DJ abre a 138.
-**Salida esperada:** ~17 tracks, curva `meseta` E6-9, recorrido armonico sin
-mas de 3 seguidas en la misma clave, sin artista repetido consecutivo, nota de
-transicion en cada par, y cierre verificado por debajo de 138.
+**Edge case** (`cases/case_02_edge_case.md`): cambio de slot a última hora, de 90 a 50 minutos
+y de peak a cierre, a una hora del bolo. Reejecución completa en menos de dos minutos.
 
-### edge_case
-**Entrada:** el promotor avisa 40 minutos antes de que el slot pasa de 90 a 50
-minutos y de peak time a calentamiento.
-**Salida esperada:** reejecucion con `-n` reducido y curva `rampa`, techo de
-energia bajado, y aviso explicito de que tracks del set anterior se caen. El
-coste de rehacerlo debe ser un comando, no una sesion de trabajo.
+**Failure** (`cases/case_03_failure.md`): pool sin clave y sin energía, solo artista, título y
+BPM. Se entrega un set ordenado por BPM y energía inferida, con el hueco declarado.
 
-### failure
-**Entrada:** pool en CSV sin columna de clave ni de energia; solo artista,
-titulo y BPM.
-**Salida esperada:** el set se construye igual. La energia se infiere del BPM
-y se declara; el criterio armonico se anula y se declara. La entrega dice, en
-una linea, que ese set esta ordenado por tempo y energia estimada, no por
-armonia, y que para mezclar en armonico hace falta analizar la biblioteca
-antes. No se inventa ni una clave.
+**Integration** (`cases/case_04_integration.md`): encadenado con `postmortem-de-bolo`. Las
+decisiones del parte del mes anterior entran como parámetros de este set.
 
-### integration
-**Entrada:** el CSV que produce `peticiones-a-repertorio` (cubo TENGO) y su
-lista de prohibidos.
-**Salida esperada:** el CSV entra como pool y los prohibidos como `--vetar`.
-La salida `--formato m3u` se importa en el software del DJ. El historial que
-genere ese bolo es la entrada de `postmortem-de-bolo`.
+## Ficha comercial
 
-## AUTOCONTROL
+Ver `ANEXO-A-ficha-comercial.md`.
 
-- ¿La curva elegida corresponde a la franja del brief?
-- ¿El numero de tracks cubre la duracion sin pasarse?
-- ¿El cierre respeta el BPM del relevo?
-- ¿Se trasladaron TODAS las declaraciones del script?
-- ¿Hay algun track cuya clave o BPM no venga del export?
-- ¿Se esta vendiendo como "el mejor orden" en vez de como "un orden
-  justificado y editable"? Lo primero seria falso.
+## Versión
 
-## REFERENCIAS
-
-- `scripts/setbuilder.py` — motor de ordenacion (beam search).
-- `scripts/dj_toolkit.py` — rueda Camelot, compatibilidad de tempo, lectura XML.
-- `references/curvas-y-franjas.md` — detalle de curvas y BPM por franja.
-- `references/mezcla-armonica.md` — rueda Camelot y sus limites.
-- Rueda Camelot verificada en dos fuentes independientes:
-  <https://neume.io/camelot-wheel> y
-  <https://vibesdj.io/dj-tools/harmonic-mixing-chart>
-- Precision comparada de deteccion de clave:
-  <https://blog.dubspot.com/dubspot-lab-report-mixed-in-key-vs-beatport>
+v1.1.0 — ver `CHANGELOG.md`.

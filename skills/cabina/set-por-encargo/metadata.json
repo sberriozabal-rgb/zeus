@@ -1,0 +1,25 @@
+{
+  "name": "set-por-encargo",
+  "commercial_name": "Set por encargo",
+  "version": "1.1.0",
+  "author": "ZEUS / FORJA",
+  "linea": "CABINA",
+  "paquete": "CABINA CORE",
+  "peldano": "P1",
+  "motor": "A",
+  "estado": "ACORDADO",
+  "precio_eur": 49,
+  "fecha_revision": "2026-09-15",
+  "entregable": "set-ordenado-con-notas-de-transicion",
+  "enlaza_con": ["postmortem-de-bolo", "auditoria-de-biblioteca", "peticiones-a-repertorio"],
+  "requiere": "python3 >= 3.9",
+  "gates": { "G1": false, "G2": false, "G3": true, "G4": true, "G5": false },
+  "fuente_umbral": "Seis curvas de energia por franja: criterio de oficio de la casa [A VALIDAR], en references/curvas-y-franjas.md. Regla de relevo 4-8 BPM por debajo del cabeza de cartel: guia de preparacion de slots de telonero. Precision de clave: rekordbox 7 en 138/200 (69%) frente a Mixed In Key 178/200, blog.dubspot.com. Rueda Camelot: neume.io/camelot-wheel",
+  "carencias_declaradas": [
+    "G2 pendiente: sin ejecuciones registradas contra pools reales de un comprador que haya pagado",
+    "No detecta clave, BPM ni energia: los lee del export y hereda sus errores",
+    "Las seis curvas son criterio de casa sin literatura publicada que las respalde"
+  ],
+  "license": "Ver LICENSE.txt — uso permitido al comprador, prohibida la redistribucion",
+  "spec": { "estandar": "Agent Skills", "url": "https://agentskills.io/specification" }
+}

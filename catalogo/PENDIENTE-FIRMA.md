@@ -44,12 +44,18 @@ cobra más comisión (5 % + 0,50 $) pero no tiene cuota fija, así que no arries
 nada hasta que haya volumen, y concede y revoca el acceso solo. Es la única de
 las cuatro decisiones que es puramente mecánica.
 
-### 5 · Decidir si se cierra el envoltorio de CABINA — **nuevo**
+### 5 · ~~Cerrar el envoltorio de CABINA~~ ✅ HECHO (15-sep-2026)
 
-Seis piezas × (4 casos de prueba + CHANGELOG + tabla NUNCA + 5 antipatrones).
-Es trabajo mecánico de fábrica: el contenido de oficio ya está escrito y es
-bueno. Sin esto, CABINA tiene precio pero no se puede poner a la venta sin
-saltarse tu propio peldaño P1.
+Las seis pasan de **0-2/20** a **19/20**. G1 levantado. Se añadieron en cada una: las 13
+secciones del ADN, 6 pasos atómicos con el molde de la serie, 10 reglas SIEMPRE y 9 NUNCA,
+5 antipatrones, los 4 casos de prueba, y `CHANGELOG.md`, `README.md`, `LICENSE.txt`,
+`metadata.json` y `references/FUENTES.md`.
+
+El contenido de oficio no se tocó: las notas bajas medían formato, no calidad.
+
+**Queda G2**, y no lo puede levantar la fábrica: los 24 casos de prueba son de fabricación y
+ninguna pieza se ha ejecutado contra los datos de alguien que haya pagado. **Lo levanta el
+primer comprador**, que es otra razón para vender antes que seguir fabricando.
 
 ### 6 · Resolver el desajuste de versión de `respuesta-resenas` — **nuevo**
 
@@ -81,6 +87,9 @@ cerrado y ahora también el precio. Solo que el validador ha puesto una condici�
 por delante que antes no veíamos: cerrarle el envoltorio a las seis. Es media
 jornada de fábrica, no un replanteamiento.
 
-Orden que yo seguiría: **envoltorio de CABINA (decisión 5) → Polar (decisión 4) →
-publicar CABINA → seguir vendiendo hostelería en paralelo.** Y la decisión 6 la
-resolvería antes de mandarle a nadie un material que diga 19/20.
+Orden que yo seguiría, con el envoltorio ya cerrado: **Polar (decisión 4) → publicar CABINA →
+seguir vendiendo hostelería en paralelo.** Y la decisión 6 la resolvería antes de mandarle a
+nadie un material que diga 19/20.
+
+CABINA ya no tiene nada pendiente de fábrica: tiene precio, ficha, licencia y 19/20 en las seis.
+Lo único que le falta es una pasarela de cobro y un comprador.
