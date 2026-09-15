@@ -1,4 +1,8 @@
-# Las 4 decisiones que desbloquean el cobro
+# Las decisiones que desbloqueaban el cobro
+
+> ✅ **TODAS TOMADAS el 15-sep-2026.** Sergio delegó y quedan cerradas en
+> [`DECISIONES.md`](DECISIONES.md), que es el documento vigente. Este se conserva como
+> historial de cómo estaba el catálogo antes.
 
 El catálogo está cargado y el producto está terminado. Lo que falta no es
 fabricación: son cuatro decisiones que solo puedes tomar tú, porque tus propias

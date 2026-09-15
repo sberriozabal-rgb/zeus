@@ -7,13 +7,13 @@ Línea              : Hostelería
 Comprador nombrado : Restaurante con carta fija y producción repetida (≥1 vez por semana), España o México, plantilla de cocina de 3 a 15 personas con más de un cocinero por turno, y con un segundo local, una franquicia o un catering de volumen en el horizonte. Decide el chef propietario o el jefe de cocina; el dueño no cocinero firma pero no evalúa. Quien la ejecuta es el jefe de cocina fuera de servicio; quien la lee después es el cocinero de línea, de pie y con las manos ocupadas. **No es comprador**: la cocina de una sola persona sin rotación (no hay dos cocineros que diverjan, que es el problema que esto resuelve), la alta cocina de autor de pieza única sin repetición prevista, el local cuyo propietario decide que el valor del plato depende de no documentarlo, y cualquiera que venga buscando el plan APPCC — eso no es esto y se dice en la primera llamada, no en la entrega.
 Trabajo que quita  : Escribir a mano las fichas técnicas de la carta, o no escribirlas nunca y perderlas el día que se va el chef. Y reconstruir cada temporada por qué el plato ya no sale como salía.
 Umbral que aporta  : Que el pescado **no lleva la misma cifra en Madrid que en Monterrey** — 68 °C durante 15 s (AESAN-2021-004) frente a 63 °C (NOM-251 §7.3.1) — y que AESAN exige binomio tiempo-temperatura y no solo grados, de modo que una ficha española que copia una tabla americana está a medias aunque los grados coincidan. Mantenimiento en caliente ≥63 °C en España contra >60 °C en México. Más los 10 campos obligatorios de la receta estándar (Pennsylvania State University, cap. 6), la tolerancia de ±10 % sobre **peso de plato servido** y no sobre ingrediente crudo, y la regla de estado que sostiene todo lo demás: ninguna ficha es ACORDADO hasta que se ha pesado una vez.
-Precio propuesto   : No se vende suelta. Incluida en el sistema instalable de hostelería (Motor B). Dentro del sistema es la pieza de mayor coste de producción por unidad —una ficha por plato, 20-40 min cada una `[A VALIDAR]`— y por eso es la candidata natural a cobrarse por volumen de carta y no a tanto alzado: la carta de 12 platos y la de 60 no son el mismo trabajo. `[A VALIDAR — pendiente de ratificación por escrito de Sergio]`
+Precio propuesto   : Dentro de Instalación Completa (4.900 €) **cuando levante G4**. Hasta entonces NO se factura. **Ratificado 15-sep-2026.**
 Canal              : Venta presencial dentro del sistema instalable (Motor B). No se publica suelta en directorio hasta que el sistema completo tenga el primer caso vendido con cifras documentadas.
 Motor              : B · Instalación
 Frase de anuncio   : "La receta de tu local, no una receta bonita: con la temperatura que exige la norma de tu país y el hueco marcado donde todavía no has pesado."
 Estado / Versión   : ACORDADO / v1.1.0
 Auditoría          : 18/20 — ver desglose abajo. No se redondea al alza.
-Gates              : G1 [x] G2 [ ] G3 [x] G4 [ ] G5 [ ]
+Gates              : G1 [x] G2 [ ] G3 [x] G4 [ ] G5 [x]
 
 ## Desglose de auditoría (18/20)
 

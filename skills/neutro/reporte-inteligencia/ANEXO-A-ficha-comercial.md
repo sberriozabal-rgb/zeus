@@ -11,14 +11,14 @@
 | Trabajo que quita | Mirar a ojo las fichas de los competidores cada cierto tiempo, sacar impresiones sin fecha ni cita, y no poder decir si algo ha cambiado o es la memoria del que mira. |
 | Umbral que aporta | El **panel congelado 13 semanas con composición 3+2+1** y el **modo de captura declarado**. Lo primero hace que los deltas signifiquen algo; lo segundo impide presentar como medición una tabla levantada con buscador que solo alcanza 2 de las 8 métricas. Más los topes duros —6 hallazgos, 5 fallos, 3 acciones— que son lo que hace que el reporte se siga abriendo en la semana 8. |
 | Límite declarado | Las cifras de BrightLocal son de consumidores de EE. UU. y la elasticidad de Luca es de restaurantes independientes en Yelp: **la dirección es extrapolable, las cifras exactas no**. El modo BÚSQUEDA **no cierra línea base**. No usa datos obtenidos saltándose términos de uso, y nunca recomienda solicitar, comprar, incentivar ni suprimir reseñas. |
-| Precio propuesto | **39–49 €** pago único `[A VALIDAR — pendiente de ratificación por escrito de Sergio]` |
+| Precio propuesto | **49 €** pago único. **Ratificado 15-sep-2026.** |
 | Razón del precio | Tramo 30-49 € de mejor conversión. Candidata natural a **suscripción** antes que a pago único, porque el producto es la serie semanal y no el corte: ahí la doctrina de la casa dice que la suscripción promedia casi el doble que el pago único, pero exige cadencia real que sostenerla. Decisión pendiente. |
 | Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Seis competidores, ocho métricas y tres acciones para esta semana. Con la cita y la fecha de cada cosa, para que puedas comprobarlo.» |
 | Estado / Versión | ACORDADO / v1.2.0 |
 | Auditoría | **19/20** (`validar_skill.py`, 15-sep-2026). El validador devuelve 20/20 mecánico; **no se firma el 20** porque el punto 19 exige URLs verificadas y no se han reconfirmado una a una. Coincide con el 18/20 que la skill declaraba *"pendiente de reauditoría tras v1.1.0"*: la reauditoría es esta. |
-| Gates | G1 [x] G2 [ ] G3 [ ] G4 [x] G5 [ ] |
+| Gates | G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x] |
 
 ## Notas de gates
 

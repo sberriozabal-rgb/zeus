@@ -18,7 +18,7 @@
 | Frase de anuncio | «El canal que pide cada sello, la frase que lo distingue de los otros cien envíos, y la fecha correcta para que Beatport y Spotify lleguen a tiempo.» |
 | Estado / Versión | ACORDADO / v1.1.0 |
 | Auditoría | **19/20**. El validador de la casa (`validar_skill.py`, 15-sep-2026) devuelve 20/20 mecánico, frente al **2/20** de la v1.0.0. **No se firma el 20**: el punto 19 exige URLs verificadas, no solo presentes, y en esta pasada no se han reverificado una a una. La casa no redondea al alza. |
-| Gates | G1 [x] G2 [ ] G3 [x] G4 [x] G5 [ ] |
+| Gates | G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x] |
 
 ## Notas de gates
 

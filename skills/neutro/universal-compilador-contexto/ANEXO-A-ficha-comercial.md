@@ -11,14 +11,14 @@
 | Trabajo que quita | Abrir cuarenta archivos para saber cuál es la propuesta buena, no encontrar en qué documento estaba aquella cifra, y descubrir que lo que se creía decidido era una propuesta de un chat que nadie llegó a aprobar. |
 | Umbral que aporta | La frontera **decidido ≠ propuesto**: cifras, contratos, reparto y estructura son `PROPUESTA A VALIDAR` por defecto, y **solo un documento aprobado o un turno del usuario** las levanta a decisión —**nunca un turno del asistente**—. Más los dos umbrales medibles de taxonomía: ningún dominio con menos de 2 fuentes y "Anexos" por debajo del 15 %, que es lo que impide entregar una plantilla disfrazada de estructura. |
 | Límite declarado | **No opina sobre el proyecto ni corrige sus cifras.** Conflictos y huecos se devuelven al dueño, no se resuelven. La **Ruta A de chats es parcial por diseño** y se declara siempre. No asume sector, país, idioma ni moneda que la carpeta no declare. Las credenciales no entran. |
-| Precio propuesto | **39–49 €** pago único `[A VALIDAR — pendiente de ratificación por escrito de Sergio]` |
+| Precio propuesto | **49 €** suelta · **89 €** en PACK CONTEXTO. **Ratificado 15-sep-2026.** |
 | Razón del precio | Tramo 30-49 € de mejor conversión. Es producto de **uso recurrente pero espaciado** —se recompila cuando la carpeta ha crecido, no cada semana—, así que no sostiene una suscripción pero sí la recompra. Entrega entre 60 y 120 minutos de trabajo que el comprador no sabe hacer de forma reproducible. |
 | Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Todo lo que hay en tu carpeta, ordenado por temas, con la versión vigente marcada y la lista de lo que aún no has decidido.» |
 | Estado / Versión | ACORDADO / v1.1.0 |
 | Auditoría | **19/20** (`validar_skill.py`, 15-sep-2026). El validador devuelve 20/20 mecánico; **no se firma el 20** porque el punto 19 exige URLs verificadas y no se han reconfirmado una a una. Antes de esta revisión medía **1/20** frente al 17/20 de autoevaluación declarado. |
-| Gates | G1 [x] G2 [ ] G3 [ ] G4 [x] G5 [ ] |
+| Gates | G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x] |
 
 ## Notas de gates
 

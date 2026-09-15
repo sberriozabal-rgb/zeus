@@ -14,13 +14,14 @@ nunca por adjunto*: el adjunto no se recupera al cancelar, el acceso sí.
 
 | Línea | Skills | Motor | Precio |
 |---|---|---|---|
-| **Hostelería** | 7 | B · instalación presencial | 4.900 € completa / 2.500 € esencial `[A VALIDAR]` |
+| **Hostelería** | 7 | B · instalación presencial | **4.900 €** completa / **2.500 €** esencial ✅ |
 | **CABINA** (DJ) | 6 | A · catálogo | **49 € suelta / 249 € completa** ✅ cerrado |
-| **Neutra / B2B** | 4 | A · catálogo | 39–79 € propuesto `[A VALIDAR]` |
+| **Neutra / B2B** | 4 | A · catálogo | **49–79 €** · pack 89 € ✅ |
 
 - [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md) — tarifa propuesta con anclas de mercado y canal de cobro.
 - [`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md) — matriz G1–G5 y riesgos abiertos.
-- [`catalogo/PENDIENTE-FIRMA.md`](catalogo/PENDIENTE-FIRMA.md) — las 4 decisiones que desbloquean el cobro.
+- [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md) — **las decisiones tomadas**, con su razón.
+- [`venta/`](venta/) — kit de venta: configuración de cobro, guion de visita y mensajes listos.
 
 ## Estructura
 
@@ -37,15 +38,16 @@ Cada skill conserva su `SKILL.md`, sus `references/`, `assets/`, `scripts/`,
 
 ## Estado
 
-Las 17 están en estado `ACORDADO`, con licencia que permite la venta y **todas por encima del umbral de 16/20** que exige el peldaño P1 (medido con el validador de la casa, no estimado). Ninguna
-tiene el gate **G3 (precio)** levantado con firma, y **G2 (prueba contra datos
-reales de cliente)** está abajo en todo el catálogo. Nada de esto impide vender
-una instalación presencial —se ejecuta con los datos del propio cliente, que es
-como está diseñado el Motor B—, pero sí desaconseja publicar suelto en
-directorio antes del primer caso vendido.
+Las 17 están en `ACORDADO`, con licencia de venta y **todas por encima del umbral de 16/20** que
+exige el peldaño P1 (medido, no estimado). **Gates G1, G3, G4 y G5 levantados**; G4 tiene una sola
+excepción, `receta-estandar`, por seguridad alimentaria.
 
-No se ha subido lo que no está en condiciones: `valoracion-lote-vino-inversion`
-(BORRADOR), `checklist-turno` (duplicado con licencia incompatible),
-`forja-fabrica-de-skills` y `zeus-skill-creator` (internos), y la línea
-`octava-*` (sistema operativo de OCTAVA, no catálogo). Motivos en
+**G2 (prueba contra datos reales de cliente) sigue abajo en las 17, y es correcto que lo esté.**
+No se cierra por decisión: lo levanta el primer cliente que ejecuta una skill con sus datos. Y no
+bloquea la venta — la instalación de hostelería se ejecuta precisamente así, en la visita y con los
+datos del propio cliente.
+
+No se han subido: `valoracion-lote-vino-inversion` (BORRADOR, 16/20), `checklist-turno`
+(**retirada**, duplicado con licencia de uso libre), `forja-fabrica-de-skills` y
+`zeus-skill-creator` (internos), y la línea `octava-*`. Motivos en
 [`CATALOGO.md`](CATALOGO.md#lo-que-no-se-ha-subido-y-por-qué).

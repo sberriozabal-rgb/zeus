@@ -7,13 +7,13 @@ Línea              : Hostelería
 Comprador nombrado : Restaurante independiente o grupo pequeño, España o México, que compra a **dos o más proveedores del mismo producto** y guarda los albaranes (carpeta física o export del programa de compras). Plantilla 8-30 personas, compra de alimentación por encima de ~4.000 €/mes. Decide el dueño; lo ejecuta él o el jefe de cocina que hace los pedidos. **Quien no es comprador**: el local con proveedor único obligado por contrato o por central de compras del grupo —sin dos proveedores no hay comparativa, y la mitad del producto no aplica—; el local que tira los albaranes o solo guarda el resumen mensual del banco, porque sin línea de producto no hay nada que normalizar; y la franquicia con lista de precios impuesta, que no puede cambiar de proveedor aunque el informe se lo demuestre.
 Trabajo que quita  : Cruzar a mano cincuenta líneas de albarán entre tres proveedores cada semana —que por eso no se hace nunca— y decidir a ojo si el que ofrece más barato es de verdad más barato o es otro producto.
 Umbral que aporta  : Que una garrafa de 5 L a 42,50 € son **8,50 €/L** y gana al litro suelto de 8,90 €, y que hasta que todo no está en la misma base y sin IVA no se compara nada. La alerta en **+8%** entre dos fechas, defendida contra el IPC general de España (3,6% anual, INE julio 2026): más del doble de la inflación ya no es "todo sube", es una decisión de ese proveedor. La separación **estacional / estructural**, que es la que impide prometer un ahorro que el cambio de temporada desmiente solo. Y el **formato encubierto**: mismo precio de caja, menos gramos dentro, invisible en el albarán y visible solo en el €/base.
-Precio propuesto   : No se vende suelta. Incluida en Instalación Completa 4.900 € (6 skills). Candidata al paquete Esencial de 3 (2.500 €) junto con escandallo y control-no-shows: es la pieza que produce el ahorro más fácil de comprobar —el dueño puede llamar al proveedor esa misma tarde—. [A VALIDAR — pendiente de ratificación por escrito de Sergio]
+Precio propuesto   : Dentro de Instalación Esencial (2.500 €) y Completa (4.900 €). **Ratificado 15-sep-2026.**
 Canal              : Venta presencial dentro del sistema instalable (Motor B). No se publica suelta en directorio hasta que el sistema completo tenga el primer caso vendido.
 Motor              : B · Instalación
 Frase de anuncio   : "Te digo qué te ha subido de verdad, cuánto de eso se corrige solo con la temporada, y quién te lo tiene hoy más barato con el precio puesto en la misma unidad."
 Estado / Versión   : ACORDADO / v1.1.0
 Auditoría          : 18/20 — ver desglose abajo. No se redondea al alza.
-Gates              : G1 [x] G2 [ ] G3 [x] G4 [x] G5 [ ]
+Gates              : G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x]
 
 ## Desglose de auditoría (18/20)
 

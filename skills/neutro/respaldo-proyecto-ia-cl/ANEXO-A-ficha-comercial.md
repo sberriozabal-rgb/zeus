@@ -11,14 +11,14 @@
 | Trabajo que quita | Perder meses de trabajo al cerrar o cambiar de cuenta, o hacer un `zip -r` de la carpeta y descubrir al restaurar que faltan las conversaciones, que los adjuntos citan documentos que no viajaron, o que dentro iba una clave API. |
 | Umbral que aporta | Las **cuatro clases excluyentes C0-C3** leídas de C3 hacia C0, con dos reglas duras: un archivo con una clave es **C3 aunque el otro 99 % sea público** (se parte el archivo, no se rebaja la clase), y **clase desconocida = C2, nunca C0**. Más la **restauración en frío firmada y fechada otro día**, que es lo único que distingue un respaldo verificado de un comando que terminó sin error. |
 | Límite declarado | **No migra nada.** Anthropic no soporta migrar datos entre cuentas personales: lo que produce es un paquete de **reconstrucción manual**. El borrador de chats **cita y cuenta, no interpreta**. Sin `pyzipper` el paquete se entrega **sin cifrar y se declara**. |
-| Precio propuesto | **39–49 €** pago único `[A VALIDAR — pendiente de ratificación por escrito de Sergio]` |
+| Precio propuesto | **49 €** suelta · **89 €** en PACK CONTEXTO. **Ratificado 15-sep-2026.** |
 | Razón del precio | Tramo 30-49 € de mejor conversión. El comprador llega con urgencia —va a cerrar una cuenta o a cambiar de plan— y el coste de no tenerlo es la pérdida total del contenido, así que la disposición a pagar es alta, pero es un producto de **uso puntual** y no de serie: no sostiene una suscripción. |
 | Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Te llevas tu proyecto entero cifrado, con el guion para rehacerlo y la lista de lo que no cabía. Probado en frío antes de que borres nada.» |
 | Estado / Versión | ACORDADO / v2.1.0 |
 | Auditoría | **19/20** (`validar_skill.py`, 15-sep-2026). El validador devuelve 20/20 mecánico; **no se firma el 20** porque el punto 19 exige URLs verificadas y no se han reconfirmado una a una. Antes de esta revisión medía **3/20** frente al 18/20 de autoevaluación que declaraba. |
-| Gates | G1 [x] G2 [ ] G3 [ ] G4 [x] G5 [ ] |
+| Gates | G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x] |
 
 ## Notas de gates
 

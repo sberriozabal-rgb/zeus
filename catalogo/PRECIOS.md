@@ -1,27 +1,33 @@
-# Tarifa propuesta
+# Tarifa — CERRADA el 15-sep-2026
 
-Toda cifra de este documento está `[A VALIDAR]` hasta ratificación por escrito.
-Las que ya estaban escritas en una ficha comercial se transcriben tal cual; las
-que faltaban se proponen aplicando las anclas de mercado de la propia doctrina
-de la casa (`forja-fabrica-de-skills`), citadas abajo con su fuente.
+Todas las cifras están **ratificadas**. Ya no llevan `[A VALIDAR]`: el gate **G3 está levantado
+en las 17 piezas**. Decisiones y su razón en [`DECISIONES.md`](DECISIONES.md).
 
-## 1 · Hostelería — Motor B (instalación)
+## 1 · Hostelería — Motor B (instalación presencial)
 
-| Producto | Contenido | Precio en ficha |
+| Producto | Contenido | Precio |
 |---|---|---|
-| **Instalación Completa** | 6 skills del sistema | **4.900 €** `[A VALIDAR]` |
-| **Instalación Esencial** | 3 skills | **2.500 €** `[A VALIDAR]` |
-| `productividad-personal-turno` suelta | 1 skill | **149–249 €** pago único `[A VALIDAR]` |
+| **Instalación Esencial** | 3 skills | **2.500 €** |
+| **Instalación Completa** | 6 skills | **4.900 €** |
+| `productividad-personal-turno` suelta | 1 skill | **199 €** |
 
-Las fichas coinciden en que el paquete Esencial de 3 se arma con
-`escandallo-ingenieria-menu` (produce la cifra que abre la conversación: euros
-al año) más dos de entre `comparativa-proveedores` (el ahorro más fácil de
-comprobar: el dueño llama al proveedor esa misma tarde), `apertura-cierre-turno`
-y `control-no-shows`. **La composición exacta está sin cerrar** y es una de las
-decisiones pendientes de firma.
+**Esencial** = `escandallo-ingenieria-menu` + `comparativa-proveedores` + `apertura-cierre-turno`.
+El escandallo produce la cifra que abre la conversación; la comparativa produce el ahorro que el
+dueño verifica esa misma tarde llamando al proveedor; el checklist es lo que hace que las otras
+dos se sostengan tres semanas después.
 
-> Regla de la casa, literal: *ante negociación se quita alcance, jamás se baja el
-> precio del sistema completo.*
+**Completa** = las tres anteriores más `respuesta-resenas`, `productividad-personal-turno` y
+`reporte-inteligencia-competencia`.
+
+> ⚠️ **`receta-estandar` NO se factura todavía.** Su G4 está abajo por seguridad alimentaria:
+> necesita revisión de un consultor antes de cobrarse. El Completa se sirve con las otras seis al
+> mismo precio, y cuando levante G4 entra sin coste para quien ya compró.
+
+**No se cobra por Polar.** La instalación va por Stripe México (pesos) o transferencia: el ticket
+alto justifica la comisión menor pese a no ser *merchant of record*.
+
+> Regla de la casa, literal: *ante negociación se quita alcance, jamás se baja el precio del
+> sistema completo.* Si el Completa baja a 3.500 € una vez, ya nunca vale 4.900 €.
 
 ## 2 · CABINA (DJ) — **TARIFA CERRADA** (15-sep-2026)
 
@@ -81,14 +87,22 @@ Es trabajo de fábrica, no de criterio: el contenido de oficio ya está y es bue
 los plazos de Beatport y Spotify—. Lo que falta es el envoltorio que la casa
 exige para poder cobrar por él.
 
-## 3 · Neutra / B2B — propuesta nueva
+## 3 · Neutra / B2B — CERRADA
 
-| Skill | Propuesta |
-|---|---|
-| `cobro-cartera-vencida` | **49–79 €** `[A VALIDAR]` — 19/20, sector neutro, dolor con cifra directa (DSO, importe en riesgo) |
-| `reporte-inteligencia` | **39–49 €** `[A VALIDAR]` — reauditar tras v1.1.0 antes de publicar |
-| `respaldo-proyecto-ia-cl` | **39–49 €** `[A VALIDAR]` |
-| `universal-compilador-contexto` | **39–49 €** `[A VALIDAR]` |
+| Producto | Precio | Razón |
+|---|---|---|
+| `cobro-cartera-vencida` | **79 €** | El único por encima del tramo: entrega los mensajes redactados y un cuadro de mando, no solo análisis, y el comprador llega con el dolor ya medido en euros |
+| `reporte-inteligencia` | **49 €** | Techo del tramo 30-49 € de mejor conversión |
+| `respaldo-proyecto-ia-cl` | **49 €** | Ídem |
+| `universal-compilador-contexto` | **49 €** | Ídem |
+| **PACK CONTEXTO** | **89 €** | Las dos de contexto juntas. 98 € sueltas → 89 € |
+
+No hay pack de las cuatro: `cobro-cartera-vencida` y `reporte-inteligencia` no comparten comprador
+con las de contexto, y empaquetar lo que no se usa junto rebaja el precio sin subir la conversión.
+
+`reporte-inteligencia-competencia` **no se lanza como suscripción todavía**: entra en la
+Instalación Completa. La suscripción exige cadencia real que sostenerla, y con cero clientes eso
+es una deuda que se paga todos los lunes. Se reabre con 3 instalaciones vivas.
 
 ## Canal de cobro
 

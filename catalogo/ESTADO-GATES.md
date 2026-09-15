@@ -74,7 +74,7 @@ con sus notas declaradas. Es fiable.
 
 ## Riesgos abiertos
 
-### 1 · `checklist-turno` duplica a `apertura-cierre-turno` con licencia incompatible
+### 1 · ~~`checklist-turno` duplica a `apertura-cierre-turno`~~ ✅ RESUELTO (15-sep-2026)
 
 Las dos skills tienen **la misma descripción palabra por palabra** y el mismo
 producto. Las licencias se contradicen:
@@ -84,8 +84,11 @@ producto. Las licencias se contradicen:
 
 Vender una pieza de la Instalación Completa mientras su gemela circula con
 licencia de uso libre es un problema comercial real, no una cuestión de orden.
-**Hay que retirar una de las dos antes de cobrar la primera instalación.**
-`checklist-turno` no se ha subido a este catálogo por ese motivo.
+**Retirada `checklist-turno`, se conserva `apertura-cierre-turno`** (la auditada, con ficha y
+licencia de venta). Decisión en [`DECISIONES.md`](DECISIONES.md).
+
+> ⚠️ Queda una acción que solo puede hacer Sergio: **borrarla de sus skills sincronizadas en su
+> cuenta de Claude**. Mientras siga instalada ahí, sigue siendo distribuible.
 
 ### 2 · Ninguna pieza ha pasado G2: cero ejecuciones contra datos reales de cliente
 

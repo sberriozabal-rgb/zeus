@@ -11,14 +11,14 @@
 | Trabajo que quita | Perseguir pagos a ojo, por orden de antigüedad y con el correo escrito de cero cada vez. En Europa son **9,85 horas semanales** de media (EU Payment Observatory, 2024). |
 | Umbral que aporta | La **matriz tramo × causa**: la acción no sale del calendario sino del cruce entre cuántos días lleva vencida y por qué no se ha pagado. Una factura parada 90 días porque falta una orden de compra no necesita una llamada del responsable, necesita que se reemita el documento. Más los cuatro escalones de causa (Disputa, Error documental, Tesorería, Silencio) y el escalado automático por fecha, que es lo que impide el recordatorio infinito. |
 | Límite declarado | **No es asesoría jurídica** — A5 marca el punto en que el caso sale del protocolo. **No sirve para deuda de consumidores.** Los umbrales de tramo, cliente crítico y coste del cobro son convenciones de este artefacto `[SIN VERIFICAR]`, no estándares de ningún organismo. |
-| Precio propuesto | **49–79 €** pago único `[A VALIDAR — pendiente de ratificación por escrito de Sergio]` |
+| Precio propuesto | **79 €** pago único. **Ratificado 15-sep-2026.** |
 | Razón del precio | Es la pieza neutra mejor posicionada del catálogo: sector agnóstico, dolor con cifra directa (DSO, importe en riesgo) y comprador que ya sabe que tiene el problema. Va por encima del tramo estándar de 49 € porque el entregable incluye los mensajes redactados y un cuadro de mando, no solo un análisis. |
 | Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «A quién reclamar primero, qué escribirle exactamente, y en qué fecha subes el tono si no paga.» |
 | Estado / Versión | ACORDADO / v1.2.0 |
 | Auditoría | **19/20** (`validar_skill.py`, 15-sep-2026). El validador devuelve 20/20 mecánico; **no se firma el 20** porque el punto 19 exige URLs verificadas, no solo presentes, y no se han reconfirmado una a una en esta pasada. Coincide con la nota que la skill ya se autodeclaraba, y con el motivo que su propio roadmap daba: los cinco antipatrones son `[DERIVADO]`, no observados en carteras reales. |
-| Gates | G1 [x] G2 [ ] G3 [ ] G4 [x] G5 [ ] |
+| Gates | G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x] |
 
 ## Notas de gates
 

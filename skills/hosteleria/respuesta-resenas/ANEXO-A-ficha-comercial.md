@@ -7,13 +7,13 @@ Línea              : Hostelería
 Comprador nombrado : Restaurante independiente, España o México, plantilla 8-30 personas, con ficha activa en Google y volumen suficiente para que un patrón signifique algo (a partir de ~10-15 reseñas nuevas al mes [A VALIDAR — sin fuente localizada, es calibración de oficio]). Decide el dueño. **Quien NO es comprador**: un grupo con marca consolidada o una cadena — el efecto de ingresos por estrella está medido solo en independientes, así que el argumento central no le aplica y venderlo ahí es venderle humo.
 Trabajo que quita  : Redactar a mano cada respuesta a reseña —o no responder nunca— y no llegar a saber si las negativas repiten el mismo problema operativo o son casos sueltos.
 Umbral que aporta  : El umbral de patrón (3 menciones del mismo motivo en 60 días) que separa señal operativa de ruido, y la traducción de estrellas a ingresos con la elasticidad de Luca (+5-9% por estrella, HBS Working Paper 12-016, 3.582 restaurantes de Seattle, 2003-2009) **citada siempre con sus tres límites: es Yelp, es EE. UU., y es ingresos, no margen**. Más el límite legal de incentivos, que es donde un dueño bienintencionado se mete en problemas él solo.
-Precio propuesto   : No se vende suelta. Incluida en Instalación Completa 4.900 € (6 skills) y candidata al paquete Esencial (2.500 €). [A VALIDAR — pendiente de ratificación por escrito de Sergio]
+Precio propuesto   : Dentro de Instalación Completa (4.900 €). **Ratificado 15-sep-2026.**
 Canal              : Venta presencial dentro del sistema instalable (Motor B), ejecutada en la visita con las reseñas reales del local, nunca con una demo de ejemplo. No se publica suelta en directorio hasta que el sistema completo tenga el primer caso vendido.
 Motor              : B · Instalación
 Frase de anuncio   : "Te digo si tus reseñas malas repiten siempre el mismo problema, y te dejo escritas las respuestas."
 Estado / Versión   : ACORDADO / v1.2.0
 Auditoría          : 19/20 (validar_skill.py, 15-sep-2026) — ver desglose abajo. No se redondea al alza.
-Gates              : G1 [x] G2 [ ] G3 [x] G4 [x] G5 [ ]
+Gates              : G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x]
 
 ## Desglose de auditoría (19/20)
 
