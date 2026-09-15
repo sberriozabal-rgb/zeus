@@ -129,8 +129,11 @@
     .semanas{grid-template-columns:repeat(4,1fr)}
     .foto{aspect-ratio:16/10}
   }
+  .hero .wrap>*,.cta .wrap>*{min-width:0}
   @media (max-width:560px){
     body{font-size:17px}
+    .btn{white-space:normal;text-align:center}
+    .hero .acciones .btn{width:100%}
     .grid3,.grid4,.niveles,.cifras{grid-template-columns:1fr}
     .semanas{grid-template-columns:repeat(2,1fr)}
     header.top .btn{display:none}
