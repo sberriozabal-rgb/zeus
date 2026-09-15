@@ -13,7 +13,7 @@
 | Límite declarado | El fichero **no sabe si había gente**. Nunca afirma que un track «vació la pista»: eso es hipótesis y se marca como tal. Tampoco juzga la selección musical ni deduce éxito del número de tracks. |
 | Precio propuesto | **49 €** pago único |
 | Razón del precio | Tramo 30–49 € que convierte un 28 % mejor que el sub-10 €. Entre el 3 % y el 5 % de un bolo de boda medio (1.000–1.500 €). |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Qué se cortó pronto, qué se sostuvo y dónde saltó el tempo. Con la hora exacta, no con lo que recuerdes.» |
 | Estado / Versión | ACORDADO / v1.1.0 |

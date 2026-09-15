@@ -7,7 +7,7 @@
   "peldano": "P1",
   "motor": "A",
   "estado": "ACORDADO",
-  "precio_eur": "39-49 [A VALIDAR]",
+  "precio_eur": "49 (ratificado 15-sep-2026, catalogo/PRECIOS.md)",
   "fecha_revision": "2026-09-15",
   "entregable": "zip-de-contexto-con-biblioteca-resumenes-e-inventario",
   "enlaza_con": [
@@ -18,7 +18,7 @@
   "gates": {
     "G1": true,
     "G2": false,
-    "G3": false,
+    "G3": true,
     "G4": true,
     "G5": false
   },
@@ -27,8 +27,7 @@
     "G2 pendiente: los casos son de fabricacion",
     "La Ruta A de ingesta de chats es parcial por diseno y se declara en cada entrega",
     "No interpreta el negocio ni corrige cifras: conflictos y huecos se devuelven al dueno",
-    "El texto obtenido por OCR se marca como transcripcion automatica y puede contener errores",
-    "G3 pendiente: la linea neutra no tiene tarifa cerrada"
+    "El texto obtenido por OCR se marca como transcripcion automatica y puede contener errores"
   ],
   "license": "Ver LICENSE.txt — uso comercial sin derecho de redistribucion",
   "spec": {

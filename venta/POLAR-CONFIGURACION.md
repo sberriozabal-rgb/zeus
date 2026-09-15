@@ -1,4 +1,9 @@
-# Configuración de Polar — lista para copiar
+# Configuración de Polar — SUSTITUIDA el 15-sep-2026
+
+> ⚠️ **Canal cambiado a Gumroad** (decisión 8 de [`../catalogo/DECISIONES.md`](../catalogo/DECISIONES.md)).
+> La hoja vigente es [`GUMROAD-ALTA.md`](GUMROAD-ALTA.md). Este documento se conserva como
+> historial: la plantilla de texto de producto y la lista de lo que NO se pone siguen valiendo.
+
 
 Plan **gratuito** (5 % + 0,50 $, sin cuota fija). No saltes al plan de 20 $/mes hasta que el
 script `punto_equilibrio.py` de `forja-fabrica-de-skills` diga que compensa: con pocos productos

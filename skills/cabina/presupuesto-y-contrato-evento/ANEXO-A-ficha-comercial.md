@@ -13,7 +13,7 @@
 | Límite declarado | **No es asesoramiento jurídico** y lleva aviso legal no negociable. Los baremos son contexto de mercado para saber si estás fuera de precio, no una tarifa: el precio lo decide el DJ según su coste, su agenda y su posicionamiento. Regla dura: no aplicar el baremo de un país a otro. |
 | Precio propuesto | **49 €** pago único |
 | Razón del precio | Es la pieza que más dinero protege del catálogo y la que más arriba podría ir del tramo. Se mantiene en 49 € por coherencia de la línea: **una sola cancelación sin cláusula de depósito cuesta entre 1.000 y 1.500 €**, y una hora extra recuperada (75–250 €) ya paga la skill varias veces. |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Las seis cláusulas que se pagan cuando faltan, y el presupuesto desglosado para que negociar no sea bajar el margen.» |
 | Estado / Versión | ACORDADO / v1.1.0 |

@@ -25,7 +25,8 @@ nunca por adjunto*: el adjunto no se recupera al cancelar, el acceso sí.
 - [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md) — tarifa propuesta con anclas de mercado y canal de cobro.
 - [`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md) — matriz G1–G5 y riesgos abiertos.
 - [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md) — **las decisiones tomadas**, con su razón.
-- [`venta/`](venta/) — kit de venta: configuración de cobro, guion de visita y mensajes listos.
+- [`venta/`](venta/) — kit de venta: **hoja de alta en Gumroad** (`GUMROAD-ALTA.md`), empaquetador
+  de productos (`empaquetar_gumroad.py`), guion de visita y mensajes listos.
 
 ## Estructura
 

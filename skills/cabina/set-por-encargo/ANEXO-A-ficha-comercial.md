@@ -13,7 +13,7 @@
 | Límite declarado | **No oye.** Lee clave, BPM y energía del export; no los detecta. Dato relevante y declarado: rekordbox 7 acierta la clave en 138/200 tracks (69 %) frente a 178/200 de Mixed In Key, así que alrededor de un tercio de las claves de una biblioteca analizada solo con rekordbox pueden estar mal, y desde aquí no hay forma de detectarlo. |
 | Precio propuesto | **49 €** pago único |
 | Razón del precio | Tramo 30–49 € de mejor conversión. Se justifica frente a las herramientas armónicas puras porque el criterio es contextual —franja, público, prohibiciones, cambio de slot— y eso no lo resuelve un clic. |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Te cambian el slot a las siete de la tarde y a las ocho tienes el set reordenado, con el por qué de cada transición.» |
 | Estado / Versión | ACORDADO / v1.1.0 |
