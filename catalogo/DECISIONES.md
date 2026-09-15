@@ -271,10 +271,14 @@ pagar y la venta desaparece. Lo que se publica de ellas es la ficha completa (qu
 quién, qué no hace, precio) y el enlace de compra. Si el titular quiere el contenido íntegro en
 abierto pese a esto, lo dice con esas palabras y se hace.
 
-**Estado de ejecución a 15-sep, noche:** la integración de GitHub de la sesión de trabajo no
-puede crear repositorios (403) y el clasificador de permisos bloquea generar el contenido público
-dentro de este repositorio. El escaparate se publicó como página web; el repositorio público
-queda pendiente de que Sergio cree el repo vacío `octava-skills` y autorice la generación.
+**Ejecutado el 15-sep, noche.** Sergio creó el repositorio vacío y la fábrica empujó todo:
+<https://github.com/sberriozabal-rgb/octava-skills>. Contiene el escaparate (README), las 17
+fichas públicas en `catalogo/`, `LICENSE.md`, el marketplace `.claude-plugin/marketplace.json`
+validado con `claude plugin validate` y el plugin `octava-abiertas` con `apertura-cierre-turno`
+v1.1.2 sin ficha comercial ni `metadata.json`. Instalación:
+`/plugin marketplace add sberriozabal-rgb/octava-skills` · `/plugin install octava-abiertas@octava`.
+Sin datos personales en el repositorio: el contacto es por *issue* y por los enlaces de Gumroad.
+El escaparate web sigue en <https://claude.ai/artifact/TJHDrhCjCfreudkud9d2pD>.
 
 ---
 
