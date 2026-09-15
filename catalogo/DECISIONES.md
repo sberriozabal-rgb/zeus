@@ -206,3 +206,18 @@ seis piezas al mismo precio. Cuando levante G4, entra sin coste para quien ya co
 4. **A quién visitas primero.** Tú conoces tu mercado; yo no sé qué restaurantes tienes a mano.
    El perfil de comprador está descrito en cada ficha y el guion de visita en
    [`../venta/GUION-VISITA.md`](../venta/GUION-VISITA.md).
+
+## 7 · Plan de trabajo v1.0 reconciliado con el repo — DECIDIDA (15-sep-2026)
+
+El plan de venta v1.0 (misma fecha, escrito sin el repositorio delante) contradecía lo ratificado
+aquí en cuatro puntos. Sergio decidió el 15-sep-2026:
+
+| Punto | Decisión |
+|---|---|
+| Tarifa | **La del repo** (CORE 149 €, COMPLETA 249 €, cobro 79 €). Los 249 USD / 69 USD del plan quedan retirados |
+| Canal | **Polar**, según doctrina. Gumroad sólo como caída si Polar no paga a México |
+| Conformidad | Las 17 del catálogo ya validan; el parche de frontmatter **no se aplica** sobre la carpeta original |
+| Tercer tramo del objetivo | **Instalación Esencial** de hostelería, no una suscripción sin precio |
+
+El plan reconciliado es [`venta/PLAN-DE-TRABAJO.md`](../venta/PLAN-DE-TRABAJO.md) v1.1.0.
+
