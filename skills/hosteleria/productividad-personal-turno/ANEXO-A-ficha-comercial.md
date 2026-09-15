@@ -13,8 +13,8 @@
 | Canal | Polar / instalación directa |
 | Motor | B instalación |
 | Frase de anuncio | Sabes en qué franjas pagas plantilla sin venta y en cuáles pierdes venta por falta de mano. |
-| Estado / Versión | ACORDADO / v1.1.0 |
-| Auditoría | ver informe de catálogo |
+| Estado / Versión | ACORDADO / v1.1.1 |
+| Auditoría | **19/20** (`validar_skill.py`, 2026-09-15, v1.1.1). El validador devuelve 20/20 mecánico; no se firma el 20 porque el punto 19 exige URLs verificadas una a una. Venía de 19/20 medido; ver CHANGELOG 1.1.1. |
 | Gates | G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x] |
 
 **Ningún gate se levanta sin la palabra de Sergio.** El precio es una propuesta con razón,

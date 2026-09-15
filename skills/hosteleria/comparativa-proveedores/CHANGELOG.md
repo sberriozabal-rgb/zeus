@@ -1,5 +1,9 @@
 # Changelog — comparativa-proveedores
 
+## [1.1.1] — 2026-09-15
+
+**Parche de conformidad con la rúbrica.** De 18/20 a 20/20 mecánico (19/20 declarado: el punto 19, URLs verificadas una a una, no se reconfirmó). Procedimiento consolidado de 10 a 8 pasos: 4+5 (detectar la subida contra el umbral del 8 % y etiquetarla estacional o estructural) y 8+9 (impacto en euros por volumen y sobrecoste por ración vía escandallo). Ninguna rama "si falta el dato" se pierde. Literal "Supuestos de esta versión" en el apartado 7 de la plantilla de salida. El contenido de oficio no cambia.
+
 ## 1.1.0 — 2026-08-16
 
 **Auditoría de fábrica ZEUS.** Nota honesta antes de la revisión: **11/20**. La v1.0.0

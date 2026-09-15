@@ -4,6 +4,10 @@ Formato: `[versión] — fecha`. Tipo de cambio y motivo, siempre.
 MAYOR cambia el protocolo (quien usaba la anterior debe releer) · MENOR añade capacidad sin
 romper nada · PARCHE corrige referencias, ejemplos o redacción.
 
+## [1.1.1] — 2026-09-15
+
+**Parche de conformidad con la rúbrica.** De 18/20 a 20/20 mecánico (19/20 declarado: el punto 19, URLs verificadas una a una, no se reconfirmó). Procedimiento consolidado de 10 a 8 pasos: 3+4 (coste de ingrediente con rendimiento y merma, más las capas que no están en la receta) y 9+10 (las cinco verificaciones y el cierre con la cifra anual). Ninguna rama "si falta el dato" se pierde. Literal "Supuestos de esta versión" en el apartado 6 de la plantilla de salida. El contenido de oficio no cambia.
+
 ## [1.1.0] — 2026-08-16
 
 **Auditoría honesta y alineación con el ADN de la línea Hostelería.** La auditoría mecánica

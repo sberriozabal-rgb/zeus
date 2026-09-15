@@ -11,8 +11,8 @@ Precio propuesto   : Dentro de Instalación Esencial (2.500 €) y Completa (4.9
 Canal              : Venta presencial dentro del sistema instalable (Motor B). No se publica suelta en directorio hasta que el sistema completo tenga el primer caso vendido.
 Motor              : B · Instalación
 Frase de anuncio   : "Te digo qué te ha subido de verdad, cuánto de eso se corrige solo con la temporada, y quién te lo tiene hoy más barato con el precio puesto en la misma unidad."
-Estado / Versión   : ACORDADO / v1.1.0
-Auditoría          : 18/20 — ver desglose abajo. No se redondea al alza.
+Estado / Versión   : ACORDADO / v1.1.1
+Auditoría          : **19/20** (`validar_skill.py`, 2026-09-15, v1.1.1). El validador devuelve 20/20 mecánico; no se firma el 20 porque el punto 19 exige URLs verificadas una a una. Venía de 18/20 medido; ver CHANGELOG 1.1.1.
 Gates              : G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x]
 
 ## Desglose de auditoría (18/20)

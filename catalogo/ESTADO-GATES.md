@@ -8,12 +8,12 @@ reales, uno sucio) · **G3** precio (comprador nombrado + cifra firmada) ·
 
 | Skill | G1 | G2 | G3 | G4 | G5 | Nota |
 |---|:--:|:--:|:--:|:--:|:--:|---|
-| `escandallo-ingenieria-menu` | ✅ | ❌ | ⚠️ | ✅ | ❌ | 19/20 |
+| `escandallo-ingenieria-menu` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 |
 | `respuesta-resenas` | ✅ | ❌ | ⚠️ | ✅ | ❌ | 19/20 |
 | `apertura-cierre-turno` | ✅ | ❌ | ⚠️ | ✅ | ❌ | 19/20 |
-| `comparativa-proveedores` | ✅ | ❌ | ⚠️ | ✅ | ❌ | 18/20 |
+| `comparativa-proveedores` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 |
 | `receta-estandar` | ✅ | ❌ | ✅ | ❌ | ✅ | 19/20 · **G4 abajo solo por (a): revisión técnica externa** |
-| `productividad-personal-turno` | ❌ | ❌ | ❌ | ❌ | ❌ | ficha con los 5 gates sin marcar |
+| `productividad-personal-turno` | ✅ | ❌ | ✅ | ✅ | ✅ | 19/20 |
 | `reporte-inteligencia-competencia` | — | — | — | — | — | sin ficha comercial |
 
 ⚠️ = G3 marcado en la ficha con comprador nombrado y canal, pero **la cifra sigue
@@ -219,7 +219,7 @@ Lo que faltaba, pieza por pieza:
 - **`respaldo-proyecto-ia-cl`** y **`universal-compilador-contexto`** tenían 12 y 6 fases con el
   molde correcto pero repartido en viñetas, y 6 antipatrones donde la rúbrica pide 5.
 
-**Estado del catálogo: 17 de 17 por encima del umbral.** Las notas van de 17/20 a 20/20 medido, y
+**Estado del catálogo: 17 de 17 por encima del umbral.** Las 17 están en 20/20 mecánico, y
 las fichas declaran 19/20 en las revisadas porque el punto 19 —URLs verificadas una a una— no se
 ha confirmado en esta pasada. No se redondea al alza.
 

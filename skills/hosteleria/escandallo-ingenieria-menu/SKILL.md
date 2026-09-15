@@ -16,7 +16,7 @@ description: >-
 license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. Ver LICENSE.txt.
 compatibility: Requiere Python 3.9+ para ejecutar scripts/escandallo.py. Sin dependencias externas.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
   sector: "hosteleria-restauracion"
   entregable: "informe-ingenieria-menu"
 ---
@@ -105,21 +105,17 @@ Los rangos de food cost sano por tipología (25-30% QSR, 28-35% casual, 35-42% c
 
 2. **Entrada: precios de carta → Acción: pasarlos a base imponible con el tipo de IVA del país y del servicio → Salida: precio neto por plato → Si falta el dato: usar 10% (España) o 16% (México), declararlo en supuestos y avisar de que el error de tipo desplaza el food cost casi seis puntos.**
 
-3. **Entrada: recetas con gramajes y precios de compra → Acción: calcular el coste de cada ingrediente aplicando rendimiento de limpieza y merma de cocción con `scripts/escandallo.py` → Salida: coste de receta por plato, con el coste por kg neto de cada ingrediente visible → Si falta el rendimiento: usar el rango de `references/rendimientos-y-umbrales.md` y marcar el plato como estimado; si falta un precio de compra, dejar el plato fuera y listarlo.**
+3. **Entrada: recetas con gramajes y precios de compra → Acción: calcular el coste de cada ingrediente aplicando rendimiento de limpieza y merma de cocción con `scripts/escandallo.py`, y sumar después las capas que no están en la receta (mesa, cocción, bases, envase de reparto y merma de servicio) como porcentaje declarado por plato → Salida: coste total por plato, con el coste por kg neto de cada ingrediente visible → Si falta el rendimiento: usar el rango de `references/rendimientos-y-umbrales.md` y marcar el plato como estimado; si falta un precio de compra, dejar el plato fuera y listarlo; si faltan las capas, usar 5-8% en sala y declararlo, y en reparto no estimar sino pedir el desglose de envase y comisión de plataforma, porque cambia el signo del plato.**
 
-4. **Entrada: coste de receta → Acción: sumar las capas que no están en la receta (mesa, cocción, bases, envase de reparto y merma de servicio) como porcentaje declarado por plato → Salida: coste total por plato → Si falta el dato: usar 5-8% en sala y declararlo; en reparto no se estima, se pide el desglose de envase y comisión de plataforma porque cambia el signo del plato.**
+4. **Entrada: coste total y precio neto → Acción: calcular margen de contribución unitario en euros y food cost porcentual → Salida: tabla plato · unidades · precio s/IVA · coste · margen € · FC% → Si falta el dato de unidades: se entrega la tabla sin las dos columnas de volumen y se dice que la matriz no se puede clasificar.**
 
-5. **Entrada: coste total y precio neto → Acción: calcular margen de contribución unitario en euros y food cost porcentual → Salida: tabla plato · unidades · precio s/IVA · coste · margen € · FC% → Si falta el dato de unidades: se entrega la tabla sin las dos columnas de volumen y se dice que la matriz no se puede clasificar.**
+5. **Entrada: margen unitario y unidades vendidas por familia → Acción: clasificar cada plato en la matriz contra el umbral de popularidad del 70% de la cuota media y contra el margen medio ponderado → Salida: cada plato con su cuadrante → Si la familia tiene menos de 3 platos: el script lo avisa y el cuadrante se interpreta con reserva o se agrupan familias.**
 
-6. **Entrada: margen unitario y unidades vendidas por familia → Acción: clasificar cada plato en la matriz contra el umbral de popularidad del 70% de la cuota media y contra el margen medio ponderado → Salida: cada plato con su cuadrante → Si la familia tiene menos de 3 platos: el script lo avisa y el cuadrante se interpreta con reserva o se agrupan familias.**
+6. **Entrada: cuadrante de cada plato → Acción: asignar la acción de su cuadrante siguiendo el orden de ataque (en caballo de batalla: rendimiento y porcionado antes que precio) → Salida: acción por plato con su euro anual, calculada extrapolando el ritmo de venta del periodo → Si falta el dato: si el periodo es de un mes, se dice que la anualización extrapola un mes y no una temporada completa.**
 
-7. **Entrada: cuadrante de cada plato → Acción: asignar la acción de su cuadrante siguiendo el orden de ataque (en caballo de batalla: rendimiento y porcionado antes que precio) → Salida: acción por plato con su euro anual, calculada extrapolando el ritmo de venta del periodo → Si falta el dato: si el periodo es de un mes, se dice que la anualización extrapola un mes y no una temporada completa.**
+7. **Entrada: lista de platos y criterio del dueño y de sala → Acción: marcar los intocables (marcadores de precio y anclas de cliente) → Salida: apartado 5 del informe con los platos que no se tocan y por qué → Si falta el dato: no se marca ninguno y se advierte por escrito de que subir precios sin esa lista puede tocar un marcador.**
 
-8. **Entrada: lista de platos y criterio del dueño y de sala → Acción: marcar los intocables (marcadores de precio y anclas de cliente) → Salida: apartado 5 del informe con los platos que no se tocan y por qué → Si falta el dato: no se marca ninguno y se advierte por escrito de que subir precios sin esa lista puede tocar un marcador.**
-
-9. **Entrada: informe montado → Acción: pasar las cinco verificaciones (IVA correcto, ningún coste por encima del precio de venta, ningún food cost por debajo del 10%, unidades cuadradas con el POS, cada acción con euros) → Salida: informe verificado o lista de anomalías para preguntar al cliente → Si una anomalía persiste: se publica como pregunta en el apartado 6, no se corrige a ojo.**
-
-10. **Entrada: acciones con su valor → Acción: ordenarlas por impacto anual y sumar → Salida: cierre del informe con "impacto estimado de las acciones: X €/año" → Si falta el dato: si las unidades son de un periodo corto, se declara el número de meses extrapolados junto a la cifra.**
+8. **Entrada: informe montado y acciones con su valor → Acción: pasar las cinco verificaciones (IVA correcto, ningún coste por encima del precio de venta, ningún food cost por debajo del 10%, unidades cuadradas con el POS, cada acción con euros) y ordenar las acciones por impacto anual sumándolas → Salida: informe verificado —o lista de anomalías para preguntar al cliente— cerrado con "impacto estimado de las acciones: X €/año" → Si una anomalía persiste: se publica como pregunta en el apartado 6, no se corrige a ojo; y si las unidades son de un periodo corto, se declara el número de meses extrapolados junto a la cifra.**
 
 ## Salida
 
@@ -146,7 +142,7 @@ Los cuatro cuadrantes con sus platos.
 ## 5. Intocables
 Platos marcados como marcador de precio o ancla de cliente, y por qué.
 
-## 6. Supuestos y huecos de dato
+## 6. Supuestos de esta versión y huecos de dato
 - Qué se asumió (rendimientos estimados, tipo de IVA, periodo extrapolado).
 - Qué platos quedaron fuera del cálculo y por qué.
 - Qué anomalías hay que preguntar al cliente antes de decidir.
