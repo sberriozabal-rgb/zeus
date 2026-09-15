@@ -77,8 +77,10 @@ publica en inglés.
 
 ---
 
-## Lo que NO se pregunta por correo
+## Lo que ya NO hace falta preguntar
 
-- **Si el 10 % + 0,50 de Gumroad incluye el procesamiento de tarjeta.** Se ve en el desglose de
-  la primera venta o de una compra de prueba propia. Más rápido y más fiable que preguntar.
-- **Qué método de cobro ofrece Gumroad desde México.** Aparece al configurar la cuenta.
+Verificado por búsqueda el 15-sep-2026 (`PLAN-DE-TRABAJO.md` §2 y §3): el 10 % + 0,50 de
+Gumroad **no** incluye el procesamiento de tarjeta (coste efectivo ≈ 12,9 % + 0,80 por venta
+directa), Gumroad paga a México por **transferencia a banco local**, y muestra precios en EUR
+pero cobra en USD. El paso 1.4 del plan confirma la cifra exacta en el desglose de la primera
+venta.
