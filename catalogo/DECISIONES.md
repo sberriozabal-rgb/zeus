@@ -221,6 +221,20 @@ que trae; no por margen.
 
 Hoja de alta, campo por campo: [`../venta/GUMROAD-ALTA.md`](../venta/GUMROAD-ALTA.md).
 
+## 9 · Los dos primeros productos de Gumroad: COMPLETA a 249 y cobro a 79 — DECIDIDA POR SERGIO (15-sep-2026)
+
+Palabras de Sergio: *«publica las seis a 249 como COMPLETA y cobro a 79»*.
+
+| Producto | Contenido | Precio | Cuota para el objetivo |
+|---|---|---|---|
+| **CABINA COMPLETA** | las seis skills de CABINA | **249** | 7 ventas/mes (1.500) |
+| **Plan de cobro de cartera vencida** | `cobro-cartera-vencida` | **79** | 15 ventas/mes (1.000) |
+
+Con esto la tarifa ratificada del punto 2 y de `PRECIOS.md` se mantiene intacta: G3 no se
+reabre. El informe FORJA v1.1.0 queda derogado en dos puntos: «CABINA CORE a 249 USD» (era
+COMPLETA) y «cobro a 69 USD» (es 79). La cuota de cobro pasa de 17 a 15 ventas/mes porque el
+neto por unidad sube.
+
 ---
 
 ## Lo que NO he decidido, y por qué
@@ -234,11 +248,7 @@ Hoja de alta, campo por campo: [`../venta/GUMROAD-ALTA.md`](../venta/GUMROAD-ALT
 4. **A quién visitas primero.** Tú conoces tu mercado; yo no sé qué restaurantes tienes a mano.
    El perfil de comprador está descrito en cada ficha y el guion de visita en
    [`../venta/GUION-VISITA.md`](../venta/GUION-VISITA.md).
-5. **El precio de Gumroad contra la tarifa ratificada.** El informe v1.1.0 pone **CABINA CORE a
-   249 USD** y **cobro a 69 USD**; la tarifa que firmaste esta mañana dice CORE 149 € (3 skills),
-   COMPLETA 249 € (6 skills) y cobro 79 €. Las dos no pueden ser verdad. Mi recomendación está en
-   `venta/GUMROAD-ALTA.md`: 249 por las seis con nombre COMPLETA, y 79 € el de cobro. Pero
-   reabrir una cifra ratificada es tuyo, no mío.
+5. ~~El precio de Gumroad contra la tarifa ratificada.~~ ✅ **Decidido por Sergio, ver punto 9.**
 6. **Publicar `apertura-cierre-turno` gratis como captación.** El informe v1.1.0 montó el
    marketplace público `octava-skills` con esa skill porque `checklist-turno` ya no existe. **No
    lo he seguido:** es exactamente lo que el punto 4 borró esta mañana. Regalar en GitHub la

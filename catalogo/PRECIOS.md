@@ -47,9 +47,9 @@ Precio ratificado por el dueño el 15-sep-2026. Estas cifras ya **no** llevan
 Pago único. Precio final al comprador; el IVA lo gestiona Gumroad como *merchant of
 record*, que es la razón por la que se eligió como canal principal (decisión 8).
 
-> ⚠️ **Conflicto abierto con el informe FORJA v1.1.0**, que lista CABINA CORE a 249 USD y
-> `cobro-cartera-vencida` a 69 USD. Esta tarifa es la ratificada; la recomendación y la decisión
-> pendiente están en `DECISIONES.md`, punto 5 de lo no decidido.
+> ✅ **Primer producto de Gumroad decidido (15-sep-2026):** CABINA COMPLETA, las seis a 249.
+> El informe FORJA v1.1.0 hablaba de «CABINA CORE a 249 USD»; queda derogado en eso. Esta
+> tarifa se mantiene tal cual. `DECISIONES.md`, punto 9.
 
 ### Por qué estas cifras
 

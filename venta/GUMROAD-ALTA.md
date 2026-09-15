@@ -30,36 +30,25 @@ cambio Gumroad actúa como *merchant of record* y remite el IVA por ti. El fiche
 genera `empaquetar_gumroad.py` (abajo), **sin** la ficha comercial ni el `metadata.json`, que
 son de fábrica.
 
-**Moneda.** El informe hace toda la cuenta en USD. Si Gumroad te deja fijar el precio en EUR,
-la tarifa ratificada está en euros (`../catalogo/PRECIOS.md`); si solo USD, usa las cifras de
-abajo y anota el cambio del día en la ficha del producto.
+**Moneda.** La tarifa está en euros. Si Gumroad te deja fijar el precio en EUR, ponlo en EUR;
+si solo admite USD, la cifra se mantiene (249 y 79) y se anota en la ficha del producto que se
+publicó en dólares. No se convierte al cambio: el número es el precio.
 
 ---
 
-## 1 · Producto: CABINA · 249 USD
+## 1 · Producto: CABINA COMPLETA · 249
 
-### ⚠️ Una decisión tuya antes de pulsar «publicar»
-
-El informe v1.1.0 pone **CABINA CORE a 249 USD**. La tarifa ratificada el 15-sep en
-[`../catalogo/PRECIOS.md`](../catalogo/PRECIOS.md) dice **CORE = 3 skills = 149 €** y
-**COMPLETA = 6 skills = 249 €**. Las dos cosas no pueden ser verdad a la vez.
-
-**Mi recomendación: publica a 249 las seis, con el nombre CABINA COMPLETA.** Razones: es la
-tarifa que ya firmaste, no hay que reabrir G3, la cuota de 7 ventas/mes del informe no cambia
-porque el precio es el mismo, y el comprador recibe más por lo mismo. Si prefieres mantener
-CORE (3 skills) a 249, hay que reescribir `PRECIOS.md` y la razón del precio de las tres
-fichas, porque hoy dicen 49 € la suelta y 3,0x el paquete.
-
-La hoja de abajo está escrita para la opción recomendada. Para la otra, cambia el nombre, el
-`slug`, la lista de contenido y genera `cabina-core.zip` en vez de `cabina-completa.zip`.
+**Decidido por Sergio el 15-sep-2026:** las seis skills a 249 con el nombre CABINA COMPLETA.
+Coincide con la tarifa ratificada de `PRECIOS.md`; no se reabre G3. El informe v1.1.0 decía
+«CABINA CORE a 249 USD»: queda derogado en ese punto, la cuota de 7 ventas/mes no cambia.
 
 ### Campos
 
 | Campo de Gumroad | Valor |
 |---|---|
 | **Name** | CABINA COMPLETA — 6 skills de cabina para DJ |
-| **URL** | `cabina-completa` *(si mantienes CORE: `cabina-core`, que es la URL que hoy da 404)* |
-| **Price** | 249 USD |
+| **URL** | `cabina-completa` |
+| **Price** | 249 · en EUR si Gumroad lo admite; si solo USD, 249 USD |
 | **Type** | Digital product · pago único |
 | **Content** | `dist/cabina-completa.zip` → `python3 venta/empaquetar_gumroad.py cabina-completa` |
 | **Summary** (una línea) | Te digo qué tracks te van a fallar en el próximo bolo, en qué orden arreglarlos, y qué pasó de verdad en el último. |
@@ -120,15 +109,11 @@ La hoja de abajo está escrita para la opción recomendada. Para la otra, cambia
 
 ---
 
-## 2 · Producto: Plan de cobro de cartera vencida · 69 USD
+## 2 · Producto: Plan de cobro de cartera vencida · 79
 
-### ⚠️ Misma decisión
-
-El informe v1.1.0 pone **69 USD**; la tarifa ratificada en `PRECIOS.md` dice **79 €**, que hoy
-son bastantes más de 69 USD. La cuota de 17 ventas/mes del informe está calculada sobre 69.
-**Recomendación: 79 €** si Gumroad admite euros; si solo USD, el equivalente de 79 € al cambio
-del día, redondeado a un precio que acabe en 9. Bajar a 69 USD es bajar el precio de una pieza
-ya tarifada, y la regla de la casa es que ante negociación se quita alcance, no precio.
+**Decidido por Sergio el 15-sep-2026: 79.** Es la tarifa ratificada. El informe v1.1.0 decía
+69 USD y calculaba 17 ventas/mes sobre esa cifra; a 79 la cuota de 1.000/mes baja a **15
+ventas/mes** con el neto de Gumroad (79 − 7,90 − 0,50 = 70,60).
 
 ### Campos
 
@@ -136,7 +121,7 @@ ya tarifada, y la regla de la casa es que ante negociación se quita alcance, no
 |---|---|
 | **Name** | Plan de cobro de cartera vencida — skill para Claude |
 | **URL** | `cobro-cartera-vencida` |
-| **Price** | 79 € · *o su equivalente en USD; el informe dice 69 USD, ver arriba* |
+| **Price** | 79 · en EUR si Gumroad lo admite; si solo USD, 79 USD |
 | **Type** | Digital product · pago único |
 | **Content** | `dist/cobro-cartera-vencida.zip` → `python3 venta/empaquetar_gumroad.py cobro-cartera-vencida` |
 | **Summary** (una línea) | A quién reclamar primero, qué escribirle exactamente, y en qué fecha subes el tono si no paga. |
@@ -222,6 +207,6 @@ Son las mismas de la doctrina y **no se negocian**:
 | 1 | Parche de frontmatter en las 14 skills rotas | **En este repositorio no aplica: 17/17 parsean y 17/17 declaran licencia**, incluidas `auditoria-de-biblioteca` y `presupuesto-y-contrato-evento`. Las 14 rotas están en la biblioteca de 78 de la cuenta, no aquí. Si esa biblioteca tiene copia distinta de estas dos, la buena es ésta |
 | 1 | Abrir Gumroad y verificar identidad | Sergio · bloque 0 |
 | 2 | Repositorio `octava-skills` con la skill gratuita | **Parado por mí, ver decisión 8 de `DECISIONES.md`**: publicar `apertura-cierre-turno` gratis deshace la decisión 4 del 15-sep |
-| 3 | Alta de los dos productos | Sergio · bloques 1 y 2, con los zips de `empaquetar_gumroad.py` |
+| 3 | Alta de los dos productos | Sergio · bloques 1 y 2, con `cabina-completa.zip` y `cobro-cartera-vencida.zip` de `empaquetar_gumroad.py`. Precios decididos: 249 y 79 |
 | 4 | `myclaude publish` | Sergio · con el paquete del informe; desde aquí `myclaude.sh` no responde |
 | 5–7 | Las dos conversaciones de prueba | Sergio · es el hueco que importa |
