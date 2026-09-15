@@ -13,7 +13,7 @@
 | Límite declarado | Nunca inventa que un track está en la biblioteca —es la única mentira que arruina el evento entero— ni afirma BPM, clave o duración que no venga del export. La elección Clean/Dirty o Radio/Extended la firma una persona, nunca se resuelve en silencio. |
 | Precio propuesto | **49 €** pago único |
 | Razón del precio | Tramo 30–49 € de mejor conversión. Un solo incidente evitado —la Dirty en una comunión, el track del primer baile que no estaba— cuesta más que la skill. |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Qué tengo, qué hay que comprar, qué está en una versión que no sirve y qué me han pedido que no ponga. Con el documento para el cliente ya escrito.» |
 | Estado / Versión | ACORDADO / v1.1.0 |

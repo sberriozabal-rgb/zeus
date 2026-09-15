@@ -8,14 +8,14 @@
   "peldano": "P1",
   "motor": "A",
   "estado": "ACORDADO",
-  "precio_eur": "49-79 [A VALIDAR]",
+  "precio_eur": "79 (ratificado 15-sep-2026, catalogo/PRECIOS.md)",
   "fecha_revision": "2026-09-15",
   "entregable": "plan-de-cobro-con-mensajes-y-cuadro-de-mando",
   "auditoria": "19/20 (validar_skill.py, 15-sep-2026; punto 19 de criterio no confirmado)",
   "gates": {
     "G1": true,
     "G2": false,
-    "G3": false,
+    "G3": true,
     "G4": true,
     "G5": false
   },
@@ -23,7 +23,6 @@
   "carencias_declaradas": [
     "G2 pendiente: los 4 casos son sinteticos, marcados [DATOS DE EJEMPLO — NO REALES]",
     "Los cinco antipatrones son [DERIVADO], no observados en carteras reales: es el unico punto que separa esta pieza del 20/20 segun su propio roadmap",
-    "G3 pendiente: la linea neutra no tiene tarifa cerrada, el precio sigue [A VALIDAR]",
     "Anexos regionales -ES y -CO pendientes; solo -MX esta verificado contra texto legal"
   ],
   "license": "Ver LICENSE.txt — uso comercial sin derecho de redistribucion",

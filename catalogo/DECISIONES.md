@@ -194,30 +194,81 @@ una ficha que tú le vendiste.
 **Decisión:** `receta-estandar` sale del Completa facturable. El Completa se sirve con las otras
 seis piezas al mismo precio. Cuando levante G4, entra sin coste para quien ya compró.
 
+## 8 · Canal de cobro: GUMROAD sustituye a Polar — DECIDIDA (15-sep-2026, tarde)
+
+Deroga el punto 5 de esta misma mañana. Viene del informe **FORJA v1.1.0** de hoy, que rehízo
+la cuenta con el procesamiento de Stripe dentro y no fuera:
+
+| Canal | Neto sobre 249 USD | Neto sobre 69 USD | Uds/mes para la cuota |
+|---|---|---|---|
+| **Gumroad**, enlace directo (10 % + 0,50) | 223,60 | 61,60 | **7 / 17** |
+| myClaude (92 %, Stripe aparte) | 221,56 | 61,18 | **7 / 17** |
+| SkillHQ Pro (85 %) | 203,31 | 56,16 | 8 / 18 |
+
+Gumroad y myClaude **empatan en unidades**. La comisión no es la palanca; lo que decide es que
+Gumroad es *merchant of record* y remite el IVA de cada país, y de myClaude y SkillHQ no hay
+ninguna mención a eso. Polar también lo era, pero la decisión del 12-sep ya estaba tomada por
+Gumroad y no hay razón de margen para reabrirla.
+
+**Lo que se pierde, declarado:** Gumroad entrega por descarga, no por acceso revocable a este
+repositorio. Es una desviación de la doctrina de entrega, asumida a cambio del IVA resuelto. El
+paquete que se sube lo genera `venta/empaquetar_gumroad.py`, sin ficha comercial ni
+`metadata.json`.
+
+**Lo que no cambia:** hostelería sigue fuera de Gumroad (Stripe México o transferencia, punto
+5). myClaude puede sumarse después **sin exclusividad ni cuota de alta**, solo por el tráfico
+que trae; no por margen.
+
+Hoja de alta, campo por campo: [`../venta/GUMROAD-ALTA.md`](../venta/GUMROAD-ALTA.md).
+
+## 9 · Los dos primeros productos de Gumroad: COMPLETA a 249 y cobro a 79 — DECIDIDA POR SERGIO (15-sep-2026)
+
+Palabras de Sergio: *«publica las seis a 249 como COMPLETA y cobro a 79»*.
+
+| Producto | Contenido | Precio | Cuota para el objetivo |
+|---|---|---|---|
+| **CABINA COMPLETA** | las seis skills de CABINA | **249** | 7 ventas/mes (1.500) |
+| **Plan de cobro de cartera vencida** | `cobro-cartera-vencida` | **79** | 15 ventas/mes (1.000) |
+
+Con esto la tarifa ratificada del punto 2 y de `PRECIOS.md` se mantiene intacta: G3 no se
+reabre. El informe FORJA v1.1.0 queda derogado en dos puntos: «CABINA CORE a 249 USD» (era
+COMPLETA) y «cobro a 69 USD» (es 79). La cuota de cobro pasa de 17 a 15 ventas/mes porque el
+neto por unidad sube.
+
+
+## 10 · Plan de trabajo v1.0 reconciliado con el repo — DECIDIDA (15-sep-2026, noche)
+
+El plan de venta v1.0 (misma fecha, escrito sin el repositorio delante) contradecía lo ratificado
+aquí en cuatro puntos. Sergio decidió el 15-sep-2026, en dos sesiones paralelas:
+
+| Punto | Decisión |
+|---|---|
+| Tarifa | **La del repo** (COMPLETA 249 €, cobro 79 €; punto 9). Los «CORE 249 USD / cobro 69 USD» del plan quedan retirados |
+| Canal | **Gumroad** (punto 8). En la sesión paralela se marcó Polar a las 19:58 sin ver el punto 8, ya fusionado; **prevalece Gumroad**, que es lo que Sergio dijo con sus palabras y lo que está en `main`. Polar queda como caída si Gumroad no paga a México |
+| Conformidad | Las 17 del catálogo ya validan; el parche de frontmatter **no se aplica** sobre la carpeta original de 78 |
+| Tercer tramo del objetivo | **Instalación Esencial** de hostelería (2.500 €), no una suscripción sin precio |
+
+El plan reconciliado es [`venta/PLAN-DE-TRABAJO.md`](../venta/PLAN-DE-TRABAJO.md) v1.1.0.
+
 ---
 
 ## Lo que NO he decidido, y por qué
 
-1. **Abrir la cuenta de Polar.** Requiere tu identidad, tu cuenta bancaria y tus datos fiscales.
-   Te dejo la configuración exacta de cada producto lista para copiar.
+1. **Abrir la cuenta de Gumroad** (antes Polar, ver punto 8). Requiere tu identidad, tu cuenta
+   bancaria y tus datos fiscales. Te dejo la hoja de alta de cada producto lista para pegar.
+   Verifica identidad el mismo día.
 2. **Levantar G2.** Explicado arriba. Lo levanta tu primer cliente, no yo.
 3. **La revisión de seguridad alimentaria de `receta-estandar`.** Es trabajo de un profesional
    colegiado, y es el que te cubre a ti.
 4. **A quién visitas primero.** Tú conoces tu mercado; yo no sé qué restaurantes tienes a mano.
    El perfil de comprador está descrito en cada ficha y el guion de visita en
    [`../venta/GUION-VISITA.md`](../venta/GUION-VISITA.md).
-
-## 7 · Plan de trabajo v1.0 reconciliado con el repo — DECIDIDA (15-sep-2026)
-
-El plan de venta v1.0 (misma fecha, escrito sin el repositorio delante) contradecía lo ratificado
-aquí en cuatro puntos. Sergio decidió el 15-sep-2026:
-
-| Punto | Decisión |
-|---|---|
-| Tarifa | **La del repo** (CORE 149 €, COMPLETA 249 €, cobro 79 €). Los 249 USD / 69 USD del plan quedan retirados |
-| Canal | **Polar**, según doctrina. Gumroad sólo como caída si Polar no paga a México |
-| Conformidad | Las 17 del catálogo ya validan; el parche de frontmatter **no se aplica** sobre la carpeta original |
-| Tercer tramo del objetivo | **Instalación Esencial** de hostelería, no una suscripción sin precio |
-
-El plan reconciliado es [`venta/PLAN-DE-TRABAJO.md`](../venta/PLAN-DE-TRABAJO.md) v1.1.0.
-
+5. ~~El precio de Gumroad contra la tarifa ratificada.~~ ✅ **Decidido por Sergio, ver punto 9.**
+6. **Publicar `apertura-cierre-turno` gratis como captación.** El informe v1.1.0 montó el
+   marketplace público `octava-skills` con esa skill porque `checklist-turno` ya no existe. **No
+   lo he seguido:** es exactamente lo que el punto 4 borró esta mañana. Regalar en GitHub la
+   pieza que va dentro de la Instalación Esencial de 2.500 € es el argumento que te tumba la
+   venta el día que un cliente lo descubra, y da igual que la licencia diga «prohibida la
+   redistribución» si cualquiera puede bifurcar el repositorio. Si quieres una skill de
+   captación, tiene que ser una que **no** esté en ningún paquete de pago, y hoy no hay ninguna
+   auditada que cumpla eso. Tu decisión.

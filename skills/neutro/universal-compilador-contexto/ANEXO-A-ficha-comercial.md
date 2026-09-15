@@ -13,7 +13,7 @@
 | Límite declarado | **No opina sobre el proyecto ni corrige sus cifras.** Conflictos y huecos se devuelven al dueño, no se resuelven. La **Ruta A de chats es parcial por diseño** y se declara siempre. No asume sector, país, idioma ni moneda que la carpeta no declare. Las credenciales no entran. |
 | Precio propuesto | **49 €** suelta · **89 €** en PACK CONTEXTO. **Ratificado 15-sep-2026.** |
 | Razón del precio | Tramo 30-49 € de mejor conversión. Es producto de **uso recurrente pero espaciado** —se recompila cuando la carpeta ha crecido, no cada semana—, así que no sostiene una suscripción pero sí la recompra. Entrega entre 60 y 120 minutos de trabajo que el comprador no sabe hacer de forma reproducible. |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Todo lo que hay en tu carpeta, ordenado por temas, con la versión vigente marcada y la lista de lo que aún no has decidido.» |
 | Estado / Versión | ACORDADO / v1.1.0 |

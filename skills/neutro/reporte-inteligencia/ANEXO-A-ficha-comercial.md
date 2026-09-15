@@ -13,7 +13,7 @@
 | Límite declarado | Las cifras de BrightLocal son de consumidores de EE. UU. y la elasticidad de Luca es de restaurantes independientes en Yelp: **la dirección es extrapolable, las cifras exactas no**. El modo BÚSQUEDA **no cierra línea base**. No usa datos obtenidos saltándose términos de uso, y nunca recomienda solicitar, comprar, incentivar ni suprimir reseñas. |
 | Precio propuesto | **49 €** pago único. **Ratificado 15-sep-2026.** |
 | Razón del precio | Tramo 30-49 € de mejor conversión. Candidata natural a **suscripción** antes que a pago único, porque el producto es la serie semanal y no el corte: ahí la doctrina de la casa dice que la suscripción promedia casi el doble que el pago único, pero exige cadencia real que sostenerla. Decisión pendiente. |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Seis competidores, ocho métricas y tres acciones para esta semana. Con la cita y la fecha de cada cosa, para que puedas comprobarlo.» |
 | Estado / Versión | ACORDADO / v1.2.0 |

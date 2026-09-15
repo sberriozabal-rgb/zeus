@@ -13,7 +13,7 @@
 | Límite declarado | **Diagnostica, no repara.** Decisión deliberada: escribir en `master.db` (SQLite cifrada con SQLCipher4) o en los `.crate` de Serato puede destruir playlists, cue points y beatgrids. Solo lectura, siempre. |
 | Precio propuesto | **49 €** pago único |
 | Razón del precio | Una cuarta parte de Lexicon (199 USD) por un trabajo que Lexicon no hace: leer el estado con criterio de bolo. Entre el 3 % y el 5 % de un bolo de boda medio en España (1.000–1.500 €). |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Te digo qué tracks te van a fallar en el próximo bolo, y en qué orden arreglarlos.» |
 | Estado / Versión | ACORDADO / v1.1.0 |

@@ -7,7 +7,7 @@
   "peldano": "P1",
   "motor": "B",
   "estado": "ACORDADO",
-  "precio_eur": "[A VALIDAR] — candidata a suscripcion semanal, no a pago unico",
+  "precio_eur": "Sin precio suelto: entra en la Instalacion Completa (4.900 EUR). No se lanza como suscripcion (decision 3, 15-sep-2026)",
   "fecha_revision": "2026-09-15",
   "entregable": "reporte-semanal-de-una-pagina",
   "enlaza_con": [
@@ -19,7 +19,7 @@
   "gates": {
     "G1": true,
     "G2": false,
-    "G3": false,
+    "G3": true,
     "G4": true,
     "G5": false
   },

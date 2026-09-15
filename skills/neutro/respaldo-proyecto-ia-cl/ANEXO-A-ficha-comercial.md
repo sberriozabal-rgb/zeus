@@ -13,7 +13,7 @@
 | Límite declarado | **No migra nada.** Anthropic no soporta migrar datos entre cuentas personales: lo que produce es un paquete de **reconstrucción manual**. El borrador de chats **cita y cuenta, no interpreta**. Sin `pyzipper` el paquete se entrega **sin cifrar y se declara**. |
 | Precio propuesto | **49 €** suelta · **89 €** en PACK CONTEXTO. **Ratificado 15-sep-2026.** |
 | Razón del precio | Tramo 30-49 € de mejor conversión. El comprador llega con urgencia —va a cerrar una cuenta o a cambiar de plan— y el coste de no tenerlo es la pérdida total del contenido, así que la disposición a pagar es alta, pero es un producto de **uso puntual** y no de serie: no sostiene una suscripción. |
-| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Canal | Gumroad · catálogo (Motor A). Entrega por descarga (`venta/GUMROAD-ALTA.md`); decisión 8 del 15-sep-2026. |
 | Motor | A · Catálogo |
 | Frase de anuncio | «Te llevas tu proyecto entero cifrado, con el guion para rehacerlo y la lista de lo que no cabía. Probado en frío antes de que borres nada.» |
 | Estado / Versión | ACORDADO / v2.1.0 |
