@@ -1,8 +1,12 @@
 name: CI
 
+# 'push' solo en main y 'pull_request' para lo demás: si 'push' cubriera todas
+# las ramas, cada empujón a una rama con PR abierto lanzaría DOS ejecuciones
+# (los dos eventos tienen github.ref distinto, así que ni se cancelan entre
+# ellas). Los minutos de macOS cuestan diez veces más que los de Linux.
 on:
   push:
-    branches: ["**"]
+    branches: [main]
   pull_request:
     branches: [main]
 
