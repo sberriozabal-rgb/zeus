@@ -101,17 +101,34 @@ campo. Esto no impide vender una instalación presencial —se ejecuta en la vis
 con los datos del propio cliente, que es precisamente cómo está diseñado el
 Motor B—, pero sí desaconseja publicar en directorio.
 
-### 3 · Atribución en corrección centralizada en `apertura-cierre-turno`
+### 3 · ~~Atribución en corrección centralizada en `apertura-cierre-turno`~~ ✅ CERRADA (15-sep-2026, v1.1.2)
 
-Su `metadata.json` dice: *"EN CORRECCION CENTRALIZADA — atribucion en revision
-por la casa (15-ago-2026). **No usar en material de venta hasta cierre.**"*
-La cifra de rotación que sostiene el producto no se ha revalidado. Antes de meter
-esta pieza en un argumentario hay que cerrar esa atribución.
+Las cuatro cifras de rotación que sostenían el producto estaban "en corrección centralizada" desde
+el 15-ago-2026, con el aviso de **no usarlas en material de venta**. Quedan ancladas a autor, año
+y URL:
 
-**Precedente a tener presente:** la v1.0.0 de `respuesta-resenas` afirmaba que
-Google y TripAdvisor *"penalizan"* las respuestas idénticas. Ninguna política
-publicada de las dos plataformas dice eso. Se retiró el 16-ago-2026. Si esa frase
-llegó a algún material de venta ya enviado, hay que corregirla también ahí.
+| Cifra | Autor | Fuente |
+|---|---|---|
+| Rotación España **63,8 %** | **Synergie España** | *La situación del empleo en el sector Hospitality en España 2026* |
+| Sustitución **2.800–5.000 €** | **Linkers** | análisis de la consultora, abr-2026 |
+| Rotación México **80–120 %** | **CANIRAC** | vía La Jornada, 21-feb-2024 |
+| Vacante México **2–3× salario** | **CANIRAC** | misma fuente |
+
+**Ya se pueden usar en argumentario**, con una condición que no es opcional: siempre con el nombre
+de quien las publica. Ninguna de las tres fuentes publica tamaño de muestra ni metodología —dos son
+empresas del sector y una es la cámara patronal—, así que van marcadas
+`[SIN TAMAÑO DE MUESTRA PUBLICADO]` y **nunca como dato oficial**. No son INE.
+
+**Y de paso, tres defectos que el validador destapó al revisarla**, en una de las tres piezas del
+Esencial de 2.500 €:
+
+1. **`allowed-tools: []` rompía el empaquetado** — la spec exige cadena separada por espacios, no
+   lista, y el validador lo marca como error duro de subida. Mismo tipo de defecto que el
+   frontmatter YAML inválido de otras tres piezas: no se ve hasta que falla en casa del comprador.
+2. Los pasos 6 y 7 sin rama "si falta el dato": solo 5 de 7 cumplían el molde.
+3. 7 reglas NUNCA donde la rúbrica pide 8.
+
+La pieza pasa de **17/20 a 19/20 declarado** (20/20 mecánico).
 
 ### 4 · Sobre la protección del archivo
 

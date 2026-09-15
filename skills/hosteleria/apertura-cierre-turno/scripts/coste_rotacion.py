@@ -12,7 +12,8 @@ Uso:
 No estima food cost ni ventas. Solo coste de personal y de la falta de
 procedimiento escrito. Trabaja en EUR.
 
-CIFRAS POR DEFECTO — todas [A VALIDAR], ver references/FUENTES.md:
+CIFRAS POR DEFECTO — atribucion cerrada 15-sep-2026, ver references/FUENTES.md.
+  Todas [SIN TAMANO DE MUESTRA PUBLICADO]: se citan con el nombre de su autor.
   Espana  tasa 63,8% anual · sustitucion 2.800-5.000 EUR por persona.
           Difundido en 2026 por Revista Hosteleria, InfoHoreca y
           Equipos&Talento; atribuido a Linkers en abril y a Synergie
@@ -36,7 +37,7 @@ import argparse
 import sys
 import json
 
-# Coste de sustitucion por puesto, EUR. [A VALIDAR] Linkers/Synergie 2026.
+# Coste de sustitucion por puesto, EUR. Fuente: analisis de Linkers (FUENTES.md #6).
 # La fuente publica una horquilla unica de 2.800-5.000 EUR para sala y cocina,
 # sin desglose por puesto: aqui se usa el suelo para sala, el punto medio para
 # cocina y el techo para encargado, y ESE REPARTO ES CRITERIO DE LA CASA, no
@@ -48,9 +49,9 @@ COSTE_REPOSICION_EUR = {
 }
 COSTE_REPOSICION_USD = COSTE_REPOSICION_EUR  # alias de compatibilidad v1.0.x
 
-TASA_ROTACION_SECTORIAL = 0.638  # [A VALIDAR] Espana 2026, prensa sectorial
-TASA_ROTACION_SECTORIAL_MX = 1.00  # [A VALIDAR] punto medio de 80-120%, CANIRAC 2024
-MULTIPLICADOR_SALARIO_MX = (2, 3)  # [A VALIDAR] InFocus via La Jornada 2024
+TASA_ROTACION_SECTORIAL = 0.638  # Synergie Espana 2026 (FUENTES.md #5)
+TASA_ROTACION_SECTORIAL_MX = 1.00  # punto medio de 80-120%, CANIRAC (FUENTES.md #7)
+MULTIPLICADOR_SALARIO_MX = (2, 3)  # CANIRAC via La Jornada 2024 (FUENTES.md #7)
 
 # Reducción de errores operativos atribuible a checklist con criterio de
 # "hecho" explícito y responsable nombrado, frente a checklist informal o

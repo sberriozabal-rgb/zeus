@@ -11,12 +11,12 @@ Precio propuesto   : Dentro de Instalación Esencial (2.500 €) y Completa (4.9
 Canal              : Venta presencial dentro del sistema instalable (Motor B). No se publica suelta en directorio hasta que el sistema completo tenga el primer caso vendido.
 Motor              : B · Instalación
 Frase de anuncio   : "El checklist que se ejecuta, no el que se firma sin mirar."
-Estado / Versión   : ACORDADO / v1.1.1
-Auditoría          : 19/20 (auditoría ZEUS de 16-ago-2026, v1.1.1). Punto que falla: **umbral con cifra** — la cifra de rotación que sostiene el producto está en corrección centralizada de atribución y no se ha revalidado desde esta ficha. Nota anterior declarada 19/20 sobre la v1.1.0: era generosa — la real era 16/20 (fallaban además versión/CHANGELOG por incoherencia, referencias externas por inexistentes, y dos de los cuatro casos por no tener entrada real). Los tres se han cerrado en la 1.1.1.
+Estado / Versión   : ACORDADO / v1.1.2
+Auditoría          : **19/20** (`validar_skill.py`, 15-sep-2026, v1.1.2). El validador devuelve 20/20 mecánico; no se firma el 20 porque el punto 19 exige URLs verificadas una a una y no se han reconfirmado todas. **La atribución del umbral queda CERRADA** en esta versión: las cuatro cifras de rotación tienen autor nombrado, año y URL (Synergie España 2026, Linkers, CANIRAC). Historial: la v1.1.0 declaró 19/20 cuando valía 16/20, y la v1.1.1 mantuvo el 19 con la atribución en corrección y tres defectos sin ver que el validador ha destapado ahora —`allowed-tools` como lista en vez de cadena, que rompe el empaquetado; dos pasos sin rama "si falta el dato"; y 7 reglas NUNCA donde la rúbrica pide 8—. Los tres cerrados en la 1.1.2.
 Gates              : G1 [x] G2 [ ] G3 [x] G4 [x] G5 [x]
 
 Notas:
-- G1 (producto) se levanta con 19/20 ≥ 16/20 sobre la v1.1.1, con la salvedad del umbral en corrección declarada arriba.
+- G1 (producto) se levanta con 19/20 ≥ 16/20 sobre la v1.1.2. **La salvedad del umbral en corrección ya no aplica: la atribución está cerrada.** Las cifras se pueden usar en material de venta citando a su autor y su límite (ninguna tiene tamaño de muestra publicado).
 - **La línea "Umbral que aporta" de esta ficha está EN CORRECCIÓN CENTRALIZADA** (atribución de la cifra de rotación y de los costes de reposición, en revisión por la casa desde el 15-ago-2026). Hasta que cierre esa corrección, esa línea **no se copia a ningún material de venta, propuesta ni correo** — es la razón principal por la que G5 sigue sin levantar. El resto de la ficha es utilizable.
 - G3 (precio) se marca con comprador nombrado y precio propuesto dentro del sistema, aunque la cifra siga [A VALIDAR] hasta ratificación de Sergio — el gate exige ficha con precio, canal y comprador, no cifra firme.
 - G4 (legal) se marca porque no deriva de material source-available prohibido, no usa marca ajena, y su licencia es de uso comercial sin redistribución (ver LICENSE.txt).

@@ -1,5 +1,48 @@
 # CHANGELOG — apertura-cierre-turno
 
+## [1.1.2] — 2026-09-15
+
+**Atribución del umbral CERRADA**, y tres defectos de distribución que el validador destapó al
+revisarla.
+
+### Atribución — el motivo de esta versión
+
+Desde el 15-ago-2026 las cuatro cifras de rotación estaban "en corrección centralizada" y la
+skill llevaba el aviso de **no usarlas en material de venta**. Quedan ancladas:
+
+| Cifra | Autor | Fuente |
+|---|---|---|
+| Rotación España **63,8 %** | **Synergie España** | *La situación del empleo en el sector Hospitality en España 2026* |
+| Sustitución **2.800–5.000 €** | **Linkers** | análisis de la consultora, abr-2026 |
+| Rotación México **80–120 %** | **CANIRAC** | vía La Jornada, 21-feb-2024, y portal propio |
+| Vacante México **2–3× salario** | **CANIRAC** | misma fuente |
+
+Las tres fuentes entran como #5, #6 y #7 de `references/FUENTES.md`, cada una con su URL, la
+afirmación concreta que sostiene y su límite.
+
+**Lo que sigue faltando, y se declara:** ninguna publica tamaño de muestra ni metodología. Dos
+vienen de empresas del sector y una de la cámara patronal. Así que las cifras **se pueden usar
+en venta pero siempre con el nombre de quien las publica**, marcadas
+`[SIN TAMAÑO DE MUESTRA PUBLICADO]` y nunca como dato oficial. No son INE.
+
+Las URLs van ahora **dentro de la sección del umbral**, no solo en el fichero de fuentes: la cifra
+lleva su enlace donde se usa.
+
+### Tres defectos corregidos
+
+1. **`allowed-tools: []` rompía el empaquetado.** La especificación exige una cadena separada por
+   espacios, no una lista, y el validador lo marca como error duro de subida. El campo es
+   opcional y esta skill no restringe herramientas: **se retira**. Es el mismo tipo de defecto
+   que el frontmatter YAML inválido corregido en otras tres piezas del catálogo: no se ve hasta
+   que falla en casa del comprador.
+2. **Los pasos 6 y 7 no tenían rama "si falta el dato"**, así que solo 5 de 7 cumplían el molde de
+   la serie. Añadidas las dos.
+3. **7 reglas NUNCA donde la rúbrica pide 8.** Añadidas dos, las dos derivadas del cierre de
+   atribución: no presentar la tasa sectorial como si fuera la del local, y no asignar tareas por
+   nombre en vez de por puesto.
+
+Resultado: **19/20 declarado** (20/20 mecánico menos el punto 19 de criterio), desde 17/20 medido.
+
 ## [1.1.1] — 2026-08-16
 
 **Tipo:** PARCHE (referencias, casos y corrección de trazabilidad). No cambia el

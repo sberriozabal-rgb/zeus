@@ -1,14 +1,14 @@
 {
   "name": "apertura-cierre-turno",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "FORJA",
   "linea": "hosteleria",
   "peldaño": "P1",
   "fecha_fabricacion": "2026-08-11",
   "motor": "B",
-  "fuente_umbral": "EN CORRECCION CENTRALIZADA — atribucion en revision por la casa (15-ago-2026). No usar en material de venta hasta cierre.",
+  "fuente_umbral": "ATRIBUCION CERRADA 15-sep-2026. Rotacion Espana 63,8%: informe La situacion del empleo en el sector Hospitality en Espana 2026, Synergie Espana. Coste de sustitucion 2.800-5.000 EUR: analisis de Linkers. Rotacion Mexico 80-120% y vacante = 2-3 veces el salario: CANIRAC, via La Jornada 21-feb-2024 y portal propio. Las tres con autor, ano y URL en references/FUENTES.md; ninguna con tamano de muestra publicado, asi que se citan con el nombre de su autor y nunca como dato oficial. YA SE PUEDEN USAR EN MATERIAL DE VENTA.",
   "fuentes_verificadas": "references/FUENTES.md",
   "estado": "ACORDADO",
   "auditoria": "19/20",
-  "fecha_revision": "2026-08-16"
+  "fecha_revision": "2026-09-15"
 }

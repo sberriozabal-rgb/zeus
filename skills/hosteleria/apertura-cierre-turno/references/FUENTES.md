@@ -108,9 +108,12 @@ como mínimo legal. Nunca al revés.
 
 - **Coste y tasa de rotación de personal** (sección `## Umbral que sostiene el
   producto` de `SKILL.md` y constantes de `scripts/coste_rotacion.py`):
-  **en corrección centralizada por la casa a fecha 15-ago-2026.** La atribución
-  actual está en revisión y no se toca desde esta ficha. Hasta que cierre esa
-  corrección, ninguna de esas cifras se usa en material de venta.
+  ✅ **ATRIBUCIÓN CERRADA el 15-sep-2026.** Las cuatro cifras quedan ancladas a
+  las fuentes 5, 6 y 7 de esta lista, cada una con autor nombrado, año y URL
+  recuperable. **Ya se pueden usar en material de venta**, siempre citando a su
+  autor y su límite. Lo que sigue faltando en las tres fuentes es el **tamaño de
+  muestra publicado**, así que ninguna se presenta como dato oficial: van con la
+  marca `[SIN TAMAÑO DE MUESTRA PUBLICADO]` y con el nombre de quien las publica.
 - **Rango de reducción de errores por onboarding (15-30 %)**: ya marcado
   `[A VALIDAR]` dentro del propio script, sin estudio público que aísle la
   variable. Se mantiene como rango declarado, no como promesa.
@@ -121,3 +124,76 @@ como mínimo legal. Nunca al revés.
   está pagando.
 - **"Una lista repartida y no auditada deja de ejecutarse en unos diez días"**:
   criterio de oficio, no dato medido. `[A VALIDAR]`.
+
+---
+
+## 5 · Synergie España — *La situación del empleo en el sector Hospitality en España 2026*
+
+<https://www.revistahosteleria.com/texto-diario/mostrar/5860927/tasa-rotacion-638-puestos-cubrir-obligan-reinventar-seleccion-personal>
+
+**Dato verificado:** tasa de rotación laboral del **63,8 %** en el sector hospitality español, la
+más alta de toda la economía del país. Contexto del mismo informe: la hostelería emplea al 8,6 %
+de los trabajadores en España (más de 1,7 millones de personas), y el salario medio del subsector
+se queda en 1.512 € frente a los 2.345 € de media nacional.
+
+**Qué afirmación sostiene:**
+- La cifra de rotación de `## Umbral que sostiene el producto` en `SKILL.md`.
+- La constante `TASA_ROTACION_SECTORIAL = 0.638` de `scripts/coste_rotacion.py`.
+- El argumento de asignar las tareas **al puesto y no al nombre**: con dos de cada tres empleados
+  cambiando de trabajo en un año, una lista atada a una persona caduca pronto.
+
+**Límite declarado:** es el informe de una **empresa de trabajo temporal**, no una estadística
+oficial del INE. Autor y año están nombrados y el dato es recuperable, pero **no se ha localizado
+el tamaño de muestra ni la metodología publicada**. Se cita siempre como *"según el informe de
+Synergie España 2026"*, nunca como dato oficial. `[SIN TAMAÑO DE MUESTRA PUBLICADO]`
+
+**Ámbito:** España. Consultado: 2026-09-15.
+
+---
+
+## 6 · Linkers — coste de sustitución de una persona en sala o cocina
+
+<https://www.hosteleriasalamanca.es/noticias-hosteleria/abril-2026/hosteleria-espanola-crece-pierde-talento>
+
+**Dato verificado:** sustituir a un empleado de cocina o sala cuesta de media **entre 2.800 y
+5.000 €**, sumando tiempo de selección, formación del nuevo incorporado y caída temporal de la
+productividad del equipo.
+
+**Qué afirmación sostiene:**
+- El rango de coste de reposición de `## Umbral que sostiene el producto`.
+- Las constantes `COSTE_REPOSICION_EUR` del script (2.800 € sala, 5.000 € encargado).
+
+**Límite declarado:** es el análisis de una **consultora de recursos humanos del sector**, no un
+estudio académico ni oficial. Autor nombrado y dato recuperable, pero **sin metodología ni tamaño
+de muestra publicados**. Se cita como *"según el análisis de Linkers"*.
+`[SIN TAMAÑO DE MUESTRA PUBLICADO]`
+
+**Ámbito:** España. Consultado: 2026-09-15.
+
+---
+
+## 7 · CANIRAC — rotación y coste de vacante en la industria restaurantera mexicana
+
+<https://www.jornada.com.mx/noticia/2024/02/21/economia/falta-de-personal-en-restaurantes-eleva-costos-canirac-7205>
+· <https://portal.canirac.org.mx/noticias/el-reto-del-talento-en-la-industria-restaurantera-de-la-rotacion-a-la-solucion/>
+
+**Datos verificados**, declarados por la Cámara Nacional de la Industria de Restaurantes y
+Alimentos Condimentados y recogidos por prensa nacional:
+
+- Tasa de rotación del sector restaurantero de **entre el 80 % y el 120 % anual**, con segmentos
+  que alcanzan el 180 %.
+- Una vacante cuesta **de dos a tres veces el salario del puesto**, por la inversión en búsqueda,
+  selección y capacitación del nuevo integrante.
+- Contexto de permanencia del mismo cuerpo de datos: alrededor del 75 % de los cocineros deja su
+  empleo antes de los cinco meses; a los 14 meses queda un 10 % de los meseros.
+
+**Qué afirmación sostiene:**
+- Las cifras de México de `## Umbral que sostiene el producto`.
+- Las constantes `TASA_ROTACION_SECTORIAL_MX = 1.00` (punto medio del rango declarado) y
+  `MULTIPLICADOR_SALARIO_MX = (2, 3)` del script.
+
+**Límite declarado:** es la **declaración de la cámara del sector**, relayada por prensa, no un
+estudio con metodología publicada. La horquilla 80-120 % es ancha por sí misma y el script usa su
+punto medio, lo que **se declara en la salida**. `[SIN TAMAÑO DE MUESTRA PUBLICADO]`
+
+**Ámbito:** México. Consultado: 2026-09-15.

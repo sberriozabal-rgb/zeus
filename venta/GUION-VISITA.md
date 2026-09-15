@@ -95,6 +95,10 @@ Y lo dejas. Cuesta cero y es el mejor recordatorio que existe.
   estrella, va con los tres límites: es Yelp, es EE. UU., y es ingresos, no margen. **Y solo aplica
   a independientes**: si el local es de un grupo, ese argumento no le sirve y decirlo te da
   credibilidad.
+- **La cifra de rotación ya se puede usar**, desde el 15-sep-2026, pero **solo con su autor
+  pegado**: *"el 63,8 % de rotación del sector, según el informe de Synergie España de 2026"*.
+  Nunca "el 63,8 % según los datos oficiales": no es INE y no tiene tamaño de muestra publicado.
+  Igual con los 2.800-5.000 € de sustituir a una persona, que son de un análisis de Linkers.
 - **Nada sobre fichas de receta ni seguridad alimentaria.** `receta-estandar` no entra en la venta
   hasta que la revise un consultor. Si te preguntan por fichas técnicas: *"eso lo tengo, pero lo
   estoy pasando por revisión de un técnico en seguridad alimentaria antes de entregarlo"*. Esa

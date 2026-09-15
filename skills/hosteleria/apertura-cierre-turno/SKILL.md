@@ -20,7 +20,6 @@ metadata:
   author: FORJA
   linea: hosteleria
   peldaño: P1
-allowed-tools: []
 ---
 
 # Checklists de apertura, cambio de turno y cierre
@@ -56,7 +55,7 @@ Esto es lo que separa un checklist que se ejecuta de uno que se firma en la puer
 
 **1 · Criterio de terminación, no verbo vago.** "Comprobar el género" no vale. "Anotar la temperatura de cámara de pescado; si supera 4 °C, avisar al encargado antes de sacar nada" sí. Sin criterio, la lista se firma sin ejecutar.
 
-**2 · Un responsable por puesto y por tarea.** Una tarea de dos dueños es una tarea de ninguno. Y se asigna al puesto, no al nombre: la lista tiene que seguir sirviendo cuando esa persona se vaya, que en un sector con un 63,8% de rotación anual en España y hasta un 120% en México `[A VALIDAR — ver references/FUENTES.md]` es pronto.
+**2 · Un responsable por puesto y por tarea.** Una tarea de dos dueños es una tarea de ninguno. Y se asigna al puesto, no al nombre: la lista tiene que seguir sirviendo cuando esa persona se vaya, que en un sector con un 63,8% de rotación anual en España (informe Synergie España 2026) y hasta un 120% en México (CANIRAC) `[ver references/FUENTES.md]` es pronto.
 
 **3 · Momento exacto, no "antes del servicio".** "T−90", "T−30", "al cerrar caja". Una tarea sin hora se acumula en los últimos diez minutos junto a todas las demás, y ahí es donde se pierden.
 
@@ -76,7 +75,23 @@ Lo que el usuario aporta, en cualquier combinación, y lo que se hace si falta:
 
 ## Umbral que sostiene el producto
 
-La hostelería española renueva cada año en torno al **63,8% de su plantilla**, y sustituir a una persona de sala o cocina cuesta entre **2.800 y 5.000 €** `[A VALIDAR]`. En México, la cámara del sector declara una rotación de entre el **80% y el 120% anual** y sitúa el coste de cubrir una vacante en **dos a tres veces el salario de ese puesto** `[A VALIDAR]`. Las cuatro cifras están difundidas por prensa sectorial y por la propia cámara, pero **ninguna tiene informe primario localizable ni tamaño de muestra publicado**: la trazabilidad completa, con quién dice qué y qué no se pudo verificar, está en `references/FUENTES.md`.
+La hostelería española renueva cada año en torno al **63,8 % de su plantilla** —la tasa más alta
+de toda la economía del país, según el informe *La situación del empleo en el sector Hospitality
+en España 2026* de **Synergie España**
+(<https://www.revistahosteleria.com/texto-diario/mostrar/5860927/tasa-rotacion-638-puestos-cubrir-obligan-reinventar-seleccion-personal>)—
+y sustituir a una persona de sala o cocina cuesta entre
+**2.800 y 5.000 €** sumando selección, formación y caída temporal de productividad, según el
+análisis de **Linkers**
+(<https://www.hosteleriasalamanca.es/noticias-hosteleria/abril-2026/hosteleria-espanola-crece-pierde-talento>).
+En México, **CANIRAC** declara una rotación de entre el **80 % y el
+120 % anual** y sitúa el coste de cubrir una vacante en **dos a tres veces el salario de ese
+puesto**
+(<https://www.jornada.com.mx/noticia/2024/02/21/economia/falta-de-personal-en-restaurantes-eleva-costos-canirac-7205>).
+
+Las cuatro cifras tienen autor nombrado, año y URL recuperable en `references/FUENTES.md`. Lo que
+**ninguna** tiene es tamaño de muestra ni metodología publicados: dos vienen de empresas del
+sector y una de la cámara patronal, así que **se citan siempre con el nombre de quien las publica
+y nunca como dato oficial** `[SIN TAMAÑO DE MUESTRA PUBLICADO]`.
 
 Traducido al local: una plantilla española de diez personas sustituye a algo más de seis a lo largo del año, y eso son entre **17.900 y 31.900 € anuales** que no figuran en ninguna línea de la cuenta de explotación. Están repartidos en horas extra de quien cubre el hueco, en el rendimiento de las primeras semanas del que entra, en tiempo de encargado dedicado a seleccionar y en errores de servicio durante la adaptación. El multiplicador mexicano —dos a tres veces el salario— sirve al dueño de cualquier país, porque lo calcula con su propia nómina delante en vez de fiarse de una media ajena.
 
@@ -94,9 +109,9 @@ El checklist no reduce la rotación. Reduce lo que cuesta cada baja mientras se 
 
 5. **Entrada: todas las tareas reunidas → Acción: para cada una, redactar el criterio de "hecho" en forma verificable por inspección (no "revisar la cámara" sino "temperatura de cámara anotada en el registro, entre 0-4°C") → Salida: cada línea del checklist con su criterio de cierre → Si el criterio no se puede verificar sin preguntar, la tarea se reescribe hasta que se pueda.**
 
-6. **Entrada: checklists completos → Acción: generar el parte de incidencias como plantilla separada, con campos fijos (fecha, turno, puesto que reporta, descripción, gravedad, acción tomada, pendiente para el siguiente turno) → Salida: plantilla de parte de incidencias lista para imprimir o volcar a hoja digital.**
+6. **Entrada: checklists completos → Acción: generar el parte de incidencias como plantilla separada, con campos fijos (fecha, turno, puesto que reporta, descripción, gravedad, acción tomada, pendiente para el siguiente turno) → Salida: plantilla de parte de incidencias lista para imprimir o volcar a hoja digital → Si falta el dato: se entregan los campos fijos del oficio y se marca `[a completar por el local]` el nombre de los turnos, nunca se inventan turnos de ejemplo.**
 
-7. **Entrada: petición de cifra de negocio → Acción: ejecutar `scripts/coste_rotacion.py` con la plantilla real del cliente, o con la tasa sectorial si no la tiene → Salida: coste anual de rotación y rango de ahorro potencial, siempre con la fuente de la tasa usada declarada.**
+7. **Entrada: petición de cifra de negocio → Acción: ejecutar `scripts/coste_rotacion.py` con la plantilla real del cliente, o con la tasa sectorial si no la tiene → Salida: coste anual de rotación y rango de ahorro potencial, siempre con la fuente de la tasa usada declarada → Si falta el dato: sin plantilla real del cliente se usa la tasa sectorial con su autor citado (Synergie España o CANIRAC según el país) y el informe declara en su primera línea que la cifra es una referencia de mercado y no la del local.**
 
 ## Salida
 
@@ -176,6 +191,8 @@ Longitud máxima: 120 líneas por checklist completo (los tres bloques + parte d
 | Omitir la fuente de la tasa de rotación usada (real del cliente vs. sectorial) | Sin esa distinción, el cliente no sabe si la cifra es suya o una referencia externa |
 | Generar más de 120 líneas totales sin avisar que el local necesita protocolos separados | Un checklist que nadie termina de leer es papel decorativo, no producto |
 | Asignar una tarea de cocina a sala o viceversa sin que el cliente lo haya confirmado | Rompe la credibilidad del checklist frente a quien conoce la operación real del local |
+| Presentar la tasa de rotación sectorial como si fuera la del local del cliente | Es una media de mercado de una empresa del sector, sin tamaño de muestra publicado: usarla como cifra propia es la cifra huérfana que el cliente pregunta y no se puede defender |
+| Asignar una tarea a una persona por su nombre en vez de a su puesto | Con dos de cada tres empleados cambiando de trabajo al año, una lista atada a un nombre caduca antes de que se imprima la siguiente versión |
 
 ## Antipatrones
 
