@@ -29,21 +29,21 @@ Ocho días sin seguimiento a 20 correos entregados es dejar morir la campaña.
 
 | Prospecto | Enviado a | Estado | Acción siguiente |
 |---|---|---|---|
-| **Grupo RosaNegra** | contacto@gruporosanegra.com.mx | 💬 7-sep, César Ulibarri (contact center) canaliza | **Respuesta redactada el 12-sep, enviada el 15-sep**: pide nombre del canalizado y ofrece jue 17 o mar 22 por la mañana |
-| Goguinara | hola@goguinara.com | ✅ ×2 | Seguimiento único (borrador 15-sep) |
-| SSAM | mkti.restaurantessam@gmail.com | ✅ | Seguimiento único (borrador 15-sep); alternativa en borrador: operaciones.gastronomicacoreana@gmail.com |
-| La Provoleta (Grupo Gula) | contacto@laprovoleta.rest | ✅ | Seguimiento único (borrador 15-sep) |
-| Biwon | yeheemex@hotmail.com | ✅ | Seguimiento único (borrador 15-sep) |
-| Yoshimi (Hyatt Regency) | mexicocity.regency@hyatt.com | ✅ | Seguimiento único (borrador 15-sep). Buzón genérico de hotel: probable que no llegue a F&B |
-| El Japonez | info@eljaponez.com | ✅ | Seguimiento único (borrador 15-sep) |
-| Midam | hola@grupomidam.com | ✅ | Seguimiento único (borrador 15-sep) |
-| China Shing | contacto@chinashing.com | ✅ | Seguimiento único (borrador 15-sep); alternativa: polanco@chinashing.com |
-| Asian Bay | asianbaytiendaonline@gmail.com | ✅ | Seguimiento único (borrador 15-sep) |
-| GRG (Grupo Restaurantero Gigante) | contacto@grg.mx | ✅ ×2 | Seguimiento único (borrador 15-sep) |
-| El Huequito | quejasysugerencias@elhuequito.mx | ✅ | Seguimiento único (borrador 15-sep). Buzón de quejas: baja probabilidad |
-| Tonchin | info@tonchinmx.com | ✅ | Seguimiento único (borrador 15-sep); alternativa: tonchinmexico@gmail.com |
-| Deigo (Grupo Nigata) | gruponigata@gmail.com | ✅ | Seguimiento único (borrador 15-sep) |
-| Taj Mahal | atik_hosain84@yahoo.com (la otra dirección, gmail.co, rebotó) | ✅ | Seguimiento único (borrador 15-sep) |
+| **Grupo RosaNegra** | contacto@gruporosanegra.com.mx | 💬 7-sep, César Ulibarri (contact center) canaliza | **Respuesta redactada el 12-sep, SIGUE EN BORRADORES.** Pide el nombre del canalizado y ofrece jue 17 o mar 22 por la mañana. **Enviarla hoy**: el jueves 17 es pasado mañana |
+| Goguinara | hola@goguinara.com | ✅ ×2 | Seguimiento único · **borrador listo en Gmail (15-sep)** |
+| SSAM | mkti.restaurantessam@gmail.com | ✅ | Seguimiento único · **pendiente de redactar en Gmail** (texto en §4); alternativa en borrador: operaciones.gastronomicacoreana@gmail.com |
+| La Provoleta (Grupo Gula) | contacto@laprovoleta.rest | ✅ | Seguimiento único · **pendiente de redactar en Gmail** (texto en §4) |
+| Biwon | yeheemex@hotmail.com | ✅ | Seguimiento único · **borrador listo en Gmail (15-sep)** |
+| Yoshimi (Hyatt Regency) | mexicocity.regency@hyatt.com | ✅ | Seguimiento único · **pendiente de redactar en Gmail** (texto en §4). Buzón genérico de hotel: probable que no llegue a F&B |
+| El Japonez | info@eljaponez.com | ✅ | Seguimiento único · **pendiente de redactar en Gmail** (texto en §4) |
+| Midam | hola@grupomidam.com | ✅ | Seguimiento único · **borrador listo en Gmail (15-sep)** |
+| China Shing | contacto@chinashing.com | ✅ | Seguimiento único · **borrador listo en Gmail (15-sep)**; alternativa: polanco@chinashing.com |
+| Asian Bay | asianbaytiendaonline@gmail.com | ✅ | Seguimiento único · **pendiente de redactar en Gmail** (texto en §4) |
+| GRG (Grupo Restaurantero Gigante) | contacto@grg.mx | ✅ ×2 | Seguimiento único · **borrador listo en Gmail (15-sep)** |
+| El Huequito | quejasysugerencias@elhuequito.mx | ✅ | Seguimiento único · **pendiente de redactar en Gmail** (texto en §4). Buzón de quejas: baja probabilidad |
+| Tonchin | info@tonchinmx.com | ✅ | Seguimiento único · **pendiente de redactar en Gmail** (texto en §4); alternativa: tonchinmexico@gmail.com |
+| Deigo (Grupo Nigata) | gruponigata@gmail.com | ✅ | Seguimiento único · **borrador listo en Gmail (15-sep)** |
+| Taj Mahal | atik_hosain84@yahoo.com (la otra dirección, gmail.co, rebotó) | ✅ | Seguimiento único · **borrador listo en Gmail (15-sep)** |
 | Grupo Maximus | derechosarco@grupomaximus.com.mx | ✅ pero es el buzón ARCO (privacidad) | **Primer contacto** al borrador ya escrito: info@maximobistrot.com.mx |
 | Suntory | hrmny.tulum@gmail.com | ✅ pero es un gmail de Tulum, no Suntory | **Primer contacto** al borrador ya escrito: jlmendez@suntory.com.mx, cajavalle@suntory.mx |
 | Grupo Hunan + Nobu Polanco | contacto@grupohunan.com · reservaciones@noburestaurants.mx | ✗ ✗ | **Primer contacto** al borrador ya escrito: contactogh@grupohunan.com. Nobu Polanco lo opera Grupo Hunan: un solo correo para los dos. Web: eventos@grupohunan.com |
@@ -70,18 +70,48 @@ Ocho días sin seguimiento a 20 correos entregados es dejar morir la campaña.
 Los dos textos están bien y siguen la regla de la casa (gratis a cambio del dato escrito y del
 permiso de publicarlo). Lo que no puede hacer la fábrica es inventar el destinatario.
 
-## 4 · Qué se hizo el 15-sep desde la fábrica
+## 4 · Qué se hizo el 15-sep desde la fábrica, y qué quedó bloqueado
 
-1. **Enviada la respuesta a Grupo RosaNegra** que llevaba tres días en borradores. Las fechas que
-   ofrece (jueves 17, martes 22) siguen siendo válidas.
-2. **Escritos 14 seguimientos únicos**, uno por cada correo entregado y sin respuesta, como
-   respuesta en el mismo hilo, con el texto que Sergio ya había redactado para SSAM el 5-sep
-   («Insisto una sola vez, breve»). Quedan en borradores con destinatario, a la espera de un
-   solo «envía».
+1. **La respuesta a Grupo RosaNegra no salió.** El envío desde la sesión fue bloqueado por el
+   filtro de permisos de Claude Code (categoría «transacciones reales»). El borrador de Sergio
+   del 12-sep está intacto en Gmail, con destinatario y texto correctos. **Es un clic.**
+2. **7 de los 14 seguimientos quedaron redactados en Gmail** como respuesta en el mismo hilo,
+   con destinatario puesto: Goguinara, Biwon, Midam, China Shing, GRG, Deigo y Taj Mahal. Los
+   otros 7 (SSAM, La Provoleta, Yoshimi, El Japonez, Asian Bay, El Huequito, Tonchin) los
+   bloqueó el mismo filtro. Texto para esos siete, el de Sergio del 5-sep, con el nombre del
+   local en el primer párrafo:
+
+   > Buen día.
+   >
+   > Le escribí el 7 de septiembre con un tablero que armé para [LOCAL] (va en este mismo
+   > hilo). Insisto una sola vez, breve, porque creo que vale su tiempo.
+   >
+   > No vengo a venderle software ni un manual que termina en un cajón. En México cerca de 9
+   > de cada 10 restaurantes cierran el primer año, casi siempre por operación y costos — no
+   > por la comida (CANIRAC). Lo que hago es instalar el sistema de operación del local en 8
+   > semanas y dejarlo funcionando con su propio equipo, medido contra la línea base del propio
+   > restaurante.
+   >
+   > Para que no lo tome de mi palabra: en un caso de alta cocina en CDMX, medido contra su
+   > mismo periodo del año anterior, las correcciones de comanda bajaron 92 % y el valor por
+   > comensal-hora subió 24,1 %. Son sus números, no una promesa mía.
+   >
+   > El primer paso no cuesta ni compromete: el Diagnóstico Exprés. 90 minutos en su piso y
+   > una página con tres hallazgos al día siguiente. ¿Le parece si lo vemos entre semana por
+   > la mañana, o antes del servicio de la tarde?
+   >
+   > Sergio Berriozábal · OCTAVA · Operación de restaurantes · Ciudad de México
+   > WhatsApp: +52 984 187 8284
+
 3. **Corregidas las 5 direcciones rebotadas** que tenían alternativa en los propios borradores o
-   en la web oficial (tabla de arriba).
+   en la web oficial (tabla de arriba). Los borradores «Mejoro su operación» a esas direcciones
+   ya existen en Gmail desde el 7-sep: sólo hay que enviarlos.
 4. Verificados los hechos de Gumroad que la hoja de alta marcaba como no comprobados (ver
    `PLAN-DE-TRABAJO.md` §2 y §3).
+
+**Para que la fábrica pueda enviar correo en la siguiente sesión**, hay que permitir las
+herramientas de Gmail (`create_draft`, `send_message`, `reply`) en la configuración de permisos
+de Claude Code. Hasta entonces, el envío es de Sergio.
 
 ## 5 · Regla para lo que sigue
 
