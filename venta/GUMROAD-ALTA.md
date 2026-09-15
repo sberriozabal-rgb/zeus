@@ -8,9 +8,13 @@ Dos productos primero, el resto cuando esos dos tengan un comprador. Cada bloque
 en cada campo del formulario de Gumroad, en el orden en que lo pide. Lo que va entre
 `[corchetes]` lo rellenas tú.
 
-> **Lo que no he podido comprobar desde aquí.** El proxy de esta sesión bloquea `gumroad.com` y
-> `myclaude.sh`. El 404 de `cabina.gumroad.com/l/cabina-core`, la comisión de 10 % + 0,50 y el
-> umbral de verificación vienen del informe FORJA v1.1.0 de hoy, no de una segunda comprobación.
+> **Comprobado el 15-sep-2026 por búsqueda (el proxy bloquea gumroad.com, no las búsquedas).**
+> La comisión es 10 % + 0,50 USD **más** el procesamiento de tarjeta (≈ 2,9 % + 0,30): coste
+> efectivo ≈ 12,9 % + 0,80 por venta directa; 30 % plano si la venta entra por Discover. Pagos
+> los viernes, retención de 7 días, mínimo 10 USD. México cobra por **transferencia a banco
+> local**. El precio se puede mostrar en EUR, pero se procesa en USD. Fuentes y cifras netas en
+> `PLAN-DE-TRABAJO.md` §2 y §3. El 404 de `cabina.gumroad.com/l/cabina-core` sigue sin segunda
+> comprobación: el subdominio se reserva en el alta.
 
 ---
 

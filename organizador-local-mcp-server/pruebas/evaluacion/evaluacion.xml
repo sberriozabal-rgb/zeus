@@ -1,0 +1,54 @@
+<!--
+  Evaluación de organizador-local-mcp-server.
+
+  Preparación: `node pruebas/evaluacion/preparar.mjs` crea el fixture, y el
+  servidor debe arrancar con ORGANIZADOR_RAICES apuntando a las dos carpetas
+  que crea (Documentos y Descargas del arenero).
+
+  Cada pregunta exige varias llamadas: inventariar para encontrar el fichero,
+  leer su contenido para saber qué es, y a veces cruzar dos documentos. Ninguna
+  se resuelve por el nombre del fichero, que es justo lo que se quiere medir.
+  Todas son de solo lectura y sus respuestas son estables.
+-->
+<evaluation>
+  <qa_pair>
+    <question>En la carpeta sin clasificar hay un documento con nombre genérico que trata de un trámite urbanístico ante un ayuntamiento catalán. ¿Qué número de expediente cita?</question>
+    <answer>T1068</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Uno de los ficheros sin clasificar es el boletín de instalación de una línea de fibra. ¿Cuál es el NIF/CIF de la sociedad que figura como cliente?</question>
+    <answer>B-67595736</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Entre los documentos sin clasificar hay un informe de ventas consolidadas de una empresa de restauración. ¿Cuál es la cifra total facturada que recoge?</question>
+    <answer>163253.06</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Localiza la factura simplificada con número T-4964 y di cuántos comensales figuran en ella.</question>
+    <answer>8</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>¿Cuántos grupos de ficheros idénticos byte a byte hay en la carpeta de Documentos?</question>
+    <answer>2</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Si se borrasen los ficheros sobrantes de cada grupo de duplicados exactos de Documentos, conservando uno por grupo, ¿cuántos bytes se liberarían en total?</question>
+    <answer>59</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>¿Cómo se llama el fichero más pesado de la carpeta sin clasificar?</question>
+    <answer>volcado.json</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Dos documentos distintos y sin relación aparente por su nombre mencionan la misma dirección postal de Barcelona. ¿Cuál es esa dirección, tal y como aparece escrita en el informe urbanístico?</question>
+    <answer>Passatge de Rates 11-15</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Al inventariar la carpeta de Descargas, ¿cuántos ficheros devuelve el servidor una vez descartado todo lo que está protegido o a medio descargar?</question>
+    <answer>2</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>En un simulacro de fusión de Descargas dentro de Documentos, ¿cuántas carpetas del primer nivel quedarían sin tocar por estar protegidas?</question>
+    <answer>2</answer>
+  </qa_pair>
+</evaluation>

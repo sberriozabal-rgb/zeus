@@ -1,0 +1,37 @@
+{
+  "name": "organizador-local-mcp-server",
+  "version": "1.0.0",
+  "description": "Servidor MCP para organizar carpetas locales (Documentos, Descargas) contra una taxonomia fija, clasificando por contenido",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "test": "node pruebas/integracion.mjs",
+    "eval:preparar": "node pruebas/evaluacion/preparar.mjs",
+    "eval:resolver": "node pruebas/evaluacion/resolver.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.6.5"
+  },
+  "type": "module",
+  "bin": {
+    "organizador-local-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.0",
+    "typescript": "^5.9.3"
+  }
+}

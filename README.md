@@ -38,9 +38,14 @@ instalaciones de hostelería siguen entregándose en la visita.
 skills/
 ├── hosteleria/   7 skills · sistema instalable Motor B
 ├── cabina/       6 skills · 3 paquetes (CORE, EVENTOS, CARRERA)
-└── neutro/       4 skills · B2B sin oficio específico
+├── neutro/       4 skills · B2B sin oficio específico
+└── externas/     skills de terceros para uso interno · fuera del catálogo
 catalogo/         tarifa, gates y decisiones pendientes
+.claude/skills/   copia real de las skills externas; Claude Code las carga al abrir el repo
 ```
+
+Las skills externas (hoy `omnivoice`, de VoiceStudio, AGPL-3.0) tienen autor y licencia
+ajenos: **no se venden ni se empaquetan**. Ficha de origen en su `ORIGEN.md`.
 
 Cada skill conserva su `SKILL.md`, sus `references/`, `assets/`, `scripts/`,
 `cases/`, su `metadata.json` y su ficha comercial `ANEXO-A` donde existe.

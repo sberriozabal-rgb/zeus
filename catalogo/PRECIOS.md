@@ -109,10 +109,12 @@ es una deuda que se paga todos los lunes. Se reabre con 3 instalaciones vivas.
 Decidido el 15-sep-2026 (decisión 8 de `DECISIONES.md`), tras rehacer la cuenta con el
 procesamiento de tarjeta dentro:
 
-- **Gumroad** como principal para catálogo: 10 % + 0,50 USD por venta directa `[según informe
-  FORJA v1.1.0; confirmar en el desglose de la primera venta si incluye tarjeta]`, sin cuota
-  fija, *merchant of record* (remite el IVA de cada país). Entrega por descarga del zip de
-  `venta/empaquetar_gumroad.py`. Hoja de alta en `venta/GUMROAD-ALTA.md`.
+- **Gumroad** como principal para catálogo: 10 % + 0,50 USD por venta directa **más el
+  procesamiento de tarjeta (≈ 2,9 % + 0,30)**, verificado el 15-sep-2026: coste efectivo
+  ≈ 12,9 % + 0,80. Sin cuota fija, *merchant of record* (remite el IVA de cada país). Pago a
+  banco mexicano, viernes, retención 7 días. Entrega por descarga del zip de
+  `venta/empaquetar_gumroad.py`. Hoja de alta en `venta/GUMROAD-ALTA.md`; cifras netas en
+  `venta/PLAN-DE-TRABAJO.md` §2.
 - **myClaude** (92 % antes de Stripe) empata con Gumroad en unidades necesarias; se suma
   después, si acaso, por el tráfico que trae, no por margen. Sin exclusividad ni cuota.
 - **Stripe México** para pesos e instalaciones: 3,6 % + 3,00 MXN, +0,5 % tarjeta
