@@ -1,0 +1,361 @@
+<title>OCTAVA · Diagnóstico Exprés</title>
+<!--
+  OCTAVA · Landing del Diagnóstico Exprés · v1.0.0 · 15-sep-2026
+  CONFIDENCIAL · [CONDICIONADO A LIBERACIÓN] — gate G·3 (marca provisional, IMPI pendiente).
+  Producir no viola gates; publicar sí. Este archivo se comparte por enlace privado hasta que se levante G·3.
+
+  HUECOS DECLARADOS (buscar "SIN DATO" en el código):
+    1. Lockup del 8 octogonal en el encabezado (hueco de 44×44 px, "Lockup 2 · isotipo sobre marfil"). No se redibuja.
+    2. Aviso de privacidad C·8 del formulario: pendiente de dictamen legal.
+    3. Fotografías de operación real (dos placeholders con proporción declarada). Nada de stock.
+  WhatsApp: +52 984 187 8284 (dato tomado de la campaña del 7-sep-2026).
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&display=swap">
+<style>
+  :root{
+    --petroleo:#0F3A31; --profundo:#08201B; --cobre:#B5793F; --cobre-claro:#CFA274;
+    --marfil:#F6F1EB; --marfil-2:#EFE7DD; --grafito:#1C2321; --gris:#5E6662; --linea:#D9D0C4;
+    --display:"Playfair Display",Georgia,"Times New Roman",serif;
+    --cuerpo:"EB Garamond",Garamond,Georgia,serif;
+    --cintillo:"Jost","Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--marfil);color:var(--grafito);font-family:var(--cuerpo);font-size:18px;line-height:1.55;padding-inline:0}
+  .wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+  .cintillo{font-family:var(--cintillo);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;margin:0;text-wrap:balance}
+  h2{font-size:clamp(28px,3.4vw,38px)}
+  h3{font-size:22px}
+  p{margin:0}
+  a{color:inherit}
+  .num{font-family:var(--display);font-weight:500;font-variant-numeric:tabular-nums}
+  .sep{width:56px;height:2px;background:var(--cobre);margin:14px 0 18px}
+
+  /* ribbon de estado */
+  .ribbon{background:var(--profundo);color:var(--cobre-claro);font-family:var(--cintillo);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 16px}
+
+  /* cabecera */
+  header.top{border-bottom:1px solid var(--linea);background:var(--marfil)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+  .marca{display:flex;align-items:center;gap:12px}
+  .lockup{width:44px;height:44px;border:1px dashed var(--cobre);display:grid;place-items:center;font-family:var(--cintillo);font-size:8px;letter-spacing:.06em;color:var(--cobre);text-align:center;line-height:1.2;flex:none}
+  .wordmark{font-family:var(--display);font-size:22px;letter-spacing:.235em;color:var(--petroleo)}
+  .btn{display:inline-block;font-family:var(--cintillo);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;text-decoration:none;padding:14px 22px;border:1px solid var(--petroleo);color:var(--petroleo);background:transparent;white-space:nowrap}
+  .btn.primario{background:var(--petroleo);color:var(--marfil)}
+  .btn:focus-visible{outline:3px solid var(--cobre);outline-offset:2px}
+  header.top .btn{padding:10px 16px}
+
+  /* hero */
+  .hero{background:var(--petroleo);color:var(--marfil);padding-block:64px 56px}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  .hero .cintillo{color:var(--cobre-claro)}
+  .hero h1{font-size:clamp(36px,5vw,58px);margin-top:14px}
+  .hero .sub{font-size:21px;margin-top:20px;max-width:34em;color:#E7E0D6}
+  .hero .acciones{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px;align-items:center}
+  .hero .btn{border-color:var(--marfil);color:var(--marfil)}
+  .hero .btn.primario{background:var(--cobre);border-color:var(--cobre);color:var(--profundo)}
+  .hero .nota{font-size:15px;color:#C9C1B5;margin-top:14px}
+  .foto{background:var(--profundo);border:1px solid rgba(246,241,235,.18);aspect-ratio:4/5;max-width:100%;display:grid;place-items:center;padding:20px;text-align:center}
+  .foto span{font-family:var(--cintillo);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cobre-claro);line-height:1.7}
+
+  section{padding-block:64px}
+  section.alt{background:var(--marfil-2)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:28px}
+  .tarjeta{border-top:2px solid var(--petroleo);padding-top:16px}
+  .tarjeta h3{margin-bottom:8px}
+  .tarjeta p{color:var(--gris);font-size:17px}
+
+  /* método */
+  .semanas{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin-top:28px}
+  .sem{background:var(--marfil);border:1px solid var(--linea);padding:12px 10px 14px;min-height:150px}
+  .sem .n{font-family:var(--display);font-size:26px;color:var(--petroleo);line-height:1}
+  .sem .t{font-size:15px;color:var(--grafito);margin-top:8px;line-height:1.35}
+  .sem.gate{border-color:var(--cobre);position:relative}
+  .sem.gate::after{content:"Gate";position:absolute;top:-10px;right:8px;background:var(--cobre);color:var(--profundo);font-family:var(--cintillo);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:2px 7px}
+  .regla{margin-top:20px;font-size:17px;color:var(--gris);max-width:70ch}
+
+  /* paquetes */
+  .niveles{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px;align-items:stretch}
+  .nivel{border:1px solid var(--linea);background:var(--marfil);padding:26px 24px;display:flex;flex-direction:column;gap:10px}
+  .nivel.plus{border-color:var(--petroleo);border-width:2px;position:relative}
+  .nivel.plus::before{content:"El más elegido";position:absolute;top:-12px;left:22px;background:var(--petroleo);color:var(--marfil);font-family:var(--cintillo);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px}
+  .nivel ul{margin:8px 0 0;padding-left:18px;color:var(--gris);font-size:16.5px}
+  .nivel li{margin-bottom:6px}
+  .nivel .pie{margin-top:auto;padding-top:14px;font-size:15px;color:var(--gris);border-top:1px solid var(--linea)}
+
+  /* caso */
+  .caso{background:var(--profundo);color:var(--marfil)}
+  .caso .cintillo{color:var(--cobre-claro)}
+  .cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:30px}
+  .cifra .v{font-family:var(--display);font-size:clamp(34px,4.4vw,52px);line-height:1;color:var(--marfil)}
+  .cifra .l{font-size:16px;color:#C9C1B5;margin-top:8px;line-height:1.35}
+  .caso .aviso{margin-top:28px;font-size:16px;color:#C9C1B5;max-width:70ch;border-left:2px solid var(--cobre);padding-left:14px}
+
+  /* comparativa */
+  table{border-collapse:collapse;width:100%;margin-top:28px;font-size:17px}
+  th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--linea);vertical-align:top}
+  th{font-family:var(--cintillo);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--gris)}
+  td:first-child{font-weight:500;color:var(--petroleo)}
+  td.si{color:var(--petroleo)}
+  .tabla-scroll{overflow-x:auto}
+
+  /* cta final */
+  .cta{background:var(--petroleo);color:var(--marfil)}
+  .cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .cta .cintillo{color:var(--cobre-claro)}
+  .cta p.l{font-size:19px;color:#E7E0D6;margin-top:14px;max-width:32em}
+  .cta ol{margin:16px 0 0;padding-left:20px;color:#E7E0D6;font-size:17px}
+  form{background:var(--marfil);color:var(--grafito);padding:26px 24px;border-top:3px solid var(--cobre)}
+  label{display:block;font-family:var(--cintillo);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-bottom:6px}
+  input,select{width:100%;font-family:var(--cuerpo);font-size:18px;padding:11px 12px;border:1px solid var(--linea);background:#fff;color:var(--grafito);margin-bottom:16px}
+  input:focus,select:focus{outline:2px solid var(--petroleo);outline-offset:1px}
+  form .btn{width:100%;text-align:center;cursor:pointer;font-size:14px;padding:15px 20px}
+  form .privacidad{font-size:14px;color:var(--gris);margin-top:14px;line-height:1.4}
+  #estado{font-size:15px;color:var(--petroleo);margin-top:10px;min-height:1.4em}
+
+  footer{padding-block:28px;border-top:1px solid var(--linea);font-size:14.5px;color:var(--gris)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer .promesa{max-width:70ch}
+
+  /* flotante WhatsApp */
+  .wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--petroleo);color:var(--marfil);text-decoration:none;font-family:var(--cintillo);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:13px 16px;border:1px solid var(--cobre);box-shadow:0 6px 24px rgba(8,32,27,.25);z-index:9}
+  .wa:focus-visible{outline:3px solid var(--cobre);outline-offset:2px}
+
+  @media (max-width:900px){
+    .hero .wrap,.cta .wrap{grid-template-columns:1fr}
+    .grid3,.grid4,.niveles,.cifras{grid-template-columns:1fr 1fr}
+    .semanas{grid-template-columns:repeat(4,1fr)}
+    .foto{aspect-ratio:16/10}
+  }
+  @media (max-width:560px){
+    body{font-size:17px}
+    .grid3,.grid4,.niveles,.cifras{grid-template-columns:1fr}
+    .semanas{grid-template-columns:repeat(2,1fr)}
+    header.top .btn{display:none}
+    section{padding-block:48px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<div class="ribbon">Borrador v1.0 · 15-sep-2026 · Confidencial · Condicionado a liberación de marca (G·3)</div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="marca">
+      <!-- SIN DATO: Lockup 2 · isotipo del 8 sobre marfil, 44×44 px. No se redibuja. -->
+      <div class="lockup" aria-label="Espacio reservado para el isotipo">8<br>lockup 2</div>
+      <div class="wordmark">OCTAVA</div>
+    </div>
+    <a class="btn primario" href="#diagnostico">Agendar Diagnóstico Exprés</a>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="titulo">
+  <div class="wrap">
+    <div>
+      <div class="cintillo">Sistema Operativo Gastronómico · Ciudad de México</div>
+      <h1 id="titulo">Toma el control de tu restaurante en 8 semanas.</h1>
+      <p class="sub">Instalamos la operación de tu local con tu propia gente: primero el hábito, en papel y firmado por quien lo hace; después lo digital. Precio cerrado, fecha de fin y evidencia medida contra tus propios números.</p>
+      <div class="acciones">
+        <a class="btn primario" href="#diagnostico">Agendar Diagnóstico Exprés · sin costo</a>
+        <a class="btn" href="https://wa.me/529841878284?text=Hola%20Sergio%2C%20quiero%20agendar%20el%20Diagn%C3%B3stico%20Expr%C3%A9s." target="_blank" rel="noopener">WhatsApp +52 984 187 8284</a>
+      </div>
+      <p class="nota">90 minutos en tu piso. Al día siguiente, una hoja con tres fugas de dinero y cómo taparlas. Si no ves valor, nos damos la mano y ahí queda.</p>
+    </div>
+    <!-- SIN DATO: fotografía de operación real, 4:5, pase de cocina en servicio, sin rostros reconocibles. Nada de stock. -->
+    <div class="foto" role="img" aria-label="Espacio reservado para fotografía de operación real"><span>Foto de operación real<br>4 : 5 · pase de cocina en servicio<br>sin banco de imágenes</span></div>
+  </div>
+</section>
+
+<section aria-labelledby="dolor">
+  <div class="wrap">
+    <div class="cintillo">Lo que pasa allá afuera</div>
+    <h2 id="dolor">En México, casi 9 de cada 10 restaurantes cierran el primer año. Casi siempre por la operación y los costos, no por la comida.</h2>
+    <div class="sep"></div>
+    <p style="max-width:70ch;color:var(--gris)">Fuente: CANIRAC. El software llega vacío y en inglés; el consultor llega, deja un manual y se va. Falta alguien que se quede hasta que el piso funcione solo.</p>
+    <div class="grid3">
+      <div class="tarjeta"><h3>«Todo depende de mí»</h3><p>Si no estás, el servicio sale distinto. Las decisiones viven en tu cabeza y en la de dos personas más, y ninguna está escrita.</p></div>
+      <div class="tarjeta"><h3>«Me entero tarde y a ciegas»</h3><p>La merma, los voids y el 86 los ves en el corte de la semana, no en el turno. Para cuando lo sabes, ya costó.</p></div>
+      <div class="tarjeta"><h3>«Cada turno sale distinto»</h3><p>Apertura, pase y cierre dependen de quién esté. Con rotación cara, cada persona nueva reaprende el local desde cero.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" aria-labelledby="propuesta">
+  <div class="wrap">
+    <div class="cintillo">Lo que hacemos</div>
+    <h2 id="propuesta">La operación, instalada y conectada.</h2>
+    <div class="sep"></div>
+    <div class="grid4">
+      <div class="tarjeta"><h3>Implementado</h3><p>No entregamos un manual: instalamos el sistema en tu piso, con tu equipo, hasta que funciona sin nosotros.</p></div>
+      <div class="tarjeta"><h3>Digital</h3><p>Lo que ya probó funcionar en papel pasa a OCTAVA OS: checklists, incidencias, pendientes y tablero diario.</p></div>
+      <div class="tarjeta"><h3>En tiempo real</h3><p>Lo ves en el turno, no en el corte. Alertas y rutinas gerenciales para enterarte a tiempo.</p></div>
+      <div class="tarjeta"><h3>Formación en video</h3><p>Academia grabada en tu propio local. La persona nueva se induce en 7 días con verificación firmada.</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="metodo">
+  <div class="wrap">
+    <div class="cintillo">Método 8 Semanas</div>
+    <h2 id="metodo">Ocho semanas base. Un gate en la quinta.</h2>
+    <div class="sep"></div>
+    <div class="semanas" role="list">
+      <div class="sem" role="listitem"><div class="n">1</div><div class="t">Diagnóstico y línea base: qué se arregla primero</div></div>
+      <div class="sem" role="listitem"><div class="n">2</div><div class="t">Arquitectura operativa: roles, estaciones, hoja de posición por puesto</div></div>
+      <div class="sem" role="listitem"><div class="n">3</div><div class="t">Sistema documental: POE, políticas, checklists de apertura, pase y cierre</div></div>
+      <div class="sem" role="listitem"><div class="n">4</div><div class="t">Primeras pruebas en piso; se ajusta lo que no jaló</div></div>
+      <div class="sem gate" role="listitem"><div class="n">5</div><div class="t">Corte: si el hábito ya funciona sin nosotros, seguimos. Nada se digitaliza sin probarse en papel</div></div>
+      <div class="sem" role="listitem"><div class="n">6</div><div class="t">Se pasa a digital lo que ya funcionó en papel</div></div>
+      <div class="sem" role="listitem"><div class="n">7</div><div class="t">Tu equipo opera solo; nosotros solo revisamos</div></div>
+      <div class="sem" role="listitem"><div class="n">8</div><div class="t">Auditoría contra tu línea base, plan de 90 días y Sello OCTAVA</div></div>
+    </div>
+    <p class="regla">Ocho semanas es la duración base para un local estándar. El proyecto no termina si tu equipo no puede sostenerlo solo. Después, cada viernes antes de las 18:00 recibes el informe semanal: valor visible aun cuando la semana fue perfecta.</p>
+  </div>
+</section>
+
+<section class="alt" aria-labelledby="niveles">
+  <div class="wrap">
+    <div class="cintillo">Implementación OCTAVA</div>
+    <h2 id="niveles">Tres niveles. El diagnóstico dice cuál te corresponde.</h2>
+    <div class="sep"></div>
+    <p style="max-width:70ch;color:var(--gris)">Los niveles son acumulativos. El nivel lo decide el Baremo del diagnóstico, no el vendedor: si el baremo dice Básico, se propone Básico. El precio, cerrado, va en la propuesta después de la visita.</p>
+    <div class="niveles">
+      <div class="nivel">
+        <h3>OCTAVA Básico</h3>
+        <ul>
+          <li>Diagnóstico y línea base</li>
+          <li>POE y manuales del local</li>
+          <li>Checklists digitales</li>
+          <li>Tablero diario y capacitación</li>
+          <li>Operación asistida y auditoría de cierre</li>
+          <li>Sello OCTAVA</li>
+        </ul>
+        <div class="pie">Soporte 30 días</div>
+      </div>
+      <div class="nivel plus">
+        <h3>OCTAVA Plus</h3>
+        <ul>
+          <li>Todo lo de Básico</li>
+          <li>Academia en video: 15–25 cápsulas grabadas en tu local</li>
+          <li>Kit de inducción de 7 días</li>
+          <li>Alertas y rutinas gerenciales</li>
+          <li>Re-auditoría semestral del Sello</li>
+        </ul>
+        <div class="pie">Soporte 60 días</div>
+      </div>
+      <div class="nivel">
+        <h3>OCTAVA Premium</h3>
+        <ul>
+          <li>Todo lo de Plus</li>
+          <li>Reporte mensual de reputación y competencia de zona</li>
+          <li>Sesión estratégica trimestral</li>
+          <li>Alerta temprana</li>
+        </ul>
+        <div class="pie">Soporte 90 días</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="caso" aria-labelledby="caso">
+  <div class="wrap">
+    <div class="cintillo">Caso documentado · alta cocina, CDMX</div>
+    <h2 id="caso">No lo decimos nosotros: lo dicen sus propios números.</h2>
+    <div class="cifras">
+      <div class="cifra"><div class="v">−92 %</div><div class="l">correcciones de comanda (voids)</div></div>
+      <div class="cifra"><div class="v">+21,4 %</div><div class="l">ticket promedio</div></div>
+      <div class="cifra"><div class="v">+24,1 %</div><div class="l">valor por comensal-hora</div></div>
+      <div class="cifra"><div class="v">76</div><div class="l">POE operando en 18 áreas</div></div>
+    </div>
+    <p class="aviso">Periodo febrero–junio 2026 contra el mismo periodo de 2025, medido contra la línea base del propio local. Es el resultado medido de un cliente, no una promesa: no prometemos ventas, estrellas ni reconocimientos. Prometemos entregables, método y evidencia contra tus propios números.</p>
+  </div>
+</section>
+
+<section aria-labelledby="porque">
+  <div class="wrap">
+    <div class="cintillo">Por qué OCTAVA</div>
+    <h2 id="porque">Ni un manual que termina en un cajón, ni un software que llega vacío.</h2>
+    <div class="sep"></div>
+    <div class="tabla-scroll">
+      <table>
+        <thead><tr><th scope="col"></th><th scope="col">Consultoría</th><th scope="col">Software de operaciones</th><th scope="col">OCTAVA</th></tr></thead>
+        <tbody>
+          <tr><td>Qué entrega</td><td>Documentos y recomendaciones</td><td>Una herramienta vacía, muchas veces en inglés</td><td class="si">El sistema instalado y operando con tu equipo</td></tr>
+          <tr><td>Quién lo hace funcionar</td><td>Tú, después de que se va</td><td>Tú, configurándolo</td><td class="si">Tu equipo, con nosotros en el piso hasta la semana 8</td></tr>
+          <tr><td>Cómo se mide</td><td>Rara vez</td><td>Con los datos que alguien cargue</td><td class="si">Línea base en la semana 1, auditoría contra ella en la 8</td></tr>
+          <tr><td>Qué pasa al terminar</td><td>Se acaba</td><td>Sigues pagando la licencia</td><td class="si">Tu equipo opera solo; informe semanal los viernes</td></tr>
+          <tr><td>De quién son los datos</td><td>—</td><td>Depende del proveedor</td><td class="si">Tuyos. Puedes administrar el sistema al terminar</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="diagnostico" aria-labelledby="cta">
+  <div class="wrap">
+    <div>
+      <div class="cintillo">El primer paso, sin costo</div>
+      <h2 id="cta">Diagnóstico Exprés: 90 minutos en tu piso.</h2>
+      <p class="l">Vemos tu operación en servicio. Al día siguiente te mandamos una hoja con tres cosas que hoy están costando dinero, cuánto cuesta cada una y cómo taparla.</p>
+      <ol>
+        <li>Nos dices cuándo: entre semana por la mañana, o antes del servicio de la tarde.</li>
+        <li>Recorremos el local contigo o con tu gerente. Sin cuestionarios, sin presentación.</li>
+        <li>Recibes la hoja de tres hallazgos. Si no ves valor, ahí queda.</li>
+      </ol>
+      <p class="l" style="margin-top:22px">Si prefieres, escribe directo: <a href="https://wa.me/529841878284?text=Hola%20Sergio%2C%20quiero%20agendar%20el%20Diagn%C3%B3stico%20Expr%C3%A9s." target="_blank" rel="noopener">WhatsApp +52 984 187 8284</a></p>
+    </div>
+    <form id="form-diagnostico" novalidate>
+      <label for="nombre">Tu nombre</label>
+      <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+      <label for="restaurante">Restaurante</label>
+      <input id="restaurante" name="restaurante" type="text" autocomplete="organization" required>
+      <label for="whatsapp">Tu WhatsApp</label>
+      <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="55 0000 0000" required>
+      <label for="zona">Zona</label>
+      <select id="zona" name="zona" required>
+        <option value="">Elige una zona</option>
+        <option>Polanco / Lomas</option>
+        <option>Roma / Condesa / Juárez</option>
+        <option>Centro</option>
+        <option>Del Valle / Nápoles / Narvarte</option>
+        <option>Santa Fe / Interlomas</option>
+        <option>Coyoacán / San Ángel</option>
+        <option>Otra zona de CDMX</option>
+        <option>Fuera de CDMX</option>
+      </select>
+      <button class="btn primario" type="submit">Pedir el Diagnóstico Exprés por WhatsApp</button>
+      <div id="estado" aria-live="polite"></div>
+      <!-- SIN DATO: aviso de privacidad C·8, pendiente de dictamen legal. Requiere validación de profesional colegiado antes de publicar. -->
+      <p class="privacidad">Al enviar se abre WhatsApp con tus datos en el mensaje; no se guardan en esta página. Aviso de privacidad: pendiente de publicación.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="promesa"><strong>Promesa honesta.</strong> Prometemos entregables, método y evidencia medida contra la línea base del propio local. No prometemos ventas, estrellas ni reconocimientos.</p>
+    <p>OCTAVA · Ciudad de México · <a href="https://wa.me/529841878284" target="_blank" rel="noopener">+52 984 187 8284</a><br>v1.0.0 · 15-sep-2026 · nombre provisional</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/529841878284?text=Hola%20Sergio%2C%20quiero%20agendar%20el%20Diagn%C3%B3stico%20Expr%C3%A9s." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
+
+<script>
+  (function(){
+    var f=document.getElementById('form-diagnostico'), est=document.getElementById('estado');
+    var NUM='529841878284'; // WhatsApp de la casa
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var n=f.nombre.value.trim(), r=f.restaurante.value.trim(), w=f.whatsapp.value.trim(), z=f.zona.value;
+      if(!n||!r||!w||!z){est.textContent='Faltan datos: nombre, restaurante, WhatsApp y zona.';return;}
+      var msg='Hola Sergio, quiero agendar el Diagnóstico Exprés.\n'+
+              'Nombre: '+n+'\nRestaurante: '+r+'\nZona: '+z+'\nMi WhatsApp: '+w;
+      var url='https://wa.me/'+NUM+'?text='+encodeURIComponent(msg);
+      est.textContent='Abriendo WhatsApp…';
+      window.open(url,'_blank','noopener');
+    });
+  })();
+</script>
