@@ -79,12 +79,13 @@ por coherencia de trabajo, no por ahorro.
 Frase útil en venta: **CABINA COMPLETA cuesta lo que una hora extra que hoy no
 estás cobrando.**
 
-### ~~Bloqueo pendiente antes de publicar~~ ✅ RESUELTO (15-sep-2026)
+### Bloqueo levantado (15-sep-2026)
 
-G1 levantado en las seis: el validador de la casa devuelve 20/20 mecánico y se declara 19/20
-(`ESTADO-GATES.md`). Lo que faltaba era envoltorio —`cases/`, `CHANGELOG.md`, reglas NUNCA,
-antipatrones—, no oficio. CABINA no tiene nada pendiente de fábrica: tiene precio, ficha,
-licencia y hoja de alta. Le falta la cuenta de Gumroad y un comprador.
+El bloqueo de G1 que existía al cerrar la tarifa —las seis puntuaban entre 0 y 2 sobre 20 por
+falta de `cases/`, `CHANGELOG.md`, tabla NUNCA y antipatrones— **quedó resuelto el mismo
+día**: envoltorio cerrado en las seis, validador en 20/20 mecánico (19/20 declarado). El
+contenido de oficio no se tocó. **CABINA está lista para publicar en Gumroad** (hoja de alta en `venta/GUMROAD-ALTA.md`). Detalle en
+[`ESTADO-GATES.md`](ESTADO-GATES.md#cabina-dj).
 
 ## 3 · Neutra / B2B — CERRADA
 
