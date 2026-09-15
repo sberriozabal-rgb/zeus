@@ -28,7 +28,9 @@ vendido. Se venden como instalación.
 | 4 | `comparativa-proveedores` | 1.1.0 | **18/20** | ACORDADO |
 | 5 | `receta-estandar` | 1.1.0 | **18/20** | ACORDADO |
 | 6 | `productividad-personal-turno` | 1.1.0 | sin nota declarada | ACORDADO |
-| 7 | `reporte-inteligencia-competencia` | 1.0.0 | **mide 1/20** ⚠️ | ACORDADO |
+| 7 | `reporte-inteligencia-competencia` | **1.1.0** | **19/20** ✅ | ACORDADO |
+
+**Auditoría:** las 7 entre 17/20 y 20/20 medido, todas por encima del 16 que exige P1.
 
 **Precio en ficha:** Instalación Completa **4.900 €** (6 skills) · Instalación
 Esencial **2.500 €** (3 skills). Ambos `[A VALIDAR]`.
@@ -63,15 +65,18 @@ Piezas que no dependen de un oficio concreto. Vendibles sueltas por catálogo
 
 | Skill | Ver. | Auditoría | Estado |
 |---|---|---|---|
-| `cobro-cartera-vencida` | 1.1.0 | declara 19/20 · **mide 1/20** ⚠️ | ACORDADO |
-| `reporte-inteligencia` | 1.1.0 | declara 18/20 · **mide 2/20** ⚠️ | ACORDADO |
-| `respaldo-proyecto-ia-cl` | 2.0.0 | declara 18/20 · **mide 3/20** ⚠️ | ACORDADO |
-| `universal-compilador-contexto` | 1.0.0 | declara 17/20 · **mide 1/20** ⚠️ | ACORDADO |
+| `cobro-cartera-vencida` | **1.2.0** | **19/20** ✅ | ACORDADO |
+| `reporte-inteligencia` | **1.2.0** | **19/20** ✅ | ACORDADO |
+| `respaldo-proyecto-ia-cl` | **2.1.0** | **19/20** ✅ | ACORDADO |
+| `universal-compilador-contexto` | **1.1.0** | **19/20** ✅ | ACORDADO |
 
-⚠️ **Las cuatro necesitan cerrar envoltorio antes de venderse**, igual que necesitó CABINA:
-miden entre 1 y 3 sobre 20 contra la rúbrica. Detalle en
-[`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md). `cobro-cartera-vencida` sigue siendo la
-mejor candidata a primer producto suelto **una vez cerrado**.
+✅ **Las cuatro cerraron envoltorio el 15-sep-2026** y están en 19/20. `cobro-cartera-vencida`
+es la mejor candidata a primer producto suelto de catálogo: sector agnóstico, dolor con cifra
+directa (DSO, importe en riesgo) y comprador que ya sabe que tiene el problema.
+
+`respaldo-proyecto-ia-cl` y `universal-compilador-contexto` son **la misma cadena en dos
+mitades** y se venden bien juntas: una asegura el material antes de que desaparezca, la otra
+lo hace comprensible.
 
 ---
 

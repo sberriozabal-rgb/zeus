@@ -171,37 +171,45 @@ Tras la reescritura, los seis `SKILL.md` de CABINA vuelven a parsear correctamen
 `metadata` mantienen todos los valores como cadena, conforme a la especificación. **17/17 del
 catálogo válidos.**
 
-### 8 · Cinco skills más con el mismo problema de envoltorio — **abierto**
+### 8 · ~~Cinco skills más con el mismo problema de envoltorio~~ ✅ CERRADO (15-sep-2026)
 
-Al revalidar el catálogo completo el 15-sep-2026 aparecen cinco piezas con la misma causa que
-tenía CABINA: contenido de oficio sin la estructura de serie. **Sus notas declaradas no
-coinciden con las medidas.**
+Las cinco pasan el umbral. Medido con `validar_skill.py`, no estimado.
 
-| Skill | Línea | Declara | Mide | Diferencia |
+| Skill | Línea | Antes | Ahora | Versión |
 |---|---|---|---|---|
-| `cobro-cartera-vencida` | Neutra | **19/20** | **1/20** | −18 |
-| `reporte-inteligencia` | Neutra | 18/20 *(pendiente de reauditoría)* | **2/20** | −16 |
-| `respaldo-proyecto-ia-cl` | Neutra | 18/20 *(autoevaluación)* | **3/20** | −15 |
-| `universal-compilador-contexto` | Neutra | 17/20 *(autoevaluación)* | **1/20** | −16 |
-| `reporte-inteligencia-competencia` | Hostelería | sin nota declarada | **1/20** | — |
+| `cobro-cartera-vencida` | Neutra | declaraba 19/20 · medía **1/20** | **19/20** | 1.2.0 |
+| `reporte-inteligencia` | Neutra | declaraba 18/20 · medía **2/20** | **19/20** | 1.2.0 |
+| `respaldo-proyecto-ia-cl` | Neutra | declaraba 18/20 · medía **3/20** | **19/20** | 2.1.0 |
+| `universal-compilador-contexto` | Neutra | declaraba 17/20 · medía **1/20** | **19/20** | 1.1.0 |
+| `reporte-inteligencia-competencia` | Hostelería | sin nota · medía **1/20** | **19/20** | 1.1.0 |
 
-`cobro-cartera-vencida` es el caso más serio: declara **19/20** en su propio frontmatter y es la
-pieza que se había señalado como **la mejor posicionada del catálogo para venta suelta**.
+Mismo trabajo que en CABINA: 13 secciones del ADN, pasos atómicos con el molde de la serie,
+reglas en tabla con su porqué, 5 antipatrones, los 4 casos de prueba y los ficheros del peldaño.
+**El contenido de oficio no se tocó en ninguna.**
 
-**Lo que esto no significa.** Igual que en CABINA, la nota mide conformidad con la rúbrica, no
-calidad del oficio. Las tres que se autoevaluaron lo declaran honestamente como
-*"(autoevaluación)"*, y `reporte-inteligencia` ya avisaba de estar *"pendiente de reauditoría
-tras v1.1.0"*. No hay aquí una nota inflada a sabiendas salvo, quizá, el 19/20 de
-`cobro-cartera-vencida`, que no lleva ninguna salvedad.
+Lo que faltaba, pieza por pieza:
 
-**Lo que sí significa.** Ninguna de las cinco puede venderse como P1 hasta cerrar el envoltorio,
-y ninguna debe aparecer en material de venta con su nota actual. El trabajo es el mismo que se
-hizo en CABINA: 13 secciones del ADN, 6 pasos atómicos, reglas SIEMPRE y NUNCA, 5 antipatrones,
-4 casos de prueba y los ficheros del peldaño.
+- **`reporte-inteligencia-competencia`** era la más desnuda del catálogo: tenía un `SKILL.md`
+  bueno **y nada más**. Ni README, ni CHANGELOG, ni LICENSE, ni metadata, ni cases, ni
+  references.
+- **`cobro-cartera-vencida`** tenía las reglas como listas numeradas en vez de tablas, los
+  antipatrones con los dos puntos dentro de la negrita, y sus tres fuentes europeas viviendo en
+  el `SKILL.md` en lugar de en `references/`, de modo que el recuento de URLs daba cero.
+- **`respaldo-proyecto-ia-cl`** y **`universal-compilador-contexto`** tenían 12 y 6 fases con el
+  molde correcto pero repartido en viñetas, y 6 antipatrones donde la rúbrica pide 5.
 
-**Estado del catálogo tras esta revisión:**
+**Estado del catálogo: 17 de 17 por encima del umbral.** Las notas van de 17/20 a 20/20 medido, y
+las fichas declaran 19/20 en las revisadas porque el punto 19 —URLs verificadas una a una— no se
+ha confirmado en esta pasada. No se redondea al alza.
 
-| Tramo | Skills | Nota |
-|---|---|---|
-| Listas (≥16/20 medido) | 12 | CABINA ×6, hostelería ×6 |
-| Pendientes de envoltorio | 5 | 4 neutras + `reporte-inteligencia-competencia` |
+### 9 · Solape comercial entre las dos piezas de inteligencia — **declarado**
+
+`reporte-inteligencia-competencia` es la **vertical de hostelería** de `reporte-inteligencia`:
+mismo panel de seis, misma lógica de mediana y brecha, cuatro métricas en vez de ocho, salida de
+una página en vez de diez secciones. **No son duplicados**, como lo eran `checklist-turno` y
+`apertura-cierre-turno`, pero **no se venden las dos al mismo comprador**: a un restaurante se le
+vende la vertical, a cualquier otro sector la neutra. Queda declarado en las dos fichas.
+
+En cambio `respaldo-proyecto-ia-cl` y `universal-compilador-contexto` **sí se venden juntas**: son
+la misma cadena en dos mitades y el `chats.jsonl` y el `HUECOS.md` de la primera son entradas
+directas de la segunda.

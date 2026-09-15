@@ -1,4 +1,36 @@
-# CHANGELOG · respaldo-proyecto-ia-cl
+# CHANGELOG — respaldo-proyecto-ia-cl
+
+## [2.1.0] — 2026-09-15
+
+**Cierre del envoltorio de venta.** La auditoría mecánica del 15-sep-2026 (`validar_skill.py`)
+dio **3/20** frente al **18/20 (autoevaluación)** que declaraba el frontmatter. La autoevaluación
+era honesta en sustancia y estaba marcada como tal, pero **una nota que nadie puede reproducir con
+el validador no sirve para vender**.
+
+Añadido:
+
+- Estructura de **13 secciones del ADN**, con los 12 pasos P0-P11 comprimidos a **8 pasos
+  atómicos** con el molde en línea Entrada → Acción → Salida → Si falta el dato.
+- Reglas convertidas de lista numerada a tabla: **10 SIEMPRE y 9 NUNCA** con su porqué.
+- Antipatrones de 6 a **5 con el molde de serie**, fusionando "el respaldo que nadie abrió nunca"
+  y "la instrucción que apunta a un archivo que no viajó": son el mismo fallo —nadie probó la
+  restauración— visto desde dos síntomas distintos.
+- Los **4 casos de prueba** en `cases/`, extraídos de `references/casos.md`, que conserva el
+  quinto (datos sucios) y el detalle de todos.
+- Viñeta de **dato sucio típico** en `Entrada`: el export sin campo de proyecto y el secreto
+  pegado dentro de un chat.
+- `ANEXO-A-ficha-comercial.md`, `README.md` y `metadata.json`.
+
+**El contenido de oficio no se ha tocado**: las cuatro clases C0-C3 con sus dos reglas duras, el
+ZIP anidado contra el índice en claro, la restauración en frío firmada y fechada, la rotación de
+credenciales y el límite de plataforma con cita literal están exactamente como estaban.
+
+Resultado: **19/20** declarado (20/20 mecánico, menos el punto 19 de criterio).
+
+Versionado semántico: MAYOR cambia el protocolo · MENOR añade capacidad ·
+PARCHE corrige referencias, ejemplos y redacción.
+
+---
 
 Versionado semántico: MAYOR cambia el protocolo · MENOR añade capacidad ·
 PARCHE corrige referencias, ejemplos y redacción.

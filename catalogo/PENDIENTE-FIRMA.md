@@ -57,13 +57,23 @@ El contenido de oficio no se tocó: las notas bajas medían formato, no calidad.
 ninguna pieza se ha ejecutado contra los datos de alguien que haya pagado. **Lo levanta el
 primer comprador**, que es otra razón para vender antes que seguir fabricando.
 
-### 6 · Resolver el desajuste de versión de `respuesta-resenas` — **nuevo**
+### 6 · ~~Resolver el desajuste de `respuesta-resenas`~~ ✅ HECHO (15-sep-2026, v1.2.0)
 
-El fichero que se entrega es la **v1.0.0** y puntúa **8/20**; su `metadata.json`
-y su ficha declaran **v1.1.0 con 19/20**, y el CHANGELOG no tiene entrada de
-v1.1.0. O la v1.1.0 existe y no se guardó, o la ficha describe un trabajo que no
-se hizo. Mientras tanto, esa pieza no debe ir a material de venta como 19/20.
-Detalle en [`ESTADO-GATES.md`](ESTADO-GATES.md).
+De 8/20 a 19/20. Las cuatro piezas que su ficha decía haber fabricado **sí estaban**: lo que
+fallaba era la versión diciendo tres cosas distintas en cuatro sitios y una estructura anterior
+al ADN. Se salta a 1.2.0 porque el número 1.1.0 está quemado.
+
+### 7 · ~~Cerrar el envoltorio de las cinco restantes~~ ✅ HECHO (15-sep-2026)
+
+`cobro-cartera-vencida`, `reporte-inteligencia`, `respaldo-proyecto-ia-cl`,
+`universal-compilador-contexto` y `reporte-inteligencia-competencia`: de 1-3/20 a **19/20**.
+
+**El catálogo entero está ahora por encima del umbral: 17 de 17.**
+
+Lo que queda pendiente ya no es fabricación. Son las decisiones 1, 3 y 4, más el precio de la
+línea neutra, que sigue sin cerrar: hay propuesta de 39-49 € por pieza y 49-79 € para
+`cobro-cartera-vencida`, todas `[A VALIDAR]`.
+
 
 ---
 

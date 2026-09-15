@@ -16,7 +16,7 @@ nunca por adjunto*: el adjunto no se recupera al cancelar, el acceso sí.
 |---|---|---|---|
 | **Hostelería** | 7 | B · instalación presencial | 4.900 € completa / 2.500 € esencial `[A VALIDAR]` |
 | **CABINA** (DJ) | 6 | A · catálogo | **49 € suelta / 249 € completa** ✅ cerrado |
-| **Neutra / B2B** | 4 | A · catálogo | sin fijar |
+| **Neutra / B2B** | 4 | A · catálogo | 39–79 € propuesto `[A VALIDAR]` |
 
 - [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md) — tarifa propuesta con anclas de mercado y canal de cobro.
 - [`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md) — matriz G1–G5 y riesgos abiertos.
@@ -37,7 +37,7 @@ Cada skill conserva su `SKILL.md`, sus `references/`, `assets/`, `scripts/`,
 
 ## Estado
 
-Las 17 están en estado `ACORDADO` con licencia que permite la venta. Ninguna
+Las 17 están en estado `ACORDADO`, con licencia que permite la venta y **todas por encima del umbral de 16/20** que exige el peldaño P1 (medido con el validador de la casa, no estimado). Ninguna
 tiene el gate **G3 (precio)** levantado con firma, y **G2 (prueba contra datos
 reales de cliente)** está abajo en todo el catálogo. Nada de esto impide vender
 una instalación presencial —se ejecuta con los datos del propio cliente, que es

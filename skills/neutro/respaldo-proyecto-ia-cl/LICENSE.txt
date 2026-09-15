@@ -1,0 +1,48 @@
+LICENCIA DE USO — respaldo-proyecto-ia-cl
+Copyright 2026 Sergio Berriozabal Serrano. Todos los derechos reservados.
+
+1. CONCESION
+   Se concede al comprador una licencia personal, intransferible y no exclusiva para usar
+   esta skill en su propia actividad profesional, incluida la actividad comercial, sin
+   limite de numero de ejecuciones ni de proyectos respaldados.
+
+2. PROHIBICIONES
+   Queda prohibida la redistribucion, reventa, cesion, sublicencia, publicacion o puesta a
+   disposicion de terceros del contenido de esta carpeta, en todo o en parte, con o sin
+   modificaciones, sea a titulo oneroso o gratuito.
+
+3. TRABAJOS DERIVADOS
+   El comprador puede adaptar la skill para su propio uso interno. Los trabajos derivados
+   quedan sujetos a esta misma licencia y no pueden redistribuirse.
+
+4. AUSENCIA DE GARANTIA
+   La skill se entrega "tal cual". NO MIGRA DATOS ENTRE CUENTAS: la plataforma de origen no
+   soporta esa operacion y este artefacto no la realiza ni la simula. Produce un paquete de
+   reconstruccion manual. No garantiza la integridad de los datos exportados por terceros ni
+   la disponibilidad de los mecanismos de export de la plataforma, que pueden cambiar sin
+   previo aviso.
+
+5. CIFRADO
+   El cifrado AES-256 requiere la libreria pyzipper. Si no esta disponible, el paquete se
+   genera SIN CIFRAR y el propio artefacto lo declara en su salida. El comprador es
+   responsable de verificar esa declaracion antes de transmitir el paquete.
+
+6. CREDENCIALES
+   El artefacto trata toda credencial como clase C3: NO SE RESPALDA, SE ROTA. El titular no
+   responde de credenciales que el usuario decida incluir manualmente en contra del
+   procedimiento.
+
+7. LIMITACION DE RESPONSABILIDAD
+   El titular no respondera de perdida de datos, directa o indirecta, derivada del uso o del
+   no uso de la skill, hasta el limite maximo del importe abonado por la licencia. La
+   verificacion de la restauracion antes de borrar cualquier origen es responsabilidad
+   exclusiva del usuario, y el procedimiento la exige expresamente.
+
+8. MARCAS DE TERCEROS
+   Claude y Anthropic son marcas de sus respectivos titulares. Su mencion es cita de
+   documentacion publica con la URL de la fuente, y no implica afiliacion, patrocinio ni
+   respaldo.
+
+9. REVOCACION
+   El acceso al repositorio de entrega puede revocarse al cesar la relacion comercial. La
+   licencia de uso sobre la copia ya entregada subsiste conforme a las clausulas anteriores.
