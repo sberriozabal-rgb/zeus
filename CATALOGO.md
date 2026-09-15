@@ -5,12 +5,12 @@ Estado a 15-sep-2026. **17 skills cargadas** en `skills/`, todas en estado
 canal de entrega que exige la doctrina de la casa —*acceso revocable a
 repositorio privado, nunca por adjunto*—, no un escaparate público.
 
-> **Lo que falta para cobrar.** Ninguna pieza tiene hoy el gate **G3 (precio)**
-> levantado con firma. Todos los precios de este catálogo están marcados
-> `[A VALIDAR]` en su propia ficha comercial, y las fichas dicen literalmente
-> *"Ningún gate se levanta sin la palabra de Sergio"*. Ver
-> [`catalogo/PENDIENTE-FIRMA.md`](catalogo/PENDIENTE-FIRMA.md): son 4 decisiones
-> y se cierran en una sentada.
+> **Estado de venta.** Gates **G1, G3 y G5 levantados en las 17** y **G4 en 16/17**
+> (`receta-estandar` espera revisión externa de inocuidad). Tarifa ratificada el
+> 15-sep-2026 y titularidad unificada en Sergio Berriozábal Serrano. Lo único que ninguna
+> pieza tiene aún es **G2**: tres ejecuciones con cliente real, que solo levanta la primera
+> venta. Razón de cada decisión en [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md);
+> [`catalogo/PENDIENTE-FIRMA.md`](catalogo/PENDIENTE-FIRMA.md) queda como histórico.
 
 ---
 
@@ -32,10 +32,10 @@ vendido. Se venden como instalación.
 
 **Auditoría:** las 7 en **20/20 mecánico** (19/20 declarado), muy por encima del 16 que exige P1.
 
-**Precio en ficha:** Instalación Completa **4.900 €** (6 skills) · Instalación
-Esencial **2.500 €** (3 skills). Ambos `[A VALIDAR]`.
-`productividad-personal-turno` es la única con precio suelto propuesto:
-**149–249 €** pago único, también `[A VALIDAR]`.
+**Precio ratificado (15-sep-2026):** Instalación Completa **4.900 €** (6 skills) · Instalación
+Esencial **2.500 €** (3 skills). `productividad-personal-turno` es la única con precio suelto:
+**199 €** pago único. `receta-estandar` no se factura hasta levantar G4; entra en la Completa
+sin coste para quien ya compró. Razón de cada cifra en [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md).
 
 ## Línea 2 · CABINA — DJ (3 paquetes cerrados)
 
