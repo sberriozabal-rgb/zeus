@@ -1,0 +1,14 @@
+{
+  "name": "apertura-cierre-turno",
+  "version": "1.1.1",
+  "author": "FORJA",
+  "linea": "hosteleria",
+  "peldaño": "P1",
+  "fecha_fabricacion": "2026-08-11",
+  "motor": "B",
+  "fuente_umbral": "EN CORRECCION CENTRALIZADA — atribucion en revision por la casa (15-ago-2026). No usar en material de venta hasta cierre.",
+  "fuentes_verificadas": "references/FUENTES.md",
+  "estado": "ACORDADO",
+  "auditoria": "19/20",
+  "fecha_revision": "2026-08-16"
+}

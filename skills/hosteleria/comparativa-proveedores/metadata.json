@@ -1,0 +1,15 @@
+{
+  "name": "comparativa-proveedores",
+  "version": "1.1.0",
+  "author": "FORJA",
+  "linea": "hosteleria",
+  "peldaño": "P1",
+  "fecha_fabricacion": "2026-08-11",
+  "fecha_revision": "2026-08-16",
+  "motor": "B",
+  "entregable": "informe-control-compras",
+  "enlaza_con": "escandallo-ingenieria-menu",
+  "fuente_umbral": "INE (IPC julio 2026: 3,6% anual; bajada mensual del 0,7% en alimentos atribuida a frutas y hortalizas) como vara del umbral del 8%, y Observatorio de Precios y Mercados de la Junta de Andalucía (virgen extra −49,4% en origen, campaña 2024/25) para la volatilidad del aceite. Los umbrales de 8%, 300 €/año, 500 €/año y 40-50% son criterio de oficio [A VALIDAR]. URLs en references/FUENTES.md",
+  "auditoria": "18/20",
+  "estado": "ACORDADO"
+}

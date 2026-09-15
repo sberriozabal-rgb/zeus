@@ -1,0 +1,29 @@
+{
+  "name": "escandallo-ingenieria-menu",
+  "version": "1.1.0",
+  "author": "FORJA",
+  "linea": "hosteleria",
+  "peldano": "P1",
+  "pieza": "1 de 6 del sistema instalable",
+  "fecha_fabricacion": "2026-08-11",
+  "fecha_ultima_auditoria": "2026-08-16",
+  "motor": "B",
+  "entregable": "informe-ingenieria-menu",
+  "fuente_umbral": "Kasavana & Smith (1982), Menu Engineering: A Practical Guide to Menu Analysis — verificado via Deturope vol.14 n1 (2022). Ver references/FUENTES.md",
+  "enlaza_con": [
+    "comparativa-proveedores",
+    "respuesta-resenas",
+    "apertura-cierre-turno"
+  ],
+  "requiere": "python3 >= 3.9",
+  "estado": "ACORDADO",
+  "gates": {
+    "G1": true,
+    "G2": false,
+    "G3": true,
+    "G4": true,
+    "G5": false
+  },
+  "auditoria": "19/20",
+  "fecha_revision": "2026-08-16"
+}

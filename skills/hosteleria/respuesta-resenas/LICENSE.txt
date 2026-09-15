@@ -1,0 +1,17 @@
+Licencia de uso — respuesta-resenas
+Copyright (c) 2026. Todos los derechos reservados.
+
+Se concede al titular de una licencia activa el derecho a usar esta skill
+dentro de su propia organizacion, incluyendo su instalacion en los agentes
+y entornos que dicha organizacion opere.
+
+No se concede el derecho a redistribuir, revender, sublicenciar ni publicar
+esta skill ni obras derivadas de ella, ni a incorporarla en un producto de
+terceros, sin autorizacion escrita del titular de los derechos.
+
+El analisis y las respuestas que produce esta skill son una herramienta de
+apoyo a la decision. No constituye asesoramiento legal sobre difamacion,
+disputas de reseñas ante la plataforma, ni sustituye el criterio de un
+profesional colegiado ante una acusacion grave o falsa. La responsabilidad
+sobre la publicacion de cualquier respuesta recae exclusivamente en quien
+la publica.

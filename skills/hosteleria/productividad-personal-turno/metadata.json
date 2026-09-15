@@ -1,0 +1,12 @@
+{
+  "name": "productividad-personal-turno",
+  "commercial_name": "Productividad de personal por turno",
+  "version": "1.1.0",
+  "estado": "ACORDADO",
+  "linea": "hosteleria",
+  "peldano": "P1",
+  "author": "FORJA",
+  "revisado": "2026-08-16",
+  "buyer": "Dueño o encargado de restaurante independiente de 1-3 locales, ES/MX. Decide el dueño.",
+  "engine": "B instalación"
+}

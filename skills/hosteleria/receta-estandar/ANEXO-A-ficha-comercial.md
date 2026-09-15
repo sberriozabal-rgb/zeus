@@ -1,0 +1,90 @@
+# Anexo A — Ficha comercial
+
+Nombre técnico     : receta-estandar
+Nombre comercial   : [A VALIDAR — nombre comercial de la casa pendiente]
+Peldaño            : P1 · SKILL (pieza del sistema instalable Motor B)
+Línea              : Hostelería
+Comprador nombrado : Restaurante con carta fija y producción repetida (≥1 vez por semana), España o México, plantilla de cocina de 3 a 15 personas con más de un cocinero por turno, y con un segundo local, una franquicia o un catering de volumen en el horizonte. Decide el chef propietario o el jefe de cocina; el dueño no cocinero firma pero no evalúa. Quien la ejecuta es el jefe de cocina fuera de servicio; quien la lee después es el cocinero de línea, de pie y con las manos ocupadas. **No es comprador**: la cocina de una sola persona sin rotación (no hay dos cocineros que diverjan, que es el problema que esto resuelve), la alta cocina de autor de pieza única sin repetición prevista, el local cuyo propietario decide que el valor del plato depende de no documentarlo, y cualquiera que venga buscando el plan APPCC — eso no es esto y se dice en la primera llamada, no en la entrega.
+Trabajo que quita  : Escribir a mano las fichas técnicas de la carta, o no escribirlas nunca y perderlas el día que se va el chef. Y reconstruir cada temporada por qué el plato ya no sale como salía.
+Umbral que aporta  : Que el pescado **no lleva la misma cifra en Madrid que en Monterrey** — 68 °C durante 15 s (AESAN-2021-004) frente a 63 °C (NOM-251 §7.3.1) — y que AESAN exige binomio tiempo-temperatura y no solo grados, de modo que una ficha española que copia una tabla americana está a medias aunque los grados coincidan. Mantenimiento en caliente ≥63 °C en España contra >60 °C en México. Más los 10 campos obligatorios de la receta estándar (Pennsylvania State University, cap. 6), la tolerancia de ±10 % sobre **peso de plato servido** y no sobre ingrediente crudo, y la regla de estado que sostiene todo lo demás: ninguna ficha es ACORDADO hasta que se ha pesado una vez.
+Precio propuesto   : No se vende suelta. Incluida en el sistema instalable de hostelería (Motor B). Dentro del sistema es la pieza de mayor coste de producción por unidad —una ficha por plato, 20-40 min cada una `[A VALIDAR]`— y por eso es la candidata natural a cobrarse por volumen de carta y no a tanto alzado: la carta de 12 platos y la de 60 no son el mismo trabajo. `[A VALIDAR — pendiente de ratificación por escrito de Sergio]`
+Canal              : Venta presencial dentro del sistema instalable (Motor B). No se publica suelta en directorio hasta que el sistema completo tenga el primer caso vendido con cifras documentadas.
+Motor              : B · Instalación
+Frase de anuncio   : "La receta de tu local, no una receta bonita: con la temperatura que exige la norma de tu país y el hueco marcado donde todavía no has pesado."
+Estado / Versión   : ACORDADO / v1.1.0
+Auditoría          : 18/20 — ver desglose abajo. No se redondea al alza.
+Gates              : G1 [x] G2 [ ] G3 [x] G4 [ ] G5 [ ]
+
+## Desglose de auditoría (18/20)
+
+Primera auditoría formal contra la rúbrica de 20 puntos de esta skill: la v1.0.0
+declaró 17/20 en su CHANGELOG remitiendo a un informe del registro del proyecto,
+sin desglose propio en la pieza.
+
+**Punto no conseguido nº 1 — versión y CHANGELOG.** `CHANGELOG.md` cierra en
+**v1.0.0** mientras el frontmatter, el cuerpo del SKILL.md, este anexo y
+`metadata.json` declaran **v1.1.0**. El cambio de más valor de esa versión —
+sustituir la tabla de temperaturas de origen británico (FoodDocs / Food Standards
+Agency UK) por las dos fuentes oficiales de los mercados de la casa, AESAN y
+NOM-251 — **no está registrado en ninguna parte**. Y el propio SKILL.md, en su
+sección `## Versión`, declara que si las cifras de versión divergen la entrega no
+sale de fábrica. Divergen. Se declara en vez de redondearse.
+
+**Punto no conseguido nº 2 — frontmatter conforme a spec.** El bloque YAML es
+conforme en forma (`name` de 15 caracteres, `description` de 868, los cinco campos
+presentes), pero `metadata.contrato_salida_hacia` declara
+`"escandallo-costos, ingenieria-menu, checklist-operativo"`: **tres nombres que no
+existen en el catálogo**. Los reales son `escandallo-ingenieria-menu` y
+`apertura-cierre-turno`, como sí dice correctamente el cuerpo del SKILL.md en su
+contrato de interfaz. Un consumidor que lea el frontmatter para encadenar no
+encuentra nada. El frontmatter está congelado por regla de fábrica y no se corrige
+desde aquí.
+
+Todos los demás puntos: disparo con jerga real (ficha técnica, gramaje, partida,
+sonda, merma, porcionado, "86"), trabajo en verbo, ejecutor definido con su tiempo
+y con la asimetría declarada entre quien la escribe y quien la lee, entrada real,
+manejo de datos sucios (nota de voz que mezcla dos preparaciones), umbral con
+cifra y norma, 8 pasos atómicos con "si falta el dato", plantilla de salida en
+bloque con longitud máxima y contrato JSON, límites declarados con matriz de
+aplicabilidad, 12 reglas SIEMPRE, 10 reglas NUNCA, 5 antipatrones con síntoma ·
+causa raíz · corrección, los 4 casos, 6 referencias externas verificadas con URL y
+apartado, y esta ficha.
+
+## Notas de gates
+
+- **G1 (producto)** levantado: 18/20, por encima del 16 exigido. Los dos puntos
+  que faltan son de coherencia documental, no de método, y ninguno se corrige
+  desde los archivos de acompañamiento.
+- **G2 (prueba)** pendiente: los cuatro casos son de fabricación. Ninguna ficha ha
+  sido pesada en una cocina real, que es precisamente la condición que la propia
+  skill impone para pasar de BORRADOR a ACORDADO. La skill se aplica su regla:
+  hasta el primer pesaje documentado en un local, es una hipótesis bien escrita.
+- **G3 (precio)** marcado con comprador nombrado, no-comprador nombrado y canal
+  definido, aunque la cifra siga `[A VALIDAR]` hasta la firma de Sergio.
+- **G4 (legal) pendiente, y es el gate crítico de esta pieza.** No por licencia
+  —no deriva de material con prohibición de venta, no usa marca ajena en el nombre
+  técnico ni comercial, y las menciones a AESAN, NOM-251, COFEPRIS y Codex son
+  citas de fuente con URL— sino porque **toca seguridad alimentaria**. Antes de
+  cobrar por ella hay que: (a) que un consultor de seguridad alimentaria revise el
+  texto de `## Límites`, la declaración de no-APPCC y las dos tablas de
+  `references/temperaturas_haccp.md` contra el documento primario; (b) confirmar
+  que el contrato de instalación traslada al titular del negocio alimentario la
+  responsabilidad sobre la inocuidad, sobre la validación de todo binomio y sobre
+  la declaración de alérgenos; (c) cerrar la divergencia de versión del punto nº 1,
+  porque un producto de seguridad alimentaria con un historial de cambios que no
+  registra el cambio de fuente normativa no es defendible ante nadie. Sin esas
+  tres cosas, no se cobra.
+- **G5 (público)** pendiente: esta ficha no se ha usado todavía en material de
+  venta enviado a nadie, y la frase de anuncio no ha pasado revisión de Sergio.
+- **Declaración obligatoria en toda entrega, comercial o técnica**: la ficha de
+  receta estándar **no es un plan APPCC** y no satisface el artículo 5 del
+  Reglamento (CE) 852/2004; en México no sustituye el cumplimiento de la
+  NOM-251-SSA1-2009. Marcar puntos críticos en una receta es buena práctica de
+  higiene documentada, no el sistema de autocontrol que la ley exige al titular.
+  Esta frase va en el material de venta, no solo en el LICENSE: un cliente que
+  compre creyendo que resuelve su APPCC es una reclamación con fecha.
+- **Riesgo comercial declarado**: es la pieza de mayor coste unitario de
+  producción del sistema (una ficha por plato) y la única cuyo valor el cliente no
+  ve hasta que se va un cocinero. Se vende contra el miedo a la fuga de
+  conocimiento y contra el segundo local, no contra la eficiencia — y eso obliga a
+  nombrar al comprador antes de fabricar carta, no después.
