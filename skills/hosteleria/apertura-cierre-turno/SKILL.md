@@ -13,7 +13,7 @@ description: >-
   "siempre se olvida algo al abrir", "quiero que quede por escrito", "el turno de tarde no
   se entera de nada" o "necesito un protocolo para el nuevo". No la uses para planes de
   higiene certificados ni para el cuadrante de personal.
-license: Ver LICENSE.txt — uso comercial sin derecho de redistribución.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. Ver LICENSE.txt.
 compatibility: Agent Skills — estándar abierto (agentskills.io). Sin dependencias de un motor concreto.
 metadata:
   version: 1.1.1

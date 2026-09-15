@@ -7,7 +7,7 @@ description: >-
   lectura: nunca escribe en la base de datos del DJ. Para DJ de club, movil y residente. Usar
   antes de un bolo importante, al migrar de disco o de software, cuando aparecen tracks que no
   cargan, o cuando la biblioteca lleva anios acumulando desorden.
-license: Propietaria. Uso permitido al comprador; prohibida la redistribucion.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso permitido al comprador; prohibida la redistribución. Ver LICENSE.txt.
 metadata:
   version: "1.1.0"
   linea: CABINA

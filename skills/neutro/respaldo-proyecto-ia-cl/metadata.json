@@ -2,7 +2,7 @@
   "name": "respaldo-proyecto-ia-cl",
   "commercial_name": "Respaldo cifrado de proyecto de IA",
   "version": "2.1.0",
-  "author": "ZEUS",
+  "author": "Sergio Berriozábal Serrano",
   "linea": "neutra",
   "peldano": "P1",
   "motor": "A",
@@ -10,10 +10,18 @@
   "precio_eur": "39-49 [A VALIDAR]",
   "fecha_revision": "2026-09-15",
   "entregable": "paquete-cifrado-de-reconstruccion",
-  "enlaza_con": ["universal-compilador-contexto"],
+  "enlaza_con": [
+    "universal-compilador-contexto"
+  ],
   "requiere": "python3 >= 3.9 y pyzipper para el cifrado AES-256",
   "auditoria": "19/20 (validar_skill.py, 15-sep-2026; punto 19 de criterio no confirmado)",
-  "gates": { "G1": true, "G2": false, "G3": false, "G4": true, "G5": false },
+  "gates": {
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "G4": true,
+    "G5": false
+  },
   "fuente_umbral": "Limite de plataforma con cita literal del Centro de Ayuda (support.claude.com art. 9450526): no se soporta migrar datos entre cuentas personales. Cifrado ZIP heredado roto por ataque de texto conocido desde 1994 (homes.cs.washington.edu/~yoshi/papers/WinZip/winzip.pdf). Las 4 clases C0-C3, la regla de partir el archivo antes que rebajar la clase y la restauracion en frio en dia distinto son criterio de oficio de la casa. URLs en references/",
   "carencias_declaradas": [
     "G2 pendiente: los casos son de fabricacion",
@@ -23,5 +31,11 @@
     "G3 pendiente: la linea neutra no tiene tarifa cerrada"
   ],
   "license": "Ver LICENSE.txt — uso comercial sin derecho de redistribucion",
-  "spec": { "estandar": "Agent Skills", "url": "https://agentskills.io/specification" }
+  "spec": {
+    "estandar": "Agent Skills",
+    "url": "https://agentskills.io/specification"
+  },
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "ZEUS"
 }

@@ -1,7 +1,7 @@
 ---
 name: cobro-cartera-vencida
 description: Convierte un listado de facturas vencidas (cliente, importe, fecha de vencimiento, historial de pago) en un plan de cobro priorizado por tramo de antigüedad y causa del impago, con el mensaje redactado para cada cliente, el calendario de escalado con fechas concretas y un cuadro de mando con DSO y importe en riesgo. Úsala siempre que aparezca un listado de facturas pendientes, un reporte de antigüedad de saldos, un export de cuentas por cobrar, o cuando alguien pregunte a quién reclamar primero, qué escribirle a un cliente que no paga, cuándo cortar el suministro, cuándo pasar un expediente a jurídico, cómo calcular el DSO o por qué no entra el dinero aunque haya ventas. Aplica también con frases del oficio como "tengo mucho pendiente de cobro", "este cliente siempre paga tarde", "no sé por cuál empezar", "¿le mando otro recordatorio?" o "se me está yendo la caja en clientes". No la uses para cobro a consumidores particulares, valoración de cartera para venta, ni contabilidad fiscal.
-license: Proprietary. Copyright 2026 Sergio. Uso comercial sin derecho de redistribución. All rights reserved.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. No es asesoría jurídica. Ver LICENSE.txt.
 metadata:
   version: "1.2.0"
   estado: "ACORDADO"

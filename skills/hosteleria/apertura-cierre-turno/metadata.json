@@ -1,7 +1,7 @@
 {
   "name": "apertura-cierre-turno",
   "version": "1.1.2",
-  "author": "FORJA",
+  "author": "Sergio Berriozábal Serrano",
   "linea": "hosteleria",
   "peldaño": "P1",
   "fecha_fabricacion": "2026-08-11",
@@ -10,5 +10,8 @@
   "fuentes_verificadas": "references/FUENTES.md",
   "estado": "ACORDADO",
   "auditoria": "19/20",
-  "fecha_revision": "2026-09-15"
+  "fecha_revision": "2026-09-15",
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "FORJA"
 }

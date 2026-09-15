@@ -11,7 +11,7 @@ description: >-
   receta a más porciones — aunque el usuario no diga "receta estándar" explícitamente (p.
   ej. "escríbeme cómo se hace este plato para que lo pueda hacer cualquiera", "el turno de
   tarde lo hace diferente al de mañana", "necesito dejar esto documentado antes de irme").
-license: Propiedad de ZEUS Suite — ver condiciones de distribución del catálogo FORJA
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. No sustituye un plan de higiene certificado (APPCC/HACCP). Ver LICENSE.txt.
 compatibility: Cualquier cliente de Agent Skills conforme a la especificación agentskills.io. No requiere herramientas externas para el uso base; el script de escalado requiere Python 3.9+.
 metadata:
   vertical: gastronomia

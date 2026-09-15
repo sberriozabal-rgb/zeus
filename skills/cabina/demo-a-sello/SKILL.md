@@ -1,7 +1,7 @@
 ---
 name: demo-a-sello
 description: Convierte un track terminado en un envio a sellos discograficos hecho como pide cada sello - canal correcto (LabelRadar, email, portal propio), texto breve con el encaje concreto en su catalogo, clip de 20 segundos elegido con criterio, y calendario de envio coordinado con las fechas de Beatport y Spotify. Incluye los motivos de descarte automatico documentados por los propios sellos. Para productor o DJ que manda demos sin manager. Usar cuando haya un track listo para enviar, cuando haya que elegir a que sellos mandarlo, o cuando los envios anteriores no obtuvieron ninguna respuesta.
-license: Propietaria. Uso permitido al comprador; prohibida la redistribucion.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso permitido al comprador; prohibida la redistribución. Ver LICENSE.txt.
 metadata:
   version: "1.1.0"
   linea: CABINA

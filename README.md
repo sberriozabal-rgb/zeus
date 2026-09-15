@@ -1,5 +1,9 @@
 # ZEUS
 
+**Titular de todos los derechos: Sergio Berriozábal Serrano.** Copyright © 2026.
+Ver [`LICENSE`](LICENSE). `ZEUS`, `FORJA`, `TROQUEL`, `OCTAVA` y `CABINA` son nombres
+comerciales del titular, no entidades distintas.
+
 Repositorio privado de skills de ZEUS / FORJA: activos ejecutables para
 hostelería y restauración, DJ y cabina, gestión y finanzas, más los códigos de
 Google Script y los contextos de la casa.
@@ -39,8 +43,8 @@ Cada skill conserva su `SKILL.md`, sus `references/`, `assets/`, `scripts/`,
 ## Estado
 
 Las 17 están en `ACORDADO`, con licencia de venta y **todas por encima del umbral de 16/20** que
-exige el peldaño P1 (medido, no estimado). **Gates G1, G3, G4 y G5 levantados**; G4 tiene una sola
-excepción, `receta-estandar`, por seguridad alimentaria.
+exige el peldaño P1 (medido, no estimado). **Gates G1 (17/17), G3 (17/17), G4 (16/17) y G5 (17/17)
+levantados.** La única excepción de G4 es `receta-estandar`, por seguridad alimentaria.
 
 **G2 (prueba contra datos reales de cliente) sigue abajo en las 17, y es correcto que lo esté.**
 No se cierra por decisión: lo levanta el primer cliente que ejecuta una skill con sus datos. Y no

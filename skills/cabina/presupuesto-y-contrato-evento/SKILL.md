@@ -9,7 +9,7 @@ description: >-
   limitador de sonido. Para DJ movil y de eventos. Usar cuando entre un lead, cuando haya que
   cerrar condiciones, cuando el cliente pida cambios sobre lo pactado o cuando haya que fijar
   precio.
-license: Propietaria. Uso permitido al comprador; prohibida la redistribucion. No es asesoramiento juridico.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso permitido al comprador; prohibida la redistribución. No es asesoramiento jurídico. Ver LICENSE.txt.
 metadata:
   version: "1.1.0"
   linea: CABINA

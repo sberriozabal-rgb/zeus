@@ -1,6 +1,6 @@
 Licencia de uso comercial — apertura-cierre-turno v1.0.0
 
-Copyright (c) 2026 FORJA. Todos los derechos reservados.
+Copyright 2026 Sergio Berriozabal Serrano. Todos los derechos reservados.
 
 Este activo se concede en uso mediante acceso revocable (suscripción o
 instalación con acuerdo vigente). El uso comercial está permitido

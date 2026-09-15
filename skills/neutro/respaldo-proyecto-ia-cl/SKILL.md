@@ -1,7 +1,7 @@
 ---
 name: respaldo-proyecto-ia-cl
 description: Convierte un Proyecto de Claude — instrucciones, conocimiento, adjuntos y descargas, skills y el historial de chats resumido — en un paquete cifrado, verificable y reconstruible en otra cuenta, con un archivo maestro RESTAURAR-TODO.md con las instrucciones íntegras y los pasos de restauración. Digiere el export oficial de datos para transcribir y resumir los chats del proyecto, y barre carpetas de descargas deduplicando por SHA-256. Úsala cuando el usuario quiera respaldar, exportar, migrar, clonar o poner a salvo un proyecto; cuando diga "haz copia de seguridad del proyecto", "guarda las descargas y los chats", "resume todos los chats", "si pierdo la cuenta lo pierdo todo" o "cómo saco todo esto de aquí". También para auditar un respaldo existente o preparar la entrega a un tercero sin exponer datos sensibles. Sirve a Free, Pro, Max, Team y Enterprise, con las diferencias declaradas en la matriz.
-license: Proprietary
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. No migra datos entre cuentas. Ver LICENSE.txt.
 compatibility: Requiere Python 3.9+ y el paquete pyzipper para el cifrado AES-256. Sin pyzipper el paquete se entrega sin cifrar y así se declara. La ingesta de chats requiere el ZIP del export oficial (Ajustes → Privacidad → Exportar datos).
 metadata:
   author: ZEUS

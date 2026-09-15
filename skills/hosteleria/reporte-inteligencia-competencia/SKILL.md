@@ -11,7 +11,7 @@ description: >-
   mi restaurante con otros" — aunque no diga la palabra inteligencia. Trabaja solo
   con fuentes públicas; nunca inventa reseñas. No la uses para responder reseñas
   propias (usa respuesta-resenas) ni para un dossier de venta a un grupo.
-license: Propietario — TROQUEL. Prohibida la redistribución del artefacto.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. Marca comercial TROQUEL. No es due diligence. Ver LICENSE.txt.
 compatibility: Requiere acceso a búsqueda y lectura web. Ejecutable en Claude Code y en app con herramientas de búsqueda activas.
 allowed-tools: WebSearch, WebFetch, Read, Write
 metadata:

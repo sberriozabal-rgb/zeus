@@ -1,7 +1,7 @@
 ---
 name: universal-compilador-contexto
 description: "Archivista y editor de contexto para cualquier proyecto u oficio. Lee una carpeta de trabajo completa (ordenador, Google Drive o ZIP adjunto) y el historial de chats del proyecto, y entrega en un ÚNICO ZIP la biblioteca de contexto (maestros por dominio + RESUMEN EJECUTIVO), el RESUMEN DE TODOS LOS CHATS con decisiones y pendientes, el RESUMEN DE TODO EL CONTEXTO en una página y el INVENTARIO con listado y ubicación de cada documento producido. Úsala SIEMPRE que se pida compilar, consolidar, unificar, actualizar o recompilar el contexto de un proyecto, cargar una carpeta al proyecto, sacar la versión vigente de cada tema, resumir los chats, saber qué documentos existen y dónde están, o preparar el paquete de contexto para socios, un equipo nuevo u otra cuenta — aunque no se nombre (pásame toda la carpeta al proyecto, qué hemos decidido en los chats, dame todo en un zip, pon orden en esta documentación). No la uses para producir entregables ni opinar sobre el proyecto; extrae y ordena lo que existe."
-license: Proprietary. Copyright 2026 Sergio Berriozábal Serrano.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. No interpreta el negocio, solo extrae y ordena. Ver LICENSE.txt.
 compatibility: Requiere Python 3.9+, pdftotext, tesseract (OCR) y las librerías python-docx, python-pptx, openpyxl. Para el historial de chats usa las herramientas recent_chats / conversation_search / read_conversation de la sesión (parcial por diseño) o el ZIP del export oficial de datos (completo).
 metadata:
   version: "1.1.0"

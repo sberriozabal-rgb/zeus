@@ -13,7 +13,7 @@ description: >-
   comida", "este plato lo hago casi regalado", "el pescado se ha puesto imposible" o
   "quiero quitar platos". No la uses para carta de vinos con rotación de bodega ni para
   contabilidad fiscal.
-license: Proprietary. Copyright 2026. All rights reserved.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. Ver LICENSE.txt.
 compatibility: Requiere Python 3.9+ para ejecutar scripts/escandallo.py. Sin dependencias externas.
 metadata:
   version: "1.1.0"

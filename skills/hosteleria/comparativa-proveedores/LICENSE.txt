@@ -1,5 +1,5 @@
 Licencia de uso — comparativa-proveedores
-Copyright (c) 2026. Todos los derechos reservados.
+Copyright 2026 Sergio Berriozabal Serrano. Todos los derechos reservados.
 
 Se concede al titular de una licencia activa el derecho a usar esta skill
 dentro de su propia organizacion, incluyendo su instalacion en los agentes

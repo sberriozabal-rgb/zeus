@@ -1,7 +1,7 @@
 ---
 name: peticiones-a-repertorio
 description: Convierte la lista de canciones que el cliente manda en texto sucio (WhatsApp, email, Excel mal escrito, notas de voz transcritas) en un informe accionable cruzado contra la biblioteca real del DJ - que tengo, que hay que comprar, que esta en una version que no sirve y que entra en la lista de prohibidos. Para DJ movil, de bodas, corporativos y eventos privados. Usar cuando llegue una lista de peticiones o un cuestionario de novios, cuando haya que preparar la compra de musica antes de un evento, o cuando haya que devolver al cliente un documento de confirmacion del repertorio.
-license: Propietaria. Uso permitido al comprador; prohibida la redistribucion.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso permitido al comprador; prohibida la redistribución. Ver LICENSE.txt.
 metadata:
   version: "1.1.0"
   linea: CABINA

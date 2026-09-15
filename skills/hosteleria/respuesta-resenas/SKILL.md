@@ -13,7 +13,7 @@ description: >-
   mismo", "cómo consigo que la gente reseñe" o "esta reseña es injusta". No la uses para
   gestionar publicidad en redes ni para diseñar la carta de respuesta a una reclamación
   formal por escrito de un cliente (eso es un asunto legal, no de reputación).
-license: Proprietary. Copyright 2026. All rights reserved.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. No es asesoría legal. Ver LICENSE.txt.
 compatibility: Requiere Python 3.9+ para ejecutar scripts/resenas.py. Sin dependencias externas.
 metadata:
   version: "1.2.0"

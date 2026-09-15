@@ -1,7 +1,7 @@
 ---
 name: set-por-encargo
 description: Ordena un set a partir del pool real de tracks del DJ y del brief del bolo (slot, hora, duracion, publico, prohibiciones del cliente, BPM de entrada y de salida), no solo de la armonia. Devuelve el orden con la justificacion de cada transicion en clave, tempo y energia, mas los huecos declarados. Para DJ de club, residente, movil y de eventos. Usar cuando haya que preparar un set para un slot concreto, cuando el slot cambie a ultima hora (menos tiempo, otra franja, otro BPM de relevo) o cuando haya que ordenar una playlist larga con criterio de sala.
-license: Propietaria. Uso permitido al comprador; prohibida la redistribucion.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso permitido al comprador; prohibida la redistribución. Ver LICENSE.txt.
 metadata:
   version: "1.1.0"
   linea: CABINA

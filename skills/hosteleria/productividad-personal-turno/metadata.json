@@ -5,8 +5,11 @@
   "estado": "ACORDADO",
   "linea": "hosteleria",
   "peldano": "P1",
-  "author": "FORJA",
+  "author": "Sergio Berriozábal Serrano",
   "revisado": "2026-08-16",
   "buyer": "Dueño o encargado de restaurante independiente de 1-3 locales, ES/MX. Decide el dueño.",
-  "engine": "B instalación"
+  "engine": "B instalación",
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "FORJA"
 }

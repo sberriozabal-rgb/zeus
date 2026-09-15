@@ -2,7 +2,7 @@
   "name": "universal-compilador-contexto",
   "commercial_name": "Compilador de contexto de proyecto",
   "version": "1.1.0",
-  "author": "ZEUS",
+  "author": "Sergio Berriozábal Serrano",
   "linea": "neutra",
   "peldano": "P1",
   "motor": "A",
@@ -10,10 +10,18 @@
   "precio_eur": "39-49 [A VALIDAR]",
   "fecha_revision": "2026-09-15",
   "entregable": "zip-de-contexto-con-biblioteca-resumenes-e-inventario",
-  "enlaza_con": ["respaldo-proyecto-ia-cl"],
+  "enlaza_con": [
+    "respaldo-proyecto-ia-cl"
+  ],
   "requiere": "python3 >= 3.9, pdftotext, tesseract, python-docx, python-pptx, openpyxl",
   "auditoria": "19/20 (validar_skill.py, 15-sep-2026; punto 19 de criterio no confirmado)",
-  "gates": { "G1": true, "G2": false, "G3": false, "G4": true, "G5": false },
+  "gates": {
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "G4": true,
+    "G5": false
+  },
   "fuente_umbral": "Limite de ingesta de chats: la Ruta A es parcial por diseno; la completa exige el export oficial (support.claude.com art. 9450526), cuyo enlace caduca. Dependencias de extraccion: Poppler, Tesseract, python-docx, openpyxl. Los tres umbrales del producto son criterio de oficio [A VALIDAR]: minimo 2 fuentes por dominio, Anexos <= 15% de los archivos, y PROPUESTA A VALIDAR por defecto salvo documento aprobado o turno del usuario. URLs en references/FUENTES.md",
   "carencias_declaradas": [
     "G2 pendiente: los casos son de fabricacion",
@@ -23,5 +31,11 @@
     "G3 pendiente: la linea neutra no tiene tarifa cerrada"
   ],
   "license": "Ver LICENSE.txt — uso comercial sin derecho de redistribucion",
-  "spec": { "estandar": "Agent Skills", "url": "https://agentskills.io/specification" }
+  "spec": {
+    "estandar": "Agent Skills",
+    "url": "https://agentskills.io/specification"
+  },
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "ZEUS"
 }

@@ -1,7 +1,7 @@
 ---
 name: postmortem-de-bolo
 description: Convierte el export de historial de una sesion (rekordbox o Serato) mas lo que el DJ recuerda de la sala en un parte de aprendizaje con hechos verificables - que se corto pronto, que se sostuvo, donde hubo saltos de tempo o armonicos, que artistas se repitieron y como fue la curva de tempo real frente a la planificada. Para DJ residente, movil o de club que quiere mejorar con datos y no solo con memoria. Usar despues de un bolo, al preparar una residencia recurrente, al comparar dos noches, o cuando algo salio mal y no se sabe exactamente donde.
-license: Propietaria. Uso permitido al comprador; prohibida la redistribucion.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso permitido al comprador; prohibida la redistribución. Ver LICENSE.txt.
 metadata:
   version: "1.1.0"
   linea: CABINA

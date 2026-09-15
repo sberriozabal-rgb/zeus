@@ -2,7 +2,7 @@
   "name": "reporte-inteligencia-competencia",
   "commercial_name": "Radar semanal de competencia",
   "version": "1.1.0",
-  "author": "ZEUS / TROQUEL",
+  "author": "Sergio Berriozábal Serrano",
   "linea": "hosteleria",
   "peldano": "P1",
   "motor": "B",
@@ -10,10 +10,19 @@
   "precio_eur": "[A VALIDAR] — candidata a suscripcion semanal, no a pago unico",
   "fecha_revision": "2026-09-15",
   "entregable": "reporte-semanal-de-una-pagina",
-  "enlaza_con": ["respuesta-resenas", "reporte-inteligencia"],
+  "enlaza_con": [
+    "respuesta-resenas",
+    "reporte-inteligencia"
+  ],
   "vertical_de": "reporte-inteligencia",
   "auditoria": "19/20 (validar_skill.py, 15-sep-2026; punto 19 de criterio no confirmado)",
-  "gates": { "G1": true, "G2": false, "G3": false, "G4": true, "G5": false },
+  "gates": {
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "G4": true,
+    "G5": false
+  },
   "fuente_umbral": "BrightLocal Local Consumer Review Survey 2026 (n=1.002 adultos EEUU): 31% solo usa negocios 4,5*+, 47% evita <20 resenas, 32% solo se fia de resenas de 2 semanas, Google 71% cayendo desde 83%, IA 45%, 6 fuentes de media, 10% exige 5,0. Edicion 2025 (n=1.026): >80% espera respuesta a todas. Edicion 2024: 59% espera 20-99 resenas. TODOS [CONTEXTO EE. UU. — A VALIDAR para ES/MX]. El panel de 6, el minimo de 3, las 3 menciones por tema, las 3 acciones y la pagina unica son convencion de la skill. URLs en references/FUENTES.md",
   "carencias_declaradas": [
     "G2 pendiente: los 4 casos son de fabricacion",
@@ -22,5 +31,11 @@
     "Solape comercial con reporte-inteligencia: esta es su vertical de hosteleria y no se venden las dos al mismo comprador"
   ],
   "license": "Propietario — TROQUEL. Ver LICENSE.txt. Prohibida la redistribucion del artefacto",
-  "spec": { "estandar": "Agent Skills", "url": "https://agentskills.io/specification" }
+  "spec": {
+    "estandar": "Agent Skills",
+    "url": "https://agentskills.io/specification"
+  },
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "ZEUS / TROQUEL"
 }

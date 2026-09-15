@@ -13,7 +13,7 @@ description: >-
   "cuánto me ha subido el pescado", "quién me lo tiene más barato" o "me sube la comida y
   no sé por qué". No la uses para calcular el escandallo de un plato desde cero (eso es
   escandallo-ingenieria-menu) ni para carta de vinos con rotación de bodega.
-license: Proprietary. Copyright 2026. All rights reserved.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. Ver LICENSE.txt.
 compatibility: Requiere Python 3.9+ para ejecutar scripts/proveedores.py. Sin dependencias externas.
 metadata:
   version: "1.1.0"

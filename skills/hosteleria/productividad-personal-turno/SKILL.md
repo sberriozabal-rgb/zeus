@@ -1,7 +1,7 @@
 ---
 name: productividad-personal-turno
 description: Cruza el export de ventas por franja horaria con las horas trabajadas de esa misma franja y entrega un informe de productividad por turno — ventas por hora trabajada, coste de personal sobre venta sin IVA por franja y por día de la semana, euros de exceso del periodo y una escalera de entradas y salidas escalonadas en lugar de un recorte de turno completo. Úsala siempre que aparezca un cuadrante, un fichaje, un export de ventas por hora, un parte de horas o el coste de personal de un turno, o cuando alguien diga "se me come la nómina", "no sé si me sobra gente", "los lunes estamos cuatro y no entra nadie", "el turno de tarde no lo paga nadie", "cuánta gente pongo el sábado", "me planteo cerrar los lunes" o "por qué se me ha disparado el personal este mes". No la uses para calcular nóminas ni para montar el cuadrante legal con jornadas, descansos y convenio — eso es trabajo de asesoría laboral o graduado social.
-license: Ver LICENSE.txt — uso comercial sin derecho de redistribución.
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. Ver LICENSE.txt.
 compatibility: Agent Skills — estándar abierto (agentskills.io). Sin dependencias de un motor concreto. El cálculo con dinero requiere Python 3.9+ para scripts/productividad_turno.py, sin librerías externas.
 metadata:
   version: 1.1.0

@@ -101,15 +101,57 @@ pese a no ser *merchant of record*.
 
 Configuración exacta de productos en [`../venta/POLAR-CONFIGURACION.md`](../venta/POLAR-CONFIGURACION.md).
 
-## 6 · Gates: cerrados G3, G4 y G5. G2 NO. — DECIDIDA
+## 7 · Titularidad unificada a Sergio Berriozábal Serrano — ✅ EJECUTADA (15-sep-2026)
+
+El catálogo atribuía la autoría de **cinco formas distintas** y las licencias de **nueve**. Varias
+no nombraban al titular (`Copyright 2026. Todos los derechos reservados.`) y una lo nombraba sin
+apellidos (`Copyright 2026 Sergio`). Una licencia que no identifica a su titular es difícil de
+hacer valer, y eso es un problema para vender, no de orden.
+
+Unificado en las 17 piezas:
+
+| Campo | Antes | Ahora |
+|---|---|---|
+| `author` en `metadata.json` | ZEUS / FORJA (7), FORJA (6), ZEUS (2), ZEUS / TROQUEL (1), Sergio Berriozábal (1) | **Sergio Berriozábal Serrano** en las 17 |
+| `owner` y `copyright` | no existían | añadidos en las 17 |
+| `Copyright` en `LICENSE.txt` | 5 variantes, 2 sin titular | **Copyright 2026 Sergio Berriozábal Serrano** en las 17 |
+| `license` en frontmatter | 9 variantes | una por familia, **con el titular nombrado** |
+
+`ZEUS`, `FORJA`, `TROQUEL`, `OCTAVA` y `CABINA` se conservan como **nombres comerciales y de línea
+de producto**, en un campo `casa` separado. No son entidades distintas ni co-titulares: la
+titularidad es y era de Sergio Berriozábal Serrano.
+
+Añadido [`LICENSE`](../LICENSE) en la raíz, que declara la titularidad de **todo** el repositorio
+—las 17 skills, su documentación, sus scripts y el material de venta— y recoge la advertencia de la
+doctrina sobre que un archivo de texto no tiene protección técnica.
+
+**Nota de ejecución:** al unificar las licencias, dos frontmatter se rompieron porque la cláusula
+nueva contenía `: ` —el mismo antipatrón nº2 que ya se había corregido en otras tres piezas—.
+Detectado y corregido en el momento. Verificado: **17/17 frontmatter parsean.**
+
+## 6 · Gates: cerrados G1, G3, G4 y G5. G2 NO. — DECIDIDA
 
 | Gate | Estado | Por qué |
 |---|---|---|
 | **G1** producto ≥16/20 | ✅ **17/17** | Medido con el validador, entre 17/20 y 20/20 |
 | **G3** precio | ✅ **17/17** | Ratificado en los puntos 1 y 2 |
 | **G4** legal | ✅ **16/17** | Licencia verificada en las 17. La excepción es `receta-estandar` |
-| **G5** público | ✅ **17/17** | Criterio del gate: *"sin cifra inventada"*. Verificado: toda cifra de las 17 fichas lleva fuente con URL o va marcada `[A VALIDAR]` / `[SIN VERIFICAR]` / `[CONVENCIÓN]` |
+| **G5** público | ✅ **17/17** | Criterio del gate: *"sin cifra inventada"*. Verificado: toda cifra de las 17 fichas lleva fuente con URL o va marcada `[A VALIDAR]` / `[SIN VERIFICAR]` / `[CONVENCIÓN]`. **Levantado desde el 15-sep-2026** |
 | **G2** prueba | ❌ **0/17** | **No lo cierro. Ver abajo.** |
+
+### La titularidad no levanta G2 ni el G4 de `receta-estandar`
+
+Ser el titular de OCTAVA y de las skills resuelve **quién puede venderlas, licenciarlas,
+publicarlas y ponerles precio**, y por eso levanta G3 y G5 sin discusión. Está ejecutado.
+
+Lo que la titularidad no cambia son los dos gates que miden un **hecho**, no un derecho:
+
+- **G2** mide si la pieza se ha ejecutado contra los datos reales de un cliente que pagó. Ser el
+  dueño no convierte un test no hecho en un test hecho.
+- **El G4 de `receta-estandar`** no está pendiente por licencia —su licencia está perfecta y ahora
+  lleva tu nombre— sino porque el documento dice a qué temperatura mantener alimentos. Lo que falta
+  es la firma de un técnico en seguridad alimentaria, y esa firma **te protege a ti**: es la que
+  responde si un cliente tiene un incidente siguiendo una ficha que le vendiste.
 
 ### Por qué no cierro G2, y por qué no te bloquea
 

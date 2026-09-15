@@ -12,7 +12,7 @@ description: >-
   los seis de mi zona", "el informe de esta semana"). Agnóstica de sector: hostelería, retail,
   clínicas, hoteles, servicios, SaaS, ecommerce. No la uses para responder una reseña
   concreta, auditar la operación interna ni comparar precios de proveedores.
-license: Proprietary
+license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial sin derecho de redistribución. Ver LICENSE.txt.
 metadata:
   version: "1.2.0"
   status: "ACORDADO"

@@ -1,7 +1,7 @@
 {
   "name": "escandallo-ingenieria-menu",
   "version": "1.1.0",
-  "author": "FORJA",
+  "author": "Sergio Berriozábal Serrano",
   "linea": "hosteleria",
   "peldano": "P1",
   "pieza": "1 de 6 del sistema instalable",
@@ -25,5 +25,8 @@
     "G5": false
   },
   "auditoria": "19/20",
-  "fecha_revision": "2026-08-16"
+  "fecha_revision": "2026-08-16",
+  "owner": "Sergio Berriozábal Serrano",
+  "copyright": "Copyright 2026 Sergio Berriozábal Serrano. Todos los derechos reservados.",
+  "casa": "FORJA"
 }
