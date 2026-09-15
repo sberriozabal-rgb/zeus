@@ -21,10 +21,38 @@ reales, uno sucio) · **G3** precio (comprador nombrado + cifra firmada) ·
 
 ## CABINA (DJ)
 
-Las seis: **sin ficha comercial**, luego sin matriz de gates. G4 es el único que
-se puede dar por bueno de entrada —la licencia *"uso permitido al comprador;
-prohibida la redistribución"* está redactada y es coherente con la venta—.
-G1 es plausible (las seis son ACORDADO) pero **ninguna declara nota de auditoría**.
+Ficha comercial escrita para las seis el 15-sep-2026, con precio cerrado. Nota de
+auditoría medida con el validador de la casa (`validar_skill.py`), no estimada.
+
+| Skill | Nota | G1 | G2 | G3 | G4 | G5 |
+|---|---|:--:|:--:|:--:|:--:|:--:|
+| `auditoria-de-biblioteca` | **0/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
+| `postmortem-de-bolo` | **1/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
+| `presupuesto-y-contrato-evento` | **1/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
+| `set-por-encargo` | **2/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
+| `peticiones-a-repertorio` | **2/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
+| `demo-a-sello` | **2/20** | ❌ | ❌ | ✅ | ✅ | ❌ |
+
+**G3 levantado** el 15-sep-2026: 49 € suelta, 149 € CORE, 99 € EVENTOS, 249 €
+COMPLETA. **G4 en orden**: licencia de comprador redactada, y
+`presupuesto-y-contrato-evento` lleva además aviso legal no negociable de que no
+es asesoramiento jurídico.
+
+**G1 es el bloqueo.** Lo que falta en las seis: `cases/` con los 4 casos de
+prueba y `CHANGELOG.md`. Además, tabla de reglas NUNCA y los 5 antipatrones en
+cinco de ellas, y `auditoria-de-biblioteca` y `postmortem-de-bolo` no llegan a 3
+URLs verificadas en `references/`.
+
+Conviene no leer mal ese 0-2/20: **no mide la calidad del oficio, mide
+conformidad con la rúbrica de la casa.** El contenido es sólido —la tabla de
+riesgo por hallazgo con consecuencia en cabina, las seis curvas de energía por
+franja, las seis cláusulas críticas con baremos fuenteados, los plazos de
+Beatport (3 semanas) y Spotify (7 días)—. Lo que no existe es el envoltorio que
+la casa exige para poder cobrar: casos, changelog y las tablas de reglas.
+
+**Calibración del validador:** contra las skills de hostelería devuelve 17–19/20,
+coincidiendo con sus notas declaradas. Es fiable, así que el 0-2/20 de CABINA no
+es un artefacto de la herramienta.
 
 ## Neutra / B2B
 
@@ -85,3 +113,48 @@ fábrica. Quien venda protección del archivo, miente."*
 
 Por eso la entrega va por acceso revocable a este repositorio privado y no por
 adjunto.
+
+
+### 5 · `respuesta-resenas` envía la v1.0.0 mientras declara la v1.1.0
+
+Hallazgo del validador, 15-sep-2026. La pieza puntúa **8/20**, no el 19/20 que
+declara su ficha. La causa no es la rúbrica: es un **desajuste de versión**.
+
+- `SKILL.md` frontmatter → `version: "1.0.0"`
+- `metadata.json` → `"version": "1.1.0"`, `"fecha_revision": "2026-08-16"`
+- `CHANGELOG.md` → **solo tiene entrada 1.0.0**, más un «Roadmap v1.1»
+
+La ficha describe con detalle cuatro piezas del ADN que *"se fabricaron el
+16-ago-2026"* —pasos atómicos con rama «si falta el dato», tabla de reglas
+SIEMPRE, tabla NUNCA y antipatrones— y dice que por eso la nota subió de 16 a
+19/20. **El fichero que se entrega no las lleva todas**, y el CHANGELOG no
+registra ninguna v1.1.0.
+
+Es exactamente el fallo que la propia ficha de esta skill se corrigió una vez y
+que la doctrina llama *nota regalada = fraude interno*. Hay que decidir qué es
+verdad: o la v1.1.0 existe y no se guardó, o la ficha describe un trabajo que no
+se llegó a hacer. Hasta resolverlo, esta pieza **no debe ir en material de venta
+con la etiqueta 19/20**.
+
+Nota de calibración: las otras cinco de hostelería validan en 17–19/20, en línea
+con lo declarado. El problema es de esta pieza, no del catálogo.
+
+### 6 · Frontmatter YAML inválido en 3 skills — **corregido el 15-sep-2026**
+
+`auditoria-de-biblioteca`, `presupuesto-y-contrato-evento` y
+`reporte-inteligencia` tenían la `description` como escalar plano conteniendo
+`: ` (dos puntos y espacio), que **no es YAML válido**. Ejemplo:
+`description: ... Solo lectura: nunca escribe en la base de datos del DJ.`
+
+Es el antipatrón nº 2 de la doctrina, literal: *"la skill entregada al cliente da
+error al cargarse en su entorno, o no aparece en su lista de capacidades"*.
+Vender un activo que puede no cargar en casa del comprador es la peor primera
+impresión posible, y el fallo no se ve hasta que está entregado.
+
+**Corregido** pasando las tres a escalar de bloque `>-`, que es el formato que ya
+usaban las skills de hostelería. El texto es idéntico carácter a carácter —solo
+cambia el envoltorio—. Verificado: **17/17 frontmatter del catálogo parsean
+correctamente.**
+
+Conviene añadir esta comprobación al empaquetado, que es lo que la propia
+doctrina manda: *"ejecutar el validador antes de empaquetar, sin excepción"*.

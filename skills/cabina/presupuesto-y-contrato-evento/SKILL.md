@@ -1,12 +1,21 @@
 ---
 name: presupuesto-y-contrato-evento
-description: Convierte la consulta de un cliente de evento (boda, corporativo, quinceanera, fiesta privada) en un presupuesto desglosado, un contrato con las clausulas que evitan los conflictos reales del oficio y un rider tecnico adaptado al espacio concreto. Incluye baremos de precio de mercado con fuente y las clausulas cuya ausencia cuesta dinero: deposito, cancelacion, horas extra, potencia electrica, superficie, comida de proveedor y limitador de sonido. Para DJ movil y de eventos. Usar cuando entre un lead, cuando haya que cerrar condiciones, cuando el cliente pida cambios sobre lo pactado o cuando haya que fijar precio.
+description: >-
+  Convierte la consulta de un cliente de evento (boda, corporativo, quinceanera, fiesta
+  privada) en un presupuesto desglosado, un contrato con las clausulas que evitan los
+  conflictos reales del oficio y un rider tecnico adaptado al espacio concreto. Incluye
+  baremos de precio de mercado con fuente y las clausulas cuya ausencia cuesta dinero:
+  deposito, cancelacion, horas extra, potencia electrica, superficie, comida de proveedor y
+  limitador de sonido. Para DJ movil y de eventos. Usar cuando entre un lead, cuando haya que
+  cerrar condiciones, cuando el cliente pida cambios sobre lo pactado o cuando haya que fijar
+  precio.
 license: Propietaria. Uso permitido al comprador; prohibida la redistribucion. No es asesoramiento juridico.
 metadata:
   version: 1.0.0
   linea: CABINA
   paquete: CABINA EVENTOS
   estado: ACORDADO
+  precio: "49 EUR"
   idioma_base: es
 ---
 

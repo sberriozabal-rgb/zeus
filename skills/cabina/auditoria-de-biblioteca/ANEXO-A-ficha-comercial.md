@@ -1,0 +1,29 @@
+# Anexo A — Ficha comercial
+
+| Campo | Valor |
+|---|---|
+| Nombre técnico | `auditoria-de-biblioteca` |
+| Nombre comercial | Auditoría de biblioteca |
+| Peldaño | P1 · SKILL |
+| Línea / Paquete | CABINA · **CABINA CORE** |
+| Comprador nombrado | DJ de club, móvil o residente con biblioteca de más de ~3.000 tracks acumulada en varios años y al menos un bolo de pago al mes. Decide y paga el propio DJ. |
+| Quien NO es comprador | El DJ que quiere **reparación automática en lote**: eso es Lexicon (199 USD vitalicio) y esta skill no lo hace ni lo promete. |
+| Trabajo que quita | Descubrir en cabina que un track no carga, no tiene beatgrid o está en un bitrate que se oye mal en un equipo de club. |
+| Umbral que aporta | La priorización por **riesgo real en cabina**, no por cantidad: `ruta_rota` y `sin_beatgrid` son CRÍTICO, `sin_rating` es BAJO. Traduce cada cifra a consecuencia («312 que no podrás sincronizar», no «312 sin beatgrid») y prioriza por proximidad al bolo. |
+| Límite declarado | **Diagnostica, no repara.** Decisión deliberada: escribir en `master.db` (SQLite cifrada con SQLCipher4) o en los `.crate` de Serato puede destruir playlists, cue points y beatgrids. Solo lectura, siempre. |
+| Precio propuesto | **49 €** pago único |
+| Razón del precio | Una cuarta parte de Lexicon (199 USD) por un trabajo que Lexicon no hace: leer el estado con criterio de bolo. Entre el 3 % y el 5 % de un bolo de boda medio en España (1.000–1.500 €). |
+| Canal | Polar · catálogo (Motor A). Entrega por acceso revocable a repositorio privado. |
+| Motor | A · Catálogo |
+| Frase de anuncio | «Te digo qué tracks te van a fallar en el próximo bolo, y en qué orden arreglarlos.» |
+| Estado / Versión | ACORDADO / v1.0.0 |
+| Auditoría | **0/20** contra la rúbrica de 20 puntos de la casa (`validar_skill.py`, 15-sep-2026). Faltan: cases/ (4 casos), CHANGELOG.md, 5 antipatrones, >=3 URLs en references/. La nota se declara sin redondear: **por debajo de 16 no se vende**. |
+| Gates | G1 [ ] G2 [ ] G3 [x] G4 [x] G5 [ ] |
+
+## Notas de gates
+
+- **G1 (producto)** **NO levantado**: 0/20 frente al 16/20 que exige el peldaño P1. Es el bloqueo real de esta pieza: el precio está cerrado pero el producto no pasa todavía la rúbrica de la casa.
+- **G3 (precio)** levantado el 15-sep-2026 por instrucción del dueño. Cifra cerrada: 49 €.
+- **G2 (prueba)** pendiente: sin ejecuciones registradas contra bibliotecas reales de un comprador que haya pagado.
+- **G4 (legal)** en orden: licencia *uso permitido al comprador; prohibida la redistribución*. La mención a Lexicon es cita de precio publicado con URL, no uso de marca.
+- **G5 (público)** pendiente hasta que la ficha se use en material de venta enviado.

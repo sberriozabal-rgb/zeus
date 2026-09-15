@@ -23,25 +23,63 @@ decisiones pendientes de firma.
 > Regla de la casa, literal: *ante negociación se quita alcance, jamás se baja el
 > precio del sistema completo.*
 
-## 2 · CABINA (DJ) — propuesta nueva
+## 2 · CABINA (DJ) — **TARIFA CERRADA** (15-sep-2026)
 
-No existía precio. Se propone aplicando la escalera P0–P5 de la casa: son P1
-sueltos (suelo 30 $) agrupables en P2 (*3–6 veces el precio de una skill
-suelta*).
+Precio ratificado por el dueño el 15-sep-2026. Estas cifras ya **no** llevan
+`[A VALIDAR]`: el gate **G3 (precio)** está levantado en las seis piezas.
 
-| Producto | Contenido | Propuesta |
-|---|---|---|
-| Skill suelta | cualquiera de las 6 | **39–49 €** `[A VALIDAR]` |
-| **CABINA CORE** | 3 skills | **119–149 €** `[A VALIDAR]` |
-| **CABINA EVENTOS** | 2 skills | **89–119 €** `[A VALIDAR]` |
-| **CABINA CARRERA** | 1 skill | **39–49 €** `[A VALIDAR]` |
-| **CABINA COMPLETA** | 6 skills | **249–299 €** `[A VALIDAR]` |
+| Producto | Contenido | **Precio** | Múltiplo |
+|---|---|---|---|
+| Skill suelta | cualquiera de las 6 | **49 €** | 1x |
+| **CABINA CORE** | 3 skills · `auditoria-de-biblioteca`, `postmortem-de-bolo`, `set-por-encargo` | **149 €** | 3,0x |
+| **CABINA EVENTOS** | 2 skills · `peticiones-a-repertorio`, `presupuesto-y-contrato-evento` | **99 €** | 2,0x |
+| **CABINA CARRERA** | 1 skill · `demo-a-sello` | **49 €** | 1x |
+| **CABINA COMPLETA** | las 6 | **249 €** | 5,1x |
 
-Razón del rango: el tramo 30–49 $ convierte un 28 % mejor que el sub-10 $, y los
-productos por debajo de 10 $ son ~35 % del catálogo pero capturan el 0,8 % del
-ingreso. `presupuesto-y-contrato-evento` es la que más arriba puede ir del rango:
-lo que evita —depósito, cancelación, horas extra, limitador de sonido— se mide en
-bolos perdidos, no en comodidad.
+Pago único. Precio final al comprador; el IVA lo gestiona Polar como *merchant of
+record*, que es la razón por la que la doctrina lo eligió como canal principal.
+
+### Por qué estas cifras
+
+**49 € la suelta.** Techo del tramo 30–49 € que convierte un 28 % mejor que el
+sub-10 €, y suelo de la casa respetado. Ancla de oficio: un bolo de boda en
+España está en el **escalón medio real de 1.000–1.500 €** (baremos con fuente en
+`presupuesto-y-contrato-evento/references/baremos-precio.md`), así que una pieza
+a 49 € es el **3–5 % de un solo bolo**. Comparable directo: Lexicon cuesta
+199 USD vitalicio y *repara* bibliotecas; `auditoria-de-biblioteca` cuesta una
+cuarta parte y hace lo que Lexicon no hace, que es priorizar por riesgo de
+cabina. Ese límite está declarado en la propia skill.
+
+**149 € CABINA CORE.** Exactamente 3,0x la suelta: el piso de la banda P2
+(3–6x). Son las tres que usa cualquier DJ con biblioteca y bolos recurrentes.
+
+**99 € CABINA EVENTOS.** Dos piezas, así que no es un P2 y la banda 3–6x no
+aplica. Es el paquete con más valor protegido del catálogo: **una sola
+cancelación sin cláusula de depósito cuesta 1.000–1.500 €**, y una hora extra
+recuperada (75–250 €) paga el paquete varias veces.
+
+**249 € CABINA COMPLETA.** 5,1x la suelta, dentro de la banda P2. Las seis
+sueltas suman 294 €, así que aquí está el único incentivo de la tarifa: **45 € de
+ahorro**. CORE y EVENTOS no llevan descuento a propósito, por la regla de la casa
+de que ante negociación se quita alcance y jamás se baja el precio. Se compran
+por coherencia de trabajo, no por ahorro.
+
+Frase útil en venta: **CABINA COMPLETA cuesta lo que una hora extra que hoy no
+estás cobrando.**
+
+### Bloqueo pendiente antes de publicar
+
+El precio está cerrado, pero **G1 (producto) no está levantado en ninguna de las
+seis**: la rúbrica de 20 puntos de la casa las puntúa entre **0 y 2 sobre 20**
+porque no tienen `cases/`, ni `CHANGELOG.md`, ni tabla de reglas NUNCA, ni los 5
+antipatrones. El peldaño P1 exige `.skill` conforme **auditada ≥16/20 y con 4
+casos de prueba**. Detalle pieza por pieza en
+[`ESTADO-GATES.md`](ESTADO-GATES.md#cabina-dj).
+
+Es trabajo de fábrica, no de criterio: el contenido de oficio ya está y es bueno
+—las tablas de riesgo, las seis curvas de energía, las seis cláusulas críticas,
+los plazos de Beatport y Spotify—. Lo que falta es el envoltorio que la casa
+exige para poder cobrar por él.
 
 ## 3 · Neutra / B2B — propuesta nueva
 

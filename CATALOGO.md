@@ -37,20 +37,25 @@ Esencial **2.500 €** (3 skills). Ambos `[A VALIDAR]`.
 
 ## Línea 2 · CABINA — DJ (3 paquetes cerrados)
 
-La línea mejor empaquetada del catálogo: seis piezas, tres paquetes, licencia de
-comprador limpia (*uso permitido al comprador; prohibida la redistribución*).
-**Es la única línea sin ningún precio escrito en ninguna parte.**
+Seis piezas, tres paquetes, licencia de comprador limpia (*uso permitido al
+comprador; prohibida la redistribución*). **Tarifa cerrada el 15-sep-2026** y
+ficha comercial escrita para las seis.
 
-| Paquete | Skills | Ver. | Estado |
+| Paquete | Skills | **Precio** | Auditoría |
 |---|---|---|---|
-| **CABINA CORE** | `auditoria-de-biblioteca`, `postmortem-de-bolo`, `set-por-encargo` | 1.0.0 | ACORDADO |
-| **CABINA EVENTOS** | `peticiones-a-repertorio`, `presupuesto-y-contrato-evento` | 1.0.0 | ACORDADO |
-| **CABINA CARRERA** | `demo-a-sello` | 1.0.0 | ACORDADO |
+| **CABINA CORE** | `auditoria-de-biblioteca`, `postmortem-de-bolo`, `set-por-encargo` | **149 €** | 0/20 · 1/20 · 2/20 |
+| **CABINA EVENTOS** | `peticiones-a-repertorio`, `presupuesto-y-contrato-evento` | **99 €** | 2/20 · 1/20 |
+| **CABINA CARRERA** | `demo-a-sello` | **49 €** | 2/20 |
+| **CABINA COMPLETA** | las seis | **249 €** | — |
 
-Ninguna de las seis tiene ficha comercial (`ANEXO-A`). Es el hueco más barato de
-cerrar del catálogo y el que más rápido puede facturar: son P1 sueltos, con
-licencia ya redactada para vender, y la doctrina de la casa fija suelo de 30 $ y
-rango óptimo de 30–49 $ para producto suelto.
+Suelta: **49 €** cualquiera de las seis. Tarifa y razón de cada cifra en
+[`catalogo/PRECIOS.md`](catalogo/PRECIOS.md#2--cabina-dj--tarifa-cerrada-15-sep-2026).
+
+> ⚠️ **No se puede publicar todavía.** G3 (precio) está levantado, pero **G1
+> (producto) no**: la rúbrica de la casa puntúa estas seis entre **0 y 2 sobre
+> 20** porque les faltan `cases/`, `CHANGELOG.md`, tabla de reglas NUNCA y los 5
+> antipatrones. P1 exige ≥16/20 y 4 casos de prueba. El contenido de oficio es
+> bueno; falta el envoltorio que la casa exige para cobrar por él.
 
 ## Línea 3 · NEUTRA / B2B
 

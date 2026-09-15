@@ -1,6 +1,17 @@
 ---
 name: reporte-inteligencia
-description: Genera el Reporte Semanal de Inteligencia Competitiva a partir del nombre de una marca: arma un panel de 6 competidores, captura su reputación digital pública (nota, volumen, velocidad, tasa y tiempo de respuesta, elogios y quejas recurrentes con cita y fecha), la compara con la marca propia y entrega brecha, qué hacen bien ellos, qué hacemos mal, oportunidades de la plaza y 3 acciones de 7 días con dueño y métrica. Úsala para un reporte de inteligencia, análisis o monitoreo de competencia, benchmark de reputación o informe semanal de la plaza, y cuando pregunten qué hacen los competidores, por qué nos ganan, qué dicen de ellos frente a nosotros o quién nos come terreno — aunque no digan "inteligencia" (p. ej. "compárame con los seis de mi zona", "el informe de esta semana"). Agnóstica de sector: hostelería, retail, clínicas, hoteles, servicios, SaaS, ecommerce. No la uses para responder una reseña concreta, auditar la operación interna ni comparar precios de proveedores.
+description: >-
+  Genera el Reporte Semanal de Inteligencia Competitiva a partir del nombre de una marca: arma
+  un panel de 6 competidores, captura su reputación digital pública (nota, volumen, velocidad,
+  tasa y tiempo de respuesta, elogios y quejas recurrentes con cita y fecha), la compara con
+  la marca propia y entrega brecha, qué hacen bien ellos, qué hacemos mal, oportunidades de la
+  plaza y 3 acciones de 7 días con dueño y métrica. Úsala para un reporte de inteligencia,
+  análisis o monitoreo de competencia, benchmark de reputación o informe semanal de la plaza,
+  y cuando pregunten qué hacen los competidores, por qué nos ganan, qué dicen de ellos frente
+  a nosotros o quién nos come terreno — aunque no digan "inteligencia" (p. ej. "compárame con
+  los seis de mi zona", "el informe de esta semana"). Agnóstica de sector: hostelería, retail,
+  clínicas, hoteles, servicios, SaaS, ecommerce. No la uses para responder una reseña
+  concreta, auditar la operación interna ni comparar precios de proveedores.
 license: Proprietary
 metadata:
   version: "1.1.0"

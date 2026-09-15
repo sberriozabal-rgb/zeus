@@ -15,7 +15,7 @@ nunca por adjunto*: el adjunto no se recupera al cancelar, el acceso sí.
 | Línea | Skills | Motor | Precio |
 |---|---|---|---|
 | **Hostelería** | 7 | B · instalación presencial | 4.900 € completa / 2.500 € esencial `[A VALIDAR]` |
-| **CABINA** (DJ) | 6 | A · catálogo | sin fijar |
+| **CABINA** (DJ) | 6 | A · catálogo | **49 € suelta / 249 € completa** ✅ cerrado |
 | **Neutra / B2B** | 4 | A · catálogo | sin fijar |
 
 - [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md) — tarifa propuesta con anclas de mercado y canal de cobro.

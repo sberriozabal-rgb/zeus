@@ -7,6 +7,7 @@ metadata:
   linea: CABINA
   paquete: CABINA CARRERA
   estado: ACORDADO
+  precio: "49 EUR"
   idioma_base: es
 ---
 

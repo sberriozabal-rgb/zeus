@@ -1,12 +1,19 @@
 ---
 name: auditoria-de-biblioteca
-description: Diagnostica una biblioteca de DJ exportada (rekordbox XML) antes de un bolo y devuelve un parte de reparacion priorizado por riesgo real en cabina - tracks sin beatgrid, sin clave, sin cue points, duplicados, rutas rotas, bitrate bajo y generos inconsistentes. Solo lectura: nunca escribe en la base de datos del DJ. Para DJ de club, movil y residente. Usar antes de un bolo importante, al migrar de disco o de software, cuando aparecen tracks que no cargan, o cuando la biblioteca lleva anios acumulando desorden.
+description: >-
+  Diagnostica una biblioteca de DJ exportada (rekordbox XML) antes de un bolo y devuelve un
+  parte de reparacion priorizado por riesgo real en cabina - tracks sin beatgrid, sin clave,
+  sin cue points, duplicados, rutas rotas, bitrate bajo y generos inconsistentes. Solo
+  lectura: nunca escribe en la base de datos del DJ. Para DJ de club, movil y residente. Usar
+  antes de un bolo importante, al migrar de disco o de software, cuando aparecen tracks que no
+  cargan, o cuando la biblioteca lleva anios acumulando desorden.
 license: Propietaria. Uso permitido al comprador; prohibida la redistribucion.
 metadata:
   version: 1.0.0
   linea: CABINA
   paquete: CABINA CORE
   estado: ACORDADO
+  precio: "49 EUR"
   idioma_base: es
 ---
 
