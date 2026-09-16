@@ -28,7 +28,8 @@ límites, marketplace de plugins y la skill abierta instalable. Generado desde e
 Las **17 skills están a la venta**. Catálogo suelto (CABINA y B2B) en la tienda de Gumroad
 enlazada en cada ficha del escaparate; instalaciones de hostelería por
 [formulario](https://github.com/sberriozabal-rgb/octava-skills/issues/new?template=instalacion.yml)
-y visita presencial. Si un enlace de Gumroad todavía no responde, la tienda está en alta:
+y visita presencial. La tienda es <https://cabina.gumroad.com>, abierta el 16-sep-2026 con los
+15 productos del catálogo suelto. Si un enlace fallara,
 [pide el producto aquí](https://github.com/sberriozabal-rgb/octava-skills/issues/new?template=comprar.yml).
 
 ## Catálogo de venta

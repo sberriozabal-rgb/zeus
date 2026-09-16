@@ -325,9 +325,12 @@ fiscales de Sergio, punto 1 de lo no decidido), y que las skills fuera del catá
    verificado.** Ese mismo día quedaron regenerados los 16 zips de producto de Gumroad con
    `venta/empaquetar_gumroad.py` (validación previa superada en las 17) y entregados junto a
    `venta/GUMROAD-ALTA.md` para el alta.
-1. **Abrir la cuenta de Gumroad** (antes Polar, ver punto 8). Requiere tu identidad, tu cuenta
-   bancaria y tus datos fiscales. Te dejo la hoja de alta de cada producto lista para pegar.
-   Verifica identidad el mismo día.
+1. ~~Abrir la cuenta de Gumroad~~ ✅ **Hecho por Sergio el 16-sep-2026.** Tienda
+   <https://cabina.gumroad.com> con los 15 productos del catálogo suelto dados de alta con los
+   slugs de las fichas públicas; Sergio confirma que los 15 enlaces abren. La fábrica no puede
+   verificarlo: el proxy de las sesiones bloquea `gumroad.com`. Quedan de esa cuenta la
+   verificación de identidad, el método de cobro desde México y el W-8BEN (bloque 0 de
+   `venta/GUMROAD-ALTA.md`), que solo Sergio sabe si están cerrados.
 2. **Levantar G2.** Explicado arriba. Lo levanta tu primer cliente, no yo.
 3. **La revisión de seguridad alimentaria de `receta-estandar`.** Es trabajo de un profesional
    colegiado, y es el que te cubre a ti.
