@@ -8,8 +8,8 @@ qué reposicionar y qué retirar. Cierra en euros al año.
 ## Instalación
 
 Copia esta carpeta completa (o el archivo `.skill` empaquetado) en el directorio de skills
-del agente que la va a ejecutar, o instálala desde el repositorio privado si el cliente
-tiene acceso de suscripción vigente.
+del agente que la va a ejecutar, o desde el paquete entregado en la
+instalación contratada.
 
 Requiere Python 3.9 o superior. Sin dependencias externas.
 

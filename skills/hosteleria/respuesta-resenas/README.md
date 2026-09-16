@@ -4,7 +4,7 @@ Skill de FORJA (Agent Skills, estándar abierto). Convierte un export de reseña
 
 ## Instalación
 
-Copia esta carpeta completa (o el archivo `.skill` empaquetado) en el directorio de skills del agente que la va a ejecutar, o instálala como plugin desde el repositorio privado si el cliente tiene acceso de suscripción.
+Copia esta carpeta completa (o el archivo `.skill` empaquetado) en el directorio de skills del agente que la va a ejecutar, o desde el paquete entregado en la instalación contratada.
 
 ## Estructura
 

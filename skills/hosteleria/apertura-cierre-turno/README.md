@@ -4,7 +4,7 @@ Skill de FORJA (Agent Skills, estándar abierto). Genera checklists de apertura,
 
 ## Instalación
 
-Copia esta carpeta completa (o el archivo `.skill` empaquetado) en el directorio de skills del agente que la va a ejecutar, o instálala como plugin desde el repositorio privado si el cliente tiene acceso de suscripción.
+Copia esta carpeta completa (o el archivo `.skill` empaquetado) en el directorio de skills del agente que la va a ejecutar, o instálala como plugin desde el marketplace público `sberriozabal-rgb/octava-skills` (plugin `octava-abiertas`).
 
 ## Estructura
 
