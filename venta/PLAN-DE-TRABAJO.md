@@ -163,7 +163,7 @@ que se firma.
 | La tienda se llama CABINA y el producto de cobro vive ahí | Un director financiero pregunta qué es CABINA | Asumido el 12-sep. Casi nadie llega por la portada |
 | Dos tarifas circulando | Alguien cita «CORE 249 USD» o «cobro 69 USD» | La v1.0 está retirada. Toda cifra sale de `catalogo/PRECIOS.md` |
 | El zip se comparte | Un comprador lo pasa a diez colegas | Desviación asumida de la doctrina (decisión 8). La licencia lo prohíbe; el remedio real es la fase 2: la cifra de cliente no se copia con el zip |
-| `receta-estandar` se vende antes de G4 | Aparece en un texto de la Completa como entregada | No se factura. Entra sin coste para quien ya compró cuando el consultor de inocuidad firme |
+| `receta-estandar` se vende antes de G4 | Un cliente sigue una ficha con un binomio `[A VALIDAR]` sin validar | Decisión 11: se vende dentro de la Completa. Mitigación: no se entrega sin el anexo de inocuidad firmado, y la revisión del consultor sigue abierta y se comunica al cliente en cuanto llegue |
 
 ---
 

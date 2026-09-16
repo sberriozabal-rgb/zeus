@@ -28,6 +28,15 @@ Cada skill lleva su `LICENSE.txt` con las condiciones concretas. En todas, en t�
 - El acceso al repositorio de entrega es **revocable** al cesar la relación comercial. La licencia
   sobre la copia ya entregada subsiste conforme a las cláusulas de cada `LICENSE.txt`.
 
+## Sobre la visibilidad pública de este repositorio
+
+Este repositorio es **público por decisión de su titular** (decisión 11 de
+`catalogo/DECISIONES.md`, 15-sep-2026). Que su contenido pueda leerse, clonarse o bifurcarse
+en GitHub **no concede ninguna licencia de uso**: no es software libre ni de código abierto, y
+ninguna licencia OSI le es aplicable. El uso permitido es únicamente el que concede la compra
+conforme al `LICENSE.txt` de cada skill. Toda copia, bifurcación, redistribución o uso comercial
+sin compra queda prohibido y se reserva el ejercicio de las acciones que correspondan.
+
 ## Sobre la protección del archivo — declarado sin adornos
 
 Una skill es texto plano. **No hay DRM, ni firma, ni ofuscación posible**, y este catálogo no

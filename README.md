@@ -4,14 +4,16 @@
 Ver [`LICENSE`](LICENSE). `ZEUS`, `FORJA`, `TROQUEL`, `OCTAVA` y `CABINA` son nombres
 comerciales del titular, no entidades distintas.
 
-Repositorio privado de skills de ZEUS / FORJA: activos ejecutables para
+Repositorio de skills de ZEUS / FORJA: activos ejecutables para
 hostelería y restauración, DJ y cabina, gestión y finanzas, más los códigos de
 Google Script y los contextos de la casa.
 
-**Este repositorio es privado y es la fuente de verdad del catálogo.** La doctrina de la
-casa prefiere entregar por *acceso revocable a repositorio privado, nunca por adjunto*; desde
-el 15-sep-2026 el catálogo suelto (CABINA y línea neutra) se vende en **Gumroad**, que entrega
-por descarga. Es una desviación declarada, asumida a cambio de que Gumroad remita el IVA como
+**Este repositorio es público por decisión del titular (decisión 11) y es la fuente de verdad
+del catálogo.** Que el contenido sea visible no lo hace de uso libre: la licencia de cada skill
+prohíbe la redistribución y la publicación, y el uso comercial solo lo concede la compra. La
+doctrina de la casa prefiere entregar por *acceso revocable a repositorio privado, nunca por
+adjunto*; desde el 15-sep-2026 el catálogo suelto (CABINA y línea neutra) se vende en
+**Gumroad**, que entrega por descarga. Es una desviación declarada, asumida a cambio de que Gumroad remita el IVA como
 *merchant of record* (decisión 8 en [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md)). Las
 instalaciones de hostelería siguen entregándose en la visita.
 
@@ -21,13 +23,21 @@ instalaciones de hostelería siguen entregándose en la visita.
 límites, marketplace de plugins y la skill abierta instalable. Generado desde este repositorio
 (decisión 10). Escaparate web: <https://sberriozabal-rgb.github.io/octava-skills/>.
 
+## Comprar
+
+Las **17 skills están a la venta**. Catálogo suelto (CABINA y B2B) en la tienda de Gumroad
+enlazada en cada ficha del escaparate; instalaciones de hostelería por
+[formulario](https://github.com/sberriozabal-rgb/octava-skills/issues/new?template=instalacion.yml)
+y visita presencial. Si un enlace de Gumroad todavía no responde, la tienda está en alta:
+[pide el producto aquí](https://github.com/sberriozabal-rgb/octava-skills/issues/new?template=comprar.yml).
+
 ## Catálogo de venta
 
 → **[`CATALOGO.md`](CATALOGO.md)** — 17 skills cargadas, en tres líneas.
 
 | Línea | Skills | Motor | Precio |
 |---|---|---|---|
-| **Hostelería** | 7 | B · instalación presencial | **4.900 €** completa / **2.500 €** esencial ✅ |
+| **Hostelería** | 7 | B · instalación presencial | **4.900 €** completa (7 skills) / **2.500 €** esencial (3) ✅ |
 | **CABINA** (DJ) | 6 | A · catálogo | **49 € suelta / 249 € completa** ✅ cerrado |
 | **Neutra / B2B** | 4 | A · catálogo | **49–79 €** · pack 89 € ✅ |
 
@@ -61,7 +71,9 @@ Cada skill conserva su `SKILL.md`, sus `references/`, `assets/`, `scripts/`,
 
 Las 17 están en `ACORDADO`, con licencia de venta y **todas por encima del umbral de 16/20** que
 exige el peldaño P1 (medido, no estimado). **Gates G1 (17/17), G3 (17/17), G4 (16/17) y G5 (17/17)
-levantados.** La única excepción de G4 es `receta-estandar`, por seguridad alimentaria.
+levantados.** La única excepción de G4 es `receta-estandar`, por seguridad alimentaria: sigue
+abajo como hecho (la revisión externa no está), pero **desde la decisión 11 no bloquea la venta**;
+entra en la Completa con el anexo de inocuidad firmado.
 
 **G2 (prueba contra datos reales de cliente) sigue abajo en las 17, y es correcto que lo esté.**
 No se cierra por decisión: lo levanta el primer cliente que ejecuta una skill con sus datos. Y no
