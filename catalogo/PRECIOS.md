@@ -8,7 +8,7 @@ en las 17 piezas**. Decisiones y su razón en [`DECISIONES.md`](DECISIONES.md).
 | Producto | Contenido | Precio |
 |---|---|---|
 | **Instalación Esencial** | 3 skills | **2.500 €** |
-| **Instalación Completa** | 6 skills | **4.900 €** |
+| **Instalación Completa** | 7 skills | **4.900 €** |
 | `productividad-personal-turno` suelta | 1 skill | **199 €** |
 
 **Esencial** = `escandallo-ingenieria-menu` + `comparativa-proveedores` + `apertura-cierre-turno`.
@@ -16,14 +16,16 @@ El escandallo produce la cifra que abre la conversación; la comparativa produce
 dueño verifica esa misma tarde llamando al proveedor; el checklist es lo que hace que las otras
 dos se sostengan tres semanas después.
 
-**Completa** = las tres anteriores más `respuesta-resenas`, `productividad-personal-turno` y
-`reporte-inteligencia-competencia`.
+**Completa** = las tres anteriores más `respuesta-resenas`, `productividad-personal-turno`,
+`reporte-inteligencia-competencia` y, desde la decisión 11, `receta-estandar`.
 
-> ⚠️ **`receta-estandar` NO se factura todavía.** Su G4 está abajo por seguridad alimentaria.
-> A 15-sep-2026 la casa ha hecho todo lo que podía —cifras ancladas al RD 3484/2000 y a AESAN,
-> cláusula contractual redactada, discrepancia AESAN/RD detectada y aplicada— y **solo falta la
-> revisión de un consultor de seguridad alimentaria** antes de cobrarse. El Completa se sirve con las otras seis al
-> mismo precio, y cuando levante G4 entra sin coste para quien ya compró.
+> ⚠️ **`receta-estandar` entra en la Completa con condición (decisión 11, 15-sep-2026).** Su G4
+> sigue abajo por seguridad alimentaria: la casa ancló las cifras al RD 3484/2000, a AESAN y a la
+> NOM-251, redactó la cláusula contractual y aplicó la discrepancia AESAN/RD, pero **la revisión de
+> un consultor de seguridad alimentaria todavía no está**. Por eso no se entrega sin el anexo de
+> `venta/ANEXO-CONTRATO-INOCUIDAD.md` firmado, cada ficha marca `[A VALIDAR]` lo que el consultor no
+> ha confirmado, y la revisión se comunica al cliente en cuanto llegue. Mismo precio: 4.900 €.
+> Ficha de producto de las instalaciones en `venta/OFERTA-HOSTELERIA.md`.
 
 **No se cobra por Gumroad.** La instalación va por Stripe México (pesos) o transferencia: el ticket
 alto justifica la comisión menor pese a no ser *merchant of record*.

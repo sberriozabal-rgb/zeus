@@ -1,4 +1,4 @@
-# universal-compilador-contexto v1.0.0
+# universal-compilador-contexto v1.1.0
 
 **Qué hace.** Lee la carpeta de cualquier proyecto (ordenador, Drive o ZIP) y los chats
 del proyecto, y entrega UN ZIP con: biblioteca de contexto por dominios (taxonomía

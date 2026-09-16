@@ -48,4 +48,4 @@ y se avisa**.
 
 ## Licencia
 
-Propietario — TROQUEL. Prohibida la redistribución del artefacto. Ver `LICENSE.txt`.
+Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Prohibida la redistribución del artefacto. Ver `LICENSE.txt`.

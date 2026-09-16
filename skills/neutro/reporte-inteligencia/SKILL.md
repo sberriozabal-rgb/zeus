@@ -16,9 +16,9 @@ license: Propietaria. Copyright 2026 Sergio Berriozábal Serrano. Uso comercial 
 metadata:
   version: "1.2.0"
   status: "ACORDADO"
-  audit: "18/20 (pendiente de reauditoría tras v1.1.0)"
+  audit: "19/20 (validar_skill.py, 2026-09-15)"
   author: "Sergio Berriozábal"
-  updated: "2026-08-16"
+  updated: "2026-09-15"
 ---
 
 # reporte-inteligencia

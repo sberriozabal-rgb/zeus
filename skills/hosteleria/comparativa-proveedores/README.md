@@ -58,4 +58,4 @@ No renegocia por el cliente, no pide ofertas, no cambia pedidos en ningún siste
 
 ## Soporte
 
-Parte del sistema instalable de 6 skills de hostelería (Motor B). No se vende suelta salvo decisión explícita de Sergio.
+Parte del sistema instalable de 7 skills de hostelería (Motor B). No se vende suelta salvo decisión explícita de Sergio.

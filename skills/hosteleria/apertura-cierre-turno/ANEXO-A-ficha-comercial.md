@@ -2,9 +2,9 @@
 
 Nombre técnico     : apertura-cierre-turno
 Nombre comercial   : [A VALIDAR — nombre comercial de la casa pendiente]
-Peldaño            : P1 · SKILL (pieza 5 de 6 del sistema instalable Motor B)
+Peldaño            : P1 · SKILL (pieza 5 de 7 del sistema instalable Motor B)
 Línea              : Hostelería
-Comprador nombrado : Restaurante o grupo de restauración independiente, España o México, plantilla 8-30 personas, decide el dueño o el encargado general. Se vende dentro del sistema instalable de 6 skills (Motor B), no suelta.
+Comprador nombrado : Restaurante o grupo de restauración independiente, España o México, plantilla 8-30 personas, decide el dueño o el encargado general. Se vende dentro del sistema instalable de 7 skills (Motor B), no suelta.
 Trabajo que quita  : Redactar y mantener a mano el protocolo de apertura/cierre/cambio de turno y el registro de incidencias — hoy vive en la cabeza del encargado o en una hoja de papel sin actualizar.
 Umbral que aporta  : Rotación de plantilla 63,8% anual en España (2.800-5.000 € por sustitución) y 80-120% en México (2-3x el salario del puesto), todas [A VALIDAR] con la trazabilidad en references/FUENTES.md; coste anual de rotación calculado con datos reales del cliente vía script determinista.
 Precio propuesto   : Dentro de Instalación Esencial (2.500 €) y Completa (4.900 €). **Ratificado 15-sep-2026.**
@@ -22,4 +22,4 @@ Notas:
 - G4 (legal) se marca porque no deriva de material source-available prohibido, no usa marca ajena, y su licencia es de uso comercial sin redistribución (ver LICENSE.txt).
 - G2 (prueba) pendiente hasta ejecutar contra 3 casos reales de un cliente real, no solo los 4 casos sintéticos de fabricación.
 - G5 (público) pendiente porque esta ficha aún no se ha usado en material de venta enviado a nadie.
-- Regla de freno (4.5 del protocolo TROQUEL): esta es la pieza 5 de 6. No se fabrica la nº7 (`cuadro-mando-semanal`, que además no tiene umbral propio definido en doctrina) hasta que las 6 estén instaladas en un cliente que pagó, según el gate ya vigente del proyecto.
+- Regla de freno (4.5 del protocolo TROQUEL): esta es la pieza 5 de 7. No se fabrica la nº7 (`cuadro-mando-semanal`, que además no tiene umbral propio definido en doctrina) hasta que las 7 estén instaladas en un cliente que pagó, según el gate ya vigente del proyecto.

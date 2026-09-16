@@ -97,8 +97,10 @@ lo hace comprensible.
 
 ## Documentos
 
+- [`venta/LISTA-DE-VENTA.md`](venta/LISTA-DE-VENTA.md) — la lista maestra: qué está hecho, qué falta y de quién es, producto a producto.
+- [`venta/OFERTA-HOSTELERIA.md`](venta/OFERTA-HOSTELERIA.md) — ficha de producto de las instalaciones Esencial y Completa: qué llevan, qué no hacen, requisitos, cobro.
 - [`venta/PLAN-DE-TRABAJO.md`](venta/PLAN-DE-TRABAJO.md) — el plan operativo de venta v1.1: fases, aritmética del objetivo y huecos con responsable.
 - [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md) — tarifa propuesta, con la razón de cada cifra y su anclaje de mercado.
 - [`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md) — matriz G1–G5 pieza por pieza y los tres riesgos abiertos.
 - [`catalogo/PENDIENTE-FIRMA.md`](catalogo/PENDIENTE-FIRMA.md) — las 4 decisiones que desbloquean el cobro.
-- [`venta/GUMROAD-ALTA.md`](venta/GUMROAD-ALTA.md) — canal de cobro decidido el 15-sep-2026 y hoja de alta de los dos primeros productos.
+- [`venta/GUMROAD-ALTA.md`](venta/GUMROAD-ALTA.md) — canal de cobro decidido el 15-sep-2026 y hoja de alta de los 15 productos, con descripción, tags y portada (`venta/portadas/`).

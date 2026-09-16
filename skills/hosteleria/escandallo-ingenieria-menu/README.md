@@ -66,5 +66,5 @@ python3 scripts/escandallo.py datos.json --csv tabla.csv
 
 ## Soporte
 
-Pieza 1 de 6 del sistema instalable de hostelería (Motor B). No se vende suelta salvo
+Pieza 1 de 7 del sistema instalable de hostelería (Motor B). No se vende suelta salvo
 decisión explícita de Sergio. Ver `ANEXO-A-ficha-comercial.md`.

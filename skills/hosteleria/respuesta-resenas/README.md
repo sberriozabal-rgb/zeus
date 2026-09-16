@@ -57,10 +57,16 @@ El apartado 5 del informe recomienda **cómo pedir reseñas**. Pedirlas está pe
 
 No publica ninguna respuesta: entrega el texto para que lo revise y lo publique el dueño. No gestiona la eliminación de reseñas falsas ante la plataforma (Google y TripAdvisor tienen su propio proceso de disputa). No es asesoría legal ante difamación. Y no promete ninguna cifra de ingresos: el rango de +5% a +9% por estrella se presenta siempre como escenario de referencia con su fuente, nunca como resultado. Ver la sección "Límites" de `SKILL.md`.
 
-## Nota de auditoría honesta
+## Nota de auditoría
 
-La nota que declara `metadata.json` es **16/20**, no los 19/20 que declara `ANEXO-A-ficha-comercial.md`. La divergencia es deliberada y se declara aquí en vez de taparse. Los cuatro puntos que faltan son estructurales, y hoy **no** están recogidos en el roadmap del `CHANGELOG.md`, que solo apunta a la cadencia de solicitud y al cruce automático con el escandallo: la skill no tiene procedimiento en pasos atómicos con la rama "si falta el dato", no tiene tabla de reglas SIEMPRE, no tiene tabla de reglas NUNCA y no tiene sección de antipatrones. Son las cuatro piezas del ADN de la línea Hostelería que `escandallo-ingenieria-menu`, `control-no-shows` y `comparativa-proveedores` sí tienen. El método y el motor funcionan —los cuatro casos y las seis comprobaciones del autotest están en verde—; lo que falta es lo que hace que otro pueda ejecutarla sin el autor delante. Y hay una afirmación que la skill usa y que no se sostiene al verificarla: la de que Google y TripAdvisor penalizan las respuestas idénticas. Está documentada en `references/FUENTES.md` §6, con la corrección sugerida. Regalarse la nota resta credibilidad al sistema entero.
+La v1.2.0 (15-sep-2026) reestructuró la skill con las cuatro piezas del ADN de la línea que le
+faltaban en la v1.1: procedimiento en pasos atómicos con la rama "si falta el dato", tabla de
+reglas SIEMPRE, tabla NUNCA y antipatrones. `metadata.json` y `ANEXO-A-ficha-comercial.md`
+declaran la misma nota, **19/20** (`validar_skill.py`, 15-sep-2026; el validador da 20/20
+mecánico y no se firma el 20 porque el punto 19 exige URLs reverificadas una a una). La
+afirmación de que Google y TripAdvisor penalizan las respuestas idénticas se retiró: no se
+sostenía al verificarla, y `references/FUENTES.md` §6 documenta la corrección.
 
 ## Soporte
 
-Pieza 4 de 6 del sistema instalable de hostelería (Motor B). No se vende suelta salvo decisión explícita de Sergio.
+Pieza 4 de 7 del sistema instalable de hostelería (Motor B). No se vende suelta salvo decisión explícita de Sergio.

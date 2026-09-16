@@ -88,6 +88,10 @@ def leeme(titulo, skills):
         "",
         "SOPORTE",
         "  Responde al correo de compra de Gumroad. Indica versión (CHANGELOG.md).",
+        "",
+        "NOTA",
+        "  Este paquete no incluye ANEXO-A-ficha-comercial.md ni metadata.json:",
+        "  son material de fábrica. Si un README los cita, no falta nada.",
     ]
     return "\n".join(lineas) + "\n"
 

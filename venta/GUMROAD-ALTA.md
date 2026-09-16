@@ -55,6 +55,7 @@ Coincide con la tarifa ratificada de `PRECIOS.md`; no se reabre G3. El informe v
 | **Price** | 249 · en EUR si Gumroad lo admite; si solo USD, 249 USD |
 | **Type** | Digital product · pago único |
 | **Content** | `dist/cabina-completa.zip` → `python3 venta/empaquetar_gumroad.py cabina-completa` |
+| **Cover / Thumbnail** | `venta/portadas/cabina-completa-portada.png` (1280×720) · `venta/portadas/cabina-completa-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** (una línea) | Te digo qué tracks te van a fallar en el próximo bolo, en qué orden arreglarlos, y qué pasó de verdad en el último. |
 | **Tags** | dj, rekordbox, serato, claude, skills, cabina, eventos |
 | **Refund policy** | *Ver bloque 3* |
@@ -128,6 +129,7 @@ ventas/mes** con el neto de Gumroad (79 − 7,90 − 0,50 = 70,60).
 | **Price** | 79 · en EUR si Gumroad lo admite; si solo USD, 79 USD |
 | **Type** | Digital product · pago único |
 | **Content** | `dist/cobro-cartera-vencida.zip` → `python3 venta/empaquetar_gumroad.py cobro-cartera-vencida` |
+| **Cover / Thumbnail** | `venta/portadas/cobro-cartera-vencida-portada.png` (1280×720) · `venta/portadas/cobro-cartera-vencida-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** (una línea) | A quién reclamar primero, qué escribirle exactamente, y en qué fecha subes el tono si no paga. |
 | **Tags** | cobros, facturas, cuentas por cobrar, pyme, b2b, claude, skills |
 | **Refund policy** | *Ver bloque 3* |
@@ -232,11 +234,13 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 
 | Campo | Valor |
 |---|---|
-| **Name** | CABINA CORE — skill para Claude |
+| **Name** | CABINA CORE — 3 skills de cabina para DJ |
 | **URL** | `cabina-core` |
 | **Price** | 149 |
 | **Content** | `dist/cabina-core.zip` → `python3 venta/empaquetar_gumroad.py cabina-core` |
+| **Cover / Thumbnail** | `venta/portadas/cabina-core-portada.png` (1280×720) · `venta/portadas/cabina-core-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Las tres que usa cualquier DJ con biblioteca y bolos recurrentes: qué va a fallar, qué pasó, y el set para el slot que te den. |
+| **Tags** | dj, rekordbox, serato, biblioteca, set, claude, skills, cabina |
 
 **Description (pegar entera)**
 
@@ -272,11 +276,13 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 
 | Campo | Valor |
 |---|---|
-| **Name** | CABINA EVENTOS — skill para Claude |
+| **Name** | CABINA EVENTOS — 2 skills para el DJ de eventos |
 | **URL** | `cabina-eventos` |
 | **Price** | 99 |
 | **Content** | `dist/cabina-eventos.zip` → `python3 venta/empaquetar_gumroad.py cabina-eventos` |
+| **Cover / Thumbnail** | `venta/portadas/cabina-eventos-portada.png` (1280×720) · `venta/portadas/cabina-eventos-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Las dos piezas del bolo de evento: qué pides al repertorio y qué firmas antes de tocar. |
+| **Tags** | dj, bodas, eventos, contrato, presupuesto, claude, skills, cabina |
 
 **Description (pegar entera)**
 
@@ -315,7 +321,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `auditoria-de-biblioteca` |
 | **Price** | 49 |
 | **Content** | `dist/auditoria-de-biblioteca.zip` → `python3 venta/empaquetar_gumroad.py auditoria-de-biblioteca` |
+| **Cover / Thumbnail** | `venta/portadas/auditoria-de-biblioteca-portada.png` (1280×720) · `venta/portadas/auditoria-de-biblioteca-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Te digo qué tracks te van a fallar en el próximo bolo, y en qué orden arreglarlos. |
+| **Tags** | dj, rekordbox, biblioteca, beatgrid, cue points, claude, skills |
 
 **Description (pegar entera)**
 
@@ -349,7 +357,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `postmortem-de-bolo` |
 | **Price** | 49 |
 | **Content** | `dist/postmortem-de-bolo.zip` → `python3 venta/empaquetar_gumroad.py postmortem-de-bolo` |
+| **Cover / Thumbnail** | `venta/portadas/postmortem-de-bolo-portada.png` (1280×720) · `venta/portadas/postmortem-de-bolo-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Qué se cortó pronto, qué se sostuvo y dónde saltó el tempo. Con la hora exacta, no con lo que recuerdes. |
+| **Tags** | dj, rekordbox, serato, historial, bolo, claude, skills |
 
 **Description (pegar entera)**
 
@@ -383,7 +393,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `set-por-encargo` |
 | **Price** | 49 |
 | **Content** | `dist/set-por-encargo.zip` → `python3 venta/empaquetar_gumroad.py set-por-encargo` |
+| **Cover / Thumbnail** | `venta/portadas/set-por-encargo-portada.png` (1280×720) · `venta/portadas/set-por-encargo-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Te cambian el slot a las siete de la tarde y a las ocho tienes el set reordenado, con el por qué de cada transición. |
+| **Tags** | dj, set, tracklist, rekordbox, armonía, claude, skills |
 
 **Description (pegar entera)**
 
@@ -417,7 +429,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `peticiones-a-repertorio` |
 | **Price** | 49 |
 | **Content** | `dist/peticiones-a-repertorio.zip` → `python3 venta/empaquetar_gumroad.py peticiones-a-repertorio` |
+| **Cover / Thumbnail** | `venta/portadas/peticiones-a-repertorio-portada.png` (1280×720) · `venta/portadas/peticiones-a-repertorio-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Qué tengo, qué hay que comprar, qué está en una versión que no sirve y qué me han pedido que no ponga. Con el documento para el cliente ya escrito. |
+| **Tags** | dj, bodas, eventos, repertorio, peticiones, claude, skills |
 
 **Description (pegar entera)**
 
@@ -451,7 +465,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `presupuesto-y-contrato-evento` |
 | **Price** | 49 |
 | **Content** | `dist/presupuesto-y-contrato-evento.zip` → `python3 venta/empaquetar_gumroad.py presupuesto-y-contrato-evento` |
+| **Cover / Thumbnail** | `venta/portadas/presupuesto-y-contrato-evento-portada.png` (1280×720) · `venta/portadas/presupuesto-y-contrato-evento-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Las seis cláusulas que se pagan cuando faltan, y el presupuesto desglosado para que negociar no sea bajar el margen. |
+| **Tags** | dj, bodas, eventos, contrato, presupuesto, rider, claude, skills |
 
 **Description (pegar entera)**
 
@@ -485,7 +501,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `demo-a-sello` |
 | **Price** | 49 |
 | **Content** | `dist/demo-a-sello.zip` → `python3 venta/empaquetar_gumroad.py demo-a-sello` |
+| **Cover / Thumbnail** | `venta/portadas/demo-a-sello-portada.png` (1280×720) · `venta/portadas/demo-a-sello-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | El canal que pide cada sello, la frase que lo distingue de los otros cien envíos, y la fecha correcta para que Beatport y Spotify lleguen a tiempo. |
+| **Tags** | dj, productor, demo, sello, beatport, spotify, claude, skills |
 
 **Description (pegar entera)**
 
@@ -515,11 +533,13 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 
 | Campo | Valor |
 |---|---|
-| **Name** | PACK CONTEXTO — skill para Claude |
+| **Name** | PACK CONTEXTO — 2 skills para Claude |
 | **URL** | `pack-contexto` |
 | **Price** | 89 |
 | **Content** | `dist/pack-contexto.zip` → `python3 venta/empaquetar_gumroad.py pack-contexto` |
+| **Cover / Thumbnail** | `venta/portadas/pack-contexto-portada.png` (1280×720) · `venta/portadas/pack-contexto-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Saca tu proyecto de IA a un paquete cifrado y conviértelo en una biblioteca ordenada con la lista de lo que aún no has decidido. |
+| **Tags** | claude, proyecto, respaldo, backup, contexto, documentación, skills |
 
 **Description (pegar entera)**
 
@@ -558,7 +578,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `reporte-inteligencia` |
 | **Price** | 49 |
 | **Content** | `dist/reporte-inteligencia.zip` → `python3 venta/empaquetar_gumroad.py reporte-inteligencia` |
+| **Cover / Thumbnail** | `venta/portadas/reporte-inteligencia-portada.png` (1280×720) · `venta/portadas/reporte-inteligencia-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Seis competidores, ocho métricas y tres acciones para esta semana. Con la cita y la fecha de cada cosa, para que puedas comprobarlo. |
+| **Tags** | competencia, reputación, reseñas, benchmark, pyme, claude, skills |
 
 **Description (pegar entera)**
 
@@ -592,7 +614,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `respaldo-proyecto-ia-cl` |
 | **Price** | 49 |
 | **Content** | `dist/respaldo-proyecto-ia-cl.zip` → `python3 venta/empaquetar_gumroad.py respaldo-proyecto-ia-cl` |
+| **Cover / Thumbnail** | `venta/portadas/respaldo-proyecto-ia-cl-portada.png` (1280×720) · `venta/portadas/respaldo-proyecto-ia-cl-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Te llevas tu proyecto entero cifrado, con el guion para rehacerlo y la lista de lo que no cabía. Probado en frío antes de que borres nada. |
+| **Tags** | claude, proyecto, respaldo, backup, cifrado, skills |
 
 **Description (pegar entera)**
 
@@ -626,7 +650,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `universal-compilador-contexto` |
 | **Price** | 49 |
 | **Content** | `dist/universal-compilador-contexto.zip` → `python3 venta/empaquetar_gumroad.py universal-compilador-contexto` |
+| **Cover / Thumbnail** | `venta/portadas/universal-compilador-contexto-portada.png` (1280×720) · `venta/portadas/universal-compilador-contexto-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Todo lo que hay en tu carpeta, ordenado por temas, con la versión vigente marcada y la lista de lo que aún no has decidido. |
+| **Tags** | claude, proyecto, contexto, documentación, biblioteca, skills |
 
 **Description (pegar entera)**
 
@@ -660,7 +686,9 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 | **URL** | `productividad-personal-turno` |
 | **Price** | 199 |
 | **Content** | `dist/productividad-personal-turno.zip` → `python3 venta/empaquetar_gumroad.py productividad-personal-turno` |
+| **Cover / Thumbnail** | `venta/portadas/productividad-personal-turno-portada.png` (1280×720) · `venta/portadas/productividad-personal-turno-miniatura.png` (600×600) → `python3 venta/generar_portadas.py` |
 | **Summary** | Sabes en qué franjas pagas plantilla sin venta y en cuáles pierdes venta por falta de mano. |
+| **Tags** | restaurante, hostelería, personal, turnos, tpv, productividad, claude, skills |
 
 **Description (pegar entera)**
 
@@ -685,3 +713,20 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 > Uso comercial permitido en tu actividad, sin límite de ejecuciones. Prohibida la redistribución, reventa o publicación. `LICENSE.txt` dentro.
 >
 > Copyright 2026 Sergio Berriozábal Serrano.
+
+---
+
+## 7 · Portadas y miniaturas
+
+Gumroad pide una imagen por producto: la **cover** (la enseña en la página del producto, 1280×720)
+y la **thumbnail** (la enseña en la tienda y en Discover, cuadrada, 600×600). Sin ellas el
+producto se publica igual, pero en la tienda aparece como una caja gris.
+
+Las quince parejas están hechas y en `venta/portadas/`, generadas desde la misma tabla de nombre,
+resumen y precio de esta hoja con `python3 venta/generar_portadas.py` (necesita Pillow:
+`pip install pillow`). Tipografía del sistema, fondo liso, sin fotos de stock ni marcas ajenas:
+línea de producto arriba, nombre, frase de anuncio, precio y "skills para Claude · estándar abierto
+Agent Skills". Si cambia un precio o una frase, se cambia aquí y se vuelve a ejecutar el script.
+
+Las de las instalaciones de hostelería no existen porque no se venden por Gumroad
+(`OFERTA-HOSTELERIA.md`).
