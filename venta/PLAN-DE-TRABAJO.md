@@ -49,7 +49,7 @@ Nada de lo que sigue tiene sentido hasta que esto esté hecho. Son cuarenta minu
 | # | Acción | Quién | Tiempo | Criterio de salida |
 |---|---|---|---|---|
 | 0.1 | **No aplicar** el parche de frontmatter sobre la carpeta original. Si se quiere que la carpeta original coincida con el repo, se sustituyen las 17 carpetas originales por las de `skills/` | Sergio | 10 min | Una sola copia de cada skill vendible: la del repo |
-| 0.2 | Abrir la cuenta de Gumroad (`venta/GUMROAD-ALTA.md`, bloque 0), **verificar identidad y configurar el método de cobro desde México el mismo día**, W-8BEN incluido | Sergio | 30 min | Umbral de pago en 10 USD, no en 100. Método de cobro a México confirmado; si sólo aparece PayPal, ver §4 |
+| 0.2 | ✅ **Cuenta abierta el 16-sep-2026** (<https://cabina.gumroad.com>, 15 productos en alta). Queda **verificar identidad y configurar el método de cobro desde México**, W-8BEN incluido (`venta/GUMROAD-ALTA.md`, bloque 0) | Sergio | 30 min | Umbral de pago en 10 USD, no en 100. Método de cobro a México confirmado; si sólo aparece PayPal, ver §4 |
 
 > **Por qué la verificación va hoy y no cuando venda.** La revisión de cuenta nueva corre entre una
 > y tres semanas en paralelo `[según informe FORJA v1.1.0; sin segunda comprobación, el proxy de

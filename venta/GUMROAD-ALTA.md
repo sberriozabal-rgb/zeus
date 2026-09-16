@@ -211,9 +211,9 @@ Son las mismas de la doctrina y **no se negocian**:
 | Día | Pendiente | Estado a 15-sep |
 |---|---|---|
 | 1 | Parche de frontmatter en las 14 skills rotas | **En este repositorio no aplica: 17/17 parsean y 17/17 declaran licencia**, incluidas `auditoria-de-biblioteca` y `presupuesto-y-contrato-evento`. Las 14 rotas están en la biblioteca de 78 de la cuenta, no aquí. Si esa biblioteca tiene copia distinta de estas dos, la buena es ésta |
-| 1 | Abrir Gumroad y verificar identidad | Sergio · bloque 0 |
+| 1 | Abrir Gumroad y verificar identidad | ✅ **Tienda abierta el 16-sep-2026** en <https://cabina.gumroad.com>. La verificación de identidad, el cobro desde México y el W-8BEN los confirma Sergio; desde la fábrica no se ve |
 | 2 | Repositorio `octava-skills` con la skill gratuita | ✅ **Publicado** (decisión 10): <https://github.com/sberriozabal-rgb/octava-skills>. Sus fichas enlazan a `cabina.gumroad.com/l/<slug>`: usa exactamente esos slugs al dar de alta cada producto |
-| 3 | Alta de los dos productos | Sergio · bloques 1 y 2, con `cabina-completa.zip` y `cobro-cartera-vencida.zip` de `empaquetar_gumroad.py`. Precios decididos: 249 y 79 |
+| 3 | Alta de los dos productos | ✅ **Los 15 del catálogo suelto dados de alta el 16-sep-2026** con los zips de `empaquetar_gumroad.py` y los slugs de las fichas públicas. Sergio confirma que los 15 enlaces abren |
 | 4 | `myclaude publish` | Sergio · con el paquete del informe; desde aquí `myclaude.sh` no responde. Antes, la consulta sobre IVA de `CONSULTAS-PENDIENTES.md` |
 | 5–7 | Las dos conversaciones de prueba | Sergio · es el hueco que importa |
 
