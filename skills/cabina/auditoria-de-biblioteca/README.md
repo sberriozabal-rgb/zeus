@@ -16,7 +16,7 @@ de trabajo separada entre lo que se arregla en lote y lo que exige oír el audio
 ## Instalación
 
 Copia esta carpeta completa (o el `.skill` empaquetado) en el directorio de skills del agente
-que la va a ejecutar, o instálala desde el repositorio privado si tienes acceso vigente.
+que la va a ejecutar, o desde la descarga de tu compra en Gumroad.
 
 ## Uso
 
