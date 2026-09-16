@@ -1,4 +1,23 @@
-# Pipeline de venta — estado a 15-sep-2026
+# Pipeline de venta — estado a 16-sep-2026
+
+> **Actualización 16-sep-2026 · enviados desde la fábrica, por orden de Sergio.** 16 correos
+> salieron de Gmail ese día; el filtro de permisos bloqueó uno.
+>
+> | Qué | A quién | Estado |
+> |---|---|---|
+> | Respuesta a Grupo RosaNegra (borrador de Sergio del 12-sep: pide el nombre del canalizado y ofrece jue 17 o mar 22) | contacto@gruporosanegra.com.mx | ✅ enviada. El borrador duplicado del 15-sep, a la papelera |
+> | Seguimiento único, en el mismo hilo | Goguinara, Biwon, Midam, China Shing, GRG, Deigo, Taj Mahal | ✅ 7 enviados. Antes se comprobó en Enviados que ninguno tenía ya un seguimiento |
+> | Primer contacto «Mejoro su operación» a la dirección corregida | Suntory (jlmendez@ y cajavalle@), Grupo Carolo (info@), Grupo Rincón, Grupo Josecho, Grupo Plaza, Grupo Maximus (solo info@maximobistrot.com.mx), Chung King (solo chungkingcego@hotmail.com) | ✅ 7 enviados |
+> | Primer contacto «Tres hallazgos» | El Diez (atencionclientes@) | ✅ enviado. La versión «Mejoro su operación · [v4]» al mismo buzón, a la papelera: uno, no los dos |
+> | Primer contacto por el canal correcto | Ling Ling (linglingmx@hakkasangroup.com, redactado el 15-sep) | ✅ enviado |
+> | Primer contacto a Grupo Hunan + Nobu | contactogh@grupohunan.com | ❌ **bloqueado por el filtro de permisos** en el envío. El borrador queda en Gmail con el destinatario ya corregido: es un clic de Sergio |
+>
+> **No se enviaron, a propósito:** los ~26 borradores sin destinatario (carta en mano o
+> WhatsApp), KYU (cerrado), los 7 seguimientos que aún no están redactados (SSAM, La Provoleta,
+> Yoshimi, El Japonez, Asian Bay, El Huequito, Tonchin: texto en §4), los correos a fondos y
+> redes de inversores del 7-sep (~20, fuera de este pipeline), las tres consultas a myClaude,
+> SkillHQ y claudemarketplaces (sin destinatario) y los borradores personales. A partir de aquí
+> rige la regla del §5: quien no responda al seguimiento sale del pipeline.
 
 Lo que hay en la cuenta de correo de la casa, leído el 15-sep-2026. Es el único activo comercial
 con movimiento real: **una campaña en frío del 6-7 de septiembre a restaurantes de CDMX**, con el
