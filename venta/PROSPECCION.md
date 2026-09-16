@@ -3,20 +3,17 @@
 Complemento de [`PIPELINE.md`](PIPELINE.md). Tres frentes que el correo no resuelve: los
 prospectos de restaurante sin buzón útil, el DJ de la fase 2.1 y la empresa de la fase 2.2.
 
+> Este repositorio es público. Los teléfonos y nombres de los prospectos están en el documento
+> privado del titular («OCTAVA · Pipeline de venta (privado)», Google Drive), no aquí.
+
 ---
 
-## 1 · Cinco prospectos que sólo se alcanzan por teléfono o WhatsApp
+## 1 · Los prospectos que sólo se alcanzan por teléfono o WhatsApp
 
-| Prospecto | Canal | Dato | Quién contesta |
-|---|---|---|---|
-| Ling Ling by Hakkasan | WhatsApp | 55 3279 9204 (web oficial) · tel. 55 5919 1559 | Reservaciones. Pedir a la gerencia de operaciones |
-| Súper Mikasa | Teléfono | +52 55 5559 8961 | Tienda de la Roma. Pedir al gerente; la carta «en mano» ya está escrita |
-| Chung King | Teléfono | 55 5510 3355 | Local de Dolores 27. Dueño en piso por las mañanas, probable |
-| Taj Mahal | Teléfono | 55 5211 8260 | Sucursal Condesa (Francisco Márquez 134). Pedir a dirección de operaciones de las seis sucursales |
-| Grupo Hunan / Nobu Polanco | Teléfono | Nobu: 55 5280 2945 · 55 5280 3035 | Reservaciones. Pedir el contacto de operaciones del grupo (oficinas en Av. Constituyentes 1080) |
-
-**Guion de 30 segundos** (doctrina de venta, §9: promesa y plazo, jamás currículum; cierre por
-agenda con dos horarios, nunca «¿le interesa?»):
+Cinco locales de la campaña no tienen buzón útil (correo inexistente, buzón lleno o servidor que
+bloquea). Se llaman entre 11:00 y 13:00, antes del servicio de comida, con el guion de la
+doctrina de venta (§9: promesa y plazo, jamás currículum; cierre por agenda con dos horarios,
+nunca «¿le interesa?»):
 
 > Buen día, soy Sergio Berriozábal, de OCTAVA. Trabajo con restaurantes de CDMX poniendo por
 > escrito cómo opera el local para que salga igual con o sin el dueño. No vendo nada por
@@ -27,7 +24,7 @@ agenda con dos horarios, nunca «¿le interesa?»):
 Si contesta reservaciones: *«¿Con quién puedo hablar de operación? Le escribo yo directo y le
 quito el pendiente.»* Y se anota nombre y correo: es lo que faltaba en estos cinco.
 
-**WhatsApp** (Ling Ling y cualquiera que dé número):
+**WhatsApp** (para quien dé número):
 
 > Hola, soy Sergio Berriozábal, de OCTAVA. Le escribí por correo el 7 de septiembre sobre la
 > operación de [LOCAL]. Ofrezco un Diagnóstico Exprés sin costo: 90 minutos en piso y una hoja
@@ -108,7 +105,7 @@ restaurantes), el jueves 18-sep:
 > No es asesoría jurídica: marca el punto en que el caso pasa a un abogado, y ahí se para.
 > No manda correos ni se conecta a tu contabilidad. Media hora de tu parte.
 >
-> Mensaje directo o WhatsApp +52 984 187 8284.
+> Mensaje directo o WhatsApp.
 
 **B · Los contadores.** La doctrina los tiene como alianza de canal (comisión de referido 5–8 %
 `[A VALIDAR]`). Un contador de pymes tiene diez clientes con cartera vencida y ninguno con plan.
@@ -122,12 +119,11 @@ Mensaje a los tres contadores más cercanos de la agenda:
 
 ---
 
-## 4 · Orden del día siguiente
+## 4 · Orden del día
 
-1. Los 22 correos de `PIPELINE.md` (borradores, un clic cada uno).
-2. Las cinco llamadas de §1, entre 11:00 y 13:00, antes del servicio de comida.
-3. Un DJ conocido por WhatsApp con el texto del 12-sep; si no hay, la convocatoria en EL FORO DEL
+1. Las llamadas de §1, entre 11:00 y 13:00, antes del servicio de comida (datos en el documento
+   privado).
+2. Un DJ conocido por WhatsApp con el texto del 12-sep; si no hay, la convocatoria en EL FORO DEL
    DJ y en Hispasonic.
-4. El post de §3-A el jueves; los tres contadores el mismo día.
-
-Nada de esto necesita Gumroad abierto. Todo esto necesita que el correo salga.
+3. El post de §3-A el jueves; los tres contadores el mismo día.
+4. El primer post de LinkedIn de `CALENDARIO-LINKEDIN.md` (martes).
