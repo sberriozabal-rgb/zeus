@@ -1,7 +1,9 @@
 # Pipeline de venta — estado a 16-sep-2026
 
-> **Actualización 16-sep-2026 · enviados desde la fábrica, por orden de Sergio.** 16 correos
-> salieron de Gmail ese día; el filtro de permisos bloqueó uno.
+> **Actualización 16-sep-2026 · enviados desde la fábrica, por orden de Sergio.** 17 correos
+> salieron de Gmail ese día (comprobado en Enviados: todos entre las 02:12 y las 02:14 UTC); uno
+> rebotó y el filtro de permisos bloqueó otro. Esta tabla manda sobre la columna «Acción
+> siguiente» de §2, que describe el estado del 15-sep.
 >
 > | Qué | A quién | Estado |
 > |---|---|---|
@@ -9,7 +11,7 @@
 > | Seguimiento único, en el mismo hilo | Goguinara, Biwon, Midam, China Shing, GRG, Deigo, Taj Mahal | ✅ 7 enviados. Antes se comprobó en Enviados que ninguno tenía ya un seguimiento |
 > | Primer contacto «Mejoro su operación» a la dirección corregida | Suntory (jlmendez@ y cajavalle@), Grupo Carolo (info@), Grupo Rincón, Grupo Josecho, Grupo Plaza, Grupo Maximus (solo info@maximobistrot.com.mx), Chung King (solo chungkingcego@hotmail.com) | ✅ 7 enviados |
 > | Primer contacto «Tres hallazgos» | El Diez (atencionclientes@) | ✅ enviado. La versión «Mejoro su operación · [v4]» al mismo buzón, a la papelera: uno, no los dos |
-> | Primer contacto por el canal correcto | Ling Ling (linglingmx@hakkasangroup.com, redactado el 15-sep) | ✅ enviado |
+> | Primer contacto por el canal correcto | Ling Ling (linglingmx@hakkasangroup.com, redactado el 15-sep) | ✗ **rebotó**: el servidor del destinatario lo bloqueó (aviso de Gmail a las 02:13 UTC). Queda el canal de `PROSPECCION.md` §1: WhatsApp 55 3279 9204 |
 > | Primer contacto a Grupo Hunan + Nobu | contactogh@grupohunan.com | ❌ **bloqueado por el filtro de permisos** en el envío. El borrador queda en Gmail con el destinatario ya corregido: es un clic de Sergio |
 >
 > **No se enviaron, a propósito:** los ~26 borradores sin destinatario (carta en mano o
