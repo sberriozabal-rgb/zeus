@@ -36,8 +36,8 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 
 | # | Qué | Con qué | Cuánto tarda |
 |---|---|---|---|
-| 1 | **Enviar la respuesta a Grupo RosaNegra** que está en borradores desde el 12-sep | `PIPELINE.md` §2 · Gmail | 1 clic |
-| 2 | **Enviar los 7 seguimientos ya redactados en Gmail** (Goguinara, Biwon, Midam, China Shing, GRG, Deigo, Taj Mahal) y redactar los otros 7 con el texto de `PIPELINE.md` §4 | `PIPELINE.md` | 30 min |
+| 1 | ~~Enviar la respuesta a Grupo RosaNegra~~ ✅ enviada el 16-sep | `PIPELINE.md` cabecera | — |
+| 2 | ~~Enviar los 7 seguimientos ya redactados~~ ✅ enviados el 16-sep, con 8 primeros contactos más. **Queda:** enviar el de Grupo Hunan (bloqueado por permisos, borrador listo) y redactar los otros 7 seguimientos con el texto de `PIPELINE.md` §4 | `PIPELINE.md` | 20 min |
 | 3 | **Abrir la cuenta de Gumroad**: identidad verificada el mismo día, banco mexicano, W-8BEN, subdominio `cabina` | `GUMROAD-ALTA.md` bloque 0 | 1 h + la verificación |
 | 4 | **Dar de alta CABINA COMPLETA y Plan de cobro de cartera vencida**: pegar campos y descripción, subir `dist/<slug>.zip`, `portadas/<slug>-portada.png` y `portadas/<slug>-miniatura.png` | `GUMROAD-ALTA.md` bloques 1 a 3 | 20 min los dos |
 | 5 | **Comprar uno a 1 USD** (o esperar la primera venta) y apuntar el desglose real de comisión | `PLAN-DE-TRABAJO.md` §2, paso 1.4 | 10 min |
