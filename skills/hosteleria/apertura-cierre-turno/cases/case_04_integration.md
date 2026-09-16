@@ -57,8 +57,8 @@ a un local que porciona a cucharón y nunca dijo tener un problema de coste.
 
 ## Por qué importa
 
-Es lo que convierte seis skills en un sistema y no en una carpeta con seis
-archivos. El checklist es la única de las seis que produce un documento que
-alguien **firma cada día**: es el punto donde los hallazgos de las otras cinco
+Es lo que convierte siete skills en un sistema y no en una carpeta con siete
+archivos. El checklist es la única de las siete que produce un documento que
+alguien **firma cada día**: es el punto donde los hallazgos de las otras seis
 dejan de ser un PDF que se leyó una vez y pasan a ser una tarea con dueño, hora
 y cifra de corte. Sin esta pieza, el sistema diagnostica y no cambia nada.
