@@ -37,7 +37,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | # | Qué | Con qué | Cuánto tarda |
 |---|---|---|---|
 | 1 | ~~Enviar la respuesta a Grupo RosaNegra~~ ✅ enviada el 16-sep | `PIPELINE.md` cabecera | — |
-| 2 | ~~Enviar los 7 seguimientos ya redactados~~ ✅ enviados el 16-sep, con 9 primeros contactos más (uno rebotó: Ling Ling, queda WhatsApp). **Queda:** enviar el de Grupo Hunan (bloqueado por permisos, borrador listo) y redactar los otros 7 seguimientos con el texto de `PIPELINE.md` §4 | `PIPELINE.md` | 20 min |
+| 2 | ~~Seguimientos y primeros contactos~~ ✅ los 14 seguimientos y 9 primeros contactos enviados el 16-sep (uno rebotó: Ling Ling, queda WhatsApp). **Queda:** enviar el de Grupo Hunan (bloqueado por permisos, borrador listo en Gmail) | `PIPELINE.md` cabecera | 1 clic |
 | 3 | ~~Abrir la cuenta de Gumroad~~ ✅ tienda <https://cabina.gumroad.com> abierta el 16-sep. **Queda:** verificar identidad, método de cobro desde México y W-8BEN | `GUMROAD-ALTA.md` bloque 0 | la verificación |
 | 4 | ~~Dar de alta CABINA COMPLETA y Plan de cobro de cartera vencida~~ ✅ en alta el 16-sep, con los 15 del catálogo suelto | `GUMROAD-ALTA.md` bloques 1 a 3 | — |
 | 5 | **Comprar uno a 1 USD** (o esperar la primera venta) y apuntar el desglose real de comisión | `PLAN-DE-TRABAJO.md` §2, paso 1.4 | 10 min |

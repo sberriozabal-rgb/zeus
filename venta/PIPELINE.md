@@ -13,10 +13,10 @@
 > | Primer contacto «Tres hallazgos» | El Diez (atencionclientes@) | ✅ enviado. La versión «Mejoro su operación · [v4]» al mismo buzón, a la papelera: uno, no los dos |
 > | Primer contacto por el canal correcto | Ling Ling (linglingmx@hakkasangroup.com, redactado el 15-sep) | ✗ **rebotó**: el servidor del destinatario lo bloqueó (aviso de Gmail a las 02:13 UTC). Queda el canal de `PROSPECCION.md` §1: WhatsApp 55 3279 9204 |
 > | Primer contacto a Grupo Hunan + Nobu | contactogh@grupohunan.com | ❌ **bloqueado por el filtro de permisos** en el envío. El borrador queda en Gmail con el destinatario ya corregido: es un clic de Sergio |
+> | Seguimiento único, en el mismo hilo, **redactado y enviado el 16-sep** con el texto del §4 | SSAM, La Provoleta, Yoshimi (dirigido a Alimentos y Bebidas), El Japonez, Asian Bay, El Huequito (dirigido a dirección de operaciones), Tonchin | ✅ 7 enviados. Con esto, los 14 prospectos entregados del 7-sep tienen hecho su único seguimiento |
 >
 > **No se enviaron, a propósito:** los ~26 borradores sin destinatario (carta en mano o
-> WhatsApp), KYU (cerrado), los 7 seguimientos que aún no están redactados (SSAM, La Provoleta,
-> Yoshimi, El Japonez, Asian Bay, El Huequito, Tonchin: texto en §4), los correos a fondos y
+> WhatsApp), KYU (cerrado), los correos a fondos y
 > redes de inversores del 7-sep (~20, fuera de este pipeline), las tres consultas a myClaude,
 > SkillHQ y claudemarketplaces (sin destinatario) y los borradores personales. A partir de aquí
 > rige la regla del §5: quien no responda al seguimiento sale del pipeline.
