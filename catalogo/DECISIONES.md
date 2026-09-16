@@ -10,7 +10,7 @@ decidido está al final, y no es por prudencia: es porque decidirlo yo te haría
 | Producto | Contenido | Precio |
 |---|---|---|
 | **Instalación Esencial** | 3 skills | **2.500 €** |
-| **Instalación Completa** | 6 skills | **4.900 €** |
+| **Instalación Completa** | 7 skills | **4.900 €** |
 | `productividad-personal-turno` suelta | 1 skill | **199 €** |
 
 **Composición del Esencial, decidida:** `escandallo-ingenieria-menu` + `comparativa-proveedores`
@@ -33,7 +33,9 @@ en el catálogo**, no tiene metadatos ni auditoría, y no se vende lo que no est
 **Composición del Completa, decidida:** las tres del Esencial más `respuesta-resenas`,
 `productividad-personal-turno` y `reporte-inteligencia-competencia`.
 
-`receta-estandar` **queda fuera del Completa facturable** hasta que levante G4. Ver punto 6.
+~~`receta-estandar` **queda fuera del Completa facturable** hasta que levante G4. Ver punto 6.~~
+**Superado por la decisión 11 (15-sep-2026, noche):** `receta-estandar` entra en la Completa, al
+mismo precio, y solo se entrega con el anexo de inocuidad firmado. La Completa son 7 skills.
 
 ## 2 · Tarifa de la línea neutra — DECIDIDA
 

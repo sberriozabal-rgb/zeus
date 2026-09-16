@@ -2,7 +2,7 @@
 
 Nombre técnico     : escandallo-ingenieria-menu
 Nombre comercial   : [A VALIDAR — nombre comercial de la casa pendiente]
-Peldaño            : P1 · SKILL (pieza 1 de 6 del sistema instalable Motor B)
+Peldaño            : P1 · SKILL (pieza 1 de 7 del sistema instalable Motor B)
 Línea              : Hostelería
 Comprador nombrado : Restaurante independiente de mesa y mantel o cocina de producto, España o México, 8-30 personas de plantilla y carta de 20 a 60 referencias. Decide el dueño; en grupo pequeño, el gerente con el jefe de cocina delante. En México el mercado objetivo es la microempresa restaurantera, que es 96 de cada 100 unidades del sector (INEGI/CANIRAC, ver `references/FUENTES.md`).
 Trabajo que quita  : Calcular a mano el coste de cada plato en una hoja de cálculo —normalmente sin rendimiento ni merma, que es lo que la hace estar mal— y decidir a ojo qué platos quitar de la carta. Hoy o no se hace, o se hace una vez al año cuando ya se perdió el margen.
@@ -32,6 +32,6 @@ Notas:
   enviado a nadie, y antes de usarse debe pasar la comprobación de que las dos cifras que
   contiene (11,4% y 30,4%) se presentan siempre como carta de prueba de la casa, no como
   caso de cliente.
-- **Regla de freno (4.5)**: esta es la pieza 1 de 6 de una línea con cero compradores
+- **Regla de freno (4.5)**: esta es la pieza 1 de 7 de una línea con cero compradores
   nombrados hasta la fecha. La prioridad de la casa no es fabricar la séptima skill, es
   instalar estas seis en un cliente que pague.

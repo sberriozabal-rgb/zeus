@@ -1,5 +1,20 @@
 # CHANGELOG — reporte-inteligencia
 
+## 1.2.0 — 15-sep-2026 · envoltorio de venta y reauditoría
+
+### Añadido
+- `README.md` para el comprador: instalación, modo de captura, contenido y límites.
+- `ANEXO-A-ficha-comercial.md` con comprador nombrado, precio (49 €) y canal (Gumroad).
+
+### Corregido
+- Conciliada la discrepancia de registro de la 1.1.0: versión **1.2.0** en frontmatter,
+  `metadata.json` y este fichero.
+- Reauditada con la rúbrica de 20 puntos: **19/20** (`validar_skill.py`, 15-sep-2026; 20/20
+  mecánico, no se firma el 20 porque el punto 19 exige URLs reverificadas una a una).
+
+### Pendiente
+- Convertir los antipatrones 1 a 5 de `[DERIVADO]` a `[OBSERVADO]`: requiere 3 reportes reales más.
+
 ## 1.1.0 — 16-ago-2026 · parche de modo de captura
 
 Origen: primera ejecución real de la skill (Semana 0, taquería de CDMX, 2026-08-16). El dry-run destapó un supuesto no declarado del protocolo.

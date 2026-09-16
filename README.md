@@ -44,7 +44,11 @@ y visita presencial. Si un enlace de Gumroad todavía no responde, la tienda est
 - [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md) — tarifa propuesta con anclas de mercado y canal de cobro.
 - [`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md) — matriz G1–G5 y riesgos abiertos.
 - [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md) — **las decisiones tomadas**, con su razón.
-- [`venta/`](venta/) — kit de venta: **hoja de alta en Gumroad** (`GUMROAD-ALTA.md`), empaquetador
+- [`venta/LISTA-DE-VENTA.md`](venta/LISTA-DE-VENTA.md) — **empieza aquí**: lo que está hecho, lo
+  que solo puede hacer el titular y en qué orden, producto a producto.
+- [`venta/`](venta/) — kit de venta: **hoja de alta en Gumroad** (`GUMROAD-ALTA.md`, los 15
+  productos con descripción, tags y portada), **portadas** (`portadas/`, `generar_portadas.py`),
+  **oferta de hostelería** (`OFERTA-HOSTELERIA.md`, las instalaciones descritas), empaquetador
   de productos con validación previa (`empaquetar_gumroad.py`), consultas pendientes a terceros
   (`CONSULTAS-PENDIENTES.md`), guion de visita, mensajes listos y **locuciones**
   generadas en local (`venta/locuciones/`).

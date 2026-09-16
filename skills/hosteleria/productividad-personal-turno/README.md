@@ -1,4 +1,4 @@
-# Productividad de personal por turno  ·  `productividad-personal-turno`  v1.1.0
+# Productividad de personal por turno  ·  `productividad-personal-turno`  v1.1.1
 
 Sabes en qué franjas pagas plantilla sin venta y en cuáles pierdes venta por falta de mano.
 

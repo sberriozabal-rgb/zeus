@@ -200,9 +200,12 @@ catálogo tiene 17 piezas listas y ninguna venta; el problema no se arregla con 
 
 | Archivo | Qué es |
 |---|---|
+| `venta/LISTA-DE-VENTA.md` | La lista maestra: hecho / pendiente / de quién, producto a producto |
 | `venta/PLAN-DE-TRABAJO.md` | Este documento. El plan operativo, v1.1 |
 | `venta/PIPELINE.md` | El pipeline real: la campaña del 7-sep prospecto a prospecto, con la acción siguiente de cada uno |
-| `venta/GUMROAD-ALTA.md` | La cuenta, los dos productos campo por campo, la política de devolución |
+| `venta/GUMROAD-ALTA.md` | La cuenta, los 15 productos campo por campo (descripción, tags, portada), la política de devolución |
+| `venta/portadas/` · `venta/generar_portadas.py` | Cover y thumbnail de cada producto de Gumroad, generadas desde la hoja de alta |
+| `venta/OFERTA-HOSTELERIA.md` | Ficha de producto de las instalaciones Esencial y Completa |
 | `venta/empaquetar_gumroad.py` | Genera en `dist/` el zip de cada producto sin material de fábrica |
 | `venta/POLAR-CONFIGURACION.md` | Histórico; es la caída si Gumroad no paga a México |
 | `venta/GUION-VISITA.md` · `venta/MENSAJES.md` | La visita de hostelería y los correos de la fase 2 |

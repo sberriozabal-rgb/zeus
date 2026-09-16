@@ -60,11 +60,11 @@ Enseña las dos opciones y cállate:
 
 | | Esencial | Completa |
 |---|---|---|
-| Skills | 3 | 6 |
+| Skills | 3 | 7 |
 | Precio | **2.500 €** | **4.900 €** |
-| Qué incluye | Escandallo, comparativa de proveedores, checklists de turno | Las tres anteriores más respuestas a reseñas, productividad por turno y radar de competencia |
+| Qué incluye | Escandallo, comparativa de proveedores, checklists de turno | Las tres anteriores más respuestas a reseñas, productividad por turno, radar de competencia y fichas de receta estándar (con anexo de inocuidad firmado) |
 
-> "Lo que has visto son las dos primeras. La instalación completa son seis, montadas con tus datos
+> "Lo que has visto son las dos primeras. La instalación completa son siete, montadas con tus datos
 > y con tu equipo formado para usarlas."
 
 **Y ahora te callas.** El primero que habla después del precio, pierde.
@@ -99,10 +99,12 @@ Y lo dejas. Cuesta cero y es el mejor recordatorio que existe.
   pegado**: *"el 63,8 % de rotación del sector, según el informe de Synergie España de 2026"*.
   Nunca "el 63,8 % según los datos oficiales": no es INE y no tiene tamaño de muestra publicado.
   Igual con los 2.800-5.000 € de sustituir a una persona, que son de un análisis de Linkers.
-- **Nada sobre fichas de receta ni seguridad alimentaria.** `receta-estandar` no entra en la venta
-  hasta que la revise un consultor. Si te preguntan por fichas técnicas: *"eso lo tengo, pero lo
-  estoy pasando por revisión de un técnico en seguridad alimentaria antes de entregarlo"*. Esa
-  frase, además, vende.
+- **Nada que suene a plan de higiene ni a certificación.** `receta-estandar` entra en la Completa
+  desde la decisión 11, pero se entrega **solo con el anexo de seguridad alimentaria firmado**
+  (`ANEXO-CONTRATO-INOCUIDAD.md`) y la revisión del consultor sigue abierta. Si te preguntan por
+  fichas técnicas: *"va dentro de la Completa; las temperaturas salen de la norma de tu país y lo
+  que un técnico todavía no ha confirmado va marcado en la ficha, no escondido"*. Esa frase, además,
+  vende. Lo que nunca dices: que sustituye el APPCC.
 
 ## Después de la visita — el mismo día
 
