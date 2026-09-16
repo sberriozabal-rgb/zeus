@@ -5,6 +5,8 @@
   "estado": "ACORDADO",
   "linea": "hosteleria",
   "peldano": "P1",
+  "motor": "A+B",
+  "precio_eur": "199 suelta por Gumroad (ratificado 15-sep-2026, catalogo/PRECIOS.md); tambien dentro de la Instalacion Completa (4.900 EUR)",
   "author": "Sergio Berriozábal Serrano",
   "revisado": "2026-08-16",
   "buyer": "Dueño o encargado de restaurante independiente de 1-3 locales, ES/MX. Decide el dueño.",

@@ -100,6 +100,21 @@ nombre y al mismo precio. Precios en EUR si Gumroad lo admite; si solo USD, la m
 - La hoja de Gumroad no tenía tags en 13 de los 15 productos ni campo de portada en ninguno, y
   llamaba "skill para Claude" a tres packs de varias skills. Añadidos y corregidos.
 
+## 5b · Revisión de venta del 16-sep-2026 (segunda pasada)
+
+- Empaquetador ejecutado: **las 17 validan y salen los 16 zips** sin `metadata.json` ni ficha comercial.
+- Hoja de Gumroad, lista maestra, `PRECIOS.md` y `metadata.json` **dicen el mismo precio en los 15
+  productos**; las 30 portadas existen con el nombre de su slug.
+- Escaparate `octava-skills`: las 17 fichas llevan la versión y el precio de zeus y los 15 enlaces de
+  Gumroad cubren los 15 slugs. La copia de `apertura-cierre-turno` del plugin iba atrasada
+  (1.1.1 y «6 skills»): sincronizada con zeus y plugin `octava-abiertas` en 1.0.1.
+- Seis `metadata.json` de hostelería no tenían campo de precio; añadido con la misma redacción que
+  `reporte-inteligencia-competencia`. Es material de fábrica, no entra en los zips.
+- El caso de integración de `apertura-cierre-turno` hablaba de un sistema de seis; ahora siete.
+- **No verificable desde la fábrica:** que <https://sberriozabal-rgb.github.io/octava-skills/>
+  y los 15 enlaces `cabina.gumroad.com/l/<slug>` respondan. El proxy de la sesión bloquea GitHub
+  Pages y Gumroad; lo comprueba Sergio desde su navegador (paso 7 de §2).
+
 ## 6 · Las reglas que siguen sin tocarse
 
 1. Ninguna cifra sin su fuente y su límite. Ninguna promesa de resultado. No decir "probadas"
