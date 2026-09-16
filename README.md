@@ -50,7 +50,8 @@ y visita presencial. La tienda es <https://cabina.gumroad.com>, abierta el 16-se
 - [`venta/`](venta/) — kit de venta: **hoja de alta en Gumroad** (`GUMROAD-ALTA.md`, los 15
   productos con descripción, tags y portada), **portadas** (`portadas/`, `generar_portadas.py`),
   **oferta de hostelería** (`OFERTA-HOSTELERIA.md`, las instalaciones descritas), empaquetador
-  de productos con validación previa (`empaquetar_gumroad.py`), consultas pendientes a terceros
+  de productos con validación previa (`empaquetar_gumroad.py`), **repositorio privado de entrega**
+  para Polar y otros canales (`publicar_entrega.py` → `zeus-entrega`, decisión 12), consultas pendientes a terceros
   (`CONSULTAS-PENDIENTES.md`), guion de visita, mensajes listos y **locuciones**
   generadas en local (`venta/locuciones/`).
 
