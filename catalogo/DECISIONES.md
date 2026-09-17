@@ -317,12 +317,31 @@ fiscales de Sergio, punto 1 de lo no decidido), y que las skills fuera del catá
 (`valoracion-lote-vino-inversion`, `forja-fabrica-de-skills`, `zeus-skill-creator`, la línea
 `octava-*`) no están en ninguno de los dos repositorios y por tanto no se publican con ellos.
 
+## 12 · `zeus` vuelve a ser privado — DECIDIDA POR SERGIO (17-sep-2026)
+
+Tras un día en abierto (decisión 11), Sergio volvió `zeus` a privado el 17-sep-2026, a
+recomendación de la fábrica. Razones, por orden:
+
+1. `venta/` contenía correos, teléfonos y nombres de contacto de unos treinta restaurantes y
+   varias direcciones personales de terceros. El 16-sep se retiraron de los ficheros vivos (#31)
+   y la tabla prospecto a prospecto pasó a un documento privado de Google Drive del titular; pero
+   el historial de git seguía exponiéndolos. Con el repositorio privado, el historial deja de
+   ser legible por terceros sin reescribirlo.
+2. La publicidad de `zeus` no aportaba a la venta: el escaparate es `octava-skills` (público,
+   fichas con precio y enlace) y la caja es Gumroad. Ninguno de los dos depende de la
+   visibilidad de `zeus`.
+3. Se recupera la doctrina de entrega: *acceso revocable a repositorio privado, nunca por
+   adjunto*. La entrega por zip de Gumroad sigue siendo la desviación declarada de la decisión 8.
+
+**Lo que no cambia:** las 17 a la venta, la tarifa, Gumroad, `octava-skills` público y la venta
+de `receta-estandar` con el anexo de inocuidad.
+
 ---
 
 ## Lo que NO he decidido, y por qué
 
-0. ~~Cambiar la visibilidad de `zeus` a público.~~ ✅ **Hecho por Sergio el 16-sep-2026 y
-   verificado.** Ese mismo día quedaron regenerados los 16 zips de producto de Gumroad con
+0. ~~Cambiar la visibilidad de `zeus` a público.~~ ✅ Hecho por Sergio el 16-sep-2026 y
+   verificado; **revertido a privado el 17-sep-2026 (decisión 12).** Ese mismo día quedaron regenerados los 16 zips de producto de Gumroad con
    `venta/empaquetar_gumroad.py` (validación previa superada en las 17) y entregados junto a
    `venta/GUMROAD-ALTA.md` para el alta.
 1. ~~Abrir la cuenta de Gumroad~~ ✅ **Hecho por Sergio el 16-sep-2026.** Tienda
