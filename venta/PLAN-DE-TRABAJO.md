@@ -4,7 +4,7 @@
 **Objetivo** 3.000 USD netos al mes en el canal en línea · **2.600 €** al cambio del 15-sep
 (EUR/USD 1,1536, [Trading Economics](https://tradingeconomics.com/euro-area/currency)) ·
 51.420 MXN al tipo de cambio del 15-sep (17,14)
-**Estado** Fase 0 abierta. Ninguna de las tres fases siguientes puede arrancar hasta cerrarla.
+**Estado a 17-sep-2026** Fase 0 cerrada por la fábrica (las 17 validan; tienda abierta el 16-sep). Fase 1 en marcha: quedan de Sergio la verificación de identidad, el cobro desde México, la compra de prueba (1.3–1.4) y comprobar los 15 enlaces. Fase 2 sin abrir: ninguna cifra de cliente.
 
 > **Cambios respecto a la v1.0.0 (misma fecha).** La v1.0 se escribió sin el repositorio delante
 > y se contradecía con él en cuatro puntos. Decidido por Sergio el 15-sep-2026
@@ -35,7 +35,7 @@ es que la tienda abra y que exista una sola cifra de cliente que respalde la pro
 | Textos de venta y licencia | Escritos: `venta/GUMROAD-ALTA.md` (dos productos, campo por campo), `LICENSE`, `LICENSE.txt` por skill |
 | Paquetes | `venta/empaquetar_gumroad.py` genera el zip de cada producto sin ficha ni `metadata.json` |
 | Conformidad del catálogo | **Las 17 validan** |
-| Tienda abierta | **No** |
+| Tienda abierta | **Sí**, desde el 16-sep: <https://cabina.gumroad.com>, 15 productos en alta. Pendiente de Sergio: verificación de identidad, método de cobro desde México y W-8BEN |
 | Prueba con cifra | **Ninguna** · G2 0/17 |
 
 ---
@@ -176,8 +176,8 @@ que se firma.
 | ~~Qué método de cobro ofrece Gumroad desde México~~ **Banco local** (verificado 15-sep, §3). El paso 0.2 lo comprueba en el alta | Sergio · paso 0.2 |
 | ~~Si Gumroad admite precio en EUR~~ **Muestra EUR, cobra en USD** (verificado 15-sep, §2) | — |
 | Si Polar paga a México (sólo importa si Gumroad falla) | La fábrica, cuando el proxy deje leer polar.sh |
-| Si myClaude y SkillHQ actúan como *merchant of record* o el IVA europeo es del vendedor | **Correos redactados** (15-sep): en borradores de Gmail y en [`CONSULTAS-PENDIENTES.md`](CONSULTAS-PENDIENTES.md). Falta el destinatario, que Sergio toma de cada web al enviar |
-| Cómo se entra en el directorio `claudemarketplaces.com` | **Correo redactado** (15-sep), mismo sitio. Sólo se envía si se decide publicar el marketplace gratuito |
+| Si myClaude y SkillHQ actúan como *merchant of record* o el IVA europeo es del vendedor | **Correos redactados y con destinatario** (17-sep): `hello@myclaude.sh` y `support@skillhq.dev`, puestos en los borradores de Gmail. Fuentes y grado de verificación en [`CONSULTAS-PENDIENTES.md`](CONSULTAS-PENDIENTES.md). Sergio los envía: un clic cada uno |
+| Cómo se entra en el directorio `claudemarketplaces.com` | **Correo redactado y con destinatario** (`hi@claudemarketplaces.com`, 17-sep), mismo sitio. Sólo se envía si se decide publicar el marketplace gratuito |
 | Si existe una skill de captación que no sea de pago (hoy no) | Sergio |
 | Revisión externa de inocuidad de `receta-estandar` (único G4 abajo) | Sergio · consultor |
 | Revisión del abogado de `venta/ANEXO-CONTRATO-INOCUIDAD.md` | Sergio · abogado |

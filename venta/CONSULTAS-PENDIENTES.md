@@ -2,9 +2,18 @@
 
 Tres huecos del informe FORJA v1.1.0 que se cierran escribiendo. Los textos están en los
 borradores de Gmail de `sergio@redcontramar.com` (asunto idéntico al de aquí) y copiados abajo.
-**Falta el destinatario en los tres:** los dominios `myclaude.sh`, `skillhq.dev` y
-`claudemarketplaces.com` están bloqueados desde la sesión de trabajo y no pude sacar la
-dirección de contacto. Se toma del pie de página o del formulario de cada web al enviar.
+**Destinatarios puestos en los tres borradores el 17-sep-2026** (los dominios `myclaude.sh`,
+`skillhq.dev` y `claudemarketplaces.com` siguen bloqueados desde la sesión; las direcciones
+salieron por otra vía):
+
+| Borrador | Para | De dónde sale | Grado |
+|---|---|---|---|
+| myClaude | `hello@myclaude.sh` | Perfil público de la organización en GitHub (<https://github.com/myclaude-sh>) | Leído directamente |
+| SkillHQ | `support@skillhq.dev` | Resultado de búsqueda de `skillhq.dev/become-seller` | Indirecto: la web no se pudo abrir |
+| claudemarketplaces | `hi@claudemarketplaces.com` | Resultado de búsqueda de `claudemarketplaces.com/about` | Indirecto: la web no se pudo abrir |
+
+Si un correo rebota, el dato correcto está en el pie de la web correspondiente. **Ninguno se ha
+enviado:** el envío es de Sergio (paso 11 de `LISTA-DE-VENTA.md` §2).
 
 Van en inglés porque los tres son productos internacionales; SkillHQ cobra en euros pero
 publica en inglés.
@@ -19,6 +28,7 @@ publica en inglés.
 
 ## 1 · myClaude
 
+**Para:** `hello@myclaude.sh`
 **Asunto:** Seller from Mexico: merchant of record, EU VAT and payouts
 
 > Hello,
@@ -41,6 +51,7 @@ publica en inglés.
 
 ## 2 · SkillHQ
 
+**Para:** `support@skillhq.dev`
 **Asunto:** Seller from Mexico: VAT handling, payouts and price range
 
 > Hello,
@@ -61,6 +72,7 @@ publica en inglés.
 
 ## 3 · claudemarketplaces.com
 
+**Para:** `hi@claudemarketplaces.com`
 **Asunto:** How to get a marketplace listed
 
 > Hello,

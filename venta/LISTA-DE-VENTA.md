@@ -1,6 +1,6 @@
 # Lista maestra de venta — qué está hecho y qué falta, con su dueño
 
-Estado a 16-sep-2026. Una sola página para no tener que leer las otras diez: lo que la fábrica
+Estado a 17-sep-2026. Una sola página para no tener que leer las otras diez: lo que la fábrica
 ya dejó listo, lo que solo puede hacer Sergio, y en qué orden. Cada línea apunta al documento que
 la sostiene.
 
@@ -28,7 +28,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | Calendario de LinkedIn, cuatro semanas | `CALENDARIO-LINKEDIN.md` | ✅ |
 | Locuciones para México | `locuciones/` | ✅ tres tomas |
 | Anexo de seguridad alimentaria para `receta-estandar` | `ANEXO-CONTRATO-INOCUIDAD.md` | ✅ redactado · ⚠️ pendiente de abogado y de técnico |
-| Consultas a myClaude, SkillHQ y claudemarketplaces | `CONSULTAS-PENDIENTES.md` | ✅ redactadas · falta el destinatario |
+| Consultas a myClaude, SkillHQ y claudemarketplaces | `CONSULTAS-PENDIENTES.md` | ✅ redactadas · ✅ destinatario puesto en los tres borradores de Gmail el 17-sep |
 | Pipeline de la campaña de CDMX, prospecto a prospecto | `PIPELINE.md` | ✅ leído y ordenado el 15-sep |
 | Escaparate público con ficha y enlace de compra por skill | <https://github.com/sberriozabal-rgb/octava-skills> | ✅ publicado (decisión 10) · sus enlaces apuntan a `cabina.gumroad.com/l/<slug>` |
 
@@ -46,7 +46,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | 8 | **Las dos conversaciones de prueba** (un DJ con nombre, una empresa con nombre): gratis a cambio de la cifra escrita y el permiso de publicarla | `PIPELINE.md` §3 · `MENSAJES.md` | Es el hueco que importa |
 | 9 | **La primera visita de hostelería** con el guion y la oferta | `GUION-VISITA.md` · `OFERTA-HOSTELERIA.md` | 45 min + desplazamiento |
 | 10 | Revisión del abogado del anexo de inocuidad y del técnico en seguridad alimentaria (`receta-estandar`) | `ANEXO-CONTRATO-INOCUIDAD.md` | Antes de entregar la primera Completa |
-| 11 | Enviar las tres consultas a myClaude, SkillHQ y claudemarketplaces con el destinatario de cada web | `CONSULTAS-PENDIENTES.md` | 10 min · solo si se quiere un segundo canal |
+| 11 | Enviar las tres consultas a myClaude, SkillHQ y claudemarketplaces. **Los borradores ya llevan destinatario** (17-sep): `hello@myclaude.sh`, `support@skillhq.dev`, `hi@claudemarketplaces.com` | `CONSULTAS-PENDIENTES.md` | 3 clics · solo si se quiere un segundo canal |
 
 Lo que no está en esta lista no bloquea ninguna venta.
 
@@ -114,6 +114,32 @@ nombre y al mismo precio. Precios en EUR si Gumroad lo admite; si solo USD, la m
 - **No verificable desde la fábrica:** que <https://sberriozabal-rgb.github.io/octava-skills/>
   y los 15 enlaces `cabina.gumroad.com/l/<slug>` respondan. El proxy de la sesión bloquea GitHub
   Pages y Gumroad; lo comprueba Sergio desde su navegador (paso 7 de §2).
+
+## 5c · Ejecución del 17-sep-2026 (tercera pasada, sobre el plan)
+
+Sergio pidió ejecutar el plan de trabajo. Lo que la fábrica podía hacer desde el repositorio, hecho;
+lo que no, dicho.
+
+- **La v1.0 del plan (15-sep, «78 skills», «14 no validan», «CORE 249 USD», «cobro 69 USD») está
+  retirada**; manda la v1.1 de `PLAN-DE-TRABAJO.md` y la tarifa de `catalogo/PRECIOS.md`. El
+  parche de frontmatter de la v1.0 **no se aplica** en este repositorio: no hay nada que parchear.
+- Fase 0.1: empaquetador ejecutado de nuevo el 17-sep. **17/17 validan y salen los 16 zips** en
+  `dist/`, sin ficha comercial ni `metadata.json`.
+- Fase 1.5: <https://github.com/sberriozabal-rgb/octava-skills> **responde en público**,
+  verificado desde la fábrica (README con las 17, tres líneas, precios y Gumroad como canal).
+- **Sigue sin poder verificarse desde la fábrica**: <https://cabina.gumroad.com>, los 15 enlaces
+  `cabina.gumroad.com/l/<slug>` y <https://sberriozabal-rgb.github.io/octava-skills/>. El proxy los
+  bloquea también el 17-sep. Lo comprueba Sergio (paso 7 de §2).
+- Consultas a terceros: destinatarios localizados y **puestos en los tres borradores de Gmail**, sin
+  enviar. `hello@myclaude.sh` está verificado en la página de la organización en GitHub;
+  `support@skillhq.dev` y `hi@claudemarketplaces.com` salen de resultados de búsqueda de sus
+  propias webs (`skillhq.dev/become-seller`, `claudemarketplaces.com/about`), que el proxy no deja
+  abrir. Si uno rebota, la web correspondiente tiene el dato en el pie.
+- Fase 2 (la que importa) **sigue en cero**: los dos correos de prueba de `MENSAJES.md` no tienen
+  a quién ir hasta que Sergio ponga un DJ y una empresa con nombre (`PROSPECCION.md` §2 y §3).
+- Visto en Gmail el 17-sep: **una tanda nueva de más de cincuenta borradores** «Tres hallazgos para
+  X, sin costo» creados esa madrugada (02:30–02:37 UTC), sin destinatario. No los toca esta pasada:
+  son de la campaña de hostelería y su envío es decisión de Sergio con el pipeline privado delante.
 
 ## 6 · Las reglas que siguen sin tocarse
 
