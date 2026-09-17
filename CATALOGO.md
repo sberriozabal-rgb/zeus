@@ -1,8 +1,8 @@
 # Catálogo de venta — ZEUS / FORJA
 
 Estado a 15-sep-2026. **17 skills cargadas** en `skills/`, todas en estado
-`ACORDADO` con licencia que permite la venta. Este repositorio es público por decisión del
-titular (decisión 11) y es la fuente de verdad del catálogo; el escaparate con precio y enlace
+`ACORDADO` con licencia que permite la venta. Este repositorio es **privado de nuevo desde el
+17-sep-2026** (decisión 12; estuvo público un día por la decisión 11) y es la fuente de verdad del catálogo; el escaparate con precio y enlace
 de compra es `octava-skills`. El catálogo suelto se vende en **Gumroad** y se
 entrega por descarga del zip que genera `venta/empaquetar_gumroad.py` (decisión 8); la
 doctrina de *acceso revocable, nunca por adjunto* queda como preferencia declarada, no como
