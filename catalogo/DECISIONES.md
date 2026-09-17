@@ -345,7 +345,7 @@ Créalo y súbelo. Conéctate. Con Gmail sberriozabal@gmail»*.
 
 | Qué | Decisión del titular | Estado |
 |---|---|---|
-| **Repositorio de entrega** | Uno solo, privado: `sberriozabal-rgb/zeus-entrega`. Es el que se conecta a Polar y a cualquier otro canal que entregue por acceso a repositorio (myClaude, SkillHQ u otro si algún día entran) | ✅ **Creado por Sergio y llenado por la fábrica el 17-sep-2026** con `python3 venta/publicar_entrega.py --push` (un commit, rama `main`). ⚠️ **Quedó público, no privado**: la API lo devuelve como `visibility: public`. La fábrica no puede cambiarlo (403 en configuración de repositorio); Sergio lo pasa a privado en *Settings → Danger Zone → Change visibility* antes de conectarlo a Polar |
+| **Repositorio de entrega** | Uno solo, privado: `sberriozabal-rgb/zeus-entrega`. Es el que se conecta a Polar y a cualquier otro canal que entregue por acceso a repositorio (myClaude, SkillHQ u otro si algún día entran) | ✅ **Creado por Sergio y llenado por la fábrica el 17-sep-2026** con `python3 venta/publicar_entrega.py --push` (un commit, rama `main`). Se creó público por error y **Sergio lo pasó a privado ese mismo día**; verificado por la fábrica (API: `visibility: private`). Listo para conectar a Polar |
 | **Contenido** | Los 15 productos del catálogo suelto en `productos/<slug>/`, idénticos al zip de Gumroad (sin ficha comercial ni `metadata.json`), con `README.md` y `LICENSE` de comprador | ✅ Construido y verificado: 15 productos, 297 ficheros de skill, 0 ficheros de fábrica. Generador: `venta/publicar_entrega.py`, con `--push` para empujar |
 | **Cuenta de Polar** | Se abre con Google, `sberriozabal@gmail.com` | ⏳ Solo Sergio: polar.sh responde 403 desde la sesión y el alta con Google pide su navegador. Pasos en `venta/POLAR-CONFIGURACION.md` §1 |
 | **Canal vigente** | No cambia: Gumroad (decisión 8). Polar sigue siendo la caída, ahora con la entrega resuelta | Sin cambio |
@@ -370,9 +370,9 @@ importa, el mismo script genera un repositorio por producto.
    verificarlo: el proxy de las sesiones bloquea `gumroad.com`. Quedan de esa cuenta la
    verificación de identidad, el método de cobro desde México y el W-8BEN (bloque 0 de
    `venta/GUMROAD-ALTA.md`), que solo Sergio sabe si están cerrados.
-1b. ~~Crear el repositorio `zeus-entrega`~~ ✅ **Creado por Sergio y llenado el 17-sep-2026.** Quedan dos
-   cosas de Sergio: **ponerlo en privado** (se creó público y la fábrica no puede cambiar la visibilidad)
-   y **abrir Polar con Google** (`sberriozabal@gmail.com`), decisión 13.
+1b. ~~Crear el repositorio `zeus-entrega`~~ ✅ **Creado por Sergio y llenado el 17-sep-2026.** **Privado desde el
+   17-sep-2026**, verificado por la API. Queda de Sergio **abrir Polar con Google** (`sberriozabal@gmail.com`),
+   decisión 13.
 2. **Levantar G2.** Explicado arriba. Lo levanta tu primer cliente, no yo.
 3. **La revisión de seguridad alimentaria de `receta-estandar`.** Es trabajo de un profesional
    colegiado, y es el que te cubre a ti.
