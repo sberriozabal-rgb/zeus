@@ -29,7 +29,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | Locuciones para México | `locuciones/` | ✅ tres tomas |
 | Anexo de seguridad alimentaria para `receta-estandar` | `ANEXO-CONTRATO-INOCUIDAD.md` | ✅ redactado · ⚠️ pendiente de abogado y de técnico |
 | Consultas a myClaude, SkillHQ y claudemarketplaces | `CONSULTAS-PENDIENTES.md` | ✅ redactadas · falta el destinatario |
-| **Repositorio de entrega por acceso revocable** (Polar y el resto de canales, decisión 12): los 15 productos en `productos/<slug>/`, README y licencia de comprador | `python3 publicar_entrega.py` → `dist/entrega/` · `--push` lo sube a `sberriozabal-rgb/zeus-entrega` | ✅ construido y verificado 16-sep (297 ficheros, 0 de fábrica) · ⏳ el repositorio lo tiene que crear Sergio |
+| **Repositorio de entrega por acceso revocable** (Polar y el resto de canales, decisión 12): los 15 productos en `productos/<slug>/`, README y licencia de comprador | `python3 publicar_entrega.py` → `dist/entrega/` · `--push` lo sube a `sberriozabal-rgb/zeus-entrega` | ✅ **subido a `sberriozabal-rgb/zeus-entrega` el 17-sep** (15 productos, 297 ficheros, 0 de fábrica) · ⚠️ el repo se creó **público**: Sergio lo pasa a privado antes de conectarlo a Polar |
 | Pipeline de la campaña de CDMX, prospecto a prospecto | `PIPELINE.md` | ✅ leído y ordenado el 15-sep |
 | Escaparate público con ficha y enlace de compra por skill | <https://github.com/sberriozabal-rgb/octava-skills> | ✅ publicado (decisión 10) · sus enlaces apuntan a `cabina.gumroad.com/l/<slug>` |
 
@@ -48,7 +48,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | 9 | **La primera visita de hostelería** con el guion y la oferta | `GUION-VISITA.md` · `OFERTA-HOSTELERIA.md` | 45 min + desplazamiento |
 | 10 | Revisión del abogado del anexo de inocuidad y del técnico en seguridad alimentaria (`receta-estandar`) | `ANEXO-CONTRATO-INOCUIDAD.md` | Antes de entregar la primera Completa |
 | 11 | Enviar las tres consultas a myClaude, SkillHQ y claudemarketplaces con el destinatario de cada web | `CONSULTAS-PENDIENTES.md` | 10 min · solo si se quiere un segundo canal |
-| 12 | **Crear el repositorio `zeus-entrega`** en GitHub (privado, vacío, sin README) y avisar a la fábrica, o ejecutar `python3 venta/publicar_entrega.py --push` desde el Mac. Después **abrir Polar con Google (`sberriozabal@gmail.com`)**, instalar su app de GitHub solo en `zeus-entrega` y crear la ventaja de acceso al repositorio | `POLAR-CONFIGURACION.md` §0 y §1 | 2 min el repo · 10 min Polar · solo si Gumroad no paga a México o se quiere el segundo canal |
+| 12 | ~~Crear el repositorio `zeus-entrega`~~ ✅ creado y llenado el 17-sep. **Queda: ponerlo en privado** (se creó público; *Settings → Danger Zone → Change visibility*). Después **abrir Polar con Google (`sberriozabal@gmail.com`)**, instalar su app de GitHub solo en `zeus-entrega` y crear la ventaja de acceso al repositorio | `POLAR-CONFIGURACION.md` §0 y §1 | 1 min la visibilidad · 10 min Polar · solo si Gumroad no paga a México o se quiere el segundo canal |
 
 Lo que no está en esta lista no bloquea ninguna venta.
 
