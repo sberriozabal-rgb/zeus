@@ -51,7 +51,23 @@ habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo qu
 | «Una prueba con tu biblioteca, a cambio de tres cifras» (DJ) | Escrito el 12-sep, sin destinatario | **Un DJ con nombre.** Dónde buscarlo: `PROSPECCION.md` §2 |
 | «Tu cartera vencida, convertida en plan — sin coste, a cambio del dato» (empresa) | Escrito el 12-sep, sin destinatario | **Una empresa con nombre.** Dos vías en `PROSPECCION.md` §3 |
 
-## 4 · Regla para lo que sigue
+## 4 · Campaña CDMX-100 (preparada el 17-sep, arranca el 21-sep)
+
+Cien restaurantes nuevos de Centro Histórico, Condesa, Roma, Juárez y Polanco, de todo tipo de
+casa, verificados en fuentes públicas el 17-sep y añadidos a la Cartera Documentada v2.1 (cuentas
+22 a 121). Un correo HTML de primer contacto por local, con catorce perfiles según el tipo de casa,
+y los tres seguimientos redactados. Cinco olas de lunes, del 21-sep al 19-oct. Método, calendario
+y cifras en [`CAMPANA-CDMX-100.md`](CAMPANA-CDMX-100.md); los nombres y contactos, en la base y
+en el documento privado.
+
+| | |
+|---|---|
+| Con correo leído en dominio oficial | 13 |
+| Con buzón de tercero, sin confirmar | 6 |
+| Sin buzón: WhatsApp, teléfono o carta en mano | 81 |
+| Pendientes de confirmar existencia o dirección antes de enviar | 16 |
+
+## 5 · Regla para lo que sigue
 
 **Fecha de corte: martes 22-sep.** Quien no haya respondido al seguimiento sale del pipeline. Un
 seguimiento por prospecto y ninguno más: es el antipatrón del recordatorio infinito. No se le
