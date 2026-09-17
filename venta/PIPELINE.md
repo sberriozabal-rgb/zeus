@@ -1,11 +1,10 @@
 # Pipeline de venta — estado a 16-sep-2026, 08:00 CDMX
 
-> **Este repositorio es público desde el 16-sep-2026** (decisión 11). Por eso aquí sólo queda la
-> estadística y el método. **La tabla prospecto a prospecto —nombres, correos, teléfonos y
+> **Este repositorio estuvo público el 16-sep-2026 y volvió a privado el 17-sep** (decisiones 11
+> y 12). Aquí queda la estadística y el método. **La tabla prospecto a prospecto —nombres, correos, teléfonos y
 > personas de contacto— vive en un documento privado de Google Drive del titular**
 > («OCTAVA · Pipeline de venta (privado)»), que es la fuente viva. Los datos de terceros que
-> figuraron en versiones anteriores de este fichero siguen en el historial de git; retirarlos
-> exige reescribir el historial, decisión pendiente de Sergio.
+> figuraron en versiones anteriores siguen en el historial de git, ya no visible desde fuera.
 
 Lo que hay en la cuenta de correo de la casa, leído el 15 y el 16-sep-2026. Es el único activo
 comercial con movimiento real: **una campaña en frío del 6-7 de septiembre a unos treinta
@@ -25,7 +24,7 @@ comparativa de proveedores son dos de las "tres fugas" que se enseñan en el dia
 | Visitas agendadas | **0** |
 | **Seguimientos y primeros contactos enviados la noche del 15 y la mañana del 16-sep** | **24** (respuesta al grupo que contestó, 14 seguimientos únicos, 9 primeros contactos a direcciones corregidas) |
 | Rebotes del 16-sep | 2 (pasan a teléfono / WhatsApp) |
-| Respuestas a 16-sep 08:00 | 0 todavía; la mitad de los seguimientos lleva dos horas en buzón |
+| Respuestas a 17-sep 08:00 | **1**, del contact center del grupo que ya había contestado: por proceso interno no facilita el contacto de operaciones; «si es de su interés, el área se pondrá en contacto». Canal agotado (3 intentos). Ninguna respuesta de los otros 23 |
 | Prospectos con borrador pero sin ningún correo público | ~26 (carta en mano o visita) |
 
 **Diagnóstico (15-sep):** el problema no era el producto ni el precio; era que 80 borradores se
@@ -43,6 +42,9 @@ habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo qu
   seguimientos y 9 primeros contactos.
 - **16-sep, 06:29 CDMX** — salen los otros 7 seguimientos.
 - **16-sep, 08:00** — dos rebotes nuevos; cero respuestas.
+- **16-sep, 13:49 CDMX** — el contact center del grupo que había contestado cierra la puerta por
+  proceso interno. Tercer intento por ese canal: se agota. Si se vuelve a intentar es por otra vía
+  (la persona de operaciones, por LinkedIn), no por el buzón de contacto.
 
 ## 3 · Los correos de la fase 2 (prueba con cifra)
 

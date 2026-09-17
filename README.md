@@ -8,14 +8,10 @@ Repositorio de skills de ZEUS / FORJA: activos ejecutables para
 hostelería y restauración, DJ y cabina, gestión y finanzas, más los códigos de
 Google Script y los contextos de la casa.
 
-**Este repositorio es público por decisión del titular (decisión 11) y es la fuente de verdad
-del catálogo.** Que el contenido sea visible no lo hace de uso libre: la licencia de cada skill
-prohíbe la redistribución y la publicación, y el uso comercial solo lo concede la compra. La
-doctrina de la casa prefiere entregar por *acceso revocable a repositorio privado, nunca por
-adjunto*; desde el 15-sep-2026 el catálogo suelto (CABINA y línea neutra) se vende en
-**Gumroad**, que entrega por descarga. Es una desviación declarada, asumida a cambio de que Gumroad remita el IVA como
-*merchant of record* (decisión 8 en [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md)). Las
-instalaciones de hostelería siguen entregándose en la visita.
+**Este repositorio volvió a ser privado el 17-sep-2026 por decisión del titular (decisión 12)**, tras un
+día en abierto (decisión 11). Es la fuente de verdad del catálogo y el canal de entrega que exige
+la doctrina: *acceso revocable a repositorio privado, nunca por adjunto*. El escaparate público es
+`octava-skills`; la venta del catálogo suelto es Gumroad
 
 ## Escaparate público
 
