@@ -46,7 +46,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | 8 | **Las dos conversaciones de prueba** (un DJ con nombre, una empresa con nombre): gratis a cambio de la cifra escrita y el permiso de publicarla | `PIPELINE.md` §3 · `MENSAJES.md` | Es el hueco que importa |
 | 9 | **La primera visita de hostelería** con el guion y la oferta | `GUION-VISITA.md` · `OFERTA-HOSTELERIA.md` | 45 min + desplazamiento |
 | 10 | Revisión del abogado del anexo de inocuidad y del técnico en seguridad alimentaria (`receta-estandar`) | `ANEXO-CONTRATO-INOCUIDAD.md` | Antes de entregar la primera Completa |
-| 11 | Enviar las tres consultas a myClaude, SkillHQ y claudemarketplaces. **Los borradores ya llevan destinatario** (17-sep): `hello@myclaude.sh`, `support@skillhq.dev`, `hi@claudemarketplaces.com` | `CONSULTAS-PENDIENTES.md` | 3 clics · solo si se quiere un segundo canal |
+| 11 | ~~Consulta a myClaude~~ ✅ **enviada el 17-sep** por la fábrica. **Queda:** enviar la de SkillHQ (borrador con destinatario `support@skillhq.dev`; el filtro de permisos bloqueó el envío desde la sesión). La de claudemarketplaces se retiene hasta decidir el marketplace gratuito | `CONSULTAS-PENDIENTES.md` | 1 clic · solo si se quiere un segundo canal |
 
 Lo que no está en esta lista no bloquea ninguna venta.
 
@@ -130,13 +130,18 @@ lo que no, dicho.
 - **Sigue sin poder verificarse desde la fábrica**: <https://cabina.gumroad.com>, los 15 enlaces
   `cabina.gumroad.com/l/<slug>` y <https://sberriozabal-rgb.github.io/octava-skills/>. El proxy los
   bloquea también el 17-sep. Lo comprueba Sergio (paso 7 de §2).
-- Consultas a terceros: destinatarios localizados y **puestos en los tres borradores de Gmail**, sin
-  enviar. `hello@myclaude.sh` está verificado en la página de la organización en GitHub;
+- Consultas a terceros: destinatarios localizados y **puestos en los tres borradores de Gmail**.
+  **La de myClaude salió el 17-sep**; la de SkillHQ la envía Sergio (el filtro de permisos de la
+  sesión bloqueó ese envío) y la de claudemarketplaces se retiene hasta la decisión pendiente 6.
+  `hello@myclaude.sh` está verificado en la página de la organización en GitHub;
   `support@skillhq.dev` y `hi@claudemarketplaces.com` salen de resultados de búsqueda de sus
   propias webs (`skillhq.dev/become-seller`, `claudemarketplaces.com/about`), que el proxy no deja
   abrir. Si uno rebota, la web correspondiente tiene el dato en el pie.
-- Fase 2 (la que importa) **sigue en cero**: los dos correos de prueba de `MENSAJES.md` no tienen
-  a quién ir hasta que Sergio ponga un DJ y una empresa con nombre (`PROSPECCION.md` §2 y §3).
+- Fase 2 (la que importa) **sigue en cero**: los dos correos de prueba no tienen a quién ir hasta
+  que Sergio ponga un DJ y una empresa con nombre. Todo lo que la fábrica podía dejar hecho está en
+  `PROSPECCION.md`: la convocatoria para foros y grupos de DJ (§2), el post de LinkedIn del jueves
+  18-sep y el mensaje a tres contadores (§3). Son publicaciones desde las cuentas de Sergio; la
+  fábrica no puede hacerlas por él.
 - Visto en Gmail el 17-sep: **una tanda nueva de más de cincuenta borradores** «Tres hallazgos para
   X, sin costo» creados esa madrugada (02:30–02:37 UTC), sin destinatario. No los toca esta pasada:
   son de la campaña de hostelería y su envío es decisión de Sergio con el pipeline privado delante.

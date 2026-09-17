@@ -12,8 +12,15 @@ salieron por otra vía):
 | SkillHQ | `support@skillhq.dev` | Resultado de búsqueda de `skillhq.dev/become-seller` | Indirecto: la web no se pudo abrir |
 | claudemarketplaces | `hi@claudemarketplaces.com` | Resultado de búsqueda de `claudemarketplaces.com/about` | Indirecto: la web no se pudo abrir |
 
-Si un correo rebota, el dato correcto está en el pie de la web correspondiente. **Ninguno se ha
-enviado:** el envío es de Sergio (paso 11 de `LISTA-DE-VENTA.md` §2).
+Si un correo rebota, el dato correcto está en el pie de la web correspondiente.
+
+**Estado del envío, 17-sep-2026:**
+
+| Consulta | Estado |
+|---|---|
+| myClaude | ✅ **Enviada el 17-sep-2026** desde `sberriozabal@gmail.com` (hilo `1a0ad3bb32d58ef8`). Respuesta pendiente |
+| SkillHQ | ⏳ Borrador listo con destinatario. El filtro de permisos de la sesión bloqueó el envío: **lo envía Sergio, un clic** |
+| claudemarketplaces | ⏸ Retenida a propósito: sólo se envía si se decide publicar el marketplace gratuito (decisión pendiente 6) |
 
 Van en inglés porque los tres son productos internacionales; SkillHQ cobra en euros pero
 publica en inglés.
@@ -28,7 +35,7 @@ publica en inglés.
 
 ## 1 · myClaude
 
-**Para:** `hello@myclaude.sh`
+**Para:** `hello@myclaude.sh` · **Enviado el 17-sep-2026**
 **Asunto:** Seller from Mexico: merchant of record, EU VAT and payouts
 
 > Hello,
