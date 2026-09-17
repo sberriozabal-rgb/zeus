@@ -201,7 +201,9 @@ def main():
             f.write(seguimientos_txt(p))
         correo = p.get("correo_verificado", "")
         alterno = p.get("correo_secundario", "")
-        if not sin_dato(correo):
+        if p.get("cerrado"):
+            estado, para = "CERRADO · no contactar (verificado en fuentes públicas)", ""
+        elif not sin_dato(correo):
             estado, para = "ENVIAR · correo leído en dominio oficial", correo.split()[0]
         elif not sin_dato(alterno):
             estado, para = "ENVIAR CON AVISO · buzón de tercero [SIN CONFIRMAR]", alterno.split()[0]

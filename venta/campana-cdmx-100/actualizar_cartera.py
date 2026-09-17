@@ -61,7 +61,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--base", required=True); ap.add_argument("--prospectos", required=True)
     ap.add_argument("--indice", required=True); ap.add_argument("--salida", required=True)
+    ap.add_argument("--envios", help="JSON opcional {nombre: {enviado, reboto, respondio, notas}} con lo que ya salió")
     a = ap.parse_args()
+    envios = json.load(open(a.envios, encoding="utf-8")) if a.envios else {}
     prospectos = json.load(open(a.prospectos, encoding="utf-8"))
     indice = {r["local"]: r for r in csv.DictReader(open(a.indice, encoding="utf-8"))}
     wb = openpyxl.load_workbook(a.base)
@@ -85,6 +87,8 @@ def main():
             cell = ws.cell(r, c, v); copiar_estilo(ws.cell(primera, c), cell)
             fill = CREMA if (r - primera) % 2 == 0 else "00000000"
             cell.fill = PatternFill("solid", fgColor=fill) if fill != "00000000" else PatternFill(fill_type=None)
+            if p.get("cerrado") and c == 27:
+                cell.value = "CERRADO · no contactar"
             if c in (18, 19, 20):  # teléfono y correos resaltados como en la v2.0
                 cell.fill = PatternFill("solid", fgColor=VERDE if (r - primera) % 2 else CREMA)
                 cell.font = Font(name="Arial", size=10, bold=(c == 19))
@@ -161,8 +165,10 @@ def main():
     for j, w in enumerate(anchos, 1): c.column_dimensions[get_column_letter(j)].width = w
     for k, p in enumerate(prospectos):
         i = indice.get(p["nombre"], {}); r = 5 + k; idx = n_prev + 1 + k
+        e = envios.get(p["nombre"], {})
         vals = [idx, p.get("nombre_cartera") or p["nombre"], p.get("zona", ""), p.get("perfil", ""), p.get("ola", ""), p.get("fecha_envio", ""), i.get("para", ""), i.get("estado", ""),
-                sd(p.get("telefono")), i.get("asunto", ""), i.get("archivo", ""), i.get("seguimientos", ""), "", "", "", "", "", "", "", "01 Nuevo", ""]
+                sd(p.get("telefono")), i.get("asunto", ""), i.get("archivo", ""), i.get("seguimientos", ""), e.get("enviado", ""), e.get("reboto", ""), e.get("respondio", ""), "", "", "", "",
+                ("09 No es cliente" if p.get("cerrado") else ("02 Calificado" if e.get("enviado") else "01 Nuevo")), e.get("notas", "")]
         for j, v in enumerate(vals, 1):
             cell = c.cell(r, j, v); cell.font = Font(name="Arial", size=10); cell.alignment = Alignment(wrap_text=True, vertical="top")
             if k % 2 == 0: cell.fill = PatternFill("solid", fgColor=CREMA)
