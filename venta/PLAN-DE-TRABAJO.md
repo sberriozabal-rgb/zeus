@@ -207,7 +207,7 @@ catálogo tiene 17 piezas listas y ninguna venta; el problema no se arregla con 
 | `venta/portadas/` · `venta/generar_portadas.py` | Cover y thumbnail de cada producto de Gumroad, generadas desde la hoja de alta |
 | `venta/OFERTA-HOSTELERIA.md` | Ficha de producto de las instalaciones Esencial y Completa |
 | `venta/empaquetar_gumroad.py` | Genera en `dist/` el zip de cada producto sin material de fábrica |
-| `venta/POLAR-CONFIGURACION.md` | La caída si Gumroad no paga a México, con su repositorio de entrega `zeus-entrega` (decisión 12) |
+| `venta/POLAR-CONFIGURACION.md` | La caída si Gumroad no paga a México, con su repositorio de entrega `zeus-entrega` (decisión 13) |
 | `venta/publicar_entrega.py` | Construye en `dist/entrega/` el repositorio privado de entrega (15 productos, sin material de fábrica) y con `--push` lo sube |
 | `venta/GUION-VISITA.md` · `venta/MENSAJES.md` | La visita de hostelería y los correos de la fase 2 |
 | `venta/ANEXO-CONTRATO-INOCUIDAD.md` | Cláusula de `receta-estandar`, pendiente de abogado |

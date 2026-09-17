@@ -29,7 +29,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | Locuciones para México | `locuciones/` | ✅ tres tomas |
 | Anexo de seguridad alimentaria para `receta-estandar` | `ANEXO-CONTRATO-INOCUIDAD.md` | ✅ redactado · ⚠️ pendiente de abogado y de técnico |
 | Consultas a myClaude, SkillHQ y claudemarketplaces | `CONSULTAS-PENDIENTES.md` | ✅ redactadas · falta el destinatario |
-| **Repositorio de entrega por acceso revocable** (Polar y el resto de canales, decisión 12): los 15 productos en `productos/<slug>/`, README y licencia de comprador | `python3 publicar_entrega.py` → `dist/entrega/` · `--push` lo sube a `sberriozabal-rgb/zeus-entrega` | ✅ **subido a `sberriozabal-rgb/zeus-entrega` el 17-sep** (15 productos, 297 ficheros, 0 de fábrica) · ⚠️ el repo se creó **público**: Sergio lo pasa a privado antes de conectarlo a Polar |
+| **Repositorio de entrega por acceso revocable** (Polar y el resto de canales, decisión 13): los 15 productos en `productos/<slug>/`, README y licencia de comprador | `python3 publicar_entrega.py` → `dist/entrega/` · `--push` lo sube a `sberriozabal-rgb/zeus-entrega` | ✅ **subido a `sberriozabal-rgb/zeus-entrega` el 17-sep** (15 productos, 297 ficheros, 0 de fábrica) · ⚠️ el repo se creó **público**: Sergio lo pasa a privado antes de conectarlo a Polar |
 | Pipeline de la campaña de CDMX, prospecto a prospecto | `PIPELINE.md` | ✅ leído y ordenado el 15-sep |
 | Escaparate público con ficha y enlace de compra por skill | <https://github.com/sberriozabal-rgb/octava-skills> | ✅ publicado (decisión 10) · sus enlaces apuntan a `cabina.gumroad.com/l/<slug>` |
 

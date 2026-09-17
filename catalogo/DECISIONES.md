@@ -338,7 +338,7 @@ de `receta-estandar` con el anexo de inocuidad.
 
 ---
 
-## 12 · Un solo repositorio privado de entrega para Polar y el resto de canales — ORDENADA POR SERGIO (16-sep-2026)
+## 13 · Un solo repositorio privado de entrega para Polar y el resto de canales — ORDENADA POR SERGIO (16-sep-2026)
 
 Palabras de Sergio: *«el mismo repositorio para Polar SH y para el resto de los que te he dicho.
 Créalo y súbelo. Conéctate. Con Gmail sberriozabal@gmail»*.
@@ -352,8 +352,8 @@ Créalo y súbelo. Conéctate. Con Gmail sberriozabal@gmail»*.
 
 **Lo que la fábrica advirtió, y el titular asume al pedir un solo repositorio:** la ventaja de
 acceso a repositorio de Polar concede el repositorio **entero**. Quien compre una skill de 49 €
-verá las 15 carpetas. La licencia lo prohíbe; el acceso no lo impide. Es la misma exposición que
-ya tiene `zeus` en público, así que no añade riesgo nuevo, pero conviene saberlo. Si algún día
+verá las 15 carpetas. La licencia lo prohíbe; el acceso no lo impide. Con `zeus` de nuevo en
+privado (decisión 12) esa exposición es real y no un duplicado de otra ya asumida. Si algún día
 importa, el mismo script genera un repositorio por producto.
 
 ---
@@ -372,7 +372,7 @@ importa, el mismo script genera un repositorio por producto.
    `venta/GUMROAD-ALTA.md`), que solo Sergio sabe si están cerrados.
 1b. ~~Crear el repositorio `zeus-entrega`~~ ✅ **Creado por Sergio y llenado el 17-sep-2026.** Quedan dos
    cosas de Sergio: **ponerlo en privado** (se creó público y la fábrica no puede cambiar la visibilidad)
-   y **abrir Polar con Google** (`sberriozabal@gmail.com`), decisión 12.
+   y **abrir Polar con Google** (`sberriozabal@gmail.com`), decisión 13.
 2. **Levantar G2.** Explicado arriba. Lo levanta tu primer cliente, no yo.
 3. **La revisión de seguridad alimentaria de `receta-estandar`.** Es trabajo de un profesional
    colegiado, y es el que te cubre a ti.

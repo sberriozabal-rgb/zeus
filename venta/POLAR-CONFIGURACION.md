@@ -2,7 +2,7 @@
 
 > **Canal vigente: Gumroad** (decisión 8 de [`../catalogo/DECISIONES.md`](../catalogo/DECISIONES.md));
 > la hoja de alta es [`GUMROAD-ALTA.md`](GUMROAD-ALTA.md). Polar es la caída si Gumroad no paga a
-> México, y **desde el 16-sep-2026 tiene su repositorio de entrega listo** (decisión 12):
+> México, y **desde el 16-sep-2026 tiene su repositorio de entrega listo** (decisión 13):
 > `sberriozabal-rgb/zeus-entrega`, privado, el mismo para Polar y para cualquier otro canal que
 > entregue por acceso a repositorio. La plantilla de texto de producto y la lista de lo que NO se
 > pone siguen valiendo tal cual.
@@ -13,9 +13,11 @@ al mes, la cuota fija se come el ahorro de comisión.
 
 ## 0 · El repositorio de entrega: `zeus-entrega` (16-sep-2026)
 
-`zeus` es público desde la decisión 11, así que conceder acceso a `zeus` ya no entrega nada:
-cualquiera lo lee sin comprar. La entrega por acceso revocable necesita un repositorio
-**privado**, y Sergio decidió que sea **uno solo para Polar y para el resto de canales**.
+`zeus` es el repositorio de fábrica: lleva las fichas comerciales, los `metadata.json` de
+auditoría y la carpeta `venta/`. Dar acceso a un comprador a `zeus` sería entregarle el material
+de fábrica junto con el producto (y el 16-sep, además, era público). La entrega por acceso
+revocable necesita un repositorio **privado y solo con producto**, y Sergio decidió que sea
+**uno solo para Polar y para el resto de canales**.
 
 | Qué | Valor |
 |---|---|
@@ -29,7 +31,7 @@ cualquiera lo lee sin comprar. La entrega por acceso revocable necesita un repos
 la ventaja «GitHub Repository Access» de Polar concede acceso al **repositorio entero**. Con un
 solo repositorio, quien compra una skill suelta a 49 € puede leer las 15 carpetas, incluida
 CABINA COMPLETA a 249 €. La licencia lo prohíbe, pero el acceso no lo impide. Dos salidas, a
-elegir cuando llegue el caso: (a) asumirlo, como ya se asumió que `zeus` sea público, o (b) crear
+elegir cuando llegue el caso: (a) asumirlo, o (b) crear
 después un repositorio por producto con el mismo script (`--remote` a otro remoto y una lista de
 productos más corta), que es media hora de trabajo cuando haya un comprador que lo justifique.
 

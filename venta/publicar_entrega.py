@@ -2,7 +2,7 @@
 """Construye el repositorio de ENTREGA a compradores y, si se pide, lo empuja.
 
 Un solo repositorio privado —`sberriozabal-rgb/zeus-entrega`— para Polar y para
-cualquier otro canal que entregue por acceso revocable a repositorio (decisión 12
+cualquier otro canal que entregue por acceso revocable a repositorio (decisión 13
 de catalogo/DECISIONES.md, 16-sep-2026). Contiene los 15 productos del catálogo
 suelto tal como los recibe el comprador: los mismos ficheros que el zip de
 Gumroad, sin material de fábrica.
