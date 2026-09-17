@@ -48,7 +48,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | 9 | **La primera visita de hostelería** con el guion y la oferta | `GUION-VISITA.md` · `OFERTA-HOSTELERIA.md` | 45 min + desplazamiento |
 | 10 | Revisión del abogado del anexo de inocuidad y del técnico en seguridad alimentaria (`receta-estandar`) | `ANEXO-CONTRATO-INOCUIDAD.md` | Antes de entregar la primera Completa |
 | 11 | Enviar las tres consultas a myClaude, SkillHQ y claudemarketplaces con el destinatario de cada web | `CONSULTAS-PENDIENTES.md` | 10 min · solo si se quiere un segundo canal |
-| 12 | ~~Crear el repositorio `zeus-entrega` y ponerlo en privado~~ ✅ creado, llenado y privado el 17-sep. **Queda: abrir Polar con Google (`sberriozabal@gmail.com`)**, instalar su app de GitHub solo en `zeus-entrega` y crear la ventaja de acceso al repositorio | `POLAR-CONFIGURACION.md` §1 | 10 min · solo si Gumroad no paga a México o se quiere el segundo canal |
+| 12 | ~~Crear el repositorio `zeus-entrega` y ponerlo en privado~~ ✅ 17-sep. ~~Abrir Polar con Google~~ ✅ 17-sep, **en sandbox** (`sandbox.polar.sh/dashboard/octava`). **Queda:** en el sandbox, instalar la app de GitHub de Polar solo en `zeus-entrega`, crear la ventaja de acceso al repositorio, un producto de prueba y comprarlo con otra cuenta de GitHub para ver que el acceso llega y se retira al reembolsar. Si funciona, repetir el alta en `polar.sh` (producción) con datos fiscales y Stripe | `POLAR-CONFIGURACION.md` §1 | 20 min la prueba · producción solo si Gumroad no paga a México o se quiere el segundo canal |
 
 Lo que no está en esta lista no bloquea ninguna venta.
 

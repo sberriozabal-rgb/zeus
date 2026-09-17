@@ -45,6 +45,9 @@ así que esto lo hace Sergio en el navegador; son diez minutos.
    O hacerlo él mismo desde su Mac con el repo `zeus` clonado: el mismo comando.
 2. Entrar en <https://polar.sh> con **Continuar con Google → `sberriozabal@gmail.com`**, que es
    la cuenta de Gmail de la casa y la que está unida a la cuenta de GitHub `sberriozabal-rgb`.
+   **Hecho el 17-sep-2026 en el sandbox** (<https://sandbox.polar.sh/dashboard/octava>). El
+   sandbox es un entorno separado de pruebas: misma interfaz, pagos ficticios, sin payout. Es
+   el sitio correcto para los pasos 4 a 7; para vender hay que repetir el alta en `polar.sh`.
 3. Crear la organización con los datos fiscales de Sergio y **conectar Stripe con México como
    país**. Si Polar no ofrece México en el alta de cobro, parar aquí: es el hueco que el plan de
    trabajo deja abierto y no tiene sentido crear productos.
