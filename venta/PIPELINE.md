@@ -1,4 +1,4 @@
-# Pipeline de venta — estado a 16-sep-2026, 08:00 CDMX
+# Pipeline de venta — estado a 19-sep-2026
 
 > **Este repositorio estuvo público el 16-sep-2026 y volvió a privado el 17-sep** (decisiones 11
 > y 12). Aquí queda la estadística y el método. **La tabla prospecto a prospecto —nombres, correos, teléfonos y
@@ -26,6 +26,9 @@ comparativa de proveedores son dos de las "tres fugas" que se enseñan en el dia
 | Rebotes del 16-sep | 2 (pasan a teléfono / WhatsApp) |
 | Respuestas a 17-sep 08:00 | **1**, del contact center del grupo que ya había contestado: por proceso interno no facilita el contacto de operaciones; «si es de su interés, el área se pondrá en contacto». Canal agotado (3 intentos). Ninguna respuesta de los otros 23 |
 | Prospectos con borrador pero sin ningún correo público | ~26 (carta en mano o visita) |
+| **Ola «CDMX-100» (16-sep noche, otra sesión): 100 restaurantes por colonias (Roma, Condesa, Juárez, Polanco, Centro)** | **38 enviados**, 62 sin buzón (borradores etiquetados «Sin buzón · WhatsApp o carta») |
+| Rebotes de la ola CDMX-100 | 7 (Fonda Garufa, Matisse, El Bajío, Tori Tori, Huset, Ryoshi/Costeño, Café de Tacuba) + Pujol remite a otro buzón |
+| **19-sep — segunda pasada sobre los 62 sin buzón** | 4 agentes buscaron correo oficial: **22 encontrados**, 40 sin correo público (teléfono/WA). **Salieron 8**; 5 quedan en borrador con destinatario puesto (El Greco, Niddo, Makoto, El Moro, Roldán 37, Los Girasoles); 10 con correo hallado pero sin poder fijar destinatario (Casa Virginia, Loup Bar, Frëims, Rokai, Parker & Lenox, Klein's, La Buena Barra, Testal, El Mayor) |
 
 **Diagnóstico (15-sep):** el problema no era el producto ni el precio; era que 80 borradores se
 habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo que tenía destinatario.
@@ -42,6 +45,11 @@ habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo qu
   seguimientos y 9 primeros contactos.
 - **16-sep, 06:29 CDMX** — salen los otros 7 seguimientos.
 - **16-sep, 08:00** — dos rebotes nuevos; cero respuestas.
+- **16-sep, 21:27–22:37 CDMX** — otra sesión lanza la ola CDMX-100: 38 correos, 7 rebotes, Pujol
+  responde en automático con buzón nuevo (reservaciones@).
+- **19-sep** — segunda pasada: 8 correos más a direcciones verificadas (Taquería Orinoco, Taverna,
+  Sartoria, Fonda Fina, Ojo de Agua, Tacos Beatriz, Masala y Maíz, Mercaderes). Direcciones y
+  teléfonos de los 62 en el documento privado.
 - **16-sep, 13:49 CDMX** — el contact center del grupo que había contestado cierra la puerta por
   proceso interno. Tercer intento por ese canal: se agota. Si se vuelve a intentar es por otra vía
   (la persona de operaciones, por LinkedIn), no por el buzón de contacto.
