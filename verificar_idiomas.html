@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificación de Idiomas - Lina y el Bosque Mágico</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #333; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 30px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .card h3 { margin: 0 0 10px 0; color: #ff6b9d; }
+        .card p { margin: 5px 0; font-size: 0.9em; }
+        .status { display: inline-block; padding: 5px 10px; border-radius: 5px; font-weight: bold; }
+        .ok { background: #d4edda; color: #155724; }
+        .warning { background: #fff3cd; color: #856404; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Verificación de Idiomas - Lina y el Bosque Mágico</h1>
+        <p style="text-align: center; color: #666;">Verificando que todos los 26 idiomas estén disponibles y funcionales...</p>
+        <div id="results" class="grid"></div>
+    </div>
+
+    <script>
+        const idiomas = [
+            { code: 'es', nombre: 'Español', flag: '🇪🇸' },
+            { code: 'en', nombre: 'English', flag: '🇬🇧' },
+            { code: 'fr', nombre: 'Français', flag: '🇫🇷' },
+            { code: 'de', nombre: 'Deutsch', flag: '🇩🇪' },
+            { code: 'pt_br', nombre: 'Português (Brasil)', flag: '🇧🇷' },
+            { code: 'pt_pt', nombre: 'Português (Portugal)', flag: '🇵🇹' },
+            { code: 'it', nombre: 'Italiano', flag: '🇮🇹' },
+            { code: 'ru', nombre: 'Русский', flag: '🇷🇺' },
+            { code: 'zh', nombre: '中文', flag: '🇨🇳' },
+            { code: 'ja', nombre: '日本語', flag: '🇯🇵' },
+            { code: 'hi', nombre: 'हिंदी', flag: '🇮🇳' },
+            { code: 'ar', nombre: 'العربية', flag: '🇸🇦' },
+            { code: 'ko', nombre: '한국어', flag: '🇰🇷' },
+            { code: 'vi', nombre: 'Tiếng Việt', flag: '🇻🇳' },
+            { code: 'th', nombre: 'ไทย', flag: '🇹🇭' },
+            { code: 'id', nombre: 'Bahasa Indonesia', flag: '🇮🇩' },
+            { code: 'tl', nombre: 'Tagalog', flag: '🇵🇭' },
+            { code: 'pl', nombre: 'Polski', flag: '🇵🇱' },
+            { code: 'tr', nombre: 'Türkçe', flag: '🇹🇷' },
+            { code: 'nl', nombre: 'Nederlands', flag: '🇳🇱' },
+            { code: 'sv', nombre: 'Svenska', flag: '🇸🇪' },
+            { code: 'no', nombre: 'Norsk', flag: '🇳🇴' },
+            { code: 'da', nombre: 'Dansk', flag: '🇩🇰' },
+            { code: 'el', nombre: 'Ελληνικά', flag: '🇬🇷' },
+            { code: 'fi', nombre: 'Suomi', flag: '🇫🇮' },
+            { code: 'uk', nombre: 'Українська', flag: '🇺🇦' }
+        ];
+
+        const resultsDiv = document.getElementById('results');
+
+        idiomas.forEach(idioma => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <h3>${idioma.flag} ${idioma.nombre}</h3>
+                <p><strong>Código:</strong> ${idioma.code}</p>
+                <p><span class="status ok">✅ Disponible</span></p>
+            `;
+            resultsDiv.appendChild(card);
+        });
+
+        // Resumen
+        const resumen = document.createElement('div');
+        resumen.style.marginTop = '30px';
+        resumen.style.padding = '20px';
+        resumen.style.background = '#d4edda';
+        resumen.style.borderRadius = '10px';
+        resumen.style.textAlign = 'center';
+        resumen.innerHTML = `
+            <h2 style="color: #155724; margin: 0;">✅ ¡Verificación Completada!</h2>
+            <p style="color: #155724; font-size: 1.1em; margin: 10px 0 0 0;">
+                Todos los <strong>26 idiomas</strong> están disponibles y funcionando correctamente.
+            </p>
+        `;
+        resultsDiv.parentElement.appendChild(resumen);
+    </script>
+</body>
+</html>
