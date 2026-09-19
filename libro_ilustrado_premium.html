@@ -9,6 +9,9 @@
         body { font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', 'Segoe UI', cursive; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; }
         .selector { max-width: 1000px; margin: 0 auto 20px; background: white; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
         .selector select { padding: 12px 20px; font-size: 1.1em; border: 2px solid #ff6b9d; border-radius: 8px; cursor: pointer; background: white; color: #333; font-weight: bold; }
+        .selector-buttons { margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .btn-download { padding: 12px 25px; font-size: 1em; border: 2px solid #667eea; border-radius: 8px; cursor: pointer; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-weight: bold; transition: transform 0.2s; }
+        .btn-download:hover { transform: scale(1.05); }
         .libro { max-width: 1000px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4); overflow: hidden; }
         .portada { background: linear-gradient(135deg, #ff6b9d 0%, #feca57 50%, #ff8fab 100%); padding: 80px 40px; text-align: center; color: white; min-height: 600px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
         .portada::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px; animation: float 20s infinite linear; }
@@ -72,6 +75,9 @@
             <option value="fi">🇫🇮 Suomi</option>
             <option value="uk">🇺🇦 Українська</option>
         </select>
+        <div class="selector-buttons">
+            <button class="btn-download" onclick="descargarPDF()">📥 Descargar como PDF</button>
+        </div>
     </div>
 
     <div id="libro-container"></div>
@@ -282,6 +288,13 @@
         function cambiarIdioma(idioma) {
             renderLibro(idioma);
             window.scrollTo(0, 0);
+        }
+
+        function descargarPDF() {
+            const idioma = document.getElementById('idioma-select').value;
+            const historia = historias[idioma] || historias.en;
+            const nombreArchivo = `lina-bosque-magico_${idioma}.pdf`;
+            window.print();
         }
 
         renderLibro('es');
