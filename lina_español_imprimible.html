@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lina y el Bosque Mágico - Edición Ilustrada Premium</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', 'Segoe UI', cursive; background: white; padding: 0; }
+        .selector { display: none; }
+        .libro { max-width: 1000px; margin: 0 auto; background: white; border-radius: 20px; overflow: hidden; }
+        .portada { background: linear-gradient(135deg, #ff6b9d 0%, #feca57 50%, #ff8fab 100%); padding: 80px 40px; text-align: center; color: white; min-height: 600px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+        .portada::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px; animation: float 20s infinite linear; }
+        @keyframes float { 0% { transform: translate(0, 0); } 100% { transform: translate(50px, 50px); } }
+        .portada > * { position: relative; z-index: 1; }
+        .portada h1 { font-size: 4em; margin-bottom: 20px; text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); font-weight: bold; letter-spacing: 2px; }
+        .portada .ilustracion { font-size: 120px; margin: 40px 0; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .portada p { font-size: 2em; margin-top: 40px; font-style: italic; font-weight: 600; }
+        .pagina { padding: 60px 50px; min-height: 700px; page-break-after: always; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+        .pagina:nth-child(odd) { background: linear-gradient(to bottom right, #fff9e6 0%, #fffbf0 50%, #ffffff 100%); }
+        .pagina:nth-child(even) { background: linear-gradient(to bottom left, #e6f7ff 0%, #f0fbff 50%, #ffffff 100%); }
+        .pagina::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(circle at 20% 50%, rgba(255, 107, 157, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(254, 202, 87, 0.05) 0%, transparent 50%); pointer-events: none; }
+        .contenido { position: relative; z-index: 1; }
+        .titulo-capitulo { color: #ff6b9d; font-size: 2.5em; margin-bottom: 30px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); }
+        .ilustracion-contenedor { text-align: center; margin: 40px 0; font-size: 150px; line-height: 1; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15)); }
+        .imagen-ia { width: 100%; max-width: 600px; height: 300px; margin: 30px auto; border-radius: 15px; object-fit: cover; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); border: 3px solid white; }
+        .texto { font-size: 1.9em; line-height: 1.8; color: #2c3e50; margin: 30px 0; font-weight: 500; }
+        .moral { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 25px; border-radius: 15px; font-size: 1.7em; color: #1a3a3a; margin-top: 30px; font-weight: bold; border-left: 6px solid #ff6b9d; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
+        .numero-pagina { text-align: center; margin-top: 30px; color: #999; font-size: 1.3em; font-weight: 600; }
+        .fin-page { text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .ilustracion-final { font-size: 100px; margin: 50px 0; }
+        .titulo-fin { font-size: 3em; color: #ff6b9d; font-weight: bold; margin: 40px 0; }
+        .lecciones { background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%); padding: 30px; border-radius: 15px; text-align: left; margin-top: 40px; }
+        .lecciones p { font-size: 1.6em; margin: 15px 0; color: #2c3e50; font-weight: 500; }
+        @media print { body { background: white; padding: 0; } .selector { display: none; } .libro { box-shadow: none; border-radius: 0; max-width: 100%; } .pagina { page-break-after: always; min-height: 100vh; } }
+        .decoracion { position: absolute; opacity: 0.15; }
+        .decoracion-top-left { top: 20px; left: 20px; font-size: 60px; }
+        .decoracion-bottom-right { bottom: 20px; right: 20px; font-size: 60px; }
+    </style>
+</head>
+<body>
+    <div id="libro-container"></div>
+
+    <script>
+        const historias = {
+            es: { t: "Lina y el Bosque Mágico", s: "Una aventura de amistad y valentía", c: [
+                { n: "El Descubrimiento", e: "🦊🏠", tx: "Lina era una pequeña zorra pelirroja que vivía al borde del bosque. Cada mañana miraba desde su madriguera, pero tenía un poco de miedo de explorar ese lugar grande y desconocido.", m: "✨ A veces, lo que nos da miedo es exactamente lo que necesitamos descubrir.", img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop" },
+                { n: "El Primer Paso", e: "🦊👣🌳", tx: "Un día, Lina tomó una gran respiración y decidió caminar hacia el bosque. Sus pequeñas patitas crujían en las hojas secas. El sol filtraba luz dorada entre los árboles. ¡Era hermoso!", m: "💪 La valentía no significa no tener miedo, significa actuar a pesar del miedo.", img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop" },
+                { n: "Un Nuevo Amigo", e: "🐰🦊💛", tx: "Junto a un árbol enorme, Lina encontró a Conejo, quien estaba llorando. "¡Perdí mi zanahoria dorada!", sollozó. Sin pensarlo dos veces, Lina dijo: "¡Te ayudaré a encontrarla!"", m: "🤝 Ayudar a otros es lo que hace verdaderos amigos.", img: "https://images.unsplash.com/photo-1458720354765-ce34ab761c98?w=600&h=400&fit=crop" },
+                { n: "La Aventura Comienza", e: "🦊🐰🗺️✨", tx: "Juntos, caminaron más profundo en el bosque. Pasaron por arroyos cristalinos, bajo puentes de lianas y entre flores brillantes. Cada paso era una nueva sorpresa. "¡Mira, Lina! ¡Esto es increíble!", gritaba Conejo feliz.", m: "🌈 Los momentos especiales se hacen más especiales cuando los compartimos con amigos.", img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" },
+                { n: "El Desafío", e: "🦊😰❓", tx: "De pronto, llegaron a un río ancho y rápido. "¿Cómo cruzamos?", preguntó Conejo asustado. Lina miró alrededor... y vio piedras grandes en el agua. "¡Saltaremos de piedra en piedra!", propuso con confianza.", m: "🧠 Cuando parece que no hay solución, mira mejor. Siempre hay un camino.", img: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&h=400&fit=crop" },
+                { n: "Trabajar Juntos", e: "🦊🐰🤝💪", tx: "Lina saltó primero a la primera piedra. "¡Vamos, Conejo! ¡Puedes hacerlo!" Conejo saltó, un poco asustado, pero Lina le dio la pata para ayudarlo. Juntos, piedra a piedra, cruzaron el río. "¡Lo logramos!", celebraron.", m: "👥 No es más fuerte quien puede hacer todo solo, sino quien hace equipo.", img: "https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=600&h=400&fit=crop" },
+                { n: "El Hallazgo Especial", e: "✨🥕💫🌟", tx: "Al cruzar el río, encontraron un claro mágico lleno de flores doradas. En el centro, brillaba la zanahoria de Conejo, rodeada de luz dorada. "¡Ahí está!", gritó Conejo corriendo hacia ella.", m: "🎯 Las cosas perdidas a menudo se encuentran cuando dejamos de solo buscar y disfrutamos el camino.", img: "https://images.unsplash.com/photo-1490097281087-84e8b36b735d?w=600&h=400&fit=crop" },
+                { n: "El Final Feliz", e: "🦊🐰🥕🌅❤️", tx: "Mientras el sol se ponía en el horizonte, Lina y Conejo se sentaron juntos en una rama. "Gracias por ser mi amiga", dijo Conejo abrazando a Lina. "Fuiste muy valiente hoy". Y Lina sonrió, sabiendo que había descubierto algo más valioso que cualquier zanahoria: ¡una amistad verdadera!", m: "💝 La verdadera magia no está en los bosques, sino en los corazones de nuestros amigos.", img: "https://images.unsplash.com/photo-1495567720989-cebdbdd97913?w=600&h=400&fit=crop" }
+            ], fin_titulo: "¡FIN!", fin_l: ["✨ Sé valiente aunque tengas miedo", "🤝 Ayuda a otros sin esperar nada a cambio", "💪 Los problemas se resuelven mejor juntos", "🌈 Las aventuras reales están en la amistad"]}
+        };
+
+        function renderLibro(idioma) {
+            const historia = historias[idioma];
+            let html = `<div class="libro">
+                <div class="portada">
+                    <div class="decoracion decoracion-top-left">🌲</div>
+                    <div class="decoracion decoracion-bottom-right">🦊</div>
+                    <h1>🌲 ${historia.t} 🌲</h1>
+                    <div class="ilustracion">🦊✨🌟</div>
+                    <p>${historia.s}</p>
+                </div>`;
+
+            historia.c.forEach((cap, idx) => {
+                html += `<div class="pagina">
+                    <div class="decoracion decoracion-top-left">✨</div>
+                    <div class="decoracion decoracion-bottom-right">🌿</div>
+                    <div class="contenido">
+                        <h2 class="titulo-capitulo">${cap.n}</h2>
+                        <div class="ilustracion-contenedor">${cap.e}</div>
+                        ${cap.img ? `<img src="${cap.img}" alt="${cap.n}" class="imagen-ia" onerror="this.style.display='none'">` : ''}
+                        <div class="texto">${cap.tx}</div>
+                        <div class="moral">${cap.m}</div>
+                    </div>
+                    <div class="numero-pagina">Página ${idx + 1}</div>
+                </div>`;
+            });
+
+            html += `<div class="pagina fin-page">
+                <div class="decoracion decoracion-top-left">🌲</div>
+                <div class="decoracion decoracion-bottom-right">🦊</div>
+                <div class="contenido" style="width: 100%;">
+                    <div class="ilustracion-final">🦊🐰✨💛🌲</div>
+                    <h2 class="titulo-fin">${historia.fin_titulo}</h2>
+                    <div class="lecciones">
+                        ${historia.fin_l.map(l => `<p><strong>${l}</strong></p>`).join('')}
+                    </div>
+                </div>
+            </div></div>`;
+
+            document.getElementById('libro-container').innerHTML = html;
+        }
+
+        renderLibro('es');
+        window.print();
+    </script>
+</body>
+</html>
