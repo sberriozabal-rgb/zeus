@@ -1,4 +1,4 @@
-# Pipeline de venta — estado a 19-sep-2026
+# Pipeline de venta — estado a 25-sep-2026
 
 > **Este repositorio estuvo público el 16-sep-2026 y volvió a privado el 17-sep** (decisiones 11
 > y 12). Aquí queda la estadística y el método. **La tabla prospecto a prospecto —nombres, correos, teléfonos y
@@ -50,6 +50,10 @@ habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo qu
 - **19-sep** — segunda pasada: 8 correos más a direcciones verificadas (Taquería Orinoco, Taverna,
   Sartoria, Fonda Fina, Ojo de Agua, Tacos Beatriz, Masala y Maíz, Mercaderes). Direcciones y
   teléfonos de los 62 en el documento privado.
+- **24-sep, 19:05 CDMX** — tercera pasada: salen 17 más (los 6 borradores con destinatario, 8
+  con correo hallado y 3 reenvíos a buzón nuevo: Pujol, Huset, Fonda Garufa). Rebotan 4 al
+  momento (Huset, Testal, Rokai; Klein's buzón lleno): pasan a teléfono. La Buena Barra queda en
+  borrador sin destinatario. Ninguna respuesta de prospectos entre el 19 y el 25-sep.
 - **16-sep, 13:49 CDMX** — el contact center del grupo que había contestado cierra la puerta por
   proceso interno. Tercer intento por ese canal: se agota. Si se vuelve a intentar es por otra vía
   (la persona de operaciones, por LinkedIn), no por el buzón de contacto.
