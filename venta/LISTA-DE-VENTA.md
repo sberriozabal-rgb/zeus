@@ -29,6 +29,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | Locuciones para México | `locuciones/` | ✅ tres tomas |
 | Anexo de seguridad alimentaria para `receta-estandar` | `ANEXO-CONTRATO-INOCUIDAD.md` | ✅ redactado · ⚠️ pendiente de abogado y de técnico |
 | Consultas a myClaude, SkillHQ y claudemarketplaces | `CONSULTAS-PENDIENTES.md` | ✅ redactadas · falta el destinatario |
+| **Repositorio de entrega por acceso revocable** (Polar y el resto de canales, decisión 13): los 15 productos en `productos/<slug>/`, README y licencia de comprador | `python3 publicar_entrega.py` → `dist/entrega/` · `--push` lo sube a `sberriozabal-rgb/zeus-entrega` | ✅ **subido a `sberriozabal-rgb/zeus-entrega` el 17-sep** (15 productos, 297 ficheros, 0 de fábrica) · ✅ **privado** desde el 17-sep, verificado por la API |
 | Pipeline de la campaña de CDMX, prospecto a prospecto | `PIPELINE.md` | ✅ leído y ordenado el 15-sep |
 | Escaparate público con ficha y enlace de compra por skill | <https://github.com/sberriozabal-rgb/octava-skills> | ✅ publicado (decisión 10) · sus enlaces apuntan a `cabina.gumroad.com/l/<slug>` |
 
@@ -47,6 +48,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | 9 | **La primera visita de hostelería** con el guion y la oferta | `GUION-VISITA.md` · `OFERTA-HOSTELERIA.md` | 45 min + desplazamiento |
 | 10 | Revisión del abogado del anexo de inocuidad y del técnico en seguridad alimentaria (`receta-estandar`) | `ANEXO-CONTRATO-INOCUIDAD.md` | Antes de entregar la primera Completa |
 | 11 | Enviar las tres consultas a myClaude, SkillHQ y claudemarketplaces con el destinatario de cada web | `CONSULTAS-PENDIENTES.md` | 10 min · solo si se quiere un segundo canal |
+| 12 | ~~Crear el repositorio `zeus-entrega` y ponerlo en privado~~ ✅ 17-sep. ~~Abrir Polar con Google~~ ✅ 17-sep, **en sandbox** (`sandbox.polar.sh/dashboard/octava`). **Queda:** en el sandbox, instalar la app de GitHub de Polar solo en `zeus-entrega`, crear la ventaja de acceso al repositorio, un producto de prueba y comprarlo con otra cuenta de GitHub para ver que el acceso llega y se retira al reembolsar. Si funciona, repetir el alta en `polar.sh` (producción) con datos fiscales y Stripe | `POLAR-CONFIGURACION.md` §1 | 20 min la prueba · producción solo si Gumroad no paga a México o se quiere el segundo canal |
 
 Lo que no está en esta lista no bloquea ninguna venta.
 
