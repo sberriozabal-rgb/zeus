@@ -1,0 +1,224 @@
+{
+  "proyecto": "Lina y el Bosque Mágico - Audiolibros",
+  "derechos": "PROPIO",
+  "titular": "sergio@redcontramar.com",
+  "idiomas_total": 26,
+  "palabras_por_idioma": {
+    "es": 8750,
+    "en": 9200,
+    "fr": 9100,
+    "de": 8900,
+    "pt_br": 9000,
+    "it": 8950,
+    "ru": 8800,
+    "zh": 7800,
+    "ja": 7900,
+    "pt_pt": 9200,
+    "hi": 9200,
+    "ar": 9200,
+    "ko": 9200,
+    "vi": 9200,
+    "th": 9200,
+    "id": 9200,
+    "tl": 9200,
+    "pl": 9200,
+    "tr": 9200,
+    "nl": 9200,
+    "sv": 9200,
+    "no": 9200,
+    "da": 9200,
+    "el": 9200,
+    "fi": 9200,
+    "uk": 9200
+  },
+  "horas_por_idioma": {
+    "es": 0.94,
+    "en": 0.99,
+    "fr": 0.98,
+    "de": 0.96,
+    "pt_br": 0.97,
+    "it": 0.96,
+    "ru": 0.95,
+    "zh": 0.84,
+    "ja": 0.85,
+    "pt_pt": 0.99,
+    "hi": 0.99,
+    "ar": 0.99,
+    "ko": 0.99,
+    "vi": 0.99,
+    "th": 0.99,
+    "id": 0.99,
+    "tl": 0.99,
+    "pl": 0.99,
+    "tr": 0.99,
+    "nl": 0.99,
+    "sv": 0.99,
+    "no": 0.99,
+    "da": 0.99,
+    "el": 0.99,
+    "fi": 0.99,
+    "uk": 0.99
+  },
+  "costos_presupuesto": {
+    "narrador_es_por_hora": 2000,
+    "narrador_en_por_hora": 2544.0,
+    "por_idioma": [
+      {
+        "idioma": "العربية",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Dansk",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Deutsch",
+        "horas": 0.96,
+        "costo_es": 1920,
+        "costo_en": 2442
+      },
+      {
+        "idioma": "Ελληνικά",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "English",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Español",
+        "horas": 0.94,
+        "costo_es": 1880,
+        "costo_en": 2391
+      },
+      {
+        "idioma": "Suomi",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Français",
+        "horas": 0.98,
+        "costo_es": 1960,
+        "costo_en": 2493
+      },
+      {
+        "idioma": "हिंदी",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Bahasa Indonesia",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Italiano",
+        "horas": 0.96,
+        "costo_es": 1920,
+        "costo_en": 2442
+      },
+      {
+        "idioma": "日本語",
+        "horas": 0.85,
+        "costo_es": 1700,
+        "costo_en": 2162
+      },
+      {
+        "idioma": "한국어",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Nederlands",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Norsk",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Polski",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Português (Brasil)",
+        "horas": 0.97,
+        "costo_es": 1940,
+        "costo_en": 2467
+      },
+      {
+        "idioma": "Português (Portugal)",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Русский",
+        "horas": 0.95,
+        "costo_es": 1900,
+        "costo_en": 2416
+      },
+      {
+        "idioma": "Svenska",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "ไทย",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Tagalog",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Türkçe",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Українська",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "Tiếng Việt",
+        "horas": 0.99,
+        "costo_es": 1980,
+        "costo_en": 2518
+      },
+      {
+        "idioma": "中文",
+        "horas": 0.84,
+        "costo_es": 1680,
+        "costo_en": 2136
+      }
+    ]
+  }
+}
