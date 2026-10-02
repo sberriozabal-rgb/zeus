@@ -7,8 +7,8 @@
 | Canal | Producto | Estado | Responsable | Enlace |
 |---|---|---|---|---|
 | Gumroad | 15 skills sueltas + 2 packs hostelería | ✅ Tienda abierta | Sergio | https://cabina.gumroad.com |
-| SkillHQ | Consulta enviada 17-sep | ⏳ Respuesta | Sergio | support@skillhq.dev |
-| myClaude | Consulta enviada 17-sep | ⏳ Respuesta | Sergio | hi@myclaude.sh |
+| SkillHQ | Consulta enviada 17-sep · **contestada 22-sep**: tope 50 €/producto, sin Stripe a México (PayPal en EUR), Starter = MoR | ⚠️ No admite el catálogo a la tarifa; sólo piezas de 49 €. Decisión pendiente | Sergio | `venta/CONSULTAS-PENDIENTES.md` |
+| myClaude | Consulta enviada 17-sep a `hello@` y `hi@` · **las dos rebotaron el 20-sep** (servidor de correo inalcanzable) | ❌ Sin contacto por correo; queda GitHub o X | Sergio | <https://github.com/myclaude-sh> |
 | Claude Marketplace | Consulta enviada 17-sep | ⏳ Respuesta | Sergio | hi@claudemarketplaces.com |
 
 ## Canales de alcance (awareness + tráfico a Gumroad)
@@ -141,7 +141,7 @@
 | Fecha | Acción | Canal | Responsable |
 |---|---|---|---|
 | 16-sep (martes) | Post LinkedIn semana 1 | LinkedIn | Sergio |
-| 17-sep | ✅ Enviar 3 consultas (myClaude, SkillHQ, Marketplace) | Email | Sergio |
+| 17-sep | ✅ Enviadas 2 consultas (myClaude rebotó; SkillHQ contestó el 22-sep). claudemarketplaces retenida | Email | Sergio |
 | 18-sep (martes) | ✅ Tweet hilo anuncio | Twitter/X | Sergio |
 | 18-sep o 23-sep | Lanzamiento Product Hunt | Product Hunt | Sergio |
 | 19-sep (miércoles) | Post Indie Hackers "Show HN" | Indie Hackers | Sergio |

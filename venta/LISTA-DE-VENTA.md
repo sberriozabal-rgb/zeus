@@ -1,6 +1,6 @@
 # Lista maestra de venta — qué está hecho y qué falta, con su dueño
 
-Estado a 16-sep-2026. Una sola página para no tener que leer las otras diez: lo que la fábrica
+Estado a 2-oct-2026. Una sola página para no tener que leer las otras diez: lo que la fábrica
 ya dejó listo, lo que solo puede hacer Sergio, y en qué orden. Cada línea apunta al documento que
 la sostiene.
 
@@ -28,7 +28,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | Calendario de LinkedIn, cuatro semanas | `CALENDARIO-LINKEDIN.md` | ✅ |
 | Locuciones para México | `locuciones/` | ✅ tres tomas |
 | Anexo de seguridad alimentaria para `receta-estandar` | `ANEXO-CONTRATO-INOCUIDAD.md` | ✅ redactado · ⚠️ pendiente de abogado y de técnico |
-| Consultas a myClaude, SkillHQ y claudemarketplaces | `CONSULTAS-PENDIENTES.md` | ✅ redactadas · falta el destinatario |
+| Consultas a myClaude, SkillHQ y claudemarketplaces | `CONSULTAS-PENDIENTES.md` | ✅ enviadas el 17-sep · **SkillHQ contestó el 22-sep** (tope 50 €, PayPal) · myClaude rebotó · claudemarketplaces retenida |
 | Pipeline de la campaña de CDMX, prospecto a prospecto | `PIPELINE.md` | ✅ leído y ordenado el 15-sep |
 | Escaparate público con ficha y enlace de compra por skill | <https://github.com/sberriozabal-rgb/octava-skills> | ✅ publicado (decisión 10) · sus enlaces apuntan a `cabina.gumroad.com/l/<slug>` |
 
@@ -46,7 +46,7 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | 8 | **Las dos conversaciones de prueba** (un DJ con nombre, una empresa con nombre): gratis a cambio de la cifra escrita y el permiso de publicarla | `PIPELINE.md` §3 · `MENSAJES.md` | Es el hueco que importa |
 | 9 | **La primera visita de hostelería** con el guion y la oferta | `GUION-VISITA.md` · `OFERTA-HOSTELERIA.md` | 45 min + desplazamiento |
 | 10 | Revisión del abogado del anexo de inocuidad y del técnico en seguridad alimentaria (`receta-estandar`) | `ANEXO-CONTRATO-INOCUIDAD.md` | Antes de entregar la primera Completa |
-| 11 | Enviar las tres consultas a myClaude, SkillHQ y claudemarketplaces con el destinatario de cada web | `CONSULTAS-PENDIENTES.md` | 10 min · solo si se quiere un segundo canal |
+| 11 | ~~Enviar las consultas~~ ✅ 17-sep. **Queda decidir** sobre SkillHQ (sólo admite piezas de hasta 50 €, cobra por PayPal) y **revisar los dos correos del 25-sep** a SkillHQ: ofrecen dos skills de hostelería a 12–18 € con las `.skill` incrustadas en el cuerpo del mensaje. Detalle y propuesta en `CONSULTAS-PENDIENTES.md` | `CONSULTAS-PENDIENTES.md` | 15 min |
 
 Lo que no está en esta lista no bloquea ninguna venta.
 
@@ -114,6 +114,23 @@ nombre y al mismo precio. Precios en EUR si Gumroad lo admite; si solo USD, la m
 - **No verificable desde la fábrica:** que <https://sberriozabal-rgb.github.io/octava-skills/>
   y los 15 enlaces `cabina.gumroad.com/l/<slug>` respondan. El proxy de la sesión bloquea GitHub
   Pages y Gumroad; lo comprueba Sergio desde su navegador (paso 7 de §2).
+
+## 5c · Estado a 2-oct-2026 (leído en el correo y en el repositorio)
+
+- **Ventas: ninguna.** Ninguna respuesta de prospectos de hostelería entre el 19-sep y el 2-oct
+  (`PIPELINE.md`, tercera pasada del 24-sep). La fecha de corte del 22-sep ya pasó.
+- **Fase 2 sigue en 0/17.** Ningún DJ y ninguna empresa con nombre. Nada de `PROSPECCION.md` §2 y
+  §3 (convocatoria en foros de DJ, post de LinkedIn del 18-sep, tres contadores) consta como hecho.
+- **SkillHQ**: contestó el 22-sep; no vale para el catálogo a la tarifa de la casa (tope 50 €, sin
+  Stripe a México). El 25-sep salieron de la casa dos correos que ofrecen hostelería a 12–18 € y
+  llevan las skills incrustadas en el cuerpo: ver `CONSULTAS-PENDIENTES.md`, «Lo que salió de la
+  casa el 25-sep». Decisión de Sergio.
+- **myClaude**: su correo no recibe; dos rebotes. Queda la *issue* en GitHub o X, si se quiere.
+- **PR abiertos de otras sesiones:** #28 (repositorio de entrega `zeus-entrega` para Polar, verde
+  desde el 17-sep, sin fusionar) y #33 (generadores de la campaña CDMX-100). Los dos esperan a
+  Sergio.
+- **Gumroad:** sin novedad verificable desde la fábrica (identidad, cobro desde México, desglose de
+  la primera venta). Sólo Sergio sabe si están cerrados.
 
 ## 6 · Las reglas que siguen sin tocarse
 
