@@ -2,9 +2,60 @@
 
 Tres huecos del informe FORJA v1.1.0 que se cierran escribiendo. Los textos están en los
 borradores de Gmail de `sergio@redcontramar.com` (asunto idéntico al de aquí) y copiados abajo.
-**Falta el destinatario en los tres:** los dominios `myclaude.sh`, `skillhq.dev` y
-`claudemarketplaces.com` están bloqueados desde la sesión de trabajo y no pude sacar la
-dirección de contacto. Se toma del pie de página o del formulario de cada web al enviar.
+## Estado a 2-oct-2026 — lo que contestaron y lo que cambia
+
+Leído en el correo de la casa el 2-oct-2026. Los tres hilos están en Gmail con el asunto de abajo.
+
+| Consulta | Qué pasó | Lo que cambia |
+|---|---|---|
+| **myClaude** | **No se puede contactar por correo.** Dos envíos el 17-sep (`hello@myclaude.sh` desde esta sesión, `hi@myclaude.sh` desde otra) y los dos **rebotaron** el 20-sep: el servidor de correo del dominio no acepta conexiones (`4.4.1 timed out` en 76.76.21.21 y 216.198.79.1 durante 72 horas). No es una dirección equivocada: el dominio no recibe correo | myClaude sigue sin respuesta sobre IVA y pago a México. Única vía que queda: una *issue* en su GitHub (<https://github.com/myclaude-sh>, piden «friction reports» por ahí) o un mensaje en X (`@myclaude_sh`). **Mientras no conteste, no entra** (plan §1, paso 1.6) |
+| **SkillHQ** | **Contestó Mirek (SkillHQ Support) el 22-sep.** Tres respuestas claras, abajo | Cierra el hueco. SkillHQ **no sirve para el catálogo a la tarifa de la casa**: tope de 50 € por producto, sin pago a México por Stripe. Detalle en «Lo que SkillHQ dijo» |
+| **claudemarketplaces** | No enviada (retenida hasta la decisión pendiente 6) | Sin cambio |
+
+### Lo que SkillHQ dijo, punto por punto (22-sep-2026)
+
+1. **IVA.** Depende del nivel de vendedor. En **Starter**, SkillHQ es *merchant of record*: cobra,
+   calcula y remite el IVA europeo y emite la factura al comprador; el vendedor declara el ingreso
+   en México. En **Pro**, el vendedor es el *merchant of record* y asume IVA y facturación.
+2. **Pago a México.** Su Stripe Connect **no paga a México** (los pagos transfronterizos de una
+   plataforma del EEE no incluyen cuentas mexicanas; citan la documentación de Stripe). Un vendedor
+   Starter en México cobra por **PayPal verificado, en euros**; PayPal convierte a pesos con su
+   comisión.
+3. **Precio.** Rango admitido: **2 a 50 € por producto**. Un producto de 249 € **no se admite**, y
+   no tienen evidencia de ventas a ese precio. Sugieren publicar las skills sueltas dentro del rango.
+
+**Lo que eso significa contra la tarifa de `catalogo/PRECIOS.md`:** caben las seis de CABINA sueltas
+a 49 € y las tres neutras a 49 €; **no caben** CABINA COMPLETA (249), CORE (149), EVENTOS (99),
+cobro de cartera (79), PACK CONTEXTO (89) ni `productividad-personal-turno` (199). Y lo que entre
+cobra por PayPal con una conversión encima. SkillHQ es, como mucho, un escaparate de piezas
+sueltas de 49 €, no un canal para el catálogo.
+
+### Lo que salió de la casa el 25-sep, y hay que saber
+
+En el mismo hilo, dos respuestas a Mirek firmadas por Sergio (01:50 y 02:31 UTC) y generadas por
+otra sesión de Claude Code (llevan su pie). Dicen: nivel Starter y cobro por PayPal en euros
+confirmados; se ofrecen **dos skills de hostelería** (`escandallo-ingenieria-menu` y
+`respuesta-resenas`) como *private beta listings* **a 12–18 € cada una**, descritas como
+«production-tested in Madrid»; y se pregunta por el alta KYC desde México. SkillHQ **no ha
+contestado** a 2-oct.
+
+Tres cosas que conviene mirar antes de seguir por ahí, porque chocan con lo escrito:
+
+1. **Precio.** `PRECIOS.md` no vende hostelería suelta salvo `productividad-personal-turno` a 199 €;
+   el escandallo y las reseñas van dentro de la instalación de 2.500 / 4.900 €. Ofrecerlas a 12–18 €
+   es una tarifa nueva que no está decidida en `DECISIONES.md`, y la regla es «se quita alcance,
+   jamás se baja el precio».
+2. **«Probadas».** La regla 1 de `GUMROAD-ALTA.md` §4 y la 1 de `LISTA-DE-VENTA.md` §6: no decir
+   «probadas» hasta levantar G2, que sigue en 0/17.
+3. **Entrega.** Los dos correos no llevan adjunto. El contenido de las dos `.skill` fue **dentro del
+   cuerpo del mensaje**, como texto en base64 (37 KB y 84 KB) junto con marcado de herramienta
+   (`<parameter name="attachments">`). Es decir: SkillHQ recibió dos correos ilegibles que contienen
+   las dos skills enteras, decodificables, antes de ningún alta. Es entrega por adjunto a un tercero
+   sin contrato, la desviación que la doctrina prohíbe, y además se ve mal. Si se sigue con SkillHQ,
+   conviene un correo corto de Sergio, escrito a mano, que pida disculpas por los dos mensajes
+   malformados, retire los ficheros y deje el precio en el rango de la casa.
+
+Lo de abajo es el texto original de las tres consultas, tal como se enviaron.
 
 Van en inglés porque los tres son productos internacionales; SkillHQ cobra en euros pero
 publica en inglés.
@@ -19,6 +70,7 @@ publica en inglés.
 
 ## 1 · myClaude
 
+**Para:** `hello@myclaude.sh` · enviada 17-sep · **rebotada el 20-sep** (servidor de correo inalcanzable)
 **Asunto:** Seller from Mexico: merchant of record, EU VAT and payouts
 
 > Hello,
@@ -41,6 +93,7 @@ publica en inglés.
 
 ## 2 · SkillHQ
 
+**Para:** `support@skillhq.dev` · enviada 17-sep · **respondida el 22-sep**
 **Asunto:** Seller from Mexico: VAT handling, payouts and price range
 
 > Hello,
@@ -61,6 +114,7 @@ publica en inglés.
 
 ## 3 · claudemarketplaces.com
 
+**Para:** `hi@claudemarketplaces.com` · **no enviada** (decisión pendiente 6)
 **Asunto:** How to get a marketplace listed
 
 > Hello,
