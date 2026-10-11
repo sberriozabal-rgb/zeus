@@ -65,7 +65,7 @@ Nada de lo que sigue tiene sentido hasta que esto esté hecho. Son cuarenta minu
 | 1.3 | Comprarse el propio producto con descuento del 100 % | Sergio | 10 min | Ve el correo, el enlace y el zip como los ve el comprador |
 | 1.4 | Apuntar la comisión exacta del desglose de esa transacción | Sergio | 2 min | Se cierra el hueco de si el 10 % + 0,50 incluye el procesamiento de tarjeta |
 | 1.5 | ~~Repositorio público `octava-skills`~~ ✅ **Publicado el 15-sep por orden del titular** (decisión 10): <https://github.com/sberriozabal-rgb/octava-skills>, con las 17 fichas, el marketplace validado y `apertura-cierre-turno` abierta | Hecho | — | Los enlaces de compra de las fichas apuntan a Gumroad: el paso 1.2 los pone en marcha |
-| 1.6 | myClaude: **sólo** tras confirmar por escrito que actúa como *merchant of record* o asumir el IVA europeo. Sin exclusividad ni cuota de alta | Fábrica escribe · Sergio decide | 20 min | Respuesta escrita de myClaude en la carpeta |
+| 1.6 | myClaude: **sólo** tras confirmar por escrito que actúa como *merchant of record* o asumir el IVA europeo. Sin exclusividad ni cuota de alta. **A 2-oct: su correo no recibe** (dos envíos rebotados el 20-sep); queda la *issue* en su GitHub o X. **SkillHQ contestó el 22-sep: tope de 50 € por producto y sin pago a México por Stripe** (`CONSULTAS-PENDIENTES.md`); no sirve para el catálogo a esta tarifa | Fábrica escribe · Sergio decide | 20 min | Respuesta escrita de myClaude en la carpeta |
 
 ### Fase 2 · La prueba — días 5 a 20
 
@@ -176,7 +176,7 @@ que se firma.
 | ~~Qué método de cobro ofrece Gumroad desde México~~ **Banco local** (verificado 15-sep, §3). El paso 0.2 lo comprueba en el alta | Sergio · paso 0.2 |
 | ~~Si Gumroad admite precio en EUR~~ **Muestra EUR, cobra en USD** (verificado 15-sep, §2) | — |
 | Si Polar paga a México (sólo importa si Gumroad falla) | La fábrica, cuando el proxy deje leer polar.sh |
-| Si myClaude y SkillHQ actúan como *merchant of record* o el IVA europeo es del vendedor | **Correos redactados** (15-sep): en borradores de Gmail y en [`CONSULTAS-PENDIENTES.md`](CONSULTAS-PENDIENTES.md). Falta el destinatario, que Sergio toma de cada web al enviar |
+| Si myClaude y SkillHQ actúan como *merchant of record* o el IVA europeo es del vendedor | **SkillHQ: cerrado el 22-sep** (Starter = SkillHQ es MoR; pago a México sólo por PayPal en euros; tope 50 €/producto, el 249 no se admite). **myClaude: sin respuesta, su correo rebota**; queda GitHub o X. Todo en [`CONSULTAS-PENDIENTES.md`](CONSULTAS-PENDIENTES.md) |
 | Cómo se entra en el directorio `claudemarketplaces.com` | **Correo redactado** (15-sep), mismo sitio. Sólo se envía si se decide publicar el marketplace gratuito |
 | Si existe una skill de captación que no sea de pago (hoy no) | Sergio |
 | Revisión externa de inocuidad de `receta-estandar` (único G4 abajo) | Sergio · consultor |
