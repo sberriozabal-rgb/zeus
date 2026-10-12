@@ -1,4 +1,4 @@
-# Pipeline de venta — estado a 25-sep-2026
+# Pipeline de venta — estado a 12-oct-2026
 
 > **Este repositorio estuvo público el 16-sep-2026 y volvió a privado el 17-sep** (decisiones 11
 > y 12). Aquí queda la estadística y el método. **La tabla prospecto a prospecto —nombres, correos, teléfonos y
@@ -54,6 +54,14 @@ habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo qu
   con correo hallado y 3 reenvíos a buzón nuevo: Pujol, Huset, Fonda Garufa). Rebotan 4 al
   momento (Huset, Testal, Rokai; Klein's buzón lleno): pasan a teléfono. La Buena Barra queda en
   borrador sin destinatario. Ninguna respuesta de prospectos entre el 19 y el 25-sep.
+- **26–28-sep** — rebotan tarde (tras 72 h de reintentos) Fonda Garufa, Casa Virginia y Makoto.
+- **12-oct** — Mercaderes contesta al seguimiento: «No nos encontramos interesados». Cerrado.
+- **12-oct** — cuarta pasada: segunda búsqueda de correo para los 39 sin buzón, los 12 rebotados y
+  17 prospectos del 7-sep nunca contactados. Salen 12 (5 de la ola CDMX-100, 4 de Polanco, Matisse
+  con buzón nuevo y Grupos Mazze y Argentilia); rebota Kura (dominio inexistente). Tres quedan en
+  borrador sin destinatario. Descartados: correos de personas, de facturación o de privacidad,
+  grupos ya contactados por otra marca y locales cerrados (Yuban, Paprika, Hostería de Santo
+  Domingo, Mía Domenicca). El resto, unos 45, solo tiene teléfono.
 - **16-sep, 13:49 CDMX** — el contact center del grupo que había contestado cierra la puerta por
   proceso interno. Tercer intento por ese canal: se agota. Si se vuelve a intentar es por otra vía
   (la persona de operaciones, por LinkedIn), no por el buzón de contacto.
