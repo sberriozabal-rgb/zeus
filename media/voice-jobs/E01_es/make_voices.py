@@ -25,16 +25,39 @@ def wav_duration(path):
         return w.getnframes() / w.getframerate()
 
 
+MAX_ATEMPO = 1.25
+
+
 def generate(api, text, instruct, seed, steps, duration=None):
+    """Devuelve (wav_bytes, segundos, n_fragmentos_descartados)."""
+    # effect_preset=raw: sin DSP en el backend; el procesado lo hace mix() una sola vez.
     form = {"text": text, "language": "es", "instruct": instruct,
-            "seed": str(seed), "num_step": str(steps)}
+            "seed": str(seed), "num_step": str(steps), "effect_preset": "raw"}
     if duration:
         form["duration"] = f"{duration:.2f}"
     req = urllib.request.Request(f"{api}/generate", data=urllib.parse.urlencode(form).encode())
     t0 = time.time()
-    # La primera llamada descarga el modelo (~2.4 GB): timeout amplio.
-    with urllib.request.urlopen(req, timeout=3600) as r:
-        return r.read(), time.time() - t0
+    try:
+        # La primera llamada descarga el modelo (~2.4 GB): timeout amplio.
+        with urllib.request.urlopen(req, timeout=3600) as r:
+            dropped = int(r.headers.get("X-OmniVoice-Dropped-Chunks") or 0)
+            return r.read(), time.time() - t0, dropped
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        try:
+            body = json.loads(body).get("detail", body)
+        except ValueError:
+            pass
+        sys.exit(f"VoiceStudio respondió {e.code} en /generate: {body}\n"
+                 "Revisa el log del backend (~/VoiceStudio/backend.log).")
+
+
+def atempo(path, factor):
+    """Acelera el WAV in situ sin cambiar el tono."""
+    tmp = path.with_suffix(".atempo.wav")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(path),
+                    "-af", f"atempo={factor:.4f}", str(tmp)], check=True)
+    tmp.replace(path)
 
 
 def synth_lines(plan, api, steps, takes, out):
@@ -42,26 +65,41 @@ def synth_lines(plan, api, steps, takes, out):
     for line in plan["lines"]:
         voice = plan["voices"][line["voice"]]
         window = line["end"] - line["start"]
+        limit = window * 0.95
         best = None
         # Varias tomas (seed base + i); se queda con la más larga que quepa en la ventana:
         # las tomas muy cortas suelen sonar atropelladas.
         for i in range(takes):
             seed = voice["seed"] + i
-            audio, secs = generate(api, line["text"], voice["instruct"], seed, steps)
+            audio, secs, dropped = generate(api, line["text"], voice["instruct"], seed, steps)
             tmp = out / f"{line['id']}_take{i}.wav"
             tmp.write_bytes(audio)
             dur = wav_duration(tmp)
-            print(f"  {line['id']} take {i} seed={seed}: {dur:.2f}s (ventana {window:.2f}s) en {secs:.0f}s")
-            fits = dur <= window * 0.95
+            print(f"  {line['id']} take {i} seed={seed}: {dur:.2f}s (ventana {window:.2f}s) en {secs:.0f}s"
+                  + (f"  ¡{dropped} fragmento(s) de texto sin audio!" if dropped else ""))
+            # Una toma que perdió texto solo se usa si no hay otra.
+            fits = dur <= limit and not dropped
             if best is None or (fits and (not best["fits"] or dur > best["dur"])):
-                best = {"path": tmp, "dur": dur, "seed": seed, "fits": fits, "gen_s": secs}
+                best = {"path": tmp, "dur": dur, "seed": seed, "fits": fits, "gen_s": secs,
+                        "dropped": dropped}
         if not best["fits"]:
             # Ninguna toma cabe: forzar duración con la seed de la mejor toma.
             target = window * 0.9
-            audio, secs = generate(api, line["text"], voice["instruct"], best["seed"], steps, target)
+            audio, secs, dropped = generate(api, line["text"], voice["instruct"], best["seed"], steps, target)
             best["path"].write_bytes(audio)
-            best.update(dur=wav_duration(best["path"]), fits=True, gen_s=secs, forced=round(target, 2))
-            print(f"  {line['id']} forzada a {target:.2f}s")
+            best.update(dur=wav_duration(best["path"]), gen_s=secs, dropped=dropped,
+                        forced=round(target, 2))
+            print(f"  {line['id']} forzada a {target:.2f}s -> {best['dur']:.2f}s")
+        if best["dur"] > limit:
+            # Sigue sin caber: acelerar hasta MAX_ATEMPO (receta del plan).
+            factor = min(best["dur"] / limit, MAX_ATEMPO)
+            atempo(best["path"], factor)
+            best.update(dur=wav_duration(best["path"]), atempo=round(factor, 3))
+            print(f"  {line['id']} atempo {factor:.3f} -> {best['dur']:.2f}s")
+        if best["dur"] > window:
+            print(f"  AVISO {line['id']}: {best['dur']:.2f}s no cabe en {window:.2f}s; se solapará")
+        if best["dropped"]:
+            print(f"  AVISO {line['id']}: el backend descartó texto; escúchala")
         final = out / f"{line['id']}.wav"
         best["path"].replace(final)
         for f in out.glob(f"{line['id']}_take*.wav"):
@@ -69,7 +107,9 @@ def synth_lines(plan, api, steps, takes, out):
         report.append({"id": line["id"], "voice": line["voice"], "text": line["text"],
                        "seed": best["seed"], "duration_s": round(best["dur"], 2),
                        "window_s": round(window, 2), "gen_time_s": round(best["gen_s"], 1),
-                       **({"forced_duration_s": best["forced"]} if "forced" in best else {})})
+                       **({"forced_duration_s": best["forced"]} if "forced" in best else {}),
+                       **({"atempo": best["atempo"]} if "atempo" in best else {}),
+                       **({"dropped_chunks": best["dropped"]} if best["dropped"] else {})})
     return report
 
 
@@ -82,10 +122,9 @@ def mix(plan, out, video, dest):
                     f"acompressor=threshold=-18dB:ratio=3:attack=5:release=80,adelay={d}|{d}[v{i}]")
         labels.append(f"[v{i}]")
     n = len(plan["lines"])
-    inputs += ["-f", "lavfi", "-i", "sine=f=880:d=0.45,afade=t=out:st=0.05:d=0.4",
-               "-f", "lavfi", "-i", "sine=f=698:d=0.7,afade=t=out:st=0.05:d=0.65",
-               "-f", "lavfi", "-i", "anoisesrc=d=0.9:c=brown:a=0.9,lowpass=f=180,afade=t=out:st=0.05:d=0.85"]
     for k, sfx in enumerate(plan["sfx"]):
+        # Cada efecto se sintetiza desde su propia entrada del plan (campo "lavfi").
+        inputs += ["-f", "lavfi", "-i", sfx["lavfi"]]
         d = int(sfx["at"] * 1000)
         filt.append(f"[{n + k}:a]aresample=48000,volume={sfx['gain']},adelay={d}|{d}[s{k}]")
         labels.append(f"[s{k}]")

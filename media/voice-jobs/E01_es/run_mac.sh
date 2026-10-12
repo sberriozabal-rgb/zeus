@@ -22,12 +22,12 @@ fi
 (cd "$VS_HOME" && uv sync)
 
 # 3. Backend en segundo plano (si no está ya corriendo)
-STARTED=0
 if ! curl -sf --max-time 2 "$API/health" >/dev/null; then
   echo "Arrancando backend de VoiceStudio (log: $VS_HOME/backend.log)..."
   (cd "$VS_HOME" && nohup uv run uvicorn main:app --app-dir backend --host 127.0.0.1 --port 3900 \
      > "$VS_HOME/backend.log" 2>&1 &)
-  STARTED=1
+  # Apagarlo al salir, también si algo falla a mitad (set -e).
+  trap 'pkill -f "uvicorn main:app --app-dir backend --host 127.0.0.1 --port 3900" || true' EXIT
   for _ in $(seq 1 90); do
     curl -sf --max-time 2 "$API/health" >/dev/null && break
     sleep 2
@@ -40,9 +40,6 @@ echo "Nota: la primera línea tarda más porque descarga el modelo k2-fsa/OmniVo
 # 4. Generar voces, mezclar y montar el video
 (cd "$VS_HOME" && uv run python "$HERE/make_voices.py" --api "$API" "$@")
 
-# 5. Apagar el backend si lo arrancamos nosotros
-if [ "$STARTED" = 1 ]; then
-  pkill -f "uvicorn main:app --app-dir backend --host 127.0.0.1 --port 3900" || true
-fi
+# 5. El trap de arriba apaga el backend si lo arrancamos nosotros.
 
 open "$HERE/E01_es_voicestudio.mp4" 2>/dev/null || true

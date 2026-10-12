@@ -77,17 +77,20 @@
     {
       "at": 10.8,
       "type": "ding (sine 880 Hz, 0.45 s, fade-out)",
-      "gain": 0.35
+      "gain": 0.35,
+      "lavfi": "sine=f=880:d=0.45,afade=t=out:st=0.05:d=0.4"
     },
     {
       "at": 11.25,
       "type": "dong (sine 698 Hz, 0.7 s, fade-out)",
-      "gain": 0.35
+      "gain": 0.35,
+      "lavfi": "sine=f=698:d=0.7,afade=t=out:st=0.05:d=0.65"
     },
     {
       "at": 18.9,
       "type": "boom (brown noise lowpass 180 Hz, 0.9 s)",
-      "gain": 1.4
+      "gain": 1.4,
+      "lavfi": "anoisesrc=d=0.9:c=brown:a=0.9,lowpass=f=180,afade=t=out:st=0.05:d=0.85"
     }
   ],
   "mix": "Por línea: highpass 80 Hz, acompressor threshold=-18dB ratio=3. Si una línea excede su ventana, atempo hasta encajar (máx 1.25). adelay a 'start'. amix normalize=0, apad whole_dur=23.6, loudnorm I=-16 TP=-1.5 LRA=11, 48 kHz estéreo. Mux: -c:v copy -c:a aac 192k -t 23.54. Cuidado: atrim posicional 'atrim=0:23.54' NO es start:end (usar atrim=end=...)."
