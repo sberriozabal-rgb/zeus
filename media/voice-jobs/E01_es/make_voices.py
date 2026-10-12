@@ -4,7 +4,7 @@
 Requiere el backend de VoiceStudio corriendo (por defecto http://127.0.0.1:3900) y ffmpeg.
 Solo usa la librería estándar. Uso:
 
-    python3 make_voices.py [--steps 32] [--takes 3] [--api http://127.0.0.1:3900]
+    python3 make_voices.py [--steps 32] [--takes 1] [--api http://127.0.0.1:3900]
 """
 import argparse
 import json
@@ -143,7 +143,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--api", default="http://127.0.0.1:3900")
     ap.add_argument("--steps", type=int, default=32, help="8 borrador · 16 equilibrado · 32 calidad")
-    ap.add_argument("--takes", type=int, default=3, help="tomas por línea (seeds consecutivas)")
+    # 1 toma = siempre la seed del personaje, misma voz en todas sus líneas.
+    # Más tomas prueban seed+1, seed+2…, que pueden cambiar el timbre.
+    ap.add_argument("--takes", type=int, default=1,
+                    help="tomas por línea (seeds consecutivas; >1 puede cambiar la voz entre líneas)")
     args = ap.parse_args()
 
     plan = json.loads((HERE / "plan.json").read_text())

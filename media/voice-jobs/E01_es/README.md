@@ -14,19 +14,20 @@ El script:
 
 1. Instala `ffmpeg` y `uv` con Homebrew si faltan.
 2. Clona VoiceStudio en `~/VoiceStudio` (solo la primera vez) y arranca el backend.
-3. Genera cada línea con 3 tomas y se queda con la mejor que quepa en su ventana. Si ninguna cabe, regenera forzando la duración, y si aún sobra, acelera con `atempo` (máx. 1.25). Descarta las tomas en las que el backend avisa de texto sin audio (`X-OmniVoice-Dropped-Chunks`).
+3. Genera cada línea con la seed de su personaje (una toma), para que cada voz suene igual en todas sus líneas. Si no cabe en su ventana, regenera forzando la duración, y si aún sobra, acelera con `atempo` (máx. 1.25). Descarta las tomas en las que el backend avisa de texto sin audio (`X-OmniVoice-Dropped-Chunks`).
 4. Mezcla las voces con los efectos y monta el resultado en `E01_es_voicestudio.mp4`. Las voces salen del backend sin procesar (`effect_preset=raw`); el highpass y el compresor se aplican una sola vez en la mezcla. Cada efecto de sonido se genera desde su campo `lavfi` en `plan.json`.
 5. Apaga el backend al terminar si lo arrancó el script, también si falla a mitad.
 
 La primera ejecución descarga el modelo `k2-fsa/OmniVoice` (~2.4 GB).
 
-- Versión rápida para probar: `... run_mac.sh --steps 16 --takes 1`
+- Versión rápida para probar: `... run_mac.sh --steps 16`
+- `--takes N` prueba N seeds consecutivas por línea y elige la que mejor cabe. Ojo: cambiar de seed puede cambiar el timbre, y el personaje dejaría de sonar igual entre líneas.
 - Salida: `E01_es_voicestudio.mp4`, más `lines/NN.wav` y `lines/report.json` (seed, duración, tiempo de generación y, si aplica, duración forzada, factor `atempo` y fragmentos descartados de cada línea)
 - Los avisos `AVISO NN` en la salida marcan líneas que conviene escuchar.
 
 ## Voces
 
-OmniVoice solo entiende un vocabulario fijo para el diseño de voz: género, edad, tono, `whisper` y acentos ingleses. El acento hispano sale del idioma (`language=es`). La seed fija por personaje mantiene la misma voz en todas sus líneas.
+OmniVoice solo entiende un vocabulario fijo para el diseño de voz: género, edad, tono, `whisper` y acentos ingleses. El acento hispano sale del idioma (`language=es`). La seed fija por personaje mantiene la misma voz en todas sus líneas (por eso el script usa una sola toma por defecto).
 
 | Personaje | instruct | seed |
 |---|---|---|

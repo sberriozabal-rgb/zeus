@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Pone voces a E01_es.mp4 con VoiceStudio en un Mac con Apple Silicon (M1/M2/M3/M4).
 # Uso, desde la raíz del repo:   bash media/voice-jobs/E01_es/run_mac.sh
-# Opciones extra se pasan a make_voices.py, p. ej.:   ... run_mac.sh --steps 16 --takes 1
+# Opciones extra se pasan a make_voices.py, p. ej.:   ... run_mac.sh --steps 16
 set -euo pipefail
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
