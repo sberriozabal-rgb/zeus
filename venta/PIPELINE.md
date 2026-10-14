@@ -68,6 +68,13 @@ habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo qu
   Comercio en México), gerencia de membresías, propone videollamada. **Confirmada para el jueves
   15-oct, 9:00 CDMX.** Objetivo: calendario de eventos, coste de membresía por escrito y acceso a
   socios del sector restaurantero; no se firma nada en la llamada.
+- **14-oct, consolidado de todas las sesiones** — tres campañas en frío («Tres hallazgos», 102 hilos;
+  «OCTAVA — Mejoro su operación», 12; «90 minutos en X», 22 enviados el 13–14-oct y unos 32 en
+  borrador): unos 140 restaurantes, unos 256 correos, unas 29 direcciones rebotadas (≈22 %), 2
+  respuestas (las dos «no») y 0 visitas. **Recomendación: parar los envíos en frío** desde la cuenta
+  personal hasta limpiar rebotes (afecta a la reputación del remitente, que es la misma de la
+  búsqueda de empleo), una sola sesión dueña de cada hilo, y pasar a red institucional (Camescom) y
+  visita presencial con la hoja de tres hallazgos.
 - **16-sep, 13:49 CDMX** — el contact center del grupo que había contestado cierra la puerta por
   proceso interno. Tercer intento por ese canal: se agota. Si se vuelve a intentar es por otra vía
   (la persona de operaciones, por LinkedIn), no por el buzón de contacto.
