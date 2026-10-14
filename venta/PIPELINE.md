@@ -1,4 +1,4 @@
-# Pipeline de venta — estado a 12-oct-2026
+# Pipeline de venta — estado a 14-oct-2026
 
 > **Este repositorio estuvo público el 16-sep-2026 y volvió a privado el 17-sep** (decisiones 11
 > y 12). Aquí queda la estadística y el método. **La tabla prospecto a prospecto —nombres, correos, teléfonos y
@@ -62,6 +62,12 @@ habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo qu
   borrador sin destinatario. Descartados: correos de personas, de facturación o de privacidad,
   grupos ya contactados por otra marca y locales cerrados (Yuban, Paprika, Hostería de Santo
   Domingo, Mía Domenicca). El resto, unos 45, solo tiene teléfono.
+- **13-oct** — salen los 3 borradores que faltaban: entrega Comedor Jacinta; rebotan Tacos Don Juan
+  y Blend Station (pasan a teléfono). Bar La Ópera da aviso de entrega retrasada el 14-oct.
+- **14-oct** — primer canal que se mueve fuera del correo en frío: Camescom (Cámara Española de
+  Comercio en México), gerencia de membresías, propone videollamada. **Confirmada para el jueves
+  15-oct, 9:00 CDMX.** Objetivo: calendario de eventos, coste de membresía por escrito y acceso a
+  socios del sector restaurantero; no se firma nada en la llamada.
 - **16-sep, 13:49 CDMX** — el contact center del grupo que había contestado cierra la puerta por
   proceso interno. Tercer intento por ese canal: se agota. Si se vuelve a intentar es por otra vía
   (la persona de operaciones, por LinkedIn), no por el buzón de contacto.
