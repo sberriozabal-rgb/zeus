@@ -13,6 +13,29 @@ restaurantes de CDMX** (cocina asiática, parrillas, grupos multimarca), con el 
 La Instalación Esencial (2.500 €) del catálogo entra por la misma puerta: el escandallo y la
 comparativa de proveedores son dos de las "tres fugas" que se enseñan en el diagnóstico.
 
+## 0 · Barrido del correo del 14-oct-2026 (Enviados de Gmail, deduplicados por id)
+
+| | |
+|---|---|
+| Correos salidos de la cuenta desde el 17-sep | **≥ 379** (204 de prospección a restaurantes, 148 candidaturas de empleo, 27 otros) |
+| Restaurantes contactados por correo | **97** |
+| Respuestas humanas de restaurante en el periodo | **1**: Mercaderes, «No nos encontramos interesados» (12-oct). Contestada el 14-oct cerrando sin insistir |
+| Rebotes definitivos | **19 direcciones** (≈ 20 % de la base): hay que marcarlas muertas antes de la próxima tanda |
+| Reuniones | **1**: Camescom, videollamada jueves 15-oct 9:00 CDMX, confirmada; convocatoria con enlace pendiente |
+| Ventas y correos de Gumroad desde el 1-sep | **0 y 0**: la cuenta no ha recibido ni alta, ni verificación, ni venta. Comprobar en qué cuenta está la tienda |
+| Borradores listos con destinatario | **32** «90 minutos en X, sin costo» del 13-oct, sin enviar; 27 «Tres hallazgos» del 17-sep sin destinatario (locales sin buzón) |
+
+**Higiene detectada el 14-oct:** la cuenta envió respuestas por duplicado ese día (Camescom dos
+veces dos, SkillHQ dos, cinco hoteles dos); `sergio@redcontramar.com` no recibe correo (los
+cuatro borradores de lanzamiento que se autoenviaron el 17-sep rebotaron); Bar La Ópera lleva
+tres días en reintento. Antes de la próxima tanda: `control_toques.py`, lista de muertas al día y
+un solo envío por respuesta.
+
+Dos cierres más del 14-oct: el hilo del contact center del grupo del 7-sep (que el 16-sep dijo que
+«por procesos internos» no facilita el contacto) quedó contestado con un cierre cortés y el
+WhatsApp del titular; y un correo del 18-sep que pide un «certificado de titularidad bancaria» sin
+relación conocida se trata como posible fraude y no se contesta.
+
 ## 1 · Resultado de la campaña, en cifras
 
 | | |
@@ -32,25 +55,6 @@ comparativa de proveedores son dos de las "tres fugas" que se enseñan en el dia
 
 **Diagnóstico (15-sep):** el problema no era el producto ni el precio; era que 80 borradores se
 habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo que tenía destinatario.
-
-### Acumulado a 14-oct-2026 (leído el correo entero desde el 14-sep)
-
-| | |
-|---|---|
-| Hilos de correo en frío a restaurantes (`in:sent`, asuntos «Tres hallazgos», «90 minutos», «ocho semanas») | **124** (≈122 locales) |
-| Mensajes enviados desde el 14-sep, recordatorios incluidos | **229** |
-| Locales con buzón muerto (fallo definitivo) | **20** (≈16 %) · Bar La Ópera en reintento |
-| Respuestas humanas | **2**, las dos negativas: Mercaderes («No nos encontramos interesados», 12-oct) y el contact center del grupo del 7-sep (cierra el canal, 16-sep; contestado con un cierre cortés el 14-oct) |
-| Visitas · diagnósticos · propuestas · cierres | **0 · 0 · 0 · 0** |
-| Borradores «90 minutos en …» con destinatario puesto y sin enviar (13-oct) | **32** |
-| Locales que solo tienen teléfono | ≈45 |
-| Primer interlocutor que pide hablar | **Camescom**: videollamada jueves 15-oct, 9:00 CDMX, con la gerencia de membresías. Enlace pendiente de recibir a las 22:00Z del 14-oct |
-
-Dos avisos del correo: el buzón `sergio@redcontramar.com` **rebota el correo entrante** desde el
-17-sep (cuatro envíos propios devueltos con «no se ha encontrado la dirección»), así que cualquier
-respuesta a esa dirección se pierde hasta que se arregle el dominio; y el 18-sep llegó una
-«solicitud de certificado de titularidad bancaria» de un remitente sin relación conocida, con el
-patrón de un fraude de cambio de cuenta: no se contesta ni se envía nada.
 
 ## 2 · Cronología
 
@@ -87,6 +91,13 @@ patrón de un fraude de cambio de cuenta: no se contesta ni se envía nada.
   Comercio en México), gerencia de membresías, propone videollamada. **Confirmada para el jueves
   15-oct, 9:00 CDMX.** Objetivo: calendario de eventos, coste de membresía por escrito y acceso a
   socios del sector restaurantero; no se firma nada en la llamada.
+- **14-oct, consolidado de todas las sesiones** — tres campañas en frío («Tres hallazgos», 102 hilos;
+  «OCTAVA — Mejoro su operación», 12; «90 minutos en X», 22 enviados el 13–14-oct y unos 32 en
+  borrador): unos 140 restaurantes, unos 256 correos, unas 29 direcciones rebotadas (≈22 %), 2
+  respuestas (las dos «no») y 0 visitas. **Recomendación: parar los envíos en frío** desde la cuenta
+  personal hasta limpiar rebotes (afecta a la reputación del remitente, que es la misma de la
+  búsqueda de empleo), una sola sesión dueña de cada hilo, y pasar a red institucional (Camescom) y
+  visita presencial con la hoja de tres hallazgos.
 - **16-sep, 13:49 CDMX** — el contact center del grupo que había contestado cierra la puerta por
   proceso interno. Tercer intento por ese canal: se agota. Si se vuelve a intentar es por otra vía
   (la persona de operaciones, por LinkedIn), no por el buzón de contacto.

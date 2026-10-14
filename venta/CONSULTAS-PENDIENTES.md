@@ -30,6 +30,15 @@ cobro de cartera (79), PACK CONTEXTO (89) ni `productividad-personal-turno` (199
 cobra por PayPal con una conversión encima. SkillHQ es, como mucho, un escaparate de piezas
 sueltas de 49 €, no un canal para el catálogo.
 
+### Corrección enviada el 14-oct-2026
+
+Respuesta a Mirek desde `sberriozabal@gmail.com`, en el mismo hilo: agradece las tres respuestas;
+pide disculpas por los dos mensajes del 25-sep (generados por un asistente, con los ficheros
+incrustados en el cuerpo y descritos como «production-tested», que no lo están) y pide que los
+borre; aclara que 12–18 € no es la tarifa de la casa y que, si se entra, serían sueltas a 49 € en
+Starter por el flujo normal de alta; y pregunta si el KYC de Starter acepta identidad y domicilio
+mexicanos. **Pendiente de respuesta.**
+
 ### Lo que salió de la casa el 25-sep, y hay que saber
 
 En el mismo hilo, dos respuestas a Mirek firmadas por Sergio (01:50 y 02:31 UTC) y generadas por

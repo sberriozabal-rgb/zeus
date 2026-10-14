@@ -1,6 +1,6 @@
 # Lista maestra de venta — qué está hecho y qué falta, con su dueño
 
-Estado a 2-oct-2026. Una sola página para no tener que leer las otras diez: lo que la fábrica
+Estado a 14-oct-2026 (§5d). Una sola página para no tener que leer las otras diez: lo que la fábrica
 ya dejó listo, lo que solo puede hacer Sergio, y en qué orden. Cada línea apunta al documento que
 la sostiene.
 
@@ -51,6 +51,14 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 | 12 | ~~Crear el repositorio `zeus-entrega` y ponerlo en privado~~ ✅ 17-sep. ~~Abrir Polar con Google~~ ✅ 17-sep, **en sandbox** (`sandbox.polar.sh/dashboard/octava`). **Queda:** en el sandbox, instalar la app de GitHub de Polar solo en `zeus-entrega`, crear la ventaja de acceso al repositorio, un producto de prueba y comprarlo con otra cuenta de GitHub para ver que el acceso llega y se retira al reembolsar. Si funciona, repetir el alta en `polar.sh` (producción) con datos fiscales y Stripe | `POLAR-CONFIGURACION.md` §1 | 20 min la prueba · producción solo si Gumroad no paga a México o se quiere el segundo canal |
 
 Lo que no está en esta lista no bloquea ninguna venta.
+
+## 5d · Estado a 14-oct-2026, tras el barrido del correo
+
+- **Ventas: ninguna.** Ni un correo de Gumroad en la cuenta desde el 1-sep: antes de publicar nada, comprobar que la tienda está en esta cuenta y que avisa.
+- **Prospección:** 204 correos a 97 restaurantes, una respuesta (negativa). El correo en frío queda cerrado salvo segundo toque válido; la vía es teléfono, visita y Camescom (15-oct 9:00).
+- **Pendientes de terceros:** SkillHQ debe contestar si su KYC acepta identidad mexicana; Camescom debe enviar la convocatoria.
+- **Lanzamiento:** sigue sin salir ningún post. Resumen ejecutivo de 20 láminas entregado el 14-oct con el plan de catorce días.
+
 
 ## 3 · Los 15 productos de Gumroad, uno a uno
 
@@ -134,30 +142,34 @@ nombre y al mismo precio. Precios en EUR si Gumroad lo admite; si solo USD, la m
 - **Gumroad:** sin novedad verificable desde la fábrica (identidad, cobro desde México, desglose de
   la primera venta). Sólo Sergio sabe si están cerrados.
 
-## 5d · Estado a 14-oct-2026 (correo entero leído; resumen ejecutivo entregado al titular)
+## 5d · Estado a 14-oct-2026 (leído en el correo y en los dos repositorios)
 
-- **Ventas: ninguna** en cuatro semanas de tienda abierta. **Posts publicados: ninguno** (los textos
-  listos están en `LANZAMIENTO-COPIA.md` desde hoy). Nadie ha llegado a la tienda.
-- **Correo en frío:** 229 mensajes a ≈122 locales, 20 buzones muertos, 2 respuestas negativas, 0
-  visitas. Canal agotado: lo que queda son los 32 borradores con destinatario del 13-oct y los ≈45
-  locales con teléfono. Cifras en `PIPELINE.md` §1.
-- **Camescom** (Cámara Española de Comercio en México) pide videollamada el **15-oct a las 9:00
-  CDMX**: único interlocutor que ha pedido hablar. Objetivo: calendario de eventos, coste de
-  membresía por escrito y acceso a socios del sector; no se firma nada.
-- **SkillHQ** queda en pausa por decisión del 14-oct (tope 50 €, PayPal); **myClaude** y
-  **claudemarketplaces**, fuera. **Polar**, en sandbox sin probar.
+- **Ventas: ninguna.** Cero notificaciones de Gumroad en el correo de la casa desde el 16-sep.
+- **Hostelería por correo: canal agotado.** Cuatro pasadas (7-sep, 16-sep, 24-sep, 12-oct), ~130
+  envíos, una respuesta: Mercaderes, «no nos encontramos interesados» (12-oct), contestada y
+  cerrada el 14-oct. Cero visitas. La próxima puerta es a pie o por WhatsApp.
+- **Escaparate sin tráfico:** `octava-skills` tiene 1 estrella, 0 *issues* de compradores y
+  **ningún topic**; GitHub Pages activo. La fábrica no puede poner los topics (403 del proxy).
+- **Ningún post publicado** de los seis canales planificados el 17-sep. Los textos listos están
+  en [`LANZAMIENTO-COPIA.md`](LANZAMIENTO-COPIA.md) (14-oct), con el orden de empuje corregido:
+  PACK CONTEXTO → cobro → CABINA → hostelería por visita.
+- **SkillHQ:** el 14-oct salió la corrección a Mirek: disculpa por los dos correos malformados
+  del 25-sep (skills incrustadas, «production-tested», 12–18 €), retirada de los ficheros, tarifa
+  de la casa (sueltas a 49 € en Starter, si se entra), y pregunta por el KYC desde México.
+- **myClaude** sin contacto; **claudemarketplaces** sin respuesta desde el 17-sep.
+- **Deck ejecutivo** del 14-oct: `ZEUS-Estado-y-Plan-2026-10-14.pptx` (entregado en la sesión):
+  dónde estamos, qué aplicamos, qué han dicho, qué hemos hecho, pendientes con dueño, riesgos.
+
 - **`zeus` está público a 14-oct** pese a la decisión 12 (privado desde el 17-sep). Verificado por
   la API y por una visita anónima a la portada. Decisión del titular pendiente: volver a privado o
-  reescribir el historial de `venta/` antes de dejarlo abierto.
-- **El buzón `sergio@redcontramar.com` no recibe correo** desde el 17-sep (rebotes). Hasta que se
-  arregle el dominio, cualquier respuesta a esa dirección se pierde.
-- **Frente paralelo:** 127 candidaturas a dirección de hotel enviadas del 9 al 14-oct desde la misma
-  cuenta; 13 respuestas humanas (6 piden registro en portal, 5 guardan el CV, 2 derivan), 0
-  entrevistas. Consume las mismas horas que la venta: conviene una franja fija.
-- Lo que sigue, en orden, está en el resumen ejecutivo del 14-oct entregado al titular: encender el
-  tráfico (topics, Discover apagado, r/ClaudeAI, Show HN, X, LinkedIn), convertir lo que existe
-  (Camescom, 32 borradores, teléfono, fase 2) y cerrar la casa (visibilidad, cuenta de Gumroad,
-  dominio, anexo de inocuidad).
+  reescribir el historial de `venta/` antes de dejarlo abierto (`../catalogo/DECISIONES.md`, nota
+  bajo la 12).
+- **Correo sospechoso:** el 18-sep llegó una «solicitud de certificado de titularidad bancaria» de un
+  remitente sin relación conocida, con el patrón de un fraude de cambio de cuenta. No se contesta ni
+  se envía ningún documento.
+- **Frente paralelo de candidaturas** a dirección de hotel desde la misma cuenta (127 del 9 al
+  14-oct, 13 respuestas humanas, 0 entrevistas): consume las mismas horas que la venta y comparte
+  reputación de remitente. Conviene una franja fija y un solo envío por respuesta.
 
 ## 6 · Las reglas que siguen sin tocarse
 
