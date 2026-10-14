@@ -55,6 +55,12 @@ Tres cosas que conviene mirar antes de seguir por ahí, porque chocan con lo esc
    conviene un correo corto de Sergio, escrito a mano, que pida disculpas por los dos mensajes
    malformados, retire los ficheros y deje el precio en el rango de la casa.
 
+**Hecho el 14-oct-2026:** respuesta enviada a Mirek desde el buzón de la casa, en el mismo hilo.
+Pide disculpas por los dos mensajes malformados, explica que un asistente automático pegó el
+contenido de los ficheros en el cuerpo, pide que los descarten y borren, y deja la propuesta en
+pausa hasta decidir qué piezas sueltas de 49 € irían, si va alguna, por el alta normal de vendedor
+y nunca por correo.
+
 Lo de abajo es el texto original de las tres consultas, tal como se enviaron.
 
 Van en inglés porque los tres son productos internacionales; SkillHQ cobra en euros pero

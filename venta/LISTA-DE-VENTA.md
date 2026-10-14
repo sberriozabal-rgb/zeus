@@ -1,14 +1,16 @@
 # Lista maestra de venta — qué está hecho y qué falta, con su dueño
 
-Estado a 2-oct-2026. Una sola página para no tener que leer las otras diez: lo que la fábrica
+Estado a 14-oct-2026. Una sola página para no tener que leer las otras diez: lo que la fábrica
 ya dejó listo, lo que solo puede hacer Sergio, y en qué orden. Cada línea apunta al documento que
 la sostiene.
 
 ## 0 · En una frase
 
-**Las 17 skills están a la venta y todo el material de venta existe.** Lo único que no ha pasado
-todavía es lo que ningún documento puede hacer: abrir la cuenta de Gumroad, pegar las quince
-fichas, enviar los correos que están en borradores y hacer una visita. Y una venta.
+**Un mes después de abrir la tienda: producto terminado, canal abierto, cero ventas y cero
+visitas.** Lo que falta ya no es material: es distribución (ningún post de lanzamiento ha salido),
+una prueba con cliente (fase 2 en cero) y las dos conversaciones que el correo en frío no da
+(unos 130 correos a restaurantes, una respuesta, negativa). El primer canal que se mueve fuera
+del correo es Camescom: videollamada el 15-oct.
 
 ## 1 · Lo que ya está hecho (la fábrica)
 
@@ -133,6 +135,34 @@ nombre y al mismo precio. Precios en EUR si Gumroad lo admite; si solo USD, la m
   Sergio.
 - **Gumroad:** sin novedad verificable desde la fábrica (identidad, cobro desde México, desglose de
   la primera venta). Sólo Sergio sabe si están cerrados.
+
+## 5d · Estado a 14-oct-2026 (correo, repositorio y las otras sesiones)
+
+- **Ventas: cero** en Gumroad desde el 16-sep. Repositorio público con una estrella. Ningún post
+  de `CANALES-DISTRIBUCION.md` ha salido; los textos listos están en `LANZAMIENTO-COPIA.md`
+  (14-oct), con el orden de empuje corregido: primero PACK CONTEXTO, luego cobro de cartera,
+  luego CABINA, y la instalación por visita.
+- **Hostelería:** unos 130 correos en frío en cuatro pasadas (7-sep, 15/16-sep, 24-sep, 12/13-oct),
+  una treintena de rebotes, una respuesta negativa (Mercaderes, 12-oct) y un contact center cerrado
+  (RosaNegra). Cero visitas. El correo en frío queda agotado como canal; lo que sigue es teléfono,
+  WhatsApp, carta en mano y el canal institucional.
+- **Camescom** (Cámara Española de Comercio en México): videollamada confirmada para el jueves
+  15-oct a las 9:00 CDMX con la gerente de membresías. Guion y preguntas en
+  `CAMESCOM-REUNION-2026-10-15.md`. No se firma nada en la llamada. Aviso: el 14-oct salieron
+  **dos confirmaciones casi idénticas** desde dos sesiones distintas; conviene que un solo canal
+  conteste a cada contacto.
+- **SkillHQ:** el 14-oct se envió la respuesta a Mirek pidiendo disculpas por los dos correos
+  malformados del 25-sep, retirando los ficheros y dejando la propuesta en pausa. Decisión
+  pendiente: si entran piezas sueltas de 49 € o no entra nada.
+- **Polar:** `zeus-entrega` y el sandbox siguen donde el 17-sep; la prueba de compra y reembolso
+  no consta hecha.
+- **Fase 2:** sigue en 0/17. Ni DJ ni empresa con nombre.
+- **PR:** fusionados #28, #33, #39, #41, #42 y #43. Abierto sólo #40 (vídeo E01_es, fuera de la
+  venta). Las cuatro sesiones de la casa trabajan en paralelo sin un reparto escrito: dos han
+  contestado al mismo correo el mismo día.
+- **Otro frente en el mismo buzón:** una campaña de candidaturas a dirección hotelera (España,
+  Portugal, México, Caribe) con respuestas los días 13 y 14-oct, ya contestadas. No es de la
+  fábrica, pero compite por el mismo tiempo y el mismo correo.
 
 ## 6 · Las reglas que siguen sin tocarse
 

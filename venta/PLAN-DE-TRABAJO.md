@@ -4,7 +4,7 @@
 **Objetivo** 3.000 USD netos al mes en el canal en línea · **2.600 €** al cambio del 15-sep
 (EUR/USD 1,1536, [Trading Economics](https://tradingeconomics.com/euro-area/currency)) ·
 51.420 MXN al tipo de cambio del 15-sep (17,14)
-**Estado** Fase 0 abierta. Ninguna de las tres fases siguientes puede arrancar hasta cerrarla.
+**Estado a 14-oct-2026** Fase 0 cerrada (las 17 validan; tienda abierta el 16-sep). Fase 1 abierta en lo administrativo de Gumroad (verificación, cobro desde México, compra de prueba). Fase 2 sin abrir: ninguna cifra de cliente. Fase 3 sin arrancar: los textos de lanzamiento existen (`LANZAMIENTO-COPIA.md`) y ningún post ha salido. Un mes de tienda: cero ventas.
 
 > **Cambios respecto a la v1.0.0 (misma fecha).** La v1.0 se escribió sin el repositorio delante
 > y se contradecía con él en cuatro puntos. Decidido por Sergio el 15-sep-2026
@@ -35,7 +35,7 @@ es que la tienda abra y que exista una sola cifra de cliente que respalde la pro
 | Textos de venta y licencia | Escritos: `venta/GUMROAD-ALTA.md` (dos productos, campo por campo), `LICENSE`, `LICENSE.txt` por skill |
 | Paquetes | `venta/empaquetar_gumroad.py` genera el zip de cada producto sin ficha ni `metadata.json` |
 | Conformidad del catálogo | **Las 17 validan** |
-| Tienda abierta | **No** |
+| Tienda abierta | **Sí**, desde el 16-sep: <https://cabina.gumroad.com>, 15 productos. Cero ventas a 14-oct. Pendiente de Sergio: verificación de identidad, cobro desde México, W-8BEN, Discover apagado |
 | Prueba con cifra | **Ninguna** · G2 0/17 |
 
 ---
