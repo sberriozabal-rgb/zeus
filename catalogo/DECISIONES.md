@@ -336,6 +336,13 @@ recomendación de la fábrica. Razones, por orden:
 **Lo que no cambia:** las 17 a la venta, la tarifa, Gumroad, `octava-skills` público y la venta
 de `receta-estandar` con el anexo de inocuidad.
 
+> **Observación de la fábrica, 14-oct-2026:** `zeus` **vuelve a estar público**. Lo dicen la API de
+> GitHub (`visibility: public`) y una visita anónima a la portada, que muestra la etiqueta *Public*.
+> No consta quién lo cambió ni cuándo. Mientras siga así, el historial de `venta/` con datos de
+> terceros está a la vista. Es decisión del titular: volver a privado (un clic en *Settings → Danger
+> Zone*) o, si ha de ser público, reescribir el historial antes. La fábrica no puede cambiar la
+> visibilidad (403 del proxy).
+
 ---
 
 ## 13 · Un solo repositorio privado de entrega para Polar y el resto de canales — ORDENADA POR SERGIO (16-sep-2026)

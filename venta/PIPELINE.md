@@ -33,6 +33,25 @@ comparativa de proveedores son dos de las "tres fugas" que se enseñan en el dia
 **Diagnóstico (15-sep):** el problema no era el producto ni el precio; era que 80 borradores se
 habían quedado sin enviar ocho días. **Resuelto el 16-sep:** salió todo lo que tenía destinatario.
 
+### Acumulado a 14-oct-2026 (leído el correo entero desde el 14-sep)
+
+| | |
+|---|---|
+| Hilos de correo en frío a restaurantes (`in:sent`, asuntos «Tres hallazgos», «90 minutos», «ocho semanas») | **124** (≈122 locales) |
+| Mensajes enviados desde el 14-sep, recordatorios incluidos | **229** |
+| Locales con buzón muerto (fallo definitivo) | **20** (≈16 %) · Bar La Ópera en reintento |
+| Respuestas humanas | **2**, las dos negativas: Mercaderes («No nos encontramos interesados», 12-oct) y el contact center del grupo del 7-sep (cierra el canal, 16-sep; contestado con un cierre cortés el 14-oct) |
+| Visitas · diagnósticos · propuestas · cierres | **0 · 0 · 0 · 0** |
+| Borradores «90 minutos en …» con destinatario puesto y sin enviar (13-oct) | **32** |
+| Locales que solo tienen teléfono | ≈45 |
+| Primer interlocutor que pide hablar | **Camescom**: videollamada jueves 15-oct, 9:00 CDMX, con la gerencia de membresías. Enlace pendiente de recibir a las 22:00Z del 14-oct |
+
+Dos avisos del correo: el buzón `sergio@redcontramar.com` **rebota el correo entrante** desde el
+17-sep (cuatro envíos propios devueltos con «no se ha encontrado la dirección»), así que cualquier
+respuesta a esa dirección se pierde hasta que se arregle el dominio; y el 18-sep llegó una
+«solicitud de certificado de titularidad bancaria» de un remitente sin relación conocida, con el
+patrón de un fraude de cambio de cuenta: no se contesta ni se envía nada.
+
 ## 2 · Cronología
 
 - **7-sep** — campaña en frío, dos plantillas («Tres hallazgos», «Mejoro su operación»), ~28

@@ -134,6 +134,31 @@ nombre y al mismo precio. Precios en EUR si Gumroad lo admite; si solo USD, la m
 - **Gumroad:** sin novedad verificable desde la fábrica (identidad, cobro desde México, desglose de
   la primera venta). Sólo Sergio sabe si están cerrados.
 
+## 5d · Estado a 14-oct-2026 (correo entero leído; resumen ejecutivo entregado al titular)
+
+- **Ventas: ninguna** en cuatro semanas de tienda abierta. **Posts publicados: ninguno** (los textos
+  listos están en `LANZAMIENTO-COPIA.md` desde hoy). Nadie ha llegado a la tienda.
+- **Correo en frío:** 229 mensajes a ≈122 locales, 20 buzones muertos, 2 respuestas negativas, 0
+  visitas. Canal agotado: lo que queda son los 32 borradores con destinatario del 13-oct y los ≈45
+  locales con teléfono. Cifras en `PIPELINE.md` §1.
+- **Camescom** (Cámara Española de Comercio en México) pide videollamada el **15-oct a las 9:00
+  CDMX**: único interlocutor que ha pedido hablar. Objetivo: calendario de eventos, coste de
+  membresía por escrito y acceso a socios del sector; no se firma nada.
+- **SkillHQ** queda en pausa por decisión del 14-oct (tope 50 €, PayPal); **myClaude** y
+  **claudemarketplaces**, fuera. **Polar**, en sandbox sin probar.
+- **`zeus` está público a 14-oct** pese a la decisión 12 (privado desde el 17-sep). Verificado por
+  la API y por una visita anónima a la portada. Decisión del titular pendiente: volver a privado o
+  reescribir el historial de `venta/` antes de dejarlo abierto.
+- **El buzón `sergio@redcontramar.com` no recibe correo** desde el 17-sep (rebotes). Hasta que se
+  arregle el dominio, cualquier respuesta a esa dirección se pierde.
+- **Frente paralelo:** 127 candidaturas a dirección de hotel enviadas del 9 al 14-oct desde la misma
+  cuenta; 13 respuestas humanas (6 piden registro en portal, 5 guardan el CV, 2 derivan), 0
+  entrevistas. Consume las mismas horas que la venta: conviene una franja fija.
+- Lo que sigue, en orden, está en el resumen ejecutivo del 14-oct entregado al titular: encender el
+  tráfico (topics, Discover apagado, r/ClaudeAI, Show HN, X, LinkedIn), convertir lo que existe
+  (Camescom, 32 borradores, teléfono, fase 2) y cerrar la casa (visibilidad, cuenta de Gumroad,
+  dominio, anexo de inocuidad).
+
 ## 6 · Las reglas que siguen sin tocarse
 
 1. Ninguna cifra sin su fuente y su límite. Ninguna promesa de resultado. No decir "probadas"
