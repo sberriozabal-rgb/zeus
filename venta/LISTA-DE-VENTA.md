@@ -52,6 +52,14 @@ fichas, enviar los correos que están en borradores y hacer una visita. Y una ve
 
 Lo que no está en esta lista no bloquea ninguna venta.
 
+## 5d · Estado a 14-oct-2026, tras el barrido del correo
+
+- **Ventas: ninguna.** Ni un correo de Gumroad en la cuenta desde el 1-sep: antes de publicar nada, comprobar que la tienda está en esta cuenta y que avisa.
+- **Prospección:** 204 correos a 97 restaurantes, una respuesta (negativa). El correo en frío queda cerrado salvo segundo toque válido; la vía es teléfono, visita y Camescom (15-oct 9:00).
+- **Pendientes de terceros:** SkillHQ debe contestar si su KYC acepta identidad mexicana; Camescom debe enviar la convocatoria.
+- **Lanzamiento:** sigue sin salir ningún post. Resumen ejecutivo de 20 láminas entregado el 14-oct con el plan de catorce días.
+
+
 ## 3 · Los 15 productos de Gumroad, uno a uno
 
 | Slug (URL de Gumroad) | Precio | Zip | Portada | Ficha en la hoja |

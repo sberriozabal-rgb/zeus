@@ -13,6 +13,24 @@ restaurantes de CDMX** (cocina asiática, parrillas, grupos multimarca), con el 
 La Instalación Esencial (2.500 €) del catálogo entra por la misma puerta: el escandallo y la
 comparativa de proveedores son dos de las "tres fugas" que se enseñan en el diagnóstico.
 
+## 0 · Barrido del correo del 14-oct-2026 (Enviados de Gmail, deduplicados por id)
+
+| | |
+|---|---|
+| Correos salidos de la cuenta desde el 17-sep | **≥ 379** (204 de prospección a restaurantes, 148 candidaturas de empleo, 27 otros) |
+| Restaurantes contactados por correo | **97** |
+| Respuestas humanas de restaurante en el periodo | **1**: Mercaderes, «No nos encontramos interesados» (12-oct). Contestada el 14-oct cerrando sin insistir |
+| Rebotes definitivos | **19 direcciones** (≈ 20 % de la base): hay que marcarlas muertas antes de la próxima tanda |
+| Reuniones | **1**: Camescom, videollamada jueves 15-oct 9:00 CDMX, confirmada; convocatoria con enlace pendiente |
+| Ventas y correos de Gumroad desde el 1-sep | **0 y 0**: la cuenta no ha recibido ni alta, ni verificación, ni venta. Comprobar en qué cuenta está la tienda |
+| Borradores listos con destinatario | **32** «90 minutos en X, sin costo» del 13-oct, sin enviar; 27 «Tres hallazgos» del 17-sep sin destinatario (locales sin buzón) |
+
+**Higiene detectada el 14-oct:** la cuenta envió respuestas por duplicado ese día (Camescom dos
+veces dos, SkillHQ dos, cinco hoteles dos); `sergio@redcontramar.com` no recibe correo (los
+cuatro borradores de lanzamiento que se autoenviaron el 17-sep rebotaron); Bar La Ópera lleva
+tres días en reintento. Antes de la próxima tanda: `control_toques.py`, lista de muertas al día y
+un solo envío por respuesta.
+
 ## 1 · Resultado de la campaña, en cifras
 
 | | |
