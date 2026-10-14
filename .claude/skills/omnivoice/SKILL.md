@@ -32,6 +32,8 @@ scripts/start-backend.sh       # boot in background (MPS/CUDA auto-detected)
 
 First synthesis call lazy-downloads the `k2-fsa/OmniVoice` model (~2.4 GB) from HuggingFace — cached on subsequent boots.
 
+**Linux/Windows without a GPU, or without access to `download.pytorch.org`:** plain `uv sync` pulls CUDA torch from the PyTorch index and fails if that host is blocked. Use `uv sync --no-sources` (torch from PyPI, runs on CPU) and start the backend with `OMNIVOICE_UV_RUN_FLAGS=--no-sources scripts/start-backend.sh`, otherwise `uv run` re-syncs and hits the same index. Not needed on macOS. Details in [references/mcp-setup.md](references/mcp-setup.md#cpu-only-or-no-access-to-downloadpytorchorg).
+
 ## Task Index — Pick the Right Tool
 
 | Task | Tool | Notes |

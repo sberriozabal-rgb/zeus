@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Start the OmniVoice FastAPI backend on 127.0.0.1:3900, detached, idempotent.
-# Honors $OMNIVOICE_HOME (default ~/VoiceStudio).
+# Honors $OMNIVOICE_HOME (default ~/VoiceStudio) and $OMNIVOICE_UV_RUN_FLAGS.
 #
 # Exit codes:
 #   0   success (already running, or freshly started + healthy within 60s)
@@ -29,7 +29,8 @@ if curl -sf --max-time 2 "$URL/health" >/dev/null 2>&1; then
 fi
 
 # Port held by something else? Identify it before refusing.
-BIND_PID="$(lsof -nP -iTCP:3900 -sTCP:LISTEN -t 2>/dev/null | head -1)"
+# lsof exits 1 when nothing listens; under pipefail that would abort the script.
+BIND_PID="$( (lsof -nP -iTCP:3900 -sTCP:LISTEN -t 2>/dev/null || true) | head -1)"
 if [ -n "$BIND_PID" ]; then
   BIND_CMD="$(ps -o command= -p "$BIND_PID" 2>/dev/null || echo "?")"
   echo "port 3900 held by PID $BIND_PID but /health not responding — investigate before starting" >&2
@@ -46,7 +47,9 @@ if [ -n "$BIND_PID" ]; then
 fi
 
 cd "$HOME_DIR"
-nohup uv run uvicorn main:app --app-dir backend --host 127.0.0.1 --port 3900 \
+# OMNIVOICE_UV_RUN_FLAGS: extra flags for `uv run`, e.g. "--no-sources" on CPU-only
+# hosts where download.pytorch.org is unreachable (uses the PyPI torch wheel).
+nohup uv run ${OMNIVOICE_UV_RUN_FLAGS:-} uvicorn main:app --app-dir backend --host 127.0.0.1 --port 3900 \
   > "$LOG" 2>&1 &
 PID=$!
 echo "starting backend (PID $PID, log: $LOG)..."
