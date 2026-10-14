@@ -41,6 +41,7 @@ y visita presencial. La tienda es <https://cabina.gumroad.com>, abierta el 16-se
 - [`catalogo/PRECIOS.md`](catalogo/PRECIOS.md) — tarifa propuesta con anclas de mercado y canal de cobro.
 - [`catalogo/ESTADO-GATES.md`](catalogo/ESTADO-GATES.md) — matriz G1–G5 y riesgos abiertos.
 - [`catalogo/DECISIONES.md`](catalogo/DECISIONES.md) — **las decisiones tomadas**, con su razón.
+- [`venta/informes/`](venta/informes/) — **láminas ejecutivas** con fecha de corte: estado, lo que han dicho, pendientes y plan (última: 14-oct-2026).
 - [`venta/LISTA-DE-VENTA.md`](venta/LISTA-DE-VENTA.md) — **empieza aquí**: lo que está hecho, lo
   que solo puede hacer el titular y en qué orden, producto a producto.
 - [`venta/`](venta/) — kit de venta: **hoja de alta en Gumroad** (`GUMROAD-ALTA.md`, los 15
