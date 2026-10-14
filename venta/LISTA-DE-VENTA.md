@@ -1,6 +1,6 @@
 # Lista maestra de venta — qué está hecho y qué falta, con su dueño
 
-Estado a 2-oct-2026. Una sola página para no tener que leer las otras diez: lo que la fábrica
+Estado a 14-oct-2026 (§5d). Una sola página para no tener que leer las otras diez: lo que la fábrica
 ya dejó listo, lo que solo puede hacer Sergio, y en qué orden. Cada línea apunta al documento que
 la sostiene.
 
@@ -133,6 +133,24 @@ nombre y al mismo precio. Precios en EUR si Gumroad lo admite; si solo USD, la m
   Sergio.
 - **Gumroad:** sin novedad verificable desde la fábrica (identidad, cobro desde México, desglose de
   la primera venta). Sólo Sergio sabe si están cerrados.
+
+## 5d · Estado a 14-oct-2026 (leído en el correo y en los dos repositorios)
+
+- **Ventas: ninguna.** Cero notificaciones de Gumroad en el correo de la casa desde el 16-sep.
+- **Hostelería por correo: canal agotado.** Cuatro pasadas (7-sep, 16-sep, 24-sep, 12-oct), ~130
+  envíos, una respuesta: Mercaderes, «no nos encontramos interesados» (12-oct), contestada y
+  cerrada el 14-oct. Cero visitas. La próxima puerta es a pie o por WhatsApp.
+- **Escaparate sin tráfico:** `octava-skills` tiene 1 estrella, 0 *issues* de compradores y
+  **ningún topic**; GitHub Pages activo. La fábrica no puede poner los topics (403 del proxy).
+- **Ningún post publicado** de los seis canales planificados el 17-sep. Los textos listos están
+  en [`LANZAMIENTO-COPIA.md`](LANZAMIENTO-COPIA.md) (14-oct), con el orden de empuje corregido:
+  PACK CONTEXTO → cobro → CABINA → hostelería por visita.
+- **SkillHQ:** el 14-oct salió la corrección a Mirek: disculpa por los dos correos malformados
+  del 25-sep (skills incrustadas, «production-tested», 12–18 €), retirada de los ficheros, tarifa
+  de la casa (sueltas a 49 € en Starter, si se entra), y pregunta por el KYC desde México.
+- **myClaude** sin contacto; **claudemarketplaces** sin respuesta desde el 17-sep.
+- **Deck ejecutivo** del 14-oct: `ZEUS-Estado-y-Plan-2026-10-14.pptx` (entregado en la sesión):
+  dónde estamos, qué aplicamos, qué han dicho, qué hemos hecho, pendientes con dueño, riesgos.
 
 ## 6 · Las reglas que siguen sin tocarse
 
