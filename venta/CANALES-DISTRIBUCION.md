@@ -1,5 +1,9 @@
 # Canales de distribución — skills de Claude Code
 
+> **14-oct-2026:** los textos listos para pegar en cada canal, con el orden de empuje corregido
+> (primero quien ya usa Claude), están en [`LANZAMIENTO-COPIA.md`](LANZAMIENTO-COPIA.md). A esa
+> fecha ninguno de los posts de este documento había salido.
+
 **Objetivo:** Alcanzar 5 públicos: músicos/DJ, productividad, restaurantes, desarrolladores de IA, y comunidad Claude.
 
 ## Canales activos (venta directa)
