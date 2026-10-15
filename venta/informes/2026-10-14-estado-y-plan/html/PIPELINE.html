@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>PIPELINE</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PIPELINE</h1>
+</header>
+<h1 id="pipeline-de-venta--estado-a-14-oct-2026">Pipeline de venta —
+estado a 14-oct-2026</h1>
+<blockquote>
+<p><strong>Este repositorio estuvo público el 16-sep-2026 y volvió a
+privado el 17-sep</strong> (decisiones 11 y 12). Aquí queda la
+estadística y el método. <strong>La tabla prospecto a prospecto
+—nombres, correos, teléfonos y personas de contacto— vive en un
+documento privado de Google Drive del titular</strong> («OCTAVA ·
+Pipeline de venta (privado)»), que es la fuente viva. Los datos de
+terceros que figuraron en versiones anteriores siguen en el historial de
+git, ya no visible desde fuera.</p>
+</blockquote>
+<p>Lo que hay en la cuenta de correo de la casa, leído el 15 y el
+16-sep-2026. Es el único activo comercial con movimiento real:
+<strong>una campaña en frío del 6-7 de septiembre a unos treinta
+restaurantes de CDMX</strong> (cocina asiática, parrillas, grupos
+multimarca), con el Diagnóstico Exprés (90 minutos en piso, sin costo)
+como primer paso y el Método OCTAVA de 8 semanas como producto. La
+Instalación Esencial (2.500 €) del catálogo entra por la misma puerta:
+el escandallo y la comparativa de proveedores son dos de las "tres
+fugas" que se enseñan en el diagnóstico.</p>
+<h2
+id="0--barrido-del-correo-del-14-oct-2026-enviados-de-gmail-deduplicados-por-id">0
+· Barrido del correo del 14-oct-2026 (Enviados de Gmail, deduplicados
+por id)</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>Correos salidos de la cuenta desde el 17-sep</td>
+<td><strong>≥ 379</strong> (204 de prospección a restaurantes, 148
+candidaturas de empleo, 27 otros)</td>
+</tr>
+<tr class="even">
+<td>Restaurantes contactados por correo</td>
+<td><strong>97</strong></td>
+</tr>
+<tr class="odd">
+<td>Respuestas humanas de restaurante en el periodo</td>
+<td><strong>1</strong>: Mercaderes, «No nos encontramos interesados»
+(12-oct). Contestada el 14-oct cerrando sin insistir</td>
+</tr>
+<tr class="even">
+<td>Rebotes definitivos</td>
+<td><strong>19 direcciones</strong> (≈ 20 % de la base): hay que
+marcarlas muertas antes de la próxima tanda</td>
+</tr>
+<tr class="odd">
+<td>Reuniones</td>
+<td><strong>1</strong>: Camescom, videollamada jueves 15-oct 9:00 CDMX,
+confirmada; convocatoria con enlace pendiente</td>
+</tr>
+<tr class="even">
+<td>Ventas y correos de Gumroad desde el 1-sep</td>
+<td><strong>0 y 0</strong>: la cuenta no ha recibido ni alta, ni
+verificación, ni venta. Comprobar en qué cuenta está la tienda</td>
+</tr>
+<tr class="odd">
+<td>Borradores listos con destinatario</td>
+<td><strong>32</strong> «90 minutos en X, sin costo» del 13-oct, sin
+enviar; 27 «Tres hallazgos» del 17-sep sin destinatario (locales sin
+buzón)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Higiene detectada el 14-oct:</strong> la cuenta envió
+respuestas por duplicado ese día (Camescom dos veces dos, SkillHQ dos,
+cinco hoteles dos); <code>sergio@redcontramar.com</code> no recibe
+correo (los cuatro borradores de lanzamiento que se autoenviaron el
+17-sep rebotaron); Bar La Ópera lleva tres días en reintento. Antes de
+la próxima tanda: <code>control_toques.py</code>, lista de muertas al
+día y un solo envío por respuesta.</p>
+<p>Dos cierres más del 14-oct: el hilo del contact center del grupo del
+7-sep (que el 16-sep dijo que «por procesos internos» no facilita el
+contacto) quedó contestado con un cierre cortés y el WhatsApp del
+titular; y un correo del 18-sep que pide un «certificado de titularidad
+bancaria» sin relación conocida se trata como posible fraude y no se
+contesta.</p>
+<h2 id="1--resultado-de-la-campaña-en-cifras">1 · Resultado de la
+campaña, en cifras</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>Correos enviados el 6-7 sep («Tres hallazgos para X, sin costo» +
+«Mejoro su operación en ocho semanas»)</td>
+<td>~28</td>
+</tr>
+<tr class="even">
+<td>Entregados</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>Rebotados (dirección inexistente, buzón lleno, dominio mal
+escrito)</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>Respuestas</td>
+<td><strong>1</strong> (un grupo, contact center: "lo canalizamos")</td>
+</tr>
+<tr class="odd">
+<td>Visitas agendadas</td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Seguimientos y primeros contactos enviados la noche del 15 y
+la mañana del 16-sep</strong></td>
+<td><strong>24</strong> (respuesta al grupo que contestó, 14
+seguimientos únicos, 9 primeros contactos a direcciones corregidas)</td>
+</tr>
+<tr class="odd">
+<td>Rebotes del 16-sep</td>
+<td>2 (pasan a teléfono / WhatsApp)</td>
+</tr>
+<tr class="even">
+<td>Respuestas a 17-sep 08:00</td>
+<td><strong>1</strong>, del contact center del grupo que ya había
+contestado: por proceso interno no facilita el contacto de operaciones;
+«si es de su interés, el área se pondrá en contacto». Canal agotado (3
+intentos). Ninguna respuesta de los otros 23</td>
+</tr>
+<tr class="odd">
+<td>Prospectos con borrador pero sin ningún correo público</td>
+<td>~26 (carta en mano o visita)</td>
+</tr>
+<tr class="even">
+<td><strong>Ola «CDMX-100» (16-sep noche, otra sesión): 100 restaurantes
+por colonias (Roma, Condesa, Juárez, Polanco, Centro)</strong></td>
+<td><strong>38 enviados</strong>, 62 sin buzón (borradores etiquetados
+«Sin buzón · WhatsApp o carta»)</td>
+</tr>
+<tr class="odd">
+<td>Rebotes de la ola CDMX-100</td>
+<td>7 (Fonda Garufa, Matisse, El Bajío, Tori Tori, Huset,
+Ryoshi/Costeño, Café de Tacuba) + Pujol remite a otro buzón</td>
+</tr>
+<tr class="even">
+<td><strong>19-sep — segunda pasada sobre los 62 sin buzón</strong></td>
+<td>4 agentes buscaron correo oficial: <strong>22 encontrados</strong>,
+40 sin correo público (teléfono/WA). <strong>Salieron 8</strong>; 5
+quedan en borrador con destinatario puesto (El Greco, Niddo, Makoto, El
+Moro, Roldán 37, Los Girasoles); 10 con correo hallado pero sin poder
+fijar destinatario (Casa Virginia, Loup Bar, Frëims, Rokai, Parker &amp;
+Lenox, Klein's, La Buena Barra, Testal, El Mayor)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Diagnóstico (15-sep):</strong> el problema no era el producto
+ni el precio; era que 80 borradores se habían quedado sin enviar ocho
+días. <strong>Resuelto el 16-sep:</strong> salió todo lo que tenía
+destinatario.</p>
+<h2 id="2--cronología">2 · Cronología</h2>
+<ul>
+<li><strong>7-sep</strong> — campaña en frío, dos plantillas («Tres
+hallazgos», «Mejoro su operación»), ~28 correos, 8 rebotes, 1 respuesta
+el mismo día.</li>
+<li><strong>12-sep</strong> — se redactan la respuesta al grupo que
+contestó y los dos correos de prueba de la fase 2. Se quedan en
+borradores.</li>
+<li><strong>15-sep</strong> — la fábrica lee el correo, levanta el
+pipeline, corrige cinco direcciones rebotadas con los propios borradores
+y las webs oficiales, y deja 7 seguimientos redactados.</li>
+<li><strong>15-sep, 20:12–20:36 CDMX</strong> — salen 17 correos por
+orden de Sergio: la respuesta, 7 seguimientos y 9 primeros
+contactos.</li>
+<li><strong>16-sep, 06:29 CDMX</strong> — salen los otros 7
+seguimientos.</li>
+<li><strong>16-sep, 08:00</strong> — dos rebotes nuevos; cero
+respuestas.</li>
+<li><strong>16-sep, 21:27–22:37 CDMX</strong> — otra sesión lanza la ola
+CDMX-100: 38 correos, 7 rebotes, Pujol responde en automático con buzón
+nuevo (reservaciones@).</li>
+<li><strong>19-sep</strong> — segunda pasada: 8 correos más a
+direcciones verificadas (Taquería Orinoco, Taverna, Sartoria, Fonda
+Fina, Ojo de Agua, Tacos Beatriz, Masala y Maíz, Mercaderes).
+Direcciones y teléfonos de los 62 en el documento privado.</li>
+<li><strong>24-sep, 19:05 CDMX</strong> — tercera pasada: salen 17 más
+(los 6 borradores con destinatario, 8 con correo hallado y 3 reenvíos a
+buzón nuevo: Pujol, Huset, Fonda Garufa). Rebotan 4 al momento (Huset,
+Testal, Rokai; Klein's buzón lleno): pasan a teléfono. La Buena Barra
+queda en borrador sin destinatario. Ninguna respuesta de prospectos
+entre el 19 y el 25-sep.</li>
+<li><strong>26–28-sep</strong> — rebotan tarde (tras 72 h de reintentos)
+Fonda Garufa, Casa Virginia y Makoto.</li>
+<li><strong>12-oct</strong> — Mercaderes contesta al seguimiento: «No
+nos encontramos interesados». Cerrado.</li>
+<li><strong>12-oct</strong> — cuarta pasada: segunda búsqueda de correo
+para los 39 sin buzón, los 12 rebotados y 17 prospectos del 7-sep nunca
+contactados. Salen 12 (5 de la ola CDMX-100, 4 de Polanco, Matisse con
+buzón nuevo y Grupos Mazze y Argentilia); rebota Kura (dominio
+inexistente). Tres quedan en borrador sin destinatario. Descartados:
+correos de personas, de facturación o de privacidad, grupos ya
+contactados por otra marca y locales cerrados (Yuban, Paprika, Hostería
+de Santo Domingo, Mía Domenicca). El resto, unos 45, solo tiene
+teléfono.</li>
+<li><strong>13-oct</strong> — salen los 3 borradores que faltaban:
+entrega Comedor Jacinta; rebotan Tacos Don Juan y Blend Station (pasan a
+teléfono). Bar La Ópera da aviso de entrega retrasada el 14-oct.</li>
+<li><strong>14-oct</strong> — primer canal que se mueve fuera del correo
+en frío: Camescom (Cámara Española de Comercio en México), gerencia de
+membresías, propone videollamada. <strong>Confirmada para el jueves
+15-oct, 9:00 CDMX.</strong> Objetivo: calendario de eventos, coste de
+membresía por escrito y acceso a socios del sector restaurantero; no se
+firma nada en la llamada.</li>
+<li><strong>14-oct, consolidado de todas las sesiones</strong> — tres
+campañas en frío («Tres hallazgos», 102 hilos; «OCTAVA — Mejoro su
+operación», 12; «90 minutos en X», 22 enviados el 13–14-oct y unos 32 en
+borrador): unos 140 restaurantes, unos 256 correos, unas 29 direcciones
+rebotadas (≈22 %), 2 respuestas (las dos «no») y 0 visitas.
+<strong>Recomendación: parar los envíos en frío</strong> desde la cuenta
+personal hasta limpiar rebotes (afecta a la reputación del remitente,
+que es la misma de la búsqueda de empleo), una sola sesión dueña de cada
+hilo, y pasar a red institucional (Camescom) y visita presencial con la
+hoja de tres hallazgos.</li>
+<li><strong>16-sep, 13:49 CDMX</strong> — el contact center del grupo
+que había contestado cierra la puerta por proceso interno. Tercer
+intento por ese canal: se agota. Si se vuelve a intentar es por otra vía
+(la persona de operaciones, por LinkedIn), no por el buzón de
+contacto.</li>
+</ul>
+<h2 id="3--los-correos-de-la-fase-2-prueba-con-cifra">3 · Los correos de
+la fase 2 (prueba con cifra)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Borrador</th>
+<th>Estado</th>
+<th>Lo que falta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>«Una prueba con tu biblioteca, a cambio de tres cifras» (DJ)</td>
+<td>Escrito el 12-sep, sin destinatario</td>
+<td><strong>Un DJ con nombre.</strong> Dónde buscarlo:
+<code>PROSPECCION.md</code> §2</td>
+</tr>
+<tr class="even">
+<td>«Tu cartera vencida, convertida en plan — sin coste, a cambio del
+dato» (empresa)</td>
+<td>Escrito el 12-sep, sin destinatario</td>
+<td><strong>Una empresa con nombre.</strong> Dos vías en
+<code>PROSPECCION.md</code> §3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4--campaña-cdmx-100-preparada-el-17-sep-arranca-el-21-sep">4 ·
+Campaña CDMX-100 (preparada el 17-sep, arranca el 21-sep)</h2>
+<p>Cien restaurantes nuevos de Centro Histórico, Condesa, Roma, Juárez y
+Polanco, de todo tipo de casa, verificados en fuentes públicas el 17-sep
+y añadidos a la Cartera Documentada v2.1 (cuentas 22 a 121). Un correo
+HTML de primer contacto por local, con catorce perfiles según el tipo de
+casa, y los tres seguimientos redactados. Cinco olas de lunes, del
+21-sep al 19-oct. Método, calendario y cifras en <a
+href="CAMPANA-CDMX-100.md"><code>CAMPANA-CDMX-100.md</code></a>; los
+nombres y contactos, en la base y en el documento privado.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Con correo leído en dominio oficial</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>Con buzón de tercero, sin confirmar</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>Sin buzón: WhatsApp, teléfono o carta en mano</td>
+<td>81</td>
+</tr>
+<tr class="even">
+<td>Pendientes de confirmar existencia o dirección antes de enviar</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5--regla-para-lo-que-sigue">5 · Regla para lo que sigue</h2>
+<p><strong>Fecha de corte: martes 22-sep.</strong> Quien no haya
+respondido al seguimiento sale del pipeline. Un seguimiento por
+prospecto y ninguno más: es el antipatrón del recordatorio infinito. No
+se le vuelve a escribir hasta que haya una cifra de cliente que enseñar
+(fase 2). Las visitas se agendan por WhatsApp, no por correo: el correo
+abre la puerta, el WhatsApp pone la fecha.</p>
+<p><strong>Qué se mide cada mañana:</strong> respuestas, visitas
+agendadas, visitas hechas, hojas de tres hallazgos entregadas,
+propuestas. Cinco números. Los nombres, en el documento privado.</p>
+</body>
+</html>
