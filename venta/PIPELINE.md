@@ -31,6 +31,11 @@ cuatro borradores de lanzamiento que se autoenviaron el 17-sep rebotaron); Bar L
 tres días en reintento. Antes de la próxima tanda: `control_toques.py`, lista de muertas al día y
 un solo envío por respuesta.
 
+Dos cierres más del 14-oct: el hilo del contact center del grupo del 7-sep (que el 16-sep dijo que
+«por procesos internos» no facilita el contacto) quedó contestado con un cierre cortés y el
+WhatsApp del titular; y un correo del 18-sep que pide un «certificado de titularidad bancaria» sin
+relación conocida se trata como posible fraude y no se contesta.
+
 ## 1 · Resultado de la campaña, en cifras
 
 | | |

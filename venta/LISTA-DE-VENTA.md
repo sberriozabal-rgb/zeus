@@ -160,6 +160,17 @@ nombre y al mismo precio. Precios en EUR si Gumroad lo admite; si solo USD, la m
 - **Deck ejecutivo** del 14-oct: `ZEUS-Estado-y-Plan-2026-10-14.pptx` (entregado en la sesión):
   dónde estamos, qué aplicamos, qué han dicho, qué hemos hecho, pendientes con dueño, riesgos.
 
+- **`zeus` está público a 14-oct** pese a la decisión 12 (privado desde el 17-sep). Verificado por
+  la API y por una visita anónima a la portada. Decisión del titular pendiente: volver a privado o
+  reescribir el historial de `venta/` antes de dejarlo abierto (`../catalogo/DECISIONES.md`, nota
+  bajo la 12).
+- **Correo sospechoso:** el 18-sep llegó una «solicitud de certificado de titularidad bancaria» de un
+  remitente sin relación conocida, con el patrón de un fraude de cambio de cuenta. No se contesta ni
+  se envía ningún documento.
+- **Frente paralelo de candidaturas** a dirección de hotel desde la misma cuenta (127 del 9 al
+  14-oct, 13 respuestas humanas, 0 entrevistas): consume las mismas horas que la venta y comparte
+  reputación de remitente. Conviene una franja fija y un solo envío por respuesta.
+
 ## 6 · Las reglas que siguen sin tocarse
 
 1. Ninguna cifra sin su fuente y su límite. Ninguna promesa de resultado. No decir "probadas"
