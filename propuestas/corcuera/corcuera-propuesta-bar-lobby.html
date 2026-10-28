@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corcuera · Bar del lobby Barceló México Reforma</title>
+<!--
+  CORCUERA · Propuesta de concepto para el bar del lobby · v0 · 27-oct-2026
+  BORRADOR INTERNO · para validar con la Dirección General. Se presenta tras un mínimo de 4 meses en el cargo.
+
+  Ocho láminas de 1600×900 (la carta, 1600×1000). En pantalla se escalan al ancho; al imprimir,
+  una lámina por página a su tamaño real (`python3 exportar_pdf.py` genera el PDF).
+
+  HUECOS DECLARADOS (buscar "[" en el texto):
+    1. Origen Krystal del nombre actual: [SIN VERIFICAR].
+    2. Recetas, costos y precios de la carta: por definir con Costos y el bartender.
+    3. Costo de botella, bloque de hielo y los tres datos del valor en pesos: a validar con el hotel.
+  Imágenes del lobby, la barra, el rincón y el coctel: generadas con IA, no son render de obra.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --marino:#0F1B2D; --marino-2:#15253C; --linea-osc:#3A4A63;
+    --oro:#C8A257; --oro-claro:#E2C27E; --oro-osc:#8A6A2C;
+    --marfil:#F4EEE2; --crema:#E9DFC9; --linea-clara:#D8CDB6;
+    --gris-claro:#C9C3B6; --gris-medio:#9C968A; --gris-osc:#5A5446; --tinta-2:#2E3A4D;
+    --display:"Playfair Display",Georgia,serif;
+    --cuerpo:Inter,"Helvetica Neue",Arial,sans-serif;
+    --escala:1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#070D17;font-family:var(--cuerpo);color:var(--marfil)}
+  p,h1,h2{margin:0}
+  a{color:var(--oro)}a:hover{color:var(--oro-claro)}
+  .claro a{color:var(--oro-osc)}.claro a:hover{color:#5E4719}
+
+  /* contenedor en pantalla: láminas apiladas y escaladas al ancho */
+  .mazo{display:flex;flex-direction:column;align-items:center;gap:24px;padding:24px 16px}
+  .marco{width:calc(1600px * var(--escala));height:calc(var(--h) * var(--escala));overflow:hidden;flex:none}
+  .lamina{width:1600px;height:var(--h);transform:scale(var(--escala));transform-origin:0 0;overflow:hidden;position:relative;background:var(--marino);color:var(--marfil)}
+  .marco{--h:900px}.marco.alta{--h:1000px}
+  .claro{background:var(--marfil);color:var(--marino)}
+
+  /* tipografía común */
+  .cintillo{font-size:14px;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:var(--oro)}
+  .claro .cintillo,.claro.cintillo{color:var(--oro-osc)}
+  .rotulo{font-size:15px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:var(--gris-claro)}
+  .claro .rotulo{color:var(--gris-osc)}
+  .titulo{font-family:var(--display);font-weight:600;line-height:1.1}
+  .entradilla{font-family:var(--display);font-style:italic;line-height:1.5;color:var(--crema)}
+  .serif{font-family:var(--display)}
+  .nota{font-size:13px;line-height:1.5;color:var(--gris-medio)}
+  .claro .nota{color:var(--gris-osc)}
+  .gris{color:var(--gris-claro)}
+  .pila{display:flex;flex-direction:column}
+  .ornamento{display:block}
+  img{display:block}
+
+  /* 1 · portada */
+  .portada{display:grid;grid-template-columns:620px 980px}
+  .portada .texto{display:flex;flex-direction:column;justify-content:space-between;padding:72px 56px 60px 80px}
+  .portada h1{font-family:var(--display);font-weight:600;font-size:116px;line-height:1;letter-spacing:2px}
+  .portada .pie{gap:6px;border-top:1px solid var(--linea-osc);padding-top:20px;font-size:14px}
+  .portada .visual{position:relative}
+  .portada .visual>img{position:absolute;inset:0;width:980px;height:900px;object-fit:cover}
+  .polaroid{position:absolute;left:40px;bottom:40px;width:330px;background:var(--marino);padding:10px 10px 0;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+  .polaroid img{width:310px;height:220px;object-fit:cover;object-position:75% 35%}
+  .polaroid div{display:flex;justify-content:space-between;align-items:baseline;padding:10px 2px 12px}
+  .credito{position:absolute;right:24px;bottom:18px;max-width:520px;text-align:right;font-size:12px;line-height:1.5;background:rgba(15,27,45,.78);padding:6px 10px}
+
+  /* 2 · historia */
+  .historia{display:grid;grid-template-columns:600px 1000px}
+  .historia .foto{background:var(--marino)}
+  .historia .foto img{width:600px;height:800px;object-fit:cover;object-position:30% 50%}
+  .historia .foto p{padding:14px 28px;font-size:13px;line-height:1.5;color:var(--gris-claro);height:100px;display:flex;align-items:center}
+  .historia .texto{gap:30px;padding:64px 88px 48px 80px}
+  .hito{display:grid;grid-template-columns:170px minmax(0,1fr);gap:32px;padding:15px 0;border-top:1px solid var(--linea-clara)}
+  .hito:last-child{border-bottom:1px solid var(--linea-clara)}
+  .hito b{font-family:var(--display);font-size:34px;font-weight:600;color:var(--oro-osc);line-height:1}
+  .hito:last-child b{color:var(--marino)}
+  .hito p{font-size:18px;line-height:1.5}
+
+  /* 3 · nombre */
+  .nombre{padding:72px 80px 56px;display:flex;flex-direction:column;gap:48px}
+  .nombre .cuerpo{display:grid;grid-template-columns:620px minmax(0,1fr);gap:72px;flex-grow:1}
+  .argumento{gap:6px;padding-bottom:22px;border-bottom:1px solid var(--linea-osc)}
+  .argumento:last-child{border-bottom:0;padding-bottom:0}
+  .argumento h3{margin:0;font-family:var(--display);font-weight:400;font-size:26px}
+  .argumento p{font-size:17px;line-height:1.55;color:var(--gris-claro)}
+  .recomendada{gap:10px;padding:28px 32px;border:1.5px solid var(--oro);background:var(--marino-2)}
+  .recomendada .fila{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+  .sello{font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:var(--marino);background:var(--oro);padding:6px 12px}
+  .alternativas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .alternativas div{display:flex;flex-direction:column;gap:8px;padding:22px;border:1px solid var(--linea-osc)}
+  .alternativas b{font-family:var(--display);font-weight:400;font-size:30px}
+  .alternativas p{font-size:15px;line-height:1.5;color:var(--gris-claro)}
+
+  /* 4 · concepto */
+  .concepto{display:grid;grid-template-columns:480px 1120px}
+  .concepto .texto{gap:26px;padding:64px 48px 48px 72px}
+  .muestras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .muestras div{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--crema)}
+  .muestras i{height:44px;border:1px solid #5A4A3A}
+  .galeria{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;padding:8px 8px 8px 0}
+  .galeria figure{position:relative;overflow:hidden;margin:0}
+  .galeria img{width:100%;height:100%;object-fit:cover}
+  .galeria figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:rgba(15,27,45,.82);font-size:13px;color:var(--gris-claro)}
+  .galeria figcaption b{display:block;font-family:var(--display);font-weight:400;font-size:20px;color:var(--marfil);margin-bottom:2px}
+
+  /* 5 · carta */
+  .carta{display:grid;grid-template-columns:520px 1080px}
+  .carta .lateral{background:var(--marino)}
+  .carta .lateral img{width:520px;height:380px;object-fit:cover;object-position:50% 55%}
+  .carta .lateral>.pila{gap:24px;padding:48px 56px;flex-grow:1}
+  .carta .lateral .ritual{gap:8px;margin-top:auto;border-top:1px solid var(--linea-osc);padding-top:18px;font-size:14px;line-height:1.5;color:var(--gris-claro)}
+  .carta .menu{gap:28px;padding:56px 72px 44px}
+  .tragos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:56px}
+  .trago{display:flex;flex-direction:column;gap:6px;padding:18px 0;border-top:1px solid var(--linea-clara)}
+  .trago .epoca{font-size:13px;letter-spacing:3px;color:var(--oro-osc);font-weight:600}
+  .trago h3{margin:0;font-family:var(--display);font-size:28px;font-weight:600}
+  .trago .relato{font-family:var(--display);font-style:italic;font-size:16px;line-height:1.45;color:var(--tinta-2)}
+  .trago .relato span{font-style:normal}
+  .trago .ingredientes{font-size:13px;line-height:1.5;color:var(--gris-osc)}
+  .casa{grid-column:span 2;display:flex;flex-direction:column;gap:10px;padding:22px 26px;margin:8px 0;background:var(--marino);color:var(--marfil)}
+  .casa .fila{display:flex;align-items:baseline;gap:18px}
+  .casa h3{margin:0;font-family:var(--display);font-size:40px;font-weight:600;color:var(--oro-claro);letter-spacing:2px}
+  .casa .relato{font-family:var(--display);font-style:italic;font-size:19px;line-height:1.45}
+
+  /* 6 · ficha técnica */
+  .ficha{padding:64px 80px 48px;display:flex;flex-direction:column;gap:36px}
+  .ficha .cabecera{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+  .ficha .cuerpo{display:grid;grid-template-columns:380px minmax(0,1fr) 420px;gap:48px;flex-grow:1}
+  .ficha .foto{background:var(--marino)}
+  .ficha .foto img{width:380px;height:560px;object-fit:cover;object-position:50% 60%}
+  .ficha .foto p{padding:18px 24px;font-size:14px;line-height:1.5;color:var(--gris-claro);text-align:center}
+  .medida{display:grid;grid-template-columns:minmax(0,1fr) 120px;gap:16px;padding:12px 0;border-top:1px solid var(--linea-clara);font-size:18px}
+  .medida:last-child{border-bottom:1px solid var(--linea-clara)}
+  .medida b{text-align:right;font-weight:600}
+  .pasos p{font-size:16px;line-height:1.5}
+  .formula{gap:10px;padding:22px 24px;background:var(--marino);color:var(--marfil)}
+  .formula .serif{font-size:20px;line-height:1.4}
+  .formula .gris{font-size:14px;line-height:1.5}
+  .controles p{font-size:15px;line-height:1.5}
+
+  /* 7 · guion */
+  .guion{display:grid;grid-template-columns:480px 1120px}
+  .guion .lateral{gap:28px;padding:64px 52px 48px 64px;background:var(--marino)}
+  .guion .reglas{gap:16px;margin-top:auto}
+  .guion .reglas p{font-size:16px;line-height:1.5}
+  .guion .reglas strong{color:var(--oro-claro)}
+  .guion .tabla{padding:48px 72px 40px 64px}
+  .frase{display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1fr);gap:28px;padding:15px 0;border-top:1px solid var(--linea-clara);font-size:15px;line-height:1.5}
+  .frase.cabeza{border-top:0;padding:0 0 12px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gris-osc);font-weight:600;line-height:1.2}
+  .frase.ultima{border-bottom:1px solid var(--linea-clara)}
+  .frase.destacada{background:var(--crema);padding:15px 16px;margin:0 -16px}
+  .frase b{font-family:var(--display);font-size:21px;font-weight:600;line-height:1.3}
+  .frase .en{color:var(--tinta-2)}
+
+  /* 8 · validar */
+  .validar{padding:72px 80px 56px;display:flex;flex-direction:column;gap:44px}
+  .validar .cuerpo{display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:64px;flex-grow:1}
+  .tareas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .tareas div{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:1px solid var(--linea-osc)}
+  .tareas p{font-size:17px;line-height:1.4}
+  .tareas span{font-size:14px;color:var(--oro)}
+  .valor{gap:8px;padding:20px 22px;background:var(--marino-2);margin-top:6px}
+  .valor .serif{font-size:22px;line-height:1.4}
+  .riesgo{gap:6px;padding-bottom:16px;border-bottom:1px solid var(--linea-osc)}
+  .riesgo h3{margin:0;font-family:var(--display);font-weight:400;font-size:22px}
+  .riesgo p{font-size:16px;line-height:1.5;color:var(--gris-claro)}
+  .siguiente{gap:8px;padding:20px 22px;border:1.5px solid var(--oro);margin-top:auto}
+  .siguiente p:last-child{font-size:16px;line-height:1.5}
+
+  /* impresión: una lámina por página, a tamaño real */
+  @page{size:1600px 900px;margin:0}
+  @page alta{size:1600px 1000px;margin:0}
+  @media print{
+    :root{--escala:1}
+    body{background:none}
+    .mazo{display:block;padding:0}
+    .marco{break-after:page}
+    .marco.alta{page:alta}
+    .marco:last-child{break-after:auto}
+  }
+</style>
+</head>
+<body>
+<main class="mazo">
+
+<!-- 1 · Portada -->
+<div class="marco"><section class="lamina portada" aria-label="1 · Portada">
+  <div class="texto">
+    <div class="pila" style="gap:12px">
+      <p class="cintillo">Propuesta de concepto</p>
+      <p class="gris" style="font-size:16px">Bar del lobby · Barceló México Reforma</p>
+    </div>
+    <div class="pila" style="gap:26px">
+      <svg class="ornamento" width="120" height="24" viewBox="0 0 120 24" aria-hidden="true"><line x1="0" y1="12" x2="44" y2="12" stroke="#C8A257" stroke-width="1.5"/><path d="M60 2 L70 12 L60 22 L50 12 Z" fill="none" stroke="#C8A257" stroke-width="1.5"/><line x1="76" y1="12" x2="120" y2="12" stroke="#C8A257" stroke-width="1.5"/></svg>
+      <h1>Corcuera</h1>
+      <p class="cintillo" style="font-size:15px;letter-spacing:6px">Bar · desde 1934</p>
+      <p class="entradilla" style="font-size:28px;line-height:1.35">Convertir el bar del lobby en un destino de la ciudad, con la historia de su propio terreno.</p>
+    </div>
+    <div class="pila pie">
+      <p style="color:var(--oro-claro);font-weight:600">Propuesta a futuro · se presenta tras un mínimo de 4 meses en el cargo</p>
+      <p class="gris">Borrador interno para validar con la Dirección General</p>
+      <p class="gris">Sergio Berriozábal Serrano · 27 de octubre de 2026</p>
+    </div>
+  </div>
+  <div class="visual">
+    <img src="img/lobby-concepto.jpg" alt="Visualización conceptual del lobby con la barra Corcuera al fondo, butacas verdes y madera oscura">
+    <div class="polaroid">
+      <img src="img/corcuera-1950.jpg" alt="El edificio Corcuera con su anuncio luminoso en la azotea, hacia 1950, en blanco y negro">
+      <div><p class="serif" style="font-size:20px;color:var(--oro-claro)">Hacia 1950</p><p class="gris" style="font-size:12px">Mismo terreno, hoy</p></div>
+    </div>
+    <p class="credito">Lobby: visualización conceptual generada con IA, no es render de obra. Foto 1950: Museo Archivo de la Fotografía, Gobierno de la CDMX (CC0), vía Wikimedia Commons.</p>
+  </div>
+</section></div>
+
+<!-- 2 · La historia del terreno -->
+<div class="marco"><section class="lamina claro historia" aria-label="2 · La historia del terreno">
+  <div class="foto">
+    <img src="img/reforma-juarez-1948.jpg" alt="Cruce de Reforma y Juárez en 1948, en blanco y negro: a la izquierda el edificio Corcuera; al fondo el Monumento a la Revolución y a la derecha El Caballito">
+    <p>Reforma y Juárez, 1948. A la izquierda, el edificio Corcuera. Foto: Janice Waltzer (CC BY 2.0), vía Wikimedia Commons; pasada a blanco y negro.</p>
+  </div>
+  <div class="pila texto">
+    <div class="pila" style="gap:14px">
+      <p class="cintillo">La historia verificada</p>
+      <h2 class="titulo" style="font-size:52px">Doce años como el edificio más alto de la ciudad</h2>
+    </div>
+    <div class="pila" style="flex-grow:1">
+      <div class="hito"><b>1934</b><p>Se inaugura el edificio Corcuera, en Paseo de la Reforma 1. Toma el nombre de su propietario, Pedro Corcuera Palomar.</p></div>
+      <div class="hito"><b>1934–46</b><p>Es el edificio más alto de la ciudad, hasta que lo supera El Moro, de la Lotería Nacional. En la azotea luce un gran anuncio luminoso.</p></div>
+      <div class="hito"><b>1948</b><p>Sale de fondo en <em>Ustedes los ricos</em>, en la pelea de Pepe el Toro en una azotea de Avenida Juárez.</p></div>
+      <div class="hito"><b>1957</b><p>El sismo del 28 de julio lo deja seriamente dañado.</p></div>
+      <div class="hito"><b>1958</b><p>Se demuele. La Facultad de Arquitectura de la UNAM la cataloga como la primera demolición técnica de México.</p></div>
+      <div class="hito"><b>Hoy</b><p>En el mismo terreno está el Barceló México Reforma, cuya fachada guarda reminiscencias del diseño del Corcuera.</p></div>
+    </div>
+    <p class="nota">Fuentes: Wikipedia (Edificio Corcuera, que cita al Dr. Alejandro Leal, Facultad de Arquitectura UNAM), SkyscraperPage, El Universal «Mochilazo en el tiempo», archivo México de Ayer, Mediateca INAH. Consultadas el 27-oct-2026. Fechas y altura se confirman con fuente primaria antes de imprimir nada.</p>
+  </div>
+</section></div>
+
+<!-- 3 · Por qué un nombre propio -->
+<div class="marco"><section class="lamina nombre" aria-label="3 · Por qué un nombre propio">
+  <div class="pila" style="gap:14px">
+    <p class="cintillo">Por qué un nombre propio</p>
+    <h2 class="titulo" style="font-size:56px">Reforma Uno es una dirección. Corcuera es un destino.</h2>
+  </div>
+  <div class="cuerpo">
+    <div class="pila" style="gap:28px">
+      <p class="rotulo">Lo que hay hoy</p>
+      <div class="pila argumento"><h3>Un nombre heredado</h3><p>«Reforma Uno Bar» viene, con toda probabilidad, de la época Krystal Grand Reforma Uno. Abre de 11:00 a 01:00 y casi no aparece en reseñas públicas.</p></div>
+      <div class="pila argumento"><h3>Los bares que atraen a la ciudad tienen historia</h3><p>Fifty Mils en el Four Seasons, King Cole Bar en el St. Regis y Cityzen en el Sofitel: nombre propio y relato propio.</p></div>
+      <div class="pila argumento"><h3>Continuidad, no ruptura</h3><p>Corcuera cuenta la historia del mismo terreno. Para el cliente fiel, el bar no cambia de casa: recupera su origen.</p></div>
+    </div>
+    <div class="pila" style="gap:20px">
+      <p class="rotulo">Opciones de nombre</p>
+      <div class="pila recomendada">
+        <div class="fila"><p class="serif" style="font-size:48px;font-weight:600;letter-spacing:1px">Corcuera</p><p class="sello">Recomendada</p></div>
+        <p style="font-size:17px;line-height:1.5;color:var(--crema)">Única, ligada al terreno y con una historia que ningún competidor puede copiar.</p>
+        <p class="gris" style="font-size:14px;line-height:1.5">Es apellido de familia: Jurídico revisa si registrarla en el IMPI exige consentimiento.</p>
+      </div>
+      <div class="alternativas">
+        <div><b>1934</b><p>Corta y buena para letrero, pero cuenta poco por sí sola.</p></div>
+        <div><b>Tabacalera</b><p>Suena local por la colonia, pero no es exclusiva del hotel.</p></div>
+        <div><b>Primero de Reforma</b><p>Juega con la dirección, pero se parece demasiado al nombre actual.</p></div>
+      </div>
+    </div>
+  </div>
+  <p class="nota">Fuentes: Estudio completo del hotel (27-oct-2026); webs oficiales de Four Seasons, St. Regis y Sofitel; Wikipedia (Edificio Corcuera). Consultadas el 27-oct-2026. Origen Krystal del nombre actual: [SIN VERIFICAR].</p>
+</section></div>
+
+<!-- 4 · Cómo se vería -->
+<div class="marco"><section class="lamina concepto" aria-label="4 · Cómo se vería">
+  <div class="pila texto">
+    <p class="cintillo">Cómo se vería</p>
+    <h2 class="titulo" style="font-size:46px">Un hotel bar Art Déco, contado en lenguaje de hoy</h2>
+    <p class="entradilla" style="font-size:19px">De lugar de paso a destino: una barra que se ve desde la entrada y una luz ámbar que favorece el ambiente y la foto de producto.</p>
+    <div class="pila" style="gap:14px">
+      <p class="rotulo" style="font-size:13px">Materiales</p>
+      <div class="muestras">
+        <div><i style="background:#3B2618"></i>Nogal oscuro</div>
+        <div><i style="background:#D9D3C7"></i>Mármol expresivo</div>
+        <div><i style="background:#A8864A"></i>Latón envejecido</div>
+        <div><i style="background:#8A4B2A"></i>Cuero coñac</div>
+        <div><i style="background:#1F3A2E"></i>Terciopelo verde</div>
+        <div><i style="background:#E3A548"></i>Luz ámbar</div>
+      </div>
+    </div>
+    <p class="nota" style="font-size:12px;margin-top:auto">Imágenes: visualizaciones conceptuales generadas con IA (ChatGPT, 27-oct-2026). No son fotos del bar actual ni render sobre planos. Distribución y materiales se comprueban sobre el espacio real con Mantenimiento y el corporativo.</p>
+  </div>
+  <div class="galeria">
+    <figure><img src="img/lobby-concepto.jpg" alt="El lobby como escenario: butacas verdes, palmeras y la barra Corcuera al fondo"><figcaption><b>El lobby como escenario</b>Una primera impresión cálida y reconocible desde la entrada.</figcaption></figure>
+    <figure><img src="img/barra-concepto.jpg" alt="La barra como protagonista: botelleros iluminados y el rótulo Corcuera, bar desde 1934"><figcaption><b>La barra como protagonista</b>Botelleros iluminados, metal cálido y una silueta limpia.</figcaption></figure>
+    <figure><img src="img/rincon-concepto.jpg" alt="El rincón de conversación: butaca de cuero, sofá de terciopelo y fotos históricas enmarcadas"><figcaption><b>El rincón de conversación</b>Cuero, terciopelo y la ciudad en los muros, como galería.</figcaption></figure>
+    <figure><img src="img/coctel-casa.jpg" alt="La coctelería de autor: old fashioned con hielo cristalino y piel de naranja sobre la barra"><figcaption><b>La coctelería de autor</b>Cristalería cuidada, hielo cristalino y acabado editorial.</figcaption></figure>
+  </div>
+</section></div>
+
+<!-- 5 · La carta de cócteles -->
+<div class="marco alta"><section class="lamina carta" aria-label="5 · La carta de cócteles">
+  <div class="pila lateral">
+    <img src="img/coctel-casa.jpg" alt="Visualización conceptual del coctel de la casa: old fashioned con hielo cristalino y piel de naranja">
+    <div class="pila">
+      <svg class="ornamento" width="120" height="24" viewBox="0 0 120 24" aria-hidden="true"><line x1="0" y1="12" x2="44" y2="12" stroke="#C8A257" stroke-width="1.5"/><path d="M60 2 L70 12 L60 22 L50 12 Z" fill="none" stroke="#C8A257" stroke-width="1.5"/><line x1="76" y1="12" x2="120" y2="12" stroke="#C8A257" stroke-width="1.5"/></svg>
+      <p class="cintillo">La carta</p>
+      <h2 class="titulo" style="font-size:46px">Siete tragos, siete momentos de un rascacielos</h2>
+      <p class="entradilla" style="font-size:20px">Cada coctel cuenta un momento del edificio que estuvo en este terreno. Se pide por su nombre y se sirve con su historia.</p>
+      <div class="pila ritual">
+        <p>Ritual de servicio: al dejar la copa, el bartender cuenta la historia en una sola frase.</p>
+        <p>Recetas, costos y precios: [por definir con Costos y el bartender].</p>
+      </div>
+    </div>
+  </div>
+  <div class="pila claro menu">
+    <div class="tragos">
+      <div class="trago"><p class="epoca">1934</p><h3>La Primera Piedra</h3><p class="relato">El año en que abrió el Corcuera. Un martini seco como se pedía entonces: limpio, firme, sin adornos.</p><p class="ingredientes">Ginebra · vermut seco · amargo de naranja · piel de limón</p></div>
+      <div class="trago"><p class="epoca">AÑOS 40</p><h3>El Luminoso</h3><p class="relato">Desde todo Reforma se veía su anuncio en la azotea. Fresco y brillante, para pedir con la luz encendida.</p><p class="ingredientes">Tequila blanco · toronja · lima · soda · escarchado de sal</p></div>
+      <div class="trago"><p class="epoca">1948</p><h3>Azotea de Juárez</h3><p class="relato">Ese año el edificio llegó al cine, de fondo en <span>Ustedes los ricos</span>. Un daiquirí de piña con espíritu de matiné.</p><p class="ingredientes">Ron blanco · lima · jarabe de piña</p></div>
+      <div class="trago"><p class="epoca">LA DIRECCIÓN</p><h3>Reforma 1</h3><p class="relato">La dirección que lo cuenta todo. Un old fashioned de mezcal, con mezcal y cacao del B-Market del hotel.</p><p class="ingredientes">Mezcal artesanal · piloncillo · amargo de cacao · piel de naranja</p></div>
+      <div class="casa">
+        <div class="fila"><h3>Corcuera</h3><p class="cintillo" style="font-size:13px">El coctel de la casa</p></div>
+        <p class="relato">El que da nombre al bar. Oscuro, profundo y con un final que se queda, como el edificio que dominó el horizonte de Reforma. Servido sobre un bloque de hielo tallado.</p>
+        <p class="gris" style="font-size:13px;line-height:1.5">Mezcal joven · vermut rojo · licor de café · amargo de chocolate · hielo tallado</p>
+      </div>
+      <div class="trago"><p class="epoca">1958</p><h3>Vuelve la Luz</h3><p class="relato">Donde hubo un rascacielos, la ciudad volvió a crecer. Burbujas para brindar por lo que sigue.</p><p class="ingredientes">Vino espumoso mexicano · licor de jamaica · piel de limón</p></div>
+      <div class="trago"><p class="epoca">HOY · SIN ALCOHOL</p><h3>El Mismo Terreno</h3><p class="relato">Otra época en el mismo lugar. Para quien quiere la historia sin el grado.</p><p class="ingredientes">Infusión de jamaica · agua tónica · lima · romero</p></div>
+    </div>
+    <p class="nota" style="margin-top:auto">Ningún trago lleva el nombre del sismo. Cada receta se estandariza con el bartender en ficha técnica, con gramaje, costo y precio, antes de entrar a carta. Imagen: visualización generada con IA.</p>
+  </div>
+</section></div>
+
+<!-- 6 · Ficha técnica -->
+<div class="marco"><section class="lamina claro ficha" aria-label="6 · Ficha técnica del coctel Corcuera">
+  <div class="cabecera">
+    <div class="pila" style="gap:12px">
+      <p class="cintillo">Ficha técnica · propuesta de base</p>
+      <h2 class="titulo" style="font-size:56px;line-height:1.05">Corcuera · El coctel de la casa</h2>
+    </div>
+    <p class="nota" style="font-size:14px;text-align:right">Versión 0 · a ajustar en cata con el bartender<br>Formato POE: una receta, una forma de servirla</p>
+  </div>
+  <div class="cuerpo">
+    <div class="foto">
+      <img src="img/coctel-casa.jpg" alt="Visualización conceptual del coctel Corcuera: old fashioned con hielo tallado y piel de naranja">
+      <p>Vaso old fashioned frío · bloque de hielo claro tallado · piel de naranja expresada · imagen generada con IA</p>
+    </div>
+    <div class="pila" style="gap:22px">
+      <p class="rotulo">Receta por coctel</p>
+      <div class="pila">
+        <div class="medida"><span>Mezcal joven</span><b>45 ml</b></div>
+        <div class="medida"><span>Vermut rojo</span><b>20 ml</b></div>
+        <div class="medida"><span>Licor de café</span><b>10 ml</b></div>
+        <div class="medida"><span>Amargo de chocolate</span><b>2 golpes</b></div>
+        <div class="medida"><span>Piel de naranja</span><b>1 tira</b></div>
+      </div>
+      <p class="rotulo">Método</p>
+      <div class="pila pasos" style="gap:10px">
+        <p><strong>1.</strong> Enfriar el vaso y colocar el bloque de hielo tallado.</p>
+        <p><strong>2.</strong> Medir con jigger en vaso mezclador con hielo y mover de 20 a 25 segundos.</p>
+        <p><strong>3.</strong> Colar sobre el bloque, expresar la piel de naranja y dejarla en el borde.</p>
+        <p><strong>4.</strong> Servir con la frase del guion.</p>
+      </div>
+    </div>
+    <div class="pila" style="gap:20px">
+      <div class="pila formula">
+        <p class="cintillo">Costo por coctel (MXN)</p>
+        <p class="serif">Σ (ml usados ÷ ml de la botella × costo de la botella) + hielo + guarnición</p>
+        <p class="gris">Costos de botella y del bloque de hielo: [dato a validar con el hotel]. Precio de venta y costo objetivo: se fijan con Finanzas después del escandallo.</p>
+      </div>
+      <div class="pila controles" style="gap:10px">
+        <p class="rotulo">Puntos de control</p>
+        <p><strong>Medida.</strong> Siempre con jigger; nada a ojo.</p>
+        <p><strong>Hielo.</strong> Claro y sin fracturas; si no hay bloque, no se sirve sobre hielo común.</p>
+        <p><strong>Abasto de hielo.</strong> Proveedor de bloque y existencia mínima por turno definidos con Compras. Sin bloque no hay coctel de la casa.</p>
+        <p><strong>Dilución.</strong> Mover lo justo: debe quedar sedoso, no aguado.</p>
+        <p><strong>Control de botella.</strong> Se descarga del inventario por receta, no por botella abierta.</p>
+      </div>
+    </div>
+  </div>
+</section></div>
+
+<!-- 7 · Guion de servicio -->
+<div class="marco"><section class="lamina guion" aria-label="7 · Guion de servicio">
+  <div class="pila lateral">
+    <p class="cintillo">Guion de servicio</p>
+    <h2 class="titulo" style="font-size:44px">Una copa, una frase</h2>
+    <p class="entradilla" style="font-size:19px">El storytelling solo funciona si todo el equipo lo cuenta igual. Esta es la frase que acompaña cada coctel al dejarlo en la mesa.</p>
+    <div class="pila reglas">
+      <p class="rotulo" style="font-size:14px">Tres reglas</p>
+      <p><strong>Una frase.</strong> Si el huésped pregunta, se sigue; si no, se le deja disfrutar.</p>
+      <p><strong>La ciudad que crece.</strong> El sismo solo se menciona si el huésped pregunta, y siempre como la ciudad que siguió adelante.</p>
+      <p><strong>Solo lo verificado.</strong> Nada de datos inventados para lucirse.</p>
+    </div>
+  </div>
+  <div class="pila claro tabla">
+    <div class="frase cabeza"><span>Coctel</span><span>Español</span><span>English</span></div>
+    <div class="frase"><b>La Primera Piedra</b><p>«En 1934 abrió aquí el edificio más alto de la ciudad. Así se tomaba un martini entonces.»</p><p class="en">“In 1934 the tallest building in the city opened right here. This is how a martini was made back then.”</p></div>
+    <div class="frase"><b>El Luminoso</b><p>«El edificio tenía un anuncio luminoso que se veía desde todo Reforma. Este coctel es su homenaje.»</p><p class="en">“The building had a neon sign you could see all along Reforma. This drink is our tribute to it.”</p></div>
+    <div class="frase"><b>Azotea de Juárez</b><p>«En 1948 el edificio salió en el cine, de fondo en <em>Ustedes los ricos</em>.»</p><p class="en">“In 1948 the building appeared on screen, in the background of the classic film <em>Ustedes los ricos</em>.”</p></div>
+    <div class="frase"><b>Reforma 1</b><p>«Nuestra dirección, en un vaso: mezcal y cacao que también encuentra en el B-Market del hotel.»</p><p class="en">“Our address in a glass: mezcal and cacao you can also find at the hotel’s B-Market.”</p></div>
+    <div class="frase destacada"><b>Corcuera</b><p>«Este bar lleva el nombre del edificio que estuvo aquí, doce años el más alto de la ciudad. Es el coctel de la casa.»</p><p class="en">“This bar carries the name of the building that stood here, the city’s tallest for twelve years. This is our house cocktail.”</p></div>
+    <div class="frase"><b>Vuelve la Luz</b><p>«Donde hubo un rascacielos, la ciudad siguió creciendo. Para brindar por lo que viene.»</p><p class="en">“Where a skyscraper once stood, the city kept growing. A toast to what comes next.”</p></div>
+    <div class="frase ultima"><b>El Mismo Terreno</b><p>«Otra época, el mismo lugar. Toda la historia, sin alcohol.»</p><p class="en">“Another era, the same ground. All the story, none of the alcohol.”</p></div>
+    <p class="nota" style="margin-top:auto">Formación: 15 minutos en el arranque de turno durante la primera semana; se valida con un servicio de prueba antes de abrir la carta.</p>
+  </div>
+</section></div>
+
+<!-- 8 · Antes de proponerlo -->
+<div class="marco"><section class="lamina validar" aria-label="8 · Antes de proponerlo">
+  <div class="pila" style="gap:14px">
+    <p class="cintillo">Antes de proponerlo</p>
+    <h2 class="titulo" style="font-size:56px">Primero los datos y la marca; después el diseño</h2>
+  </div>
+  <div class="cuerpo">
+    <div class="pila" style="gap:18px">
+      <p class="rotulo">Qué validar y con quién</p>
+      <div class="tareas">
+        <div><p>Ventas por hora, ticket medio y mezcla huésped / cliente externo</p><span>Finanzas</span></div>
+        <div><p>Costo de bebida y control de botellas</p><span>Costos · A&amp;B</span></div>
+        <div><p>Si la marca Barceló permite nombre propio de outlet</p><span>Dirección General · corporativo</span></div>
+        <div><p>Registro de «Corcuera» disponible en el IMPI</p><span>Jurídico</span></div>
+        <div><p>Permisos de uso de imágenes del INAH</p><span>Jurídico</span></div>
+        <div><p>Encaje con La Cofradía y Sonora Grill, operados por terceros</p><span>Dirección General · Jurídico</span></div>
+      </div>
+      <div class="pila valor">
+        <p class="rotulo" style="font-size:14px">Valor en pesos</p>
+        <p class="serif">Ingreso adicional anual (MXN) = cubiertos externos adicionales × ticket medio × margen de contribución</p>
+        <p class="gris" style="font-size:14px">Los tres datos: [dato a validar con el hotel]. Sin cifra objetivo antes de la línea base.</p>
+      </div>
+    </div>
+    <div class="pila" style="gap:18px">
+      <p class="rotulo">Riesgos</p>
+      <div class="pila riesgo"><h3>Marca</h3><p>Barceló puede tener nombres estándar de outlets. Se pregunta antes de diseñar nada.</p></div>
+      <div class="pila riesgo"><h3>El recuerdo del sismo</h3><p>Se cuenta como renacimiento de la ciudad, nunca como tragedia. Tono revisado con Comunicación.</p></div>
+      <div class="pila riesgo" style="border-bottom:0;padding-bottom:0"><h3>Inversión sin línea base</h3><p>Ni montos ni retorno hasta conocer las ventas actuales del bar.</p></div>
+      <div class="pila siguiente">
+        <p class="cintillo">Siguiente paso</p>
+        <p>Semana 3 del diagnóstico: pedir a Finanzas las ventas por hora del bar y preguntar a la Dirección General si la marca permite nombre propio.</p>
+      </div>
+    </div>
+  </div>
+</section></div>
+
+</main>
+<script>
+  // En pantalla, cada lámina se escala al ancho disponible (16 px de margen por lado).
+  function ajustar(){
+    var e = Math.min(1, (document.documentElement.clientWidth - 32) / 1600);
+    document.documentElement.style.setProperty('--escala', e);
+  }
+  addEventListener('resize', ajustar); ajustar();
+  addEventListener('beforeprint', function(){ document.documentElement.style.setProperty('--escala', 1); });
+  addEventListener('afterprint', ajustar);
+</script>
+</body>
+</html>
