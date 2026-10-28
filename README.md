@@ -61,6 +61,7 @@ skills/
 ├── neutro/       4 skills · B2B sin oficio específico
 └── externas/     skills de terceros para uso interno · fuera del catálogo
 catalogo/         tarifa, gates y decisiones pendientes
+propuestas/       propuestas de concepto fuera del catálogo (hoy: `corcuera/`, bar del lobby)
 .claude/skills/   copia real de las skills externas; Claude Code las carga al abrir el repo
 ```
 
