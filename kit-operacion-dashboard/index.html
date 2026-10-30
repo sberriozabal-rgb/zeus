@@ -223,6 +223,7 @@ footer { border-top: 1px solid var(--line); background: var(--surface); margin-t
 footer .envoltura { padding-top: 22px; padding-bottom: 28px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; font-size: 15px; color: var(--ink-2); }
 .whatsapp { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-family: var(--sans); }
 .whatsapp .tel { user-select: all; -webkit-user-select: all; font-weight: 600; color: var(--ink); }
+.enlace-tienda { font-family: var(--sans); font-size: 14px; font-weight: 500; color: var(--accent); text-underline-offset: 3px; }
 .fuente-datos { font-family: var(--sans); font-size: 13px; color: var(--ink-3); }
 </style>
 </head>
@@ -237,6 +238,7 @@ footer .envoltura { padding-top: 22px; padding-bottom: 28px; display: flex; flex
       <div class="cab-meta">
         <span id="etiqueta-ejemplo" class="etiqueta-ejemplo">Ejemplo</span>
         <span id="fuente" class="fuente-datos"></span>
+        <a id="tienda" class="enlace-tienda" hidden>¿Aún no tienes el Excel del kit? Consíguelo aquí</a>
       </div>
     </div>
     <div class="cab-acciones">
@@ -820,6 +822,9 @@ footer .envoltura { padding-top: 22px; padding-bottom: 28px; display: flex; flex
     var ej = estado.fuente === 'ejemplo';
     document.getElementById('etiqueta-ejemplo').hidden = !ej;
     document.getElementById('volver-ejemplo').hidden = ej;
+    // Solo la copia pública (demostración) declara data-tienda en <html>
+    var tienda = document.getElementById('tienda'), urlTienda = document.documentElement.getAttribute('data-tienda');
+    if (urlTienda && /^https:\/\//.test(urlTienda)) { tienda.href = urlTienda; tienda.hidden = !ej; } else tienda.hidden = true;
     var f = document.getElementById('fuente');
     if (ej) f.textContent = 'Datos del restaurante del capítulo 19. Carga tu Excel para ver los tuyos.';
     else {

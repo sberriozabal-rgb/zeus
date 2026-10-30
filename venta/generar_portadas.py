@@ -45,7 +45,9 @@ CABINA = {
     "postmortem-de-bolo", "set-por-encargo", "peticiones-a-repertorio",
     "presupuesto-y-contrato-evento", "demo-a-sello",
 }
-HOSTELERIA = {"productividad-personal-turno"}
+HOSTELERIA = {"productividad-personal-turno", "kit-de-operacion"}
+# Productos que no son skills: su propio pie
+PIE_PROPIO = {"kit-de-operacion": "Excel de 12 hojas + tablero · del libro Historia de la hostelería y la gastronomía"}
 
 
 def linea_de(slug):
@@ -164,7 +166,7 @@ def dibujar(prod, ancho, alto, ruta):
     y_pie = alto - margen + 4
     if cuadrado:
         y_pie -= f_pie.size + 10  # dos líneas de pie en la miniatura
-    d.text((margen, y_pie), PIE, font=f_pie, fill=TEXTO_SUAVE)
+    d.text((margen, y_pie), PIE_PROPIO.get(slug, PIE), font=f_pie, fill=TEXTO_SUAVE)
     ancho_copy = d.textlength(COPY, font=f_pie)
     if cuadrado:
         d.text((margen, y_pie + f_pie.size + 6), COPY, font=f_pie, fill=TEXTO_SUAVE)

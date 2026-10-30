@@ -115,6 +115,45 @@ la venta, y quema el contacto para siempre.
 
 ---
 
+## Hostelería — Kit de operación (49 €, por enlace)
+
+Es la única pieza de hostelería que sí se vende por mensaje: cuesta poco, se ve antes de pagar y
+abre la conversación de la instalación. El enlace a la demostración va siempre antes que el de
+compra.
+
+### A quien ya leyó el libro o te sigue
+
+> [Nombre], el Excel del libro ya tiene tablero: metes tus números de la semana y te dice qué
+> está en banda, qué vigilar y cuánto vale en pesos un punto de prime cost en tu casa.
+>
+> Míralo con el restaurante del capítulo 19, sin registrarte:
+> sberriozabal-rgb.github.io/octava-skills/tablero/
+>
+> El Excel de las doce hojas para meter los tuyos está aquí, 49 €:
+> cabina.gumroad.com/l/kit-de-operacion
+
+### Para LinkedIn o un grupo de restauranteros
+
+> La pregunta que cambia una junta de lunes no es «¿nos esforzamos?», sino «¿cuánto vale aquí
+> un punto de prime cost?». En el restaurante de referencia del libro, 50.000 pesos al mes.
+>
+> Hice un tablero que lo calcula con tus números: los cinco números de la semana con semáforo,
+> la matriz de menú, las fugas de inventario y de barra, el no-show. Tus datos no salen de tu
+> computadora.
+>
+> Demostración abierta: sberriozabal-rgb.github.io/octava-skills/tablero/
+> El Excel para usarlo con lo tuyo: cabina.gumroad.com/l/kit-de-operacion
+
+### En la visita del Diagnóstico Exprés, si no hay cierre
+
+> Para que no se pierda lo de hoy: este es el tablero con el que se mira la semana. Si lo usas
+> tres semanas y quieres que te lo dejemos montado con tu equipo, me escribes.
+
+**Fuente de la cifra:** los 50.000 pesos son el restaurante de referencia del libro (5 millones
+de venta al mes, capítulo 19), no un promedio del sector. Dilo así si alguien pregunta.
+
+---
+
 ## Las dos reglas que no se tocan en ningún mensaje
 
 1. **Ninguna promesa de resultado.** Ni más reseñas, ni firma de sello, ni cartera recuperada.
