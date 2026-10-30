@@ -716,6 +716,75 @@ plantilla de la casa: frase de anuncio, qué hace, qué NO hace, requisitos, lic
 
 ---
 
+### Kit de operación · 49
+
+Alta del 30-oct-2026. Es el único producto de hostelería que se vende por Gumroad sin
+instalación: el Excel de doce hojas del libro más el tablero web que lo lee. Precio en el escalón
+de la pieza suelta de la casa (49), muy por debajo de la Instalación Esencial (2.500), de la que
+es la puerta: quien lo usa tres semanas y quiere que alguien se lo deje montado con su equipo,
+escribe al WhatsApp que lleva el tablero en el pie. El tablero con el ejemplo del libro está en
+abierto como demostración (<https://sberriozabal-rgb.github.io/octava-skills/tablero/>); lo que
+se compra es el Excel, sin el que el tablero solo enseña el restaurante de referencia.
+
+| Campo | Valor |
+|---|---|
+| **Name** | Kit de operación — Excel de 12 hojas y tablero para restaurantes |
+| **URL** | `kit-de-operacion` |
+| **Price** | 49 |
+| **Content** | `dist/kit-de-operacion.zip` → `python3 venta/empaquetar_kit.py ruta/a/Kit_de_operacion.xlsx` (el Excel no está en el repo: es lo que se vende y el repo es público) |
+| **Cover / Thumbnail** | `venta/portadas/kit-de-operacion-portada.png` (1280×720) · `venta/portadas/kit-de-operacion-miniatura.png` (600×600) → `python3 venta/generar_portadas.py kit-de-operacion` |
+| **Summary** | Escribes los números de tu semana y el tablero te dice qué está en banda, qué vigilar y cuánto vale en pesos un punto de prime cost en tu casa. |
+| **Tags** | restaurante, hostelería, prime cost, food cost, ingeniería de menú, excel, méxico |
+
+**Description (pegar entera)**
+
+> **Escribes los números de tu semana y el tablero te dice qué está en banda, qué vigilar y
+> cuánto vale en pesos un punto de prime cost en tu casa.**
+>
+> Las doce hojas de trabajo del libro *Historia de la hostelería y la gastronomía* y un tablero
+> que las lee. Vienen rellenas con el restaurante de referencia del capítulo 19 para que veas la
+> aritmética funcionando antes de poner la tuya. Antes de comprar, mira el tablero con ese
+> ejemplo: <https://sberriozabal-rgb.github.io/octava-skills/tablero/>
+>
+> **Qué llevas**
+>
+> - **El Excel de doce hojas** — diez referencias de inventario, escandallo, ingeniería de menú
+>   (Kasavana y Smith), estado de resultados con prime cost, los cinco números de la semana,
+>   control de barra, tiempo del pase, ficha del plato, hora valle, reservas y no-show,
+>   inspector anónimo y clientes frecuentes. Escribes solo en las celdas azules; lo demás se
+>   calcula.
+> - **El tablero** — una página que abres con doble clic. Carga tu Excel y enseña los cinco
+>   números con semáforo y flecha contra la semana anterior, lo que vale un punto, la cascada
+>   del estado de resultados, la tendencia, la matriz de menú con qué hacer con cada plato, las
+>   fugas de inventario y de barra, el no-show y el tiempo del pase por plato y franja.
+> - **Los doce quick wins** en el orden en que se instalan, para marcar los que ya tienes.
+>
+> **Qué NO hace, para que no lo compres por lo que no es**
+>
+> - No se conecta a tu punto de venta ni a tu contabilidad: los números los escribes tú, una
+>   vez a la semana.
+> - No es asesoría fiscal ni contable. Las bandas de referencia son las del libro; tu concepto
+>   puede tener las suyas.
+> - No sube tus datos a ningún sitio: el Excel se lee dentro de tu navegador y se queda ahí.
+>
+> **Requisitos**
+>
+> Excel o LibreOffice para el archivo (en Google Sheets, descárgalo como .xlsx antes de
+> cargarlo); cualquier navegador actual para el tablero. Funciona en computadora y en teléfono,
+> también sin internet.
+>
+> **Licencia**
+>
+> Uso en tu propio negocio, sin límite de locales propios. Prohibida la redistribución, reventa
+> o publicación del Excel. El código del tablero es MIT.
+>
+> Copyright 2026 Sergio Berriozábal Serrano.
+
+**Devolución:** la del bloque 3, leyendo «el tablero no carga el Excel siguiendo el LEEME» donde
+dice «una skill no se activa en Claude Code».
+
+---
+
 ## 7 · Portadas y miniaturas
 
 Gumroad pide una imagen por producto: la **cover** (la enseña en la página del producto, 1280×720)
