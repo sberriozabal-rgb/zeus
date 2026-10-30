@@ -1,0 +1,1290 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit de operación · Tablero</title>
+<meta name="description" content="Tablero del Kit de operación del libro «Historia de la hostelería y la gastronomía»: los cinco números, el estado de resultados, la matriz de menú, las fugas, el no-show y el tiempo del pase.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Librerías desde CDN con versión fija; si no hay conexión, se usan las copias de vendor/ -->
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>window.XLSX || document.write('<script src="vendor/xlsx.full.min.js"><\/script>')</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+<script>window.Chart || document.write('<script src="vendor/chart.umd.js"><\/script>')</script>
+<style>
+:root {
+  --bg: #F7F4EE;
+  --surface: #FFFDF8;
+  --surface-2: #EFEADF;
+  --ink: #1F2A30;
+  --ink-2: #4A555B;
+  --ink-3: #737C80;
+  --line: #E1DACC;
+  --accent: #B5462E;
+  --ocre: #C99A3B;
+  --ocre-text: #8F6A1C;
+  --verde: #3D7A4F;
+  --ambar: #C99A3B;
+  --rojo: #B5462E;
+  --banda: rgba(61, 122, 79, .12);
+  --punto-bg: #1F2A30;
+  --punto-ink: #F7F4EE;
+  --punto-cifra: #E0B65A;
+  --sombra: 0 1px 2px rgba(31, 42, 48, .06), 0 4px 16px rgba(31, 42, 48, .05);
+  --serif: "Lora", Georgia, "Times New Roman", serif;
+  --sans: "Poppins", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141A1D;
+    --surface: #1C2428;
+    --surface-2: #232D32;
+    --ink: #ECE5D8;
+    --ink-2: #BDB5A7;
+    --ink-3: #8E9290;
+    --line: #2F3A40;
+    --accent: #DB6C52;
+    --ocre: #D8B060;
+    --ocre-text: #D8B060;
+    --verde: #72B585;
+    --ambar: #D8B060;
+    --rojo: #E2765C;
+    --banda: rgba(114, 181, 133, .14);
+    --punto-bg: #2A2420;
+    --punto-ink: #ECE5D8;
+    --punto-cifra: #E4BC66;
+    --sombra: 0 1px 2px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141A1D;
+  --surface: #1C2428;
+  --surface-2: #232D32;
+  --ink: #ECE5D8;
+  --ink-2: #BDB5A7;
+  --ink-3: #8E9290;
+  --line: #2F3A40;
+  --accent: #DB6C52;
+  --ocre: #D8B060;
+  --ocre-text: #D8B060;
+  --verde: #72B585;
+  --ambar: #D8B060;
+  --rojo: #E2765C;
+  --banda: rgba(114, 181, 133, .14);
+  --punto-bg: #2A2420;
+  --punto-ink: #ECE5D8;
+  --punto-cifra: #E4BC66;
+  --sombra: 0 1px 2px rgba(0, 0, 0, .3);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+.num, .cifra, table, .etq, button, select, input { font-family: var(--sans); font-variant-numeric: tabular-nums; }
+.envoltura { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+/* Cabecera */
+header.cab {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.cab .envoltura { padding-top: 22px; padding-bottom: 18px; display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: flex-end; justify-content: space-between; }
+.cab-titulo { min-width: 0; flex: 1 1 320px; }
+.sobretitulo { font-family: var(--sans); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 4px; }
+#nombre {
+  font-family: var(--serif); font-size: clamp(26px, 5vw, 38px); font-weight: 600; color: var(--ink);
+  background: transparent; border: 0; border-bottom: 1px dashed transparent; padding: 0; margin: 0;
+  width: 100%; line-height: 1.2;
+}
+#nombre:hover { border-bottom-color: var(--line); }
+#nombre:focus { outline: none; border-bottom-color: var(--accent); }
+.cab-meta { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-top: 8px; font-family: var(--sans); font-size: 14px; color: var(--ink-2); }
+.etiqueta-ejemplo { display: inline-block; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--bg); background: var(--accent); border-radius: 3px; padding: 2px 8px; }
+.cab-acciones { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+select, .boton {
+  font-size: 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  padding: 9px 14px; min-height: 42px; cursor: pointer;
+}
+.boton-principal { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 500; }
+.boton-principal:hover { background: var(--accent); border-color: var(--accent); }
+.boton-texto { background: transparent; border: 0; color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; padding: 4px; min-height: 0; }
+.boton:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#archivo { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.aviso { font-family: var(--sans); font-size: 14px; margin: 14px 0 0; padding: 10px 14px; border-radius: 6px; background: var(--surface-2); color: var(--ink); border-left: 3px solid var(--accent); }
+
+/* Secciones */
+main { padding-bottom: 40px; }
+section.bloque { padding: 34px 0 6px; }
+.bloque h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(22px, 3.6vw, 28px); margin: 0 0 4px; line-height: 1.25; }
+.bloque .entrada { color: var(--ink-2); margin: 0 0 18px; max-width: 70ch; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--sombra); padding: 18px; min-width: 0; }
+.sin-datos { font-family: var(--sans); font-size: 15px; color: var(--ink-3); padding: 22px; text-align: center; border: 1px dashed var(--line); border-radius: 10px; }
+.rejilla-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px; }
+.nota { font-size: 15px; color: var(--ink-2); font-style: italic; margin: 14px 0 0; }
+.lienzo { position: relative; width: 100%; }
+
+/* Tarjetas de los cinco números */
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 168px), 1fr)); gap: 12px; }
+@media (max-width: 440px) { .tarjetas { grid-template-columns: 1fr 1fr; } .tarjeta:last-child { grid-column: 1 / -1; } }
+.tarjeta { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 14px 12px; box-shadow: var(--sombra); display: flex; flex-direction: column; gap: 6px; min-width: 0; border-top: 4px solid var(--line); }
+.tarjeta[data-estado="verde"] { border-top-color: var(--verde); }
+.tarjeta[data-estado="ambar"] { border-top-color: var(--ambar); }
+.tarjeta[data-estado="rojo"] { border-top-color: var(--rojo); }
+.tarjeta .etq { font-size: 13px; font-weight: 500; color: var(--ink-2); }
+.tarjeta .cifra { font-size: clamp(26px, 6vw, 34px); font-weight: 600; line-height: 1.1; letter-spacing: -.01em; }
+.tarjeta .banda { font-family: var(--sans); font-size: 12px; color: var(--ink-3); }
+.fila-estado { display: flex; justify-content: space-between; gap: 8px; align-items: center; font-family: var(--sans); font-size: 13px; flex-wrap: wrap; }
+.semaforo { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+.forma { display: inline-block; width: 11px; height: 11px; flex: none; }
+.forma.verde { background: var(--verde); border-radius: 50%; }
+.forma.ambar { width: 0; height: 0; border-left: 6.5px solid transparent; border-right: 6.5px solid transparent; border-bottom: 11px solid var(--ambar); }
+.forma.rojo { background: var(--rojo); border-radius: 1px; }
+.var { color: var(--ink-2); white-space: nowrap; }
+.var.bien { color: var(--verde); }
+.var.mal { color: var(--rojo); }
+.tira-merma { margin-top: 12px; font-family: var(--sans); font-size: 14px; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+
+/* Lo que vale un punto */
+.punto { background: var(--punto-bg); color: var(--punto-ink); border-radius: 12px; padding: clamp(20px, 4vw, 34px); }
+.punto p { margin: 0; }
+.punto .grande { font-size: clamp(22px, 4.4vw, 34px); line-height: 1.3; }
+.punto .grande .num { font-weight: 600; color: var(--punto-cifra); white-space: nowrap; }
+.punto .chica { margin-top: 10px; font-size: clamp(17px, 2.6vw, 20px); opacity: .88; }
+.punto .chica .num { font-weight: 600; white-space: nowrap; }
+.punto .pie-punto { margin-top: 14px; font-size: 15px; font-style: italic; opacity: .75; }
+
+/* Tablas */
+.tabla-env { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--line); }
+th { font-weight: 500; color: var(--ink-3); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+td.n, th.n { text-align: right; white-space: nowrap; }
+tr.resaltado td { background: color-mix(in srgb, var(--accent) 10%, transparent); font-weight: 600; }
+tr.subtotal td { font-weight: 600; border-top: 1px solid var(--ink-3); }
+tr.total td { font-weight: 600; border-top: 2px solid var(--ink); }
+.celda-tiempo { font-weight: 600; }
+@media (max-width: 520px) {
+  th, td { padding: 7px 5px; font-size: 13px; }
+  th { font-size: 11px; letter-spacing: .02em; }
+  .opc { display: none; }
+  .panel { padding: 14px 12px; }
+}
+.celda-tiempo .forma { margin-right: 6px; vertical-align: 0; }
+
+/* Matriz de menú */
+.categorias { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; margin-top: 16px; }
+.categoria { border: 1px solid var(--line); border-radius: 10px; padding: 14px; background: var(--surface); }
+.categoria h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin: 0 0 2px; display: flex; align-items: center; gap: 8px; }
+.categoria .accion { font-size: 14px; color: var(--ink-2); margin: 0 0 8px; }
+.categoria ul { list-style: none; margin: 0; padding: 0; font-family: var(--sans); font-size: 13px; }
+.categoria li { display: flex; justify-content: space-between; gap: 8px; padding: 4px 0; border-top: 1px solid var(--line); }
+.categoria li span:last-child { color: var(--ink-3); white-space: nowrap; }
+.categoria .vacia { color: var(--ink-3); font-style: italic; border: 0; }
+.pastilla { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+.datos-matriz { font-family: var(--sans); font-size: 13px; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 10px; }
+
+/* Fugas y cifras grandes */
+.cifras { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; margin-bottom: 16px; }
+.cifra-grande { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; box-shadow: var(--sombra); }
+.cifra-grande .etq { font-size: 13px; color: var(--ink-2); font-weight: 500; }
+.cifra-grande .cifra { font-size: clamp(28px, 6vw, 40px); font-weight: 600; color: var(--accent); line-height: 1.15; }
+.cifra-grande .sub { font-family: var(--sans); font-size: 13px; color: var(--ink-3); }
+.panel h3 { font-family: var(--sans); font-size: 14px; font-weight: 600; margin: 0 0 10px; color: var(--ink-2); }
+
+/* Quick wins */
+.regla { font-style: italic; color: var(--ink-2); border-left: 3px solid var(--ocre); padding: 4px 0 4px 14px; margin: 0 0 16px; }
+ol.wins { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 8px; }
+ol.wins li label { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); cursor: pointer; min-height: 48px; }
+ol.wins .n-win { font-family: var(--sans); font-weight: 600; color: var(--ink-3); width: 22px; text-align: right; flex: none; }
+ol.wins input { width: 20px; height: 20px; accent-color: var(--verde); flex: none; margin: 0; }
+ol.wins .t-win { flex: 1; }
+ol.wins li.hecho .t-win { color: var(--ink-3); text-decoration: line-through; text-decoration-thickness: 1px; }
+ol.wins li.toca label { border: 2px solid var(--accent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.toca-ahora { font-family: var(--sans); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--bg); background: var(--accent); padding: 2px 7px; border-radius: 3px; white-space: nowrap; }
+.progreso-wins { font-family: var(--sans); font-size: 14px; color: var(--ink-2); margin: 12px 0 0; }
+
+/* Pie */
+footer { border-top: 1px solid var(--line); background: var(--surface); margin-top: 30px; }
+footer .envoltura { padding-top: 22px; padding-bottom: 28px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; font-size: 15px; color: var(--ink-2); }
+.whatsapp { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-family: var(--sans); }
+.whatsapp .tel { user-select: all; -webkit-user-select: all; font-weight: 600; color: var(--ink); }
+.fuente-datos { font-family: var(--sans); font-size: 13px; color: var(--ink-3); }
+</style>
+</head>
+<body>
+
+<header class="cab">
+  <div class="envoltura">
+    <div class="cab-titulo">
+      <p class="sobretitulo">Kit de operación · Tablero</p>
+      <label for="nombre" class="sr" style="position:absolute;left:-9999px">Nombre del restaurante</label>
+      <input id="nombre" type="text" value="Restaurante de referencia" maxlength="60" autocomplete="off" spellcheck="false">
+      <div class="cab-meta">
+        <span id="etiqueta-ejemplo" class="etiqueta-ejemplo">Ejemplo</span>
+        <span id="fuente" class="fuente-datos"></span>
+      </div>
+    </div>
+    <div class="cab-acciones">
+      <label for="semana" style="position:absolute;left:-9999px">Semana que se muestra</label>
+      <select id="semana" aria-label="Semana que se muestra"></select>
+      <input id="archivo" type="file" accept=".xlsx,.xlsm,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+      <button id="cargar" class="boton boton-principal" type="button">Cargar mi Excel</button>
+      <button id="volver-ejemplo" class="boton boton-texto" type="button" hidden>Volver al ejemplo</button>
+    </div>
+  </div>
+</header>
+
+<main class="envoltura">
+  <div id="aviso" class="aviso" role="status" hidden></div>
+
+  <section class="bloque" id="s-cinco">
+    <h2>Los cinco números</h2>
+    <p class="entrada" id="entrada-cinco">La semana en cinco cifras. Verde, sigue igual; ámbar, mira; rojo, actúa esta semana.</p>
+    <div id="cinco"></div>
+  </section>
+
+  <section class="bloque" id="s-punto">
+    <h2>Lo que vale un punto</h2>
+    <div id="punto"></div>
+  </section>
+
+  <section class="bloque" id="s-resultados">
+    <h2>Estado de resultados del mes</h2>
+    <p class="entrada">De la venta a lo que queda. El prime cost, en ladrillo, es lo único que se puede mover esta semana.</p>
+    <div id="resultados"></div>
+  </section>
+
+  <section class="bloque" id="s-tendencia">
+    <h2>Tendencia</h2>
+    <p class="entrada">Las semanas cargadas, con la banda de referencia sombreada en verde y la línea roja donde empieza el problema.</p>
+    <div id="tendencia"></div>
+  </section>
+
+  <section class="bloque" id="s-menu">
+    <h2>Matriz de menú</h2>
+    <p class="entrada">Cada plato por popularidad y por margen en pesos. La renta se paga con pesos, no con porcentajes.</p>
+    <div id="menu"></div>
+  </section>
+
+  <section class="bloque" id="s-fugas">
+    <h2>Las fugas</h2>
+    <p class="entrada">Lo que consumiste contra lo que vendiste, proyectado al mes.</p>
+    <div id="fugas"></div>
+  </section>
+
+  <section class="bloque" id="s-reservas">
+    <h2>Reservas y no-show</h2>
+    <p class="entrada">La mesa vacía más cara es la que le negaste a otro.</p>
+    <div id="reservas"></div>
+  </section>
+
+  <section class="bloque" id="s-pase">
+    <h2>Tiempo del pase</h2>
+    <p class="entrada">De la comanda a la mesa, por plato y franja. Verde hasta 15 minutos, ámbar de 15 a 20, rojo más de 20.</p>
+    <div id="pase"></div>
+  </section>
+
+  <section class="bloque" id="s-wins">
+    <h2>Los doce quick wins</h2>
+    <p class="regla">Una mejora cada tres o cuatro semanas, con el número de la anterior ya estabilizado.</p>
+    <ol class="wins" id="wins"></ol>
+    <p class="progreso-wins" id="progreso-wins"></p>
+  </section>
+</main>
+
+<footer>
+  <div class="envoltura">
+    <span>Kit de operación · <em>Historia de la hostelería y la gastronomía</em> · Sergio Berriozábal Serrano</span>
+    <span class="whatsapp">WhatsApp <span class="tel" id="tel">+52 984 187 8284</span>
+      <button class="boton" type="button" id="copiar">Copiar</button></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Datos del restaurante de referencia (los mismos del Excel) ---------- */
+  var EJEMPLO = {
+    pnl: { ventaAlim: 3500000, ventaBeb: 1500000, costoAlim: 1050000, costoBeb: 300000, nomina: 1500000, renta: 600000, otros: 650000, impuestos: 300000 },
+    semanas: [
+      { semana: 'S-1', ventaAlim: 808000, ventaBeb: 346000, costoAlim: 246000, costoBeb: 71000, nomina: 346000, merma: 9800, compras: 318000, comensales: 2400 },
+      { semana: 'S-2', ventaAlim: 792000, ventaBeb: 338000, costoAlim: 249000, costoBeb: 70500, nomina: 346000, merma: 12400, compras: 322000, comensales: 2355 },
+      { semana: 'S-3', ventaAlim: 845000, ventaBeb: 364000, costoAlim: 251000, costoBeb: 71200, nomina: 351000, merma: 8900, compras: 329000, comensales: 2480 },
+      { semana: 'S-4', ventaAlim: 821000, ventaBeb: 352000, costoAlim: 262000, costoBeb: 76800, nomina: 346000, merma: 14600, compras: 341000, comensales: 2410 }
+    ],
+    menu: [
+      { plato: 'Tacos de pescado (3)', unidades: 2400, precio: 185, costo: 52 },
+      { plato: 'Hamburguesa de la casa', unidades: 1980, precio: 245, costo: 86 },
+      { plato: 'Postre del día', unidades: 1720, precio: 115, costo: 26 },
+      { plato: 'Ensalada de la casa', unidades: 1620, precio: 155, costo: 38 },
+      { plato: 'Tostada de atún', unidades: 1460, precio: 165, costo: 55 },
+      { plato: 'Pulpo a la brasa', unidades: 1350, precio: 320, costo: 92 },
+      { plato: 'Sopa de tortilla', unidades: 1180, precio: 125, costo: 29 },
+      { plato: 'Camarones al ajillo', unidades: 1040, precio: 345, costo: 118 },
+      { plato: 'Ribeye 350 g', unidades: 980, precio: 590, costo: 210 },
+      { plato: 'Pechuga rellena', unidades: 760, precio: 265, costo: 78 },
+      { plato: 'Pasta del día', unidades: 620, precio: 225, costo: 58 },
+      { plato: 'Risotto de hongos', unidades: 540, precio: 285, costo: 62 }
+    ],
+    refs: [
+      { articulo: 'Ribeye', inicial: 18, compras: 62, final: 15, vendidas: 246, porcion: 0.26, costoUnit: 390 },
+      { articulo: 'Pulpo', inicial: 9, compras: 26, final: 7, vendidas: 153, porcion: 0.18, costoUnit: 320 },
+      { articulo: 'Pechuga de pollo', inicial: 12, compras: 40, final: 11, vendidas: 213, porcion: 0.19, costoUnit: 145 },
+      { articulo: 'Camarón', inicial: 7, compras: 24, final: 6, vendidas: 136, porcion: 0.18, costoUnit: 310 },
+      { articulo: 'Queso Oaxaca', inicial: 6, compras: 22, final: 5, vendidas: 325, porcion: 0.07, costoUnit: 165 },
+      { articulo: 'Aceite de oliva', inicial: 8, compras: 18, final: 7, vendidas: 1190, porcion: 0.015, costoUnit: 180 },
+      { articulo: 'Tequila blanco', inicial: 6, compras: 14, final: 5, vendidas: 305, porcion: 0.045, costoUnit: 420 },
+      { articulo: 'Mezcal', inicial: 4, compras: 9, final: 3.5, vendidas: 190, porcion: 0.045, costoUnit: 560 },
+      { articulo: 'Ron blanco', inicial: 5, compras: 10, final: 4, vendidas: 230, porcion: 0.045, costoUnit: 300 },
+      { articulo: 'Vino tinto de la casa', inicial: 22, compras: 70, final: 18, vendidas: 352, porcion: 0.2, costoUnit: 190 }
+    ],
+    barra: [
+      { producto: 'Tequila blanco', contenido: 1000, servicio: 45, envases: 15, vendidos: 305, precio: 165 },
+      { producto: 'Mezcal', contenido: 1000, servicio: 45, envases: 9.5, vendidos: 190, precio: 185 },
+      { producto: 'Ron blanco', contenido: 1000, servicio: 45, envases: 11, vendidos: 230, precio: 145 },
+      { producto: 'Vino tinto de la casa', contenido: 750, servicio: 150, envases: 74, vendidos: 352, precio: 180 },
+      { producto: 'Ginebra', contenido: 1000, servicio: 50, envases: 6, vendidos: 116, precio: 175 },
+      { producto: 'Whisky', contenido: 1000, servicio: 50, envases: 7, vendidos: 135, precio: 210 },
+      { producto: 'Vodka', contenido: 1000, servicio: 45, envases: 8, vendidos: 172, precio: 160 }
+    ],
+    reservas: {
+      objetivo: 0.04,
+      meses: [
+        { mes: 'Enero', reservas: 400, noShows: 48, personas: 2.5, ticket: 480 },
+        { mes: 'Febrero', reservas: 412, noShows: 44, personas: 2.5, ticket: 480 },
+        { mes: 'Marzo', reservas: 428, noShows: 38, personas: 2.5, ticket: 480 },
+        { mes: 'Abril', reservas: 440, noShows: 29, personas: 2.5, ticket: 480 },
+        { mes: 'Mayo', reservas: 455, noShows: 22, personas: 2.5, ticket: 480 },
+        { mes: 'Junio', reservas: 470, noShows: 19, personas: 2.5, ticket: 480 }
+      ]
+    },
+    pase: [
+      ['13–15', 'Tacos de pescado (3)', '13:40', '13:51'],
+      ['13–15', 'Ribeye 350 g', '13:44', '14:03'],
+      ['13–15', 'Pulpo a la brasa', '13:52', '14:14'],
+      ['13–15', 'Hamburguesa de la casa', '14:05', '14:21'],
+      ['21–23', 'Ribeye 350 g', '21:18', '21:40'],
+      ['21–23', 'Pulpo a la brasa', '21:25', '21:51'],
+      ['21–23', 'Camarones al ajillo', '21:31', '21:49'],
+      ['21–23', 'Hamburguesa de la casa', '21:38', '22:02'],
+      ['13–15', 'Pulpo a la brasa', '13:36', '13:55'],
+      ['13–15', 'Ensalada de la casa', '13:41', '13:47'],
+      ['21–23', 'Ribeye 350 g', '21:22', '21:47'],
+      ['21–23', 'Pulpo a la brasa', '21:29', '21:56'],
+      ['21–23', 'Pasta del día', '21:44', '22:01'],
+      ['21–23', 'Hamburguesa de la casa', '21:50', '22:13']
+    ].map(function (r) { return { franja: r[0], plato: r[1], comanda: r[2], salida: r[3], minutos: null }; })
+  };
+
+  var QUICK_WINS = [
+    'La medida justa (diez referencias y barra)',
+    'El tiempo de la comanda a la mesa',
+    'La ficha del plato con foto',
+    'La reserva que se confirma',
+    'La carta que vende',
+    'Vender en las horas muertas',
+    'Precio y oferta para la hora valle',
+    'Un producto de la casa en el mostrador',
+    'Recibir antes de preguntar',
+    'Una promesa que cabe en una línea',
+    'Tres datos por cliente frecuente',
+    'Tu propio inspector anónimo'
+  ];
+
+  var ACCIONES = {
+    'Estrella': 'Mantener y destacar. Arriba a la derecha y primera posición de sección.',
+    'Caballo de batalla': 'Ajustar costo o precio. Se vende solo: trabaja el margen.',
+    'Rompecabezas': 'Promover o reubicar. Mejor descripción, mejor sitio en la carta.',
+    'Perro': 'Sustituir o eliminar. Ni se vende ni deja.'
+  };
+  var PLURAL = { 'Estrella': 'Estrellas', 'Caballo de batalla': 'Caballos de batalla', 'Rompecabezas': 'Rompecabezas', 'Perro': 'Perros' };
+
+  var SEMANAS_MES = 4.33;
+  var FUENTE = 'Poppins, "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif';
+  var CLAVES = { datos: 'kitop.datos.v1', nombre: 'kitop.nombre', wins: 'kitop.wins', semana: 'kitop.semana' };
+
+  /* ---------- Almacenamiento local, siempre envuelto ---------- */
+  function leer(clave) {
+    try { var t = window.localStorage.getItem(clave); return t == null ? null : JSON.parse(t); } catch (e) { return null; }
+  }
+  function guardar(clave, valor) {
+    try { window.localStorage.setItem(clave, JSON.stringify(valor)); return true; } catch (e) { return false; }
+  }
+  function borrar(clave) {
+    try { window.localStorage.removeItem(clave); } catch (e) { /* sin almacenamiento */ }
+  }
+
+  /* ---------- Formato ---------- */
+  var nfPesos = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  var nfPesos2 = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  function pesos(v) { return isFinite(v) ? nfPesos.format(Math.round(v) === 0 ? 0 : v) : '—'; }
+  function pesos2(v) { return isFinite(v) ? nfPesos2.format(v) : '—'; }
+  function numero(v, d) { return isFinite(v) ? v.toLocaleString('es-MX', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }) : '—'; }
+  function pct(v, d) { d = d == null ? 1 : d; return isFinite(v) ? (v * 100).toLocaleString('es-MX', { minimumFractionDigits: d, maximumFractionDigits: d }) + ' %' : '—'; }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function div(a, b) { return b ? a / b : NaN; }
+
+  /* ---------- Cálculo: las mismas fórmulas del Excel ---------- */
+  function calcSemana(s) {
+    var venta = s.ventaAlim + s.ventaBeb;
+    return {
+      semana: s.semana,
+      venta: venta,
+      food: div(s.costoAlim, s.ventaAlim),
+      bebidas: div(s.costoBeb, s.ventaBeb),
+      personal: div(s.nomina, venta),
+      prime: div(s.costoAlim + s.costoBeb + s.nomina, venta),
+      merma: div(s.merma, s.compras),
+      ticket: div(venta, s.comensales)
+    };
+  }
+
+  function calcPnl(p) {
+    var venta = p.ventaAlim + p.ventaBeb;
+    var prime = p.costoAlim + p.costoBeb + p.nomina;
+    var operacion = venta - p.costoAlim - p.costoBeb - p.nomina - p.renta - p.otros;
+    return {
+      venta: venta, prime: prime, operacion: operacion, neta: operacion - p.impuestos,
+      puntoPrime: venta * 0.01, puntoFood: p.ventaAlim * 0.01
+    };
+  }
+
+  function calcMenu(menu) {
+    var unidades = 0, margenTotal = 0;
+    menu.forEach(function (m) { unidades += m.unidades; margenTotal += m.unidades * (m.precio - m.costo); });
+    var umbral = menu.length ? 0.7 / menu.length : NaN;
+    var margenMedio = div(margenTotal, unidades);
+    var platos = menu.map(function (m) {
+      var mezcla = div(m.unidades, unidades);
+      var margen = m.precio - m.costo;
+      var alta = mezcla >= umbral, alto = margen >= margenMedio;
+      var cat = alta ? (alto ? 'Estrella' : 'Caballo de batalla') : (alto ? 'Rompecabezas' : 'Perro');
+      return { plato: m.plato, unidades: m.unidades, precio: m.precio, costo: m.costo, mezcla: mezcla, margen: margen, categoria: cat };
+    });
+    return { platos: platos, umbral: umbral, margenMedio: margenMedio, unidades: unidades };
+  }
+
+  function calcRefs(refs) {
+    var semanal = 0, teorico = 0;
+    var filas = refs.map(function (r) {
+      var real = r.inicial + r.compras - r.final;
+      var teo = r.vendidas * r.porcion;
+      var fuga = (real - teo) * r.costoUnit;
+      semanal += fuga; teorico += teo * r.costoUnit;
+      return { nombre: r.articulo, semanal: fuga, mes: fuga * SEMANAS_MES };
+    });
+    return { filas: filas, semanal: semanal, mes: semanal * SEMANAS_MES, sobreTeorico: div(semanal, teorico) };
+  }
+
+  function calcBarra(barra) {
+    var semanal = 0;
+    var filas = barra.map(function (b) {
+      var porEnvase = div(b.contenido, b.servicio);
+      var esperados = (isFinite(porEnvase) ? porEnvase : 0) * b.envases;
+      var fuga = (esperados - b.vendidos) * b.precio;
+      semanal += fuga;
+      return { nombre: b.producto, semanal: fuga, mes: fuga * SEMANAS_MES };
+    });
+    return { filas: filas, semanal: semanal, mes: semanal * SEMANAS_MES };
+  }
+
+  function calcReservas(r) {
+    var meses = r.meses.map(function (m) {
+      var perdida = m.noShows * m.personas * m.ticket;
+      var alObjetivo = m.reservas * r.objetivo * m.personas * m.ticket;
+      return { mes: m.mes, reservas: m.reservas, noShows: m.noShows, porc: div(m.noShows, m.reservas), perdida: perdida, alObjetivo: alObjetivo, recupera: perdida - alObjetivo };
+    });
+    return { objetivo: r.objetivo, meses: meses };
+  }
+
+  function aMinutos(v) {
+    if (v == null || v === '') return NaN;
+    if (typeof v === 'number') { var f = v % 1; if (v >= 1 && f === 0) return NaN; return (v >= 1 ? f : v) * 1440; }
+    var m = String(v).trim().match(/^(\d{1,2})[:.h](\d{2})(?::(\d{2}))?\s*(a\.?\s*m\.?|p\.?\s*m\.?)?$/i);
+    if (!m) return NaN;
+    var h = +m[1], mi = +m[2] + (m[3] ? +m[3] / 60 : 0);
+    if (m[4]) { var pm = /^p/i.test(m[4]); if (pm && h < 12) h += 12; if (!pm && h === 12) h = 0; }
+    return h * 60 + mi;
+  }
+  function franjaDe(minComanda) {
+    var h = Math.floor(minComanda / 60) % 24;
+    var ini = h % 2 === 1 ? h : h - 1;
+    return ini + '–' + (ini + 2);
+  }
+  function calcPase(pase) {
+    var grupos = {};
+    pase.forEach(function (p) {
+      var c = aMinutos(p.comanda), s = aMinutos(p.salida);
+      var min = isFinite(c) && isFinite(s) ? s - c : (typeof p.minutos === 'number' ? p.minutos : NaN);
+      if (isFinite(c) && isFinite(s) && min < 0) min += 1440;
+      if (!isFinite(min)) return;
+      min = Math.round(min * 100) / 100;
+      var franja = p.franja || (isFinite(c) ? franjaDe(c) : 'Sin franja');
+      var k = franja + '|' + p.plato;
+      (grupos[k] = grupos[k] || { franja: franja, plato: p.plato, lista: [] }).lista.push(min);
+    });
+    return Object.keys(grupos).map(function (k) {
+      var g = grupos[k], suma = g.lista.reduce(function (a, b) { return a + b; }, 0);
+      return { franja: g.franja, plato: g.plato, medio: suma / g.lista.length, maximo: Math.max.apply(null, g.lista), comandas: g.lista.length };
+    }).sort(function (a, b) { return b.medio - a.medio || b.maximo - a.maximo; });
+  }
+
+  /* ---------- Semáforos ---------- */
+  var BANDAS = {
+    food: { texto: 'Banda 28–32 %', verde: [0.28, 0.32], rojoDesde: 0.35, estado: function (v) { return v > 0.35 ? 'rojo' : (v > 0.32 || v < 0.28) ? 'ambar' : 'verde'; } },
+    bebidas: { texto: 'Banda 18–22 %', verde: [0.18, 0.22], rojoDesde: 0.25, estado: function (v) { return v > 0.25 ? 'rojo' : v > 0.22 ? 'ambar' : 'verde'; } },
+    personal: { texto: 'Banda 25–30 %', verde: [0.25, 0.30], rojoDesde: 0.35, estado: function (v) { return v > 0.35 ? 'rojo' : v > 0.30 ? 'ambar' : 'verde'; } },
+    prime: { texto: 'Menos de 60 %', verde: [null, 0.60], rojoDesde: 0.65, estado: function (v) { return v > 0.65 ? 'rojo' : v >= 0.60 ? 'ambar' : 'verde'; } },
+    merma: { texto: 'Menos de 3 %', verde: [null, 0.03], rojoDesde: 0.05, estado: function (v) { return v > 0.05 ? 'rojo' : v >= 0.03 ? 'ambar' : 'verde'; } }
+  };
+  var NOMBRE_ESTADO = { verde: 'En banda', ambar: 'Vigilar', rojo: 'Actuar' };
+  function forma(estado) { return '<span class="forma ' + estado + '" aria-hidden="true"></span>'; }
+
+  /* ---------- Lectura del Excel ---------- */
+  function norm(s) { return String(s == null ? '' : s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ').trim(); }
+
+  function aNumero(c) {
+    if (!c || c.v == null || c.v === '') return null;
+    if (typeof c.v === 'number') return c.v;
+    if (typeof c.v === 'boolean') return null;
+    var t = String(c.v).trim(), esPct = /%$/.test(t);
+    t = t.replace(/[$\s%]/g, '');
+    if (/^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(t)) t = t.replace(/\./g, '').replace(',', '.');
+    else t = t.replace(/,/g, '');
+    var n = parseFloat(t);
+    if (!isFinite(n)) return null;
+    return esPct ? n / 100 : n;
+  }
+
+  function hojaComoMatriz(ws) {
+    if (!ws || !ws['!ref']) return [];
+    var rango = XLSX.utils.decode_range(ws['!ref']), filas = [];
+    for (var r = rango.s.r; r <= rango.e.r; r++) {
+      var fila = [];
+      for (var c = 0; c <= rango.e.c; c++) {
+        var celda = ws[XLSX.utils.encode_cell({ r: r, c: c })];
+        fila.push(celda ? { v: celda.v, f: celda.f, w: celda.w } : null);
+      }
+      filas.push(fila);
+    }
+    return filas;
+  }
+
+  function buscarHoja(wb, nombre) {
+    if (wb.Sheets[nombre]) return wb.Sheets[nombre];
+    var objetivo = norm(nombre), prefijo = objetivo.slice(0, 3);
+    for (var i = 0; i < wb.SheetNames.length; i++) {
+      if (norm(wb.SheetNames[i]) === objetivo) return wb.Sheets[wb.SheetNames[i]];
+    }
+    for (var j = 0; j < wb.SheetNames.length; j++) {
+      if (norm(wb.SheetNames[j]).indexOf(prefijo) === 0) return wb.Sheets[wb.SheetNames[j]];
+    }
+    return null;
+  }
+
+  // Localiza una tabla por el texto de sus encabezados. Cada campo lleva una lista de patrones;
+  // entre varias columnas candidatas se prefiere la que el usuario escribe (sin fórmula) y sin «%».
+  function leerTabla(filas, campos, requeridos) {
+    for (var r = 0; r < Math.min(filas.length, 60); r++) {
+      var fila = filas[r] || [];
+      var encabezados = fila.map(function (c) { return c && typeof c.v === 'string' ? norm(c.v) : ''; });
+      if (encabezados.filter(Boolean).length < 2) continue;
+      var mapa = {}, usadas = {};
+      Object.keys(campos).forEach(function (campo) {
+        var def = campos[campo], candidatas = [];
+        for (var p = 0; p < def.patrones.length && !candidatas.length; p++) {
+          encabezados.forEach(function (h, ci) {
+            if (h && !usadas[ci] && def.patrones[p].test(h) && (def.permitePct || h.indexOf('%') < 0)) candidatas.push(ci);
+          });
+        }
+        if (!candidatas.length) return;
+        var elegida = candidatas[0];
+        if (candidatas.length > 1) {
+          var siguiente = filas[r + 1] || [];
+          var sinFormula = candidatas.filter(function (ci) { return !(siguiente[ci] && siguiente[ci].f); });
+          if (sinFormula.length) elegida = sinFormula[0];
+        }
+        mapa[campo] = elegida; usadas[elegida] = true;
+      });
+      if (!requeridos.every(function (k) { return k in mapa; })) continue;
+      var datos = [];
+      for (var d = r + 1; d < filas.length; d++) {
+        var f = filas[d] || [], reg = {}, valido = true;
+        var primerTexto = f.filter(function (c) { return c && typeof c.v === 'string'; })[0];
+        if (primerTexto && /^total/.test(norm(primerTexto.v))) continue;
+        Object.keys(mapa).forEach(function (campo) {
+          var celda = f[mapa[campo]], def = campos[campo];
+          if (def.tipo === 'texto') { reg[campo] = celda && celda.v != null ? String(celda.w != null && typeof celda.v !== 'string' ? celda.w : celda.v).trim() : ''; }
+          else if (def.tipo === 'hora') { reg[campo] = celda ? celda.v : null; }
+          else { reg[campo] = aNumero(celda); }
+        });
+        requeridos.forEach(function (k) {
+          var t = campos[k].tipo;
+          if (t === 'texto' || t === 'hora') { if (reg[k] == null || reg[k] === '') valido = false; }
+          else if (reg[k] == null) valido = false;
+        });
+        if (valido) datos.push(reg);
+      }
+      return { datos: datos, filaEncabezado: r };
+    }
+    return null;
+  }
+
+  function T(patrones, tipo, permitePct) { return { patrones: patrones, tipo: tipo || 'numero', permitePct: !!permitePct }; }
+
+  function leerPnl(ws) {
+    var filas = hojaComoMatriz(ws);
+    var defs = {
+      ventaAlim: /^venta de alimentos/, ventaBeb: /^venta de bebidas/, costoAlim: /^costo de alimentos/, costoBeb: /^costo de bebidas/,
+      nomina: /^nomina/, renta: /^renta/, otros: /^(marketing|otros)/, impuestos: /^impuestos/
+    };
+    var orden = Object.keys(defs), res = {}, etiquetas = {};
+    filas.forEach(function (f) {
+      var a = f[0], b = f[1];
+      if (!a || typeof a.v !== 'string' || !b || b.f) return;
+      var n = aNumero(b), h = norm(a.v);
+      if (n == null) return;
+      orden.forEach(function (k) { if (!(k in res) && defs[k].test(h)) { res[k] = n; etiquetas[k] = h; } });
+    });
+    if (orden.some(function (k) { return !(k in res); })) {
+      // Respaldo: columna B, filas 5 a 12, en el orden del libro
+      res = {}; etiquetas = {};
+      for (var i = 0; i < 8; i++) {
+        var c = (filas[4 + i] || [])[1], n = aNumero(c);
+        if (n == null) return null;
+        res[orden[i]] = n;
+      }
+    }
+    // Los costos pueden venir como % de su venta (así viene el kit) o en pesos
+    if ((etiquetas.costoAlim && etiquetas.costoAlim.indexOf('%') >= 0) || res.costoAlim <= 1.5) res.costoAlim = res.costoAlim * res.ventaAlim;
+    if ((etiquetas.costoBeb && etiquetas.costoBeb.indexOf('%') >= 0) || res.costoBeb <= 1.5) res.costoBeb = res.costoBeb * res.ventaBeb;
+    return res.ventaAlim + res.ventaBeb > 0 ? res : null;
+  }
+
+  function leerSemanas(ws) {
+    var t = leerTabla(hojaComoMatriz(ws), {
+      semana: T([/^semana/], 'texto'),
+      ventaAlim: T([/venta.*alim/]), ventaBeb: T([/venta.*beb/]),
+      costoAlim: T([/costo.*alim/]), costoBeb: T([/costo.*beb/]),
+      nomina: T([/nomina/, /^personal/]), merma: T([/^merma/]), compras: T([/compras/]),
+      comensales: T([/comensales|cubiertos|^pax/])
+    }, ['ventaAlim', 'ventaBeb', 'costoAlim', 'costoBeb', 'nomina', 'comensales']);
+    if (!t) return null;
+    var lista = t.datos.filter(function (s) { return s.ventaAlim + s.ventaBeb > 0; }).map(function (s, i) {
+      s.semana = s.semana || ('S-' + (i + 1));
+      s.merma = s.merma || 0; s.compras = s.compras || 0;
+      return s;
+    });
+    return lista.length ? lista : null;
+  }
+
+  function leerMenu(ws) {
+    var t = leerTabla(hojaComoMatriz(ws), {
+      plato: T([/^plato|^platillo/], 'texto'), unidades: T([/^unidades/]), precio: T([/^precio/]), costo: T([/^costo/])
+    }, ['plato', 'unidades', 'precio', 'costo']);
+    return t && t.datos.length ? t.datos : null;
+  }
+
+  function leerRefs(ws) {
+    var t = leerTabla(hojaComoMatriz(ws), {
+      articulo: T([/^articulo|^referencia|^insumo|^producto/], 'texto'),
+      inicial: T([/inicial/]), compras: T([/^compras/]), final: T([/final/]),
+      vendidas: T([/vendid/]), porcion: T([/^porcion/]), costoUnit: T([/costo unitario/, /^costo/])
+    }, ['articulo', 'inicial', 'compras', 'final', 'vendidas', 'porcion', 'costoUnit']);
+    return t && t.datos.length ? t.datos : null;
+  }
+
+  function leerBarra(ws) {
+    var t = leerTabla(hojaComoMatriz(ws), {
+      producto: T([/^producto|^bebida|^articulo/], 'texto'),
+      contenido: T([/^contenido|capacidad/]), servicio: T([/^servicio(?!s)/, /^medida/]),
+      envases: T([/^envases/]), vendidos: T([/vendid/]), precio: T([/^precio/])
+    }, ['producto', 'contenido', 'servicio', 'envases', 'vendidos', 'precio']);
+    return t && t.datos.length ? t.datos : null;
+  }
+
+  function leerReservas(ws) {
+    var filas = hojaComoMatriz(ws);
+    var t = leerTabla(filas, {
+      mes: T([/^mes/], 'texto'), reservas: T([/^reservas?$/, /^reservas?\b/]), noShows: T([/^no.?shows?/]),
+      personas: T([/^personas por/]), ticket: T([/^ticket/])
+    }, ['mes', 'reservas', 'noShows']);
+    if (!t || !t.datos.length) return null;
+    function parametro(re) {
+      for (var r = 0; r < filas.length; r++) {
+        var f = filas[r] || [];
+        for (var c = 0; c < f.length; c++) {
+          if (f[c] && typeof f[c].v === 'string' && re.test(norm(f[c].v))) {
+            for (var d = c + 1; d < f.length; d++) { var n = aNumero(f[d]); if (n != null) return n; }
+          }
+        }
+      }
+      return null;
+    }
+    var objetivo = parametro(/^objetivo/);
+    if (objetivo == null) objetivo = 0.04;
+    if (objetivo > 1) objetivo = objetivo / 100;
+    var personasDef = parametro(/^personas por reserva/) || 2.5, ticketDef = parametro(/^ticket/) || 480;
+    return {
+      objetivo: objetivo,
+      meses: t.datos.map(function (m) {
+        return { mes: m.mes, reservas: m.reservas, noShows: m.noShows, personas: m.personas || personasDef, ticket: m.ticket || ticketDef };
+      })
+    };
+  }
+
+  function leerPase(ws) {
+    var filas = hojaComoMatriz(ws);
+    var t = leerTabla(filas, {
+      plato: T([/^plato|^platillo/], 'texto'), franja: T([/^franja|^turno|^horario/], 'texto'),
+      comanda: T([/comanda/], 'hora'), salida: T([/salida/], 'hora')
+    }, ['plato', 'comanda', 'salida']);
+    if (t) t.datos.forEach(function (p) { p.minutos = null; });
+    if (!t) t = leerTabla(filas, { plato: T([/^plato|^platillo/], 'texto'), franja: T([/^franja|^turno/], 'texto'), minutos: T([/^minutos|^tiempo/]) }, ['plato', 'minutos']);
+    return t && t.datos.length ? t.datos : null;
+  }
+
+  function leerLibro(wb) {
+    var hojas = {
+      pnl: ['04 Estado de resultados', leerPnl],
+      semanas: ['05 Los cinco números', leerSemanas],
+      menu: ['03 Ingeniería de menú', leerMenu],
+      refs: ['01 Diez referencias', leerRefs],
+      barra: ['06 Control de barra', leerBarra],
+      reservas: ['10 Reservas y no-show', leerReservas],
+      pase: ['07 Tiempo del pase', leerPase]
+    };
+    var datos = {}, encontradas = 0;
+    Object.keys(hojas).forEach(function (k) {
+      var ws = buscarHoja(wb, hojas[k][0]);
+      try { datos[k] = ws ? hojas[k][1](ws) : null; } catch (e) { datos[k] = null; }
+      if (datos[k]) encontradas++;
+    });
+    return { datos: datos, encontradas: encontradas };
+  }
+
+  /* ---------- Estado de la página ---------- */
+  var estado = { fuente: 'ejemplo', datos: EJEMPLO, archivo: null, cargado: null, semana: null };
+  var graficos = [];
+
+  function colores() {
+    var cs = getComputedStyle(document.documentElement);
+    function v(n) { return cs.getPropertyValue(n).trim(); }
+    return { ink: v('--ink'), ink2: v('--ink-2'), ink3: v('--ink-3'), line: v('--line'), accent: v('--accent'), ocre: v('--ocre'), verde: v('--verde'), ambar: v('--ambar'), rojo: v('--rojo'), banda: v('--banda'), surface: v('--surface'), bg: v('--bg') };
+  }
+
+  function sinDatos(id) { document.getElementById(id).innerHTML = '<div class="sin-datos">Sin datos en esta pestaña del Excel</div>'; }
+
+  function nuevoGrafico(canvas, config) {
+    if (!window.Chart) { canvas.parentNode.innerHTML = '<div class="sin-datos">No se pudo cargar la librería de gráficos.</div>'; return null; }
+    var g = new Chart(canvas, config);
+    graficos.push(g);
+    return g;
+  }
+
+  function baseOpciones(c) {
+    return {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      plugins: {
+        legend: { labels: { color: c.ink2, font: { family: FUENTE, size: 12 }, boxWidth: 12, boxHeight: 12 } },
+        tooltip: { titleFont: { family: FUENTE }, bodyFont: { family: FUENTE } }
+      }
+    };
+  }
+  function eje(c, extra) {
+    var e = { grid: { color: c.line, drawTicks: false }, border: { display: false }, ticks: { color: c.ink3, font: { family: FUENTE, size: 11 }, padding: 6 } };
+    for (var k in extra) e[k] = extra[k];
+    return e;
+  }
+
+  /* ---------- Render: cabecera ---------- */
+  function pintarCabecera() {
+    var ej = estado.fuente === 'ejemplo';
+    document.getElementById('etiqueta-ejemplo').hidden = !ej;
+    document.getElementById('volver-ejemplo').hidden = ej;
+    var f = document.getElementById('fuente');
+    if (ej) f.textContent = 'Datos del restaurante del capítulo 19. Carga tu Excel para ver los tuyos.';
+    else {
+      var cuando = '';
+      try { cuando = new Date(estado.cargado).toLocaleString('es-MX', { dateStyle: 'medium', timeStyle: 'short' }); } catch (e) { cuando = ''; }
+      f.textContent = estado.archivo + (cuando ? ' · cargado el ' + cuando : '');
+    }
+    var sel = document.getElementById('semana'), sem = estado.datos.semanas;
+    sel.innerHTML = '';
+    if (!sem || !sem.length) { sel.hidden = true; return; }
+    sel.hidden = false;
+    sem.forEach(function (s, i) { var o = document.createElement('option'); o.value = i; o.textContent = 'Semana ' + s.semana; sel.appendChild(o); });
+    if (estado.semana == null || estado.semana >= sem.length) estado.semana = sem.length - 1;
+    sel.value = estado.semana;
+  }
+
+  /* ---------- Render: los cinco números ---------- */
+  function pintarCinco() {
+    var sem = estado.datos.semanas;
+    if (!sem || !sem.length) { sinDatos('cinco'); return; }
+    var i = estado.semana, act = calcSemana(sem[i]), ant = i > 0 ? calcSemana(sem[i - 1]) : null;
+    var defs = [
+      { k: 'food', etq: 'Food cost' }, { k: 'bebidas', etq: 'Costo de bebidas' }, { k: 'personal', etq: 'Costo de personal' },
+      { k: 'prime', etq: 'Prime cost' }, { k: 'ticket', etq: 'Ticket promedio' }
+    ];
+    var html = '<div class="tarjetas">' + defs.map(function (d) {
+      var v = act[d.k], esTicket = d.k === 'ticket', est = esTicket ? '' : BANDAS[d.k].estado(v);
+      var variacion = '<span class="var">Sin semana anterior</span>';
+      if (ant && isFinite(ant[d.k]) && isFinite(v)) {
+        var delta = v - ant[d.k], sube = delta > 0, igual = Math.abs(delta) < (esTicket ? 0.005 : 0.00005);
+        var flecha = igual ? '=' : (sube ? '▲' : '▼');
+        var clase = igual ? '' : ((esTicket ? sube : !sube) ? 'bien' : 'mal');
+        var txt = esTicket ? pesos(Math.abs(delta)) : numero(Math.abs(delta * 100), 1) + ' pts';
+        variacion = '<span class="var ' + clase + '" title="Contra ' + esc(sem[i - 1].semana) + '"><span aria-hidden="true">' + flecha + '</span> ' + (igual ? 'Igual' : txt) + ' <span class="sr-vs">vs ' + esc(sem[i - 1].semana) + '</span></span>';
+      }
+      return '<article class="tarjeta"' + (est ? ' data-estado="' + est + '"' : '') + '>' +
+        '<span class="etq">' + d.etq + '</span>' +
+        '<span class="cifra">' + (esTicket ? pesos(v) : pct(v)) + '</span>' +
+        '<span class="banda">' + (esTicket ? 'Sin banda: según concepto' : BANDAS[d.k].texto) + '</span>' +
+        '<div class="fila-estado">' + (est ? '<span class="semaforo">' + forma(est) + NOMBRE_ESTADO[est] + '</span>' : '<span class="semaforo" style="color:var(--ink-3)">Solo variación</span>') + variacion + '</div>' +
+        '</article>';
+    }).join('') + '</div>';
+    var em = BANDAS.merma.estado(act.merma);
+    html += isFinite(act.merma)
+      ? '<div class="tira-merma"><span class="semaforo">' + forma(em) + 'Merma ' + pct(act.merma) + '</span><span>' + BANDAS.merma.texto + ' · ' + NOMBRE_ESTADO[em] + '</span>' +
+        (ant && isFinite(ant.merma) ? '<span class="var">Semana anterior ' + pct(ant.merma) + '</span>' : '') + '</div>'
+      : '';
+    document.getElementById('cinco').innerHTML = html;
+  }
+
+  /* ---------- Render: lo que vale un punto ---------- */
+  function pintarPunto() {
+    var p = estado.datos.pnl;
+    if (!p) { sinDatos('punto'); return; }
+    var r = calcPnl(p);
+    document.getElementById('punto').innerHTML = '<div class="punto">' +
+      '<p class="grande">En tu casa, un punto de prime cost son <span class="num">' + pesos(r.puntoPrime) + '</span> al mes.</p>' +
+      '<p class="chica">Un punto de food cost son <span class="num">' + pesos(r.puntoFood) + '</span> al mes.</p>' +
+      '<p class="pie-punto">Deja de discutirse si alguien «se esfuerza» y pasa a discutirse si el número bajó.</p></div>';
+  }
+
+  /* ---------- Render: estado de resultados ---------- */
+  function pintarResultados(c) {
+    var p = estado.datos.pnl;
+    if (!p) { sinDatos('resultados'); return; }
+    var r = calcPnl(p), V = r.venta;
+    var lineas = [
+      { t: 'Venta neta', corto: 'Venta', v: V, tipo: 'total' },
+      { t: 'Costo de alimentos', corto: 'Alimentos', v: -p.costoAlim, tipo: 'prime' },
+      { t: 'Costo de bebidas', corto: 'Bebidas', v: -p.costoBeb, tipo: 'prime' },
+      { t: 'Nómina', corto: 'Nómina', v: -p.nomina, tipo: 'prime' },
+      { t: 'Renta y servicios', corto: 'Renta', v: -p.renta, tipo: 'gasto' },
+      { t: 'Marketing, mantenimiento y otros', corto: 'Otros', v: -p.otros, tipo: 'gasto' },
+      { t: 'Utilidad de operación', corto: ['Utilidad', 'operación'], v: r.operacion, tipo: 'sub' },
+      { t: 'Impuestos y gastos financieros', corto: 'Impuestos', v: -p.impuestos, tipo: 'gasto' },
+      { t: 'Utilidad neta', corto: ['Utilidad', 'neta'], v: r.neta, tipo: 'total2' }
+    ];
+    var acum = 0, barras = [], colorBarra = [];
+    lineas.forEach(function (l) {
+      if (l.tipo === 'total' || l.tipo === 'sub' || l.tipo === 'total2') { barras.push([0, l.v]); acum = l.v; }
+      else { barras.push([acum + l.v, acum]); acum += l.v; }
+      colorBarra.push(l.tipo === 'prime' ? c.accent : l.tipo === 'gasto' ? c.ink3 : l.tipo === 'sub' ? c.ocre : l.tipo === 'total2' ? c.verde : c.ink);
+    });
+
+    var filas = lineas.slice(0, 4).map(function (l) { return [l.t, l.v, l.tipo]; });
+    filas.push(['Prime cost', r.prime, 'resaltado']);
+    lineas.slice(4).forEach(function (l) { filas.push([l.t, l.v, l.tipo]); });
+    var tabla = '<div class="tabla-env"><table><thead><tr><th>Línea</th><th class="n">Pesos</th><th class="n">%</th></tr></thead><tbody>' +
+      filas.map(function (f) {
+        var clase = f[2] === 'resaltado' ? 'resaltado' : f[2] === 'sub' ? 'subtotal' : f[2] === 'total2' ? 'total' : '';
+        var signo = f[1] < 0 ? '− ' : '';
+        return '<tr class="' + clase + '"><td>' + esc(f[0]) + '</td><td class="n">' + signo + pesos(Math.abs(f[1])) + '</td><td class="n">' + pct(Math.abs(f[1]) / V) + '</td></tr>';
+      }).join('') + '</tbody></table></div>';
+
+    document.getElementById('resultados').innerHTML = '<div class="rejilla-2"><div class="panel"><div class="lienzo" style="height:340px"><canvas aria-label="Cascada del estado de resultados" role="img"></canvas></div></div><div class="panel">' + tabla + '</div></div>';
+
+    var llave = {
+      id: 'llavePrime',
+      afterDatasetsDraw: function (ch) {
+        var meta = ch.getDatasetMeta(0), a = meta.data[1], b = meta.data[3];
+        if (!a || !b) return;
+        var x1 = a.x - a.width / 2, x2 = b.x + b.width / 2, y = ch.chartArea.top + 4, ctx = ch.ctx;
+        ctx.save(); ctx.strokeStyle = c.accent; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(x1, y + 8); ctx.lineTo(x1, y); ctx.lineTo(x2, y); ctx.lineTo(x2, y + 8); ctx.stroke();
+        ctx.fillStyle = c.accent; ctx.font = '600 12px ' + FUENTE; ctx.textAlign = 'center'; ctx.textBaseline = 'bottom';
+        ctx.fillText('Prime cost ' + pct(r.prime / V), (x1 + x2) / 2, y - 2);
+        ctx.restore();
+      }
+    };
+    var op = baseOpciones(c);
+    op.layout = { padding: { top: 22 } };
+    op.plugins.legend = { display: false };
+    op.plugins.tooltip.callbacks = {
+      title: function (it) { return lineas[it[0].dataIndex].t; },
+      label: function (it) { var l = lineas[it.dataIndex]; return pesos(l.v) + ' · ' + pct(Math.abs(l.v) / V); }
+    };
+    op.scales = {
+      x: eje(c, { grid: { display: false }, ticks: { color: c.ink2, font: { family: FUENTE, size: 11 }, maxRotation: 60, autoSkip: false } }),
+      y: eje(c, { beginAtZero: true, ticks: { color: c.ink3, font: { family: FUENTE, size: 11 }, callback: function (v) { return '$' + numero(v / 1e6, 1) + ' M'; } } })
+    };
+    nuevoGrafico(document.querySelector('#resultados canvas'), {
+      type: 'bar',
+      data: { labels: lineas.map(function (l) { return l.corto; }), datasets: [{ data: barras, backgroundColor: colorBarra, borderRadius: 2, barPercentage: 0.78, categoryPercentage: 0.9 }] },
+      options: op, plugins: [llave]
+    });
+  }
+
+  /* ---------- Render: tendencia ---------- */
+  function pintarTendencia(c) {
+    var sem = estado.datos.semanas;
+    if (!sem || !sem.length) { sinDatos('tendencia'); return; }
+    var calc = sem.map(calcSemana), etiquetas = sem.map(function (s) { return s.semana; });
+    var series = [
+      { k: 'food', t: 'Food cost' }, { k: 'bebidas', t: 'Costo de bebidas' },
+      { k: 'personal', t: 'Costo de personal' }, { k: 'prime', t: 'Prime cost' }
+    ];
+    document.getElementById('tendencia').innerHTML = '<div class="rejilla-2" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))">' +
+      series.map(function (s) { return '<div class="panel"><h3>' + s.t + ' · ' + BANDAS[s.k].texto.replace('Banda ', 'banda ') + '</h3><div class="lienzo" style="height:200px"><canvas role="img" aria-label="Tendencia de ' + s.t + '"></canvas></div></div>'; }).join('') + '</div>';
+    var lienzos = document.querySelectorAll('#tendencia canvas');
+    series.forEach(function (s, i) {
+      var b = BANDAS[s.k], valores = calc.map(function (x) { return x[s.k] * 100; });
+      var lo = Math.min.apply(null, valores.concat([b.verde[0] != null ? b.verde[0] * 100 : Infinity])), hi = Math.max.apply(null, valores.concat([b.rojoDesde * 100]));
+      var min = Math.floor((lo - 2) / 2) * 2, max = Math.ceil((hi + 2) / 2) * 2;
+      if (b.verde[0] == null) min = Math.max(0, Math.floor((Math.min.apply(null, valores) - 6) / 5) * 5);
+      var banda = {
+        id: 'banda',
+        beforeDatasetsDraw: function (ch) {
+          var y = ch.scales.y, a = ch.chartArea, ctx = ch.ctx;
+          var top = y.getPixelForValue(b.verde[1] * 100), bot = b.verde[0] != null ? y.getPixelForValue(b.verde[0] * 100) : a.bottom;
+          ctx.save(); ctx.fillStyle = c.banda;
+          ctx.fillRect(a.left, Math.max(top, a.top), a.right - a.left, Math.min(bot, a.bottom) - Math.max(top, a.top));
+          var r = y.getPixelForValue(b.rojoDesde * 100);
+          if (r >= a.top && r <= a.bottom) { ctx.strokeStyle = c.rojo; ctx.setLineDash([4, 4]); ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.left, r); ctx.lineTo(a.right, r); ctx.stroke(); }
+          ctx.restore();
+        }
+      };
+      var op = baseOpciones(c);
+      op.plugins.legend = { display: false };
+      op.plugins.tooltip.callbacks = { label: function (it) { return s.t + ': ' + numero(it.parsed.y, 1) + ' %'; } };
+      op.scales = {
+        x: eje(c, { grid: { display: false } }),
+        y: eje(c, { min: min, max: max, ticks: { color: c.ink3, font: { family: FUENTE, size: 11 }, callback: function (v) { return v + ' %'; }, maxTicksLimit: 6 } })
+      };
+      nuevoGrafico(lienzos[i], {
+        type: 'line',
+        data: { labels: etiquetas, datasets: [{ data: valores, borderColor: s.k === 'prime' ? c.accent : c.ink, backgroundColor: s.k === 'prime' ? c.accent : c.ink, borderWidth: 2, pointRadius: 3.5, pointHoverRadius: 5, tension: 0 }] },
+        options: op, plugins: [banda]
+      });
+    });
+  }
+
+  /* ---------- Render: matriz de menú ---------- */
+  function colorCategoria(c, cat) { return { 'Estrella': c.verde, 'Caballo de batalla': c.ocre, 'Rompecabezas': c.ink2, 'Perro': c.rojo }[cat]; }
+  function pintarMenu(c) {
+    var m = estado.datos.menu;
+    if (!m || !m.length) { sinDatos('menu'); return; }
+    var r = calcMenu(m);
+    var orden = ['Estrella', 'Caballo de batalla', 'Rompecabezas', 'Perro'];
+    var listas = orden.map(function (cat) {
+      var ps = r.platos.filter(function (p) { return p.categoria === cat; }).sort(function (a, b) { return b.margen * b.unidades - a.margen * a.unidades; });
+      return '<div class="categoria"><h3><span class="pastilla" style="background:' + colorCategoria(c, cat) + '"></span>' + PLURAL[cat] + ' · ' + ps.length + '</h3>' +
+        '<p class="accion">' + ACCIONES[cat] + '</p><ul>' +
+        (ps.length ? ps.map(function (p) { return '<li><span>' + esc(p.plato) + '</span><span>' + pct(p.mezcla) + ' · ' + pesos(p.margen) + '</span></li>'; }).join('') : '<li class="vacia">Ninguno</li>') +
+        '</ul></div>';
+    }).join('');
+    document.getElementById('menu').innerHTML = '<div class="panel"><div class="lienzo" style="height:420px"><canvas role="img" aria-label="Matriz de ingeniería de menú"></canvas></div>' +
+      '<div class="datos-matriz"><span>Umbral de popularidad <strong>' + pct(r.umbral, 2) + '</strong></span><span>Margen medio ponderado <strong>' + pesos2(r.margenMedio) + '</strong></span><span>' + numero(r.unidades) + ' unidades en 90 días · ' + r.platos.length + ' platos</span></div></div>' +
+      '<div class="categorias">' + listas + '</div>';
+
+    var xs = r.platos.map(function (p) { return p.mezcla * 100; }), ys = r.platos.map(function (p) { return p.margen; });
+    var xMax = Math.ceil(Math.max.apply(null, xs.concat([r.umbral * 100])) * 1.12 + 0.5);
+    var yMax = Math.ceil(Math.max.apply(null, ys.concat([r.margenMedio])) * 1.1 / 50) * 50;
+    var yMin = Math.max(0, Math.floor(Math.min.apply(null, ys.concat([r.margenMedio])) * 0.8 / 50) * 50);
+    var cuadrantes = {
+      id: 'cuadrantes',
+      beforeDatasetsDraw: function (ch) {
+        var a = ch.chartArea, ctx = ch.ctx, x = ch.scales.x.getPixelForValue(r.umbral * 100), y = ch.scales.y.getPixelForValue(r.margenMedio);
+        ctx.save(); ctx.strokeStyle = c.ink3; ctx.setLineDash([5, 4]); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(x, a.top); ctx.lineTo(x, a.bottom); ctx.moveTo(a.left, y); ctx.lineTo(a.right, y); ctx.stroke();
+        ctx.setLineDash([]); ctx.font = '600 12px ' + FUENTE; ctx.globalAlpha = 0.75;
+        function etiqueta(t, px, py, al, base, col) { ctx.fillStyle = col; ctx.textAlign = al; ctx.textBaseline = base; ctx.fillText(t, px, py); }
+        etiqueta('ESTRELLAS', a.right - 6, a.top + 6, 'right', 'top', c.verde);
+        etiqueta('ROMPECABEZAS', a.left + 6, a.top + 6, 'left', 'top', c.ink2);
+        etiqueta('CABALLOS DE BATALLA', a.right - 6, a.bottom - 6, 'right', 'bottom', c.ocre);
+        etiqueta('PERROS', a.left + 6, a.bottom - 6, 'left', 'bottom', c.rojo);
+        ctx.restore();
+      },
+      afterDatasetsDraw: function (ch) {
+        var ctx = ch.ctx, a = ch.chartArea, chico = a.right - a.left < 420;
+        ctx.save(); ctx.font = (chico ? '10px ' : '11px ') + FUENTE; ctx.fillStyle = c.ink; ctx.textBaseline = 'middle';
+        var puestas = [], alto = chico ? 12 : 13;
+        ch.getDatasetMeta(0).data.forEach(function (pt) { puestas.push({ x1: pt.x - 7, x2: pt.x + 7, y1: pt.y - 7, y2: pt.y + 7 }); });
+        function choca(b) { return puestas.some(function (o) { return b.x1 < o.x2 && b.x2 > o.x1 && b.y1 < o.y2 && b.y2 > o.y1; }); }
+        ch.getDatasetMeta(0).data.forEach(function (pt, j) {
+          var nombre = r.platos[j].plato.replace(/\s*\(.*?\)\s*/g, ' ').trim();
+          if (chico && nombre.length > 16) nombre = nombre.split(' ').slice(0, 2).join(' ');
+          var w = ctx.measureText(nombre).width, intentos = [];
+          [0, -alto, alto, -2 * alto, 2 * alto].forEach(function (dy) {
+            intentos.push({ x1: pt.x + 9, x2: pt.x + 9 + w, y: pt.y + dy, al: 'left' });
+            intentos.push({ x1: pt.x - 9 - w, x2: pt.x - 9, y: pt.y + dy, al: 'right' });
+          });
+          var elegido = null;
+          for (var k = 0; k < intentos.length && !elegido; k++) {
+            var t = intentos[k], caja = { x1: t.x1, x2: t.x2, y1: t.y - alto / 2, y2: t.y + alto / 2 };
+            if (t.x1 >= a.left && t.x2 <= a.right && caja.y1 >= a.top && caja.y2 <= a.bottom && !choca(caja)) elegido = { t: t, caja: caja };
+          }
+          if (!elegido) { var d = pt.x + 9 + w < a.right; elegido = { t: { x1: d ? pt.x + 9 : pt.x - 9 - w, x2: 0, y: pt.y, al: d ? 'left' : 'right' } }; elegido.caja = { x1: elegido.t.x1, x2: elegido.t.x1 + w, y1: pt.y - alto / 2, y2: pt.y + alto / 2 }; }
+          puestas.push(elegido.caja);
+          ctx.textAlign = 'left';
+          ctx.fillText(nombre, elegido.caja.x1, elegido.t.y);
+        });
+        ctx.restore();
+      }
+    };
+    var op = baseOpciones(c);
+    op.plugins.legend = { display: false };
+    op.plugins.tooltip.callbacks = {
+      label: function (it) { var p = r.platos[it.dataIndex]; return p.plato + ' · ' + p.categoria + ' · mezcla ' + pct(p.mezcla, 2) + ' · margen ' + pesos(p.margen); }
+    };
+    op.scales = {
+      x: eje(c, { min: 0, max: xMax, title: { display: true, text: '% de la mezcla', color: c.ink2, font: { family: FUENTE, size: 12 } }, ticks: { color: c.ink3, font: { family: FUENTE, size: 11 }, callback: function (v) { return v + ' %'; } } }),
+      y: eje(c, { min: yMin, max: yMax, title: { display: true, text: 'Margen unitario (pesos)', color: c.ink2, font: { family: FUENTE, size: 12 } }, ticks: { color: c.ink3, font: { family: FUENTE, size: 11 }, callback: function (v) { return '$' + numero(v); } } })
+    };
+    nuevoGrafico(document.querySelector('#menu canvas'), {
+      type: 'scatter',
+      data: { datasets: [{ data: r.platos.map(function (p) { return { x: p.mezcla * 100, y: p.margen }; }), backgroundColor: r.platos.map(function (p) { return colorCategoria(c, p.categoria); }), pointRadius: 6, pointHoverRadius: 8, borderColor: c.surface, borderWidth: 1.5 }] },
+      options: op, plugins: [cuadrantes]
+    });
+  }
+
+  /* ---------- Render: fugas ---------- */
+  function barrasFuga(c, canvas, filas, etiqueta) {
+    var orden = filas.slice().sort(function (a, b) { return b.mes - a.mes; });
+    canvas.parentNode.style.height = (orden.length * 30 + 30) + 'px';
+    var op = baseOpciones(c);
+    op.indexAxis = 'y';
+    op.layout = { padding: { right: 8 } };
+    op.plugins.legend = { display: false };
+    op.plugins.tooltip.callbacks = { label: function (it) { var f = orden[it.dataIndex]; return etiqueta + ': ' + pesos(f.mes) + ' al mes · ' + pesos(f.semanal) + ' a la semana'; } };
+    op.scales = {
+      x: eje(c, { ticks: { color: c.ink3, font: { family: FUENTE, size: 11 }, callback: function (v) { return '$' + numero(v / 1000) + ' mil'; }, maxTicksLimit: 5 } }),
+      y: eje(c, { grid: { display: false }, afterFit: function (sc) { sc.width += 14; }, ticks: { color: c.ink2, font: { family: FUENTE, size: 12 }, autoSkip: false } })
+    };
+    nuevoGrafico(canvas, {
+      type: 'bar',
+      data: { labels: orden.map(function (f) { return f.nombre; }), datasets: [{ data: orden.map(function (f) { return f.mes; }), backgroundColor: orden.map(function (f) { return f.mes >= 0 ? c.accent : c.verde; }), borderRadius: 2, barPercentage: 0.75 }] },
+      options: op
+    });
+  }
+  function pintarFugas(c) {
+    var d = estado.datos, refs = d.refs ? calcRefs(d.refs) : null, barra = d.barra ? calcBarra(d.barra) : null;
+    var sd = '<div class="sin-datos">Sin datos en esta pestaña del Excel</div>';
+    var html = '<div class="cifras">' +
+      '<div class="cifra-grande"><div class="etq">Fuga de las diez referencias, a costo</div>' + (refs ? '<div class="cifra">' + pesos(refs.mes) + '<span style="font-size:.45em;color:var(--ink-3)"> al mes</span></div><div class="sub">' + pesos(refs.semanal) + ' a la semana · ' + pct(refs.sobreTeorico, 2) + ' del costo teórico</div>' : sd) + '</div>' +
+      '<div class="cifra-grande"><div class="etq">Fuga de barra, a precio de venta</div>' + (barra ? '<div class="cifra">' + pesos(barra.mes) + '<span style="font-size:.45em;color:var(--ink-3)"> al mes</span></div><div class="sub">' + pesos(barra.semanal) + ' a la semana</div>' : sd) + '</div>' +
+      '</div><div class="rejilla-2">' +
+      (refs ? '<div class="panel"><h3>Diez referencias · al mes, a costo</h3><div class="lienzo"><canvas role="img" aria-label="Fuga por artículo"></canvas></div></div>' : '') +
+      (barra ? '<div class="panel"><h3>Barra · al mes, a precio de venta</h3><div class="lienzo"><canvas role="img" aria-label="Fuga de barra por producto"></canvas></div></div>' : '') +
+      '</div><p class="nota">Son la misma botella contada dos veces: una a lo que te costó, otra a lo que habrías cobrado.</p>';
+    document.getElementById('fugas').innerHTML = html;
+    var lienzos = document.querySelectorAll('#fugas canvas'), i = 0;
+    if (refs) barrasFuga(c, lienzos[i++], refs.filas, 'Fuga a costo');
+    if (barra) barrasFuga(c, lienzos[i++], barra.filas, 'Fuga a precio de venta');
+  }
+
+  /* ---------- Render: reservas ---------- */
+  function pintarReservas(c) {
+    var d = estado.datos.reservas;
+    if (!d || !d.meses.length) { sinDatos('reservas'); return; }
+    var r = calcReservas(d), ult = r.meses[r.meses.length - 1];
+    var cabeza = ult.recupera > 0
+      ? 'Bajar al objetivo recupera <span class="num">' + pesos(ult.recupera) + '</span> al mes.'
+      : 'Ya estás en el objetivo. Sostenerlo vale <span class="num">' + pesos(Math.max(0, r.meses[0].recupera)) + '</span> al mes contra ' + esc(r.meses[0].mes) + '.';
+    var tabla = '<div class="tabla-env"><table><thead><tr><th>Mes</th><th class="n opc">Reservas</th><th class="n opc">No-shows</th><th class="n">No-show</th><th class="n">Venta perdida</th><th class="n opc">Al objetivo</th><th class="n">Recuperas</th></tr></thead><tbody>' +
+      r.meses.map(function (m) {
+        return '<tr><td>' + esc(m.mes) + '</td><td class="n opc">' + numero(m.reservas) + '</td><td class="n opc">' + numero(m.noShows) + '</td><td class="n">' + pct(m.porc) + '</td><td class="n">' + pesos(m.perdida) + '</td><td class="n opc">' + pesos(m.alObjetivo) + '</td><td class="n">' + pesos(m.recupera) + '</td></tr>';
+      }).join('') + '</tbody></table></div>';
+    document.getElementById('reservas').innerHTML =
+      '<div class="cifras"><div class="cifra-grande"><div class="etq">' + esc(ult.mes) + ' · no-show ' + pct(ult.porc) + ' contra un objetivo de ' + pct(r.objetivo, 0) + '</div><div class="cifra" style="font-size:clamp(22px,4.5vw,30px);color:var(--ink)">' + cabeza.replace('class="num"', 'class="num" style="color:var(--accent)"') + '</div></div></div>' +
+      '<div class="rejilla-2" style="grid-template-columns:1fr"><div class="panel"><div class="lienzo" style="height:260px"><canvas role="img" aria-label="Porcentaje de no-show por mes"></canvas></div></div><div class="panel">' + tabla + '</div></div>';
+    var objetivo = r.objetivo * 100;
+    var op = baseOpciones(c);
+    op.plugins.tooltip.callbacks = { label: function (it) { return it.dataset.label + ': ' + numero(it.parsed.y, 1) + ' %'; } };
+    op.scales = {
+      x: eje(c, { grid: { display: false } }),
+      y: eje(c, { beginAtZero: true, ticks: { color: c.ink3, font: { family: FUENTE, size: 11 }, callback: function (v) { return v + ' %'; } } })
+    };
+    nuevoGrafico(document.querySelector('#reservas canvas'), {
+      type: 'bar',
+      data: {
+        labels: r.meses.map(function (m) { return m.mes; }),
+        datasets: [
+          { type: 'bar', label: 'No-show', data: r.meses.map(function (m) { return m.porc * 100; }), backgroundColor: r.meses.map(function (m) { return m.porc > r.objetivo ? c.accent : c.verde; }), borderRadius: 2, order: 2 },
+          { type: 'line', label: 'Objetivo', data: r.meses.map(function () { return objetivo; }), borderColor: c.ink, borderDash: [5, 4], borderWidth: 1.5, pointRadius: 0, order: 1 }
+        ]
+      },
+      options: op
+    });
+  }
+
+  /* ---------- Render: tiempo del pase ---------- */
+  function estadoTiempo(m) { return m > 20 ? 'rojo' : m > 15 ? 'ambar' : 'verde'; }
+  function pintarPase() {
+    var d = estado.datos.pase;
+    if (!d || !d.length) { sinDatos('pase'); return; }
+    var filas = calcPase(d);
+    if (!filas.length) { sinDatos('pase'); return; }
+    function celda(m) {
+      var e = estadoTiempo(m), col = { verde: 'var(--verde)', ambar: 'var(--ocre-text)', rojo: 'var(--rojo)' }[e];
+      return '<td class="n celda-tiempo" style="color:' + col + '">' + forma(e) + numero(m, 1) + '</td>';
+    }
+    document.getElementById('pase').innerHTML = '<div class="panel"><div class="tabla-env"><table><thead><tr><th>Franja</th><th>Plato</th><th class="n">Medio, min</th><th class="n">Máximo, min</th><th class="n opc">Comandas</th></tr></thead><tbody>' +
+      filas.map(function (f) { return '<tr><td class="num">' + esc(f.franja) + '</td><td>' + esc(f.plato) + '</td>' + celda(f.medio) + celda(f.maximo) + '<td class="n opc">' + f.comandas + '</td></tr>'; }).join('') +
+      '</tbody></table></div><p class="nota">Ordenado del más lento al más rápido. Se mide para encontrar el cuello de botella, no para castigar.</p></div>';
+  }
+
+  /* ---------- Render: quick wins ---------- */
+  function pintarWins() {
+    var marcados = leer(CLAVES.wins);
+    if (!Array.isArray(marcados)) marcados = [];
+    var toca = -1;
+    for (var i = 0; i < QUICK_WINS.length; i++) { if (!marcados[i]) { toca = i; break; } }
+    var ol = document.getElementById('wins');
+    ol.innerHTML = QUICK_WINS.map(function (t, i) {
+      var hecho = !!marcados[i];
+      return '<li class="' + (hecho ? 'hecho' : '') + (i === toca ? ' toca' : '') + '"><label><span class="n-win">' + (i + 1) + '</span><input type="checkbox" data-i="' + i + '"' + (hecho ? ' checked' : '') + '><span class="t-win">' + t + '</span>' + (i === toca ? '<span class="toca-ahora">Toca ahora</span>' : '') + '</label></li>';
+    }).join('');
+    var n = marcados.filter(Boolean).length;
+    document.getElementById('progreso-wins').textContent = n === QUICK_WINS.length ? 'Las doce instaladas. Ahora toca sostenerlas.' : n + ' de 12 instaladas.';
+  }
+
+  /* ---------- Render completo ---------- */
+  function pintarTodo() {
+    graficos.forEach(function (g) { try { g.destroy(); } catch (e) { /* ya destruido */ } });
+    graficos = [];
+    var c = colores();
+    if (window.Chart) { Chart.defaults.font.family = FUENTE; Chart.defaults.color = c.ink2; }
+    pintarCabecera();
+    [pintarCinco, pintarPunto, pintarResultados, pintarTendencia, pintarMenu, pintarFugas, pintarReservas, pintarPase].forEach(function (f) {
+      try { f(c); } catch (e) { if (window.console) console.warn('No se pudo pintar una sección:', e); }
+    });
+  }
+
+  function avisar(texto) {
+    var a = document.getElementById('aviso');
+    if (!texto) { a.hidden = true; a.textContent = ''; return; }
+    a.textContent = texto; a.hidden = false;
+  }
+
+  /* ---------- Carga de archivo ---------- */
+  function cargarArchivo(file) {
+    if (!file) return;
+    if (!window.XLSX) { avisar('No se pudo cargar el lector de Excel. Revisa la conexión a internet y vuelve a abrir la página.'); return; }
+    var lector = new FileReader();
+    lector.onload = function (ev) {
+      var resultado;
+      try {
+        var wb = XLSX.read(new Uint8Array(ev.target.result), { type: 'array', cellFormula: true, cellDates: false });
+        resultado = leerLibro(wb);
+      } catch (e) {
+        avisar('No pude leer «' + file.name + '». ¿Es el archivo Kit_de_operacion.xlsx guardado como libro de Excel?');
+        return;
+      }
+      if (!resultado.encontradas) { avisar('«' + file.name + '» no tiene ninguna de las pestañas del kit con datos. Se mantiene lo que había.'); return; }
+      estado = { fuente: 'archivo', datos: resultado.datos, archivo: file.name, cargado: new Date().toISOString(), semana: null };
+      if (!guardar(CLAVES.datos, { fuente: estado.fuente, datos: estado.datos, archivo: estado.archivo, cargado: estado.cargado })) {
+        avisar('Cargado, pero este navegador no deja guardar: al cerrar la página volverá el ejemplo.');
+      } else {
+        var faltan = 7 - resultado.encontradas;
+        avisar(faltan ? 'Cargado. ' + faltan + (faltan === 1 ? ' sección quedó' : ' secciones quedaron') + ' sin datos: revisa esas pestañas del Excel.' : '');
+      }
+      borrar(CLAVES.semana);
+      pintarTodo();
+    };
+    lector.onerror = function () { avisar('No se pudo abrir el archivo.'); };
+    lector.readAsArrayBuffer(file);
+  }
+
+  /* ---------- Arranque ---------- */
+  function iniciar() {
+    var guardado = leer(CLAVES.datos);
+    if (guardado && guardado.datos && guardado.fuente === 'archivo') {
+      estado = { fuente: 'archivo', datos: guardado.datos, archivo: guardado.archivo || 'Mi Excel', cargado: guardado.cargado, semana: null };
+    }
+    var sem = leer(CLAVES.semana);
+    if (typeof sem === 'number') estado.semana = sem;
+
+    var nombre = document.getElementById('nombre'), nGuardado = leer(CLAVES.nombre);
+    if (typeof nGuardado === 'string' && nGuardado.trim()) nombre.value = nGuardado;
+    nombre.addEventListener('input', function () { guardar(CLAVES.nombre, nombre.value); });
+    nombre.addEventListener('blur', function () { if (!nombre.value.trim()) { nombre.value = 'Restaurante de referencia'; borrar(CLAVES.nombre); } });
+
+    var archivo = document.getElementById('archivo');
+    document.getElementById('cargar').addEventListener('click', function () { archivo.click(); });
+    archivo.addEventListener('change', function () { cargarArchivo(archivo.files[0]); archivo.value = ''; });
+    document.getElementById('volver-ejemplo').addEventListener('click', function () {
+      borrar(CLAVES.datos); borrar(CLAVES.semana);
+      estado = { fuente: 'ejemplo', datos: EJEMPLO, archivo: null, cargado: null, semana: null };
+      avisar(''); pintarTodo();
+    });
+    document.getElementById('semana').addEventListener('change', function (e) {
+      estado.semana = +e.target.value; guardar(CLAVES.semana, estado.semana);
+      pintarCinco();
+    });
+    document.getElementById('wins').addEventListener('change', function (e) {
+      var i = +e.target.getAttribute('data-i');
+      if (isNaN(i)) return;
+      var m = leer(CLAVES.wins); if (!Array.isArray(m)) m = [];
+      m[i] = e.target.checked;
+      for (var k = 0; k < QUICK_WINS.length; k++) m[k] = !!m[k];
+      guardar(CLAVES.wins, m);
+      pintarWins();
+      var foco = document.querySelector('#wins input[data-i="' + i + '"]'); if (foco) foco.focus();
+    });
+    document.getElementById('copiar').addEventListener('click', function () {
+      var boton = this, tel = document.getElementById('tel').textContent;
+      function hecho() { boton.textContent = 'Copiado'; setTimeout(function () { boton.textContent = 'Copiar'; }, 1800); }
+      function respaldo() {
+        try {
+          var r = document.createRange(); r.selectNodeContents(document.getElementById('tel'));
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          if (document.execCommand && document.execCommand('copy')) hecho(); else boton.textContent = 'Seleccionado';
+        } catch (e) { boton.textContent = 'Seleccionado'; }
+      }
+      try { if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(tel).then(hecho, respaldo); else respaldo(); } catch (e) { respaldo(); }
+    });
+
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var cambio = function () { pintarTodo(); };
+      if (mq.addEventListener) mq.addEventListener('change', cambio); else if (mq.addListener) mq.addListener(cambio);
+    }
+    var tRes;
+    window.addEventListener('resize', function () { clearTimeout(tRes); tRes = setTimeout(function () { graficos.forEach(function (g) { g.update('none'); }); }, 150); });
+
+    pintarTodo();
+    pintarWins();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { graficos.forEach(function (g) { g.update('none'); }); });
+  }
+
+  // Para comprobaciones automáticas (pruebas/verificar.js)
+  window.KIT = {
+    EJEMPLO: EJEMPLO, leerLibro: leerLibro, calcSemana: calcSemana, calcPnl: calcPnl, calcMenu: calcMenu, calcRefs: calcRefs,
+    calcBarra: calcBarra, calcReservas: calcReservas, calcPase: calcPase, estado: function () { return estado; }
+  };
+
+  iniciar();
+})();
+</script>
+</body>
+</html>
