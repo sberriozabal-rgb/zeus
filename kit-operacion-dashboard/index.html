@@ -212,6 +212,7 @@ ol.wins li label { display: flex; align-items: center; gap: 12px; padding: 11px 
 ol.wins .n-win { font-family: var(--sans); font-weight: 600; color: var(--ink-3); width: 22px; text-align: right; flex: none; }
 ol.wins input { width: 20px; height: 20px; accent-color: var(--verde); flex: none; margin: 0; }
 ol.wins .t-win { flex: 1; }
+ol.wins .paso { display: block; font-family: var(--sans); font-size: 12px; color: var(--ink-3); text-decoration: none; }
 ol.wins li.hecho .t-win { color: var(--ink-3); text-decoration: line-through; text-decoration-thickness: 1px; }
 ol.wins li.toca label { border: 2px solid var(--accent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
 .toca-ahora { font-family: var(--sans); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--bg); background: var(--accent); padding: 2px 7px; border-radius: 3px; white-space: nowrap; }
@@ -301,6 +302,7 @@ footer .envoltura { padding-top: 22px; padding-bottom: 28px; display: flex; flex
   <section class="bloque" id="s-wins">
     <h2>Los doce quick wins</h2>
     <p class="regla">Una mejora cada tres o cuatro semanas, con el número de la anterior ya estabilizado.</p>
+    <p class="entrada">En el orden en que se instalan: primero las fugas, luego el margen, luego el cliente y al final el control. El número de cada casilla es el del libro.</p>
     <ol class="wins" id="wins"></ol>
     <p class="progreso-wins" id="progreso-wins"></p>
   </section>
@@ -391,19 +393,20 @@ footer .envoltura { padding-top: 22px; padding-bottom: 28px; display: flex; flex
     ].map(function (r) { return { franja: r[0], plato: r[1], comanda: r[2], salida: r[3], minutos: null }; })
   };
 
+  // En orden de instalación; el número es el del libro (el Excel los cita así: «quick win 8»)
   var QUICK_WINS = [
-    'La medida justa (diez referencias y barra)',
-    'El tiempo de la comanda a la mesa',
-    'La ficha del plato con foto',
-    'La reserva que se confirma',
-    'La carta que vende',
-    'Vender en las horas muertas',
-    'Precio y oferta para la hora valle',
-    'Un producto de la casa en el mostrador',
-    'Recibir antes de preguntar',
-    'Una promesa que cabe en una línea',
-    'Tres datos por cliente frecuente',
-    'Tu propio inspector anónimo'
+    [1, 'La medida justa (diez referencias y barra)', 'las fugas'],
+    [8, 'El tiempo de la comanda a la mesa', 'las fugas'],
+    [10, 'La ficha del plato con foto', 'las fugas'],
+    [12, 'La reserva que se confirma', 'las fugas'],
+    [5, 'La carta que vende', 'el margen'],
+    [3, 'Vender en las horas muertas', 'el margen'],
+    [11, 'Precio y oferta para la hora valle', 'el margen'],
+    [4, 'Un producto de la casa en el mostrador', 'el margen'],
+    [2, 'Recibir antes de preguntar', 'el cliente'],
+    [6, 'Una promesa que cabe en una línea', 'el cliente'],
+    [7, 'Tres datos por cliente frecuente', 'el cliente'],
+    [9, 'Tu propio inspector anónimo', 'el control']
   ];
 
   var ACCIONES = {
@@ -1162,7 +1165,7 @@ footer .envoltura { padding-top: 22px; padding-bottom: 28px; display: flex; flex
     var ol = document.getElementById('wins');
     ol.innerHTML = QUICK_WINS.map(function (t, i) {
       var hecho = !!marcados[i];
-      return '<li class="' + (hecho ? 'hecho' : '') + (i === toca ? ' toca' : '') + '"><label><span class="n-win">' + (i + 1) + '</span><input type="checkbox" data-i="' + i + '"' + (hecho ? ' checked' : '') + '><span class="t-win">' + t + '</span>' + (i === toca ? '<span class="toca-ahora">Toca ahora</span>' : '') + '</label></li>';
+      return '<li class="' + (hecho ? 'hecho' : '') + (i === toca ? ' toca' : '') + '"><label><span class="n-win" title="Número del quick win en el libro">' + t[0] + '</span><input type="checkbox" data-i="' + i + '"' + (hecho ? ' checked' : '') + '><span class="t-win">' + t[1] + '<span class="paso">Paso ' + (i + 1) + ' · ' + t[2] + '</span></span>' + (i === toca ? '<span class="toca-ahora">Toca ahora</span>' : '') + '</label></li>';
     }).join('');
     var n = marcados.filter(Boolean).length;
     document.getElementById('progreso-wins').textContent = n === QUICK_WINS.length ? 'Las doce instaladas. Ahora toca sostenerlas.' : n + ' de 12 instaladas.';

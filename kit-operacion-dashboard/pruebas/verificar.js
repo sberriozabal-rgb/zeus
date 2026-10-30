@@ -134,6 +134,7 @@ const texto = (page, sel) => page.$eval(sel, (e) => e.innerText.replace(/\s+/g, 
   comprobar('Tras recargar sin red: sigue el Excel cargado', (await page.evaluate(() => KIT.estado().fuente)) === 'archivo' && !(await page.isVisible('#etiqueta-ejemplo')));
   comprobar('Tras recargar sin red: gráficos pintados (librerías locales)', await page.evaluate(() => !!window.Chart && !!window.XLSX && document.querySelectorAll('canvas').length >= 8));
   comprobar('Quick win guardado y «Toca ahora» en el 2', await page.evaluate(() => document.querySelector('#wins input[data-i="0"]').checked && document.querySelector('#wins li.toca input').getAttribute('data-i') === '1'));
+  comprobar('Quick wins con el número del libro (1, 8, 10, 12…)', (await page.$$eval('#wins .n-win', (e) => e.map((x) => x.textContent).join(','))) === '1,8,10,12,5,3,11,4,2,6,7,9');
 
   // 5. 400 px de ancho, claro y oscuro
   for (const esquema of ['light', 'dark']) {
